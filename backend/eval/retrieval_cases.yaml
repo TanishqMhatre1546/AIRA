@@ -1,0 +1,198 @@
+version: "1.0.0"
+description: "AIRA retrieval evaluation test suite with 45 queries across all 15 guideline documents."
+
+cases:
+  # 1. Acute Diarrhea
+  - id: "RET-DIAR-01"
+    query: "How to prepare oral rehydration salts ORS for acute diarrhea dehydration?"
+    expected_condition_id: "icmr-stw-acute-diarrhea"
+
+  - id: "RET-DIAR-02"
+    query: "What dietary fluids and home fluids should be given during loose watery motions?"
+    expected_condition_id: "icmr-stw-acute-diarrhea"
+
+  - id: "RET-DIAR-03"
+    query: "Signs of severe dehydration skin pinch slow when to go to hospital immediately"
+    expected_condition_id: "icmr-stw-acute-diarrhea"
+
+  # 2. Acute Respiratory Infections
+  - id: "RET-RESP-01"
+    query: "Home care for common cold, runny nose, sneezing, and fever in adults"
+    expected_condition_id: "icmr-stw-acute-respiratory-infections"
+
+  - id: "RET-RESP-02"
+    query: "When to see a doctor for persistent cough lasting more than two weeks"
+    expected_condition_id: "icmr-stw-acute-respiratory-infections"
+
+  - id: "RET-RESP-03"
+    query: "Danger signs of severe pneumonia, rapid breathing, and breathlessness"
+    expected_condition_id: "icmr-stw-acute-respiratory-infections"
+
+  # 3. Acute Rhinosinusitis
+  - id: "RET-SINU-01"
+    query: "Steam inhalation and saline nasal rinse for acute sinus congestion and facial pressure"
+    expected_condition_id: "icmr-stw-acute-rhinosinusitis"
+
+  - id: "RET-SINU-02"
+    query: "Symptoms of acute rhinosinusitis with purulent nasal discharge and headache"
+    expected_condition_id: "icmr-stw-acute-rhinosinusitis"
+
+  - id: "RET-SINU-03"
+    query: "Complications of sinus infection eye swelling and double vision"
+    expected_condition_id: "icmr-stw-acute-rhinosinusitis"
+
+  # 4. Bacterial Skin Infections
+  - id: "RET-SKIN-01"
+    query: "Warm compress and hygiene for localized mild skin boil and folliculitis"
+    expected_condition_id: "icmr-stw-bacterial-skin-infections"
+
+  - id: "RET-SKIN-02"
+    query: "Spreading redness, warmth, and pus in cellulitis and furuncle"
+    expected_condition_id: "icmr-stw-bacterial-skin-infections"
+
+  - id: "RET-SKIN-03"
+    query: "Danger signs of necrotizing skin infection and black tissue necrosis"
+    expected_condition_id: "icmr-stw-bacterial-skin-infections"
+
+  # 5. Dengue Fever
+  - id: "RET-DENG-01"
+    query: "Rest, fluid intake, and paracetamol for fever management in dengue"
+    expected_condition_id: "icmr-stw-dengue-fever"
+
+  - id: "RET-DENG-02"
+    query: "Warning signs of severe dengue persistent vomiting and abdominal pain"
+    expected_condition_id: "icmr-stw-dengue-fever"
+
+  - id: "RET-DENG-03"
+    query: "Dengue shock syndrome, low blood pressure, and bleeding gums"
+    expected_condition_id: "icmr-stw-dengue-fever"
+
+  # 6. Dermatophytosis (Ringworm)
+  - id: "RET-DERM-01"
+    query: "Self-care, personal hygiene, and keeping skin folds dry for ringworm"
+    expected_condition_id: "icmr-stw-dermatophytosis"
+
+  - id: "RET-DERM-02"
+    query: "Washing clothes in hot water and avoiding sharing towels for fungal infection"
+    expected_condition_id: "icmr-stw-dermatophytosis"
+
+  - id: "RET-DERM-03"
+    query: "When to see a doctor for extensive ringworm spreading across body"
+    expected_condition_id: "icmr-stw-dermatophytosis"
+
+  # 7. Diabetes (Type 2)
+  - id: "RET-DIAB-01"
+    query: "Common symptoms of type 2 diabetes frequent urination, thirst, weight loss"
+    expected_condition_id: "icmr-stw-diabetes-type2"
+
+  - id: "RET-DIAB-02"
+    query: "Dietary modifications, regular exercise, and blood glucose screening in adults"
+    expected_condition_id: "icmr-stw-diabetes-type2"
+
+  - id: "RET-DIAB-03"
+    query: "Diabetic foot care, inspection of feet, and non-healing foot ulcers"
+    expected_condition_id: "icmr-stw-diabetes-type2"
+
+  # 8. Eczema / Dermatitis
+  - id: "RET-ECZE-01"
+    query: "Applying emollients, skin moisturizers, and avoiding harsh soaps for eczema"
+    expected_condition_id: "icmr-stw-eczema-dermatitis"
+
+  - id: "RET-ECZE-02"
+    query: "Managing contact dermatitis triggers and wearing cotton clothing"
+    expected_condition_id: "icmr-stw-eczema-dermatitis"
+
+  - id: "RET-ECZE-03"
+    query: "Signs of secondary bacterial infection in eczema with yellow crusting"
+    expected_condition_id: "icmr-stw-eczema-dermatitis"
+
+  # 9. Epistaxis (Nosebleed)
+  - id: "RET-EPIS-01"
+    query: "How to pinch the soft part of the nose and lean forward for nosebleed"
+    expected_condition_id: "icmr-stw-epistaxis"
+
+  - id: "RET-EPIS-02"
+    query: "Applying ice pack over nasal bridge to control minor nose bleeding"
+    expected_condition_id: "icmr-stw-epistaxis"
+
+  - id: "RET-EPIS-03"
+    query: "Emergency referral for continuous severe nosebleed lasting more than 20 minutes"
+    expected_condition_id: "icmr-stw-epistaxis"
+
+  # 10. Headache
+  - id: "RET-HEAD-01"
+    query: "Rest in a dark quiet room and hydration for mild tension headache"
+    expected_condition_id: "icmr-stw-headache"
+
+  - id: "RET-HEAD-02"
+    query: "Red flag warning signs for headache sudden severe thunderclap or stiff neck"
+    expected_condition_id: "icmr-stw-headache"
+
+  - id: "RET-HEAD-03"
+    query: "When to see a doctor for chronic recurrent headache lasting over one week"
+    expected_condition_id: "icmr-stw-headache"
+
+  # 11. Hypertension
+  - id: "RET-HYPE-01"
+    query: "Reducing dietary salt intake, stopping tobacco, and physical activity for blood pressure"
+    expected_condition_id: "asha-ncd-hypertension"
+
+  - id: "RET-HYPE-02"
+    query: "Symptoms and awareness for high blood pressure screening in adults"
+    expected_condition_id: "asha-ncd-hypertension"
+
+  - id: "RET-HYPE-03"
+    query: "Severe hypertension with chest pain, breathlessness, and target organ damage"
+    expected_condition_id: "asha-ncd-hypertension"
+
+  # 12. Pharyngitis (Sore Throat)
+  - id: "RET-PHAR-01"
+    query: "Warm water salt gargles and adequate warm fluids for scratchy sore throat"
+    expected_condition_id: "icmr-stw-pharyngitis-sore-throat"
+
+  - id: "RET-PHAR-02"
+    query: "Symptoms of bacterial pharyngitis with tonsillar exudate and high fever"
+    expected_condition_id: "icmr-stw-pharyngitis-sore-throat"
+
+  - id: "RET-PHAR-03"
+    query: "Danger signs of severe sore throat unable to swallow saliva drooling and stridor"
+    expected_condition_id: "icmr-stw-pharyngitis-sore-throat"
+
+  # 13. Scabies
+  - id: "RET-SCAB-01"
+    query: "Intense nocturnal itching and skin burrows between fingers in scabies"
+    expected_condition_id: "icmr-stw-scabies"
+
+  - id: "RET-SCAB-02"
+    query: "Treating all household family contacts simultaneously for scabies infection"
+    expected_condition_id: "icmr-stw-scabies"
+
+  - id: "RET-SCAB-03"
+    query: "Washing clothing and bedding in hot water to eliminate scabies mites"
+    expected_condition_id: "icmr-stw-scabies"
+
+  # 14. Urinary Tract Infection (UTI)
+  - id: "RET-UTI-01"
+    query: "Drinking plenty of water and maintaining genital hygiene for urinary tract infection"
+    expected_condition_id: "icmr-stw-urinary-tract-infection"
+
+  - id: "RET-UTI-02"
+    query: "Dysuria, burning urination, and increased urinary frequency in acute cystitis"
+    expected_condition_id: "icmr-stw-urinary-tract-infection"
+
+  - id: "RET-UTI-03"
+    query: "Danger signs of upper urinary tract infection with high fever and flank loin pain"
+    expected_condition_id: "icmr-stw-urinary-tract-infection"
+
+  # 15. Urticaria and Angioedema
+  - id: "RET-URTI-01"
+    query: "Avoiding identifiable allergic triggers and applying cool compresses for hives"
+    expected_condition_id: "icmr-stw-urticaria-angioedema"
+
+  - id: "RET-URTI-02"
+    query: "Transient itchy raised skin wheals in acute urticaria lasting less than 6 weeks"
+    expected_condition_id: "icmr-stw-urticaria-angioedema"
+
+  - id: "RET-URTI-03"
+    query: "Angioedema swelling of lips, tongue, and throat causing respiratory compromise"
+    expected_condition_id: "icmr-stw-urticaria-angioedema"

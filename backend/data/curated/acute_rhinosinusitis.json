@@ -1,0 +1,82 @@
+{
+  "id": "icmr-stw-acute-rhinosinusitis",
+  "condition": "Acute Rhinosinusitis (Sinus Infection)",
+  "icd_code": "ICD-10-J01.90",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Acute Rhinosinusitis",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "antibiotic names",
+      "dosing schedules",
+      "nasal spray drug names",
+      "decongestant names"
+    ]
+  },
+  "condition_description": "Sinusitis is suspected when nasal blockage, nasal discharge, or facial pain lasting more than 7 days follows a cold. Symptoms lasting less than 7 days are usually a viral cold and do not need antibiotics.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Swelling or redness around the eye, or eye being pushed forward (proptosis), indicates the infection has spread to the eye socket",
+        "Double vision or significant vision disturbance",
+        "Altered mental state or confusion, indicates the infection may have spread to the brain",
+        "Severe headache with stiff neck, may indicate meningitis",
+        "Increasing swelling or fullness on the forehead",
+        "Facial skin, palate, or inner nasal tissues turning dark or discoloured, suggests invasive fungal sinusitis, which is a medical emergency, especially in diabetic patients",
+        "Facial numbness or reduced sensation on the face",
+        "Signs of sinusitis in a person with diabetes or on immunosuppressive treatment, these individuals are at high risk of a rapidly worsening infection"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home for Mild Sinusitis",
+      "page": 1,
+      "items": [
+        "Rinse the nose with normal saline nasal wash, dissolve a pinch of salt in a cup of clean water and gently rinse each nostril. This helps clear mucus and improves breathing",
+        "Steam inhalation for 10 to 15 minutes, two or three sessions a day, can relieve nasal congestion",
+        "Drink adequate fluids to keep mucus thin and easier to drain",
+        "Sleep with your head slightly elevated to help drainage",
+        "Avoid smoking and exposure to tobacco smoke, dust, and strong chemical smells",
+        "Symptoms lasting less than 7 days after a cold are usually viral and self-limiting, rest, fluids, and saline nasal wash are appropriate",
+        "Do not use nasal decongestant sprays for more than 3 to 5 days, prolonged use can worsen nasal congestion",
+        "Address dental hygiene, untreated upper tooth decay can cause sinus infection on that side"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Nasal blockage, nasal discharge, or facial pressure or pain lasting more than 7 days after a cold",
+        "Thick yellow or green nasal discharge with fever",
+        "Pain or pressure over the cheeks, forehead, or between the eyes",
+        "Reduced or absent sense of smell",
+        "Symptoms not improving after a full course of prescribed antibiotics",
+        "Recurrent sinusitis episodes (more than once in a few months)",
+        "Sinusitis in a person with diabetes, they must see a doctor promptly given higher risk of severe infection",
+        "Sinusitis with suspected dental origin, pain on one side of the face near upper teeth"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any red flag sign listed above, eye swelling, double vision, confusion, stiff neck, forehead fullness, dark facial tissue",
+        "Suspected invasive fungal sinusitis in a diabetic or immunocompromised person",
+        "No improvement after 10 days of correctly prescribed antibiotic treatment",
+        "Worsening symptoms while already on antibiotic treatment"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antibiotic names, steroid spray names, and decongestant drug names excluded. The saline nasal wash is retained as a non-drug self-care measure directly sourced from the document. Invasive fungal sinusitis danger signs retained in full given life-threatening nature and high relevance to diabetic Indian patients."
+  }
+}

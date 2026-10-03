@@ -1,0 +1,103 @@
+{
+  "id": "asha-ncd-hypertension",
+  "condition": "Hypertension (High Blood Pressure): Awareness, Symptoms, and When to Seek Care",
+  "icd_code": "ICD-10-I10",
+  "source": {
+    "title": "Module for ASHA on Non-Communicable Diseases: Chapter 3: Hypertension",
+    "publisher": "Ministry of Health and Family Welfare, Government of India / National Health Mission",
+    "edition_year": "Current edition (no date printed)",
+    "url": "https://nhm.gov.in",
+    "retrieved": "2026-10-02",
+    "source_pages": "27–33",
+    "restricted_content_excluded": [
+      "drug names",
+      "antihypertensive treatment algorithms",
+      "BP measurement technique steps"
+    ]
+  },
+  "scope_note": "AIRA covers hypertension awareness, warning signs, lifestyle measures, and triage only. Diagnosis and treatment must be done by a qualified doctor or medical officer.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Heart Attack Warning Signs: Call 112 or Go to Hospital Immediately",
+      "page": 31,
+      "items": [
+        "Pain, pressure, or constriction in the centre of the chest lasting more than 30 minutes",
+        "Pain spreading to the jaw, neck, arms, shoulders, or back",
+        "Shortness of breath along with chest discomfort",
+        "Nausea with chest pain",
+        "Loss of consciousness"
+      ]
+    },
+    {
+      "type": "danger_signs",
+      "label": "Stroke Warning Signs: Call 112 or Go to Hospital Immediately",
+      "page": 32,
+      "items": [
+        "Sudden weakness, paralysis, or numbness on one side of the face, arm, or leg",
+        "Loss of speech or sudden difficulty speaking or understanding speech",
+        "Dimness or loss of vision, particularly in one eye",
+        "Unexplained dizziness, unsteadiness, or sudden falls",
+        "Sudden severe headache or loss of consciousness",
+        "Any of these signs in a person with high blood pressure must be treated as a medical emergency, refer immediately to a Community Health Centre or hospital"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Lifestyle Measures for Persons with High Blood Pressure",
+      "page": 30,
+      "items": [
+        "Stop all use of tobacco, smoking or chewing tobacco significantly raises blood pressure and risk of heart attack",
+        "Reduce alcohol intake",
+        "Reduce salt intake, limit to a maximum of 1 teaspoon (5 grams) of salt per day for the whole family",
+        "Reduce consumption of oily, fried, and fatty foods",
+        "Reduce intake of refined cereals (maida), sugar, and sweet beverages",
+        "Eat more fresh fruits, vegetables, whole grains, and whole pulses",
+        "Maintain a healthy weight, losing weight if overweight significantly reduces blood pressure",
+        "Be physically active, at least 30 minutes of brisk walking or moderate activity daily",
+        "Manage stress, practice relaxation techniques, take breaks, maintain social connections",
+        "Take blood pressure medicines every day as prescribed, do not stop on your own even if you feel fine",
+        "Get blood pressure checked at least once a month if on treatment",
+        "Attend regular follow-up at the Primary Health Centre or sub-centre as advised"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 29,
+      "items": [
+        "Hypertension is called the silent killer because it usually has no symptoms, the only way to detect it is to measure blood pressure",
+        "All adults aged 30 years and above should have their blood pressure checked at least once a year even if they feel well",
+        "A blood pressure reading of 140 mm Hg systolic (upper number) or 90 mm Hg diastolic (lower number) or above on a single reading should prompt referral to a medical officer for confirmation and further management",
+        "Frequent headaches, especially at the back of the head in the morning, can sometimes be a symptom of very high blood pressure",
+        "Any person with high blood pressure who develops a new symptom or illness, they are at higher risk of complications",
+        "Family history of heart attack or stroke, screening and prevention are very important"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 32,
+      "items": [
+        "Any heart attack or stroke warning sign listed above, these are medical emergencies",
+        "Very severe headache with high blood pressure and visual disturbance or confusion, may indicate hypertensive emergency",
+        "A known hypertensive patient who has stopped their medication and is now feeling unwell",
+        "A hypertensive patient with chest pain, breathlessness, or swelling of the legs, may indicate heart failure"
+      ]
+    }
+  ],
+  "prevention_note": {
+    "label": "Preventing Heart Attack and Stroke in Hypertensive Patients",
+    "source_page": 32,
+    "items": [
+      "All adults above 30 years should be screened annually for both high blood pressure and diabetes",
+      "Blood pressure and blood sugar must be monitored regularly in high-risk individuals, those with a family history of heart attack or stroke",
+      "Anyone who experiences heart attack or stroke warning signs must seek immediate medical care, every minute matters"
+    ]
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All drug names, antihypertensive medication classes, and BP measurement procedural steps excluded. Heart attack and stroke warning signs retained verbatim from source pages 31-32 as these are emergency-critical. The 140/90 referral threshold retained as it is a screening action point (see a doctor), not a treatment threshold."
+  }
+}

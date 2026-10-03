@@ -1,0 +1,98 @@
+{
+  "id": "icmr-stw-urinary-tract-infection",
+  "condition": "Urinary Tract Infection (UTI)",
+  "icd_code": "ICD-11-GC08",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Urinary Tract Infections",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2026",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "antibiotic names",
+      "dosing schedules",
+      "IV regimens",
+      "lab reference values beyond triage purpose"
+    ]
+  },
+  "types_covered": [
+    "Uncomplicated UTI (bladder infection)",
+    "Complicated UTI / Pyelonephritis (kidney infection)",
+    "Recurrent UTI"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Fever above 100 degrees Fahrenheit along with urinary symptoms",
+        "Chills and rigors (shaking with cold)",
+        "Fast heart rate (tachycardia)",
+        "Fast breathing (tachypnoea)",
+        "Low blood pressure (hypotension)",
+        "Pain or tenderness in the flank (the side of the back, just below the ribs), this may indicate a kidney infection",
+        "Confusion or altered mental state (obtundation)",
+        "Signs of sepsis: high fever, fast heart rate, very unwell appearance, confusion"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Supportive Self-Care While Seeking Medical Help",
+      "page": 1,
+      "items": [
+        "Drink plenty of water and fluids to flush out the urinary tract",
+        "Do not delay seeking a doctor. UTIs require antibiotic treatment prescribed by a doctor and should not be managed with home remedies alone",
+        "Paracetamol can be taken for pain relief while waiting to see a doctor",
+        "Avoid holding urine for long periods",
+        "Empty your bladder fully each time you urinate",
+        "Wipe from front to back after using the toilet (for women) to avoid introducing bacteria",
+        "Urinate soon after sexual intercourse to help prevent UTIs"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor Promptly",
+      "page": 1,
+      "items": [
+        "Burning or pain when urinating",
+        "Frequent urge to urinate even when little urine passes",
+        "Feeling of urgency, needing to rush to the toilet",
+        "Pain or pressure in the lower abdomen or pelvis",
+        "Cloudy, dark, or foul-smelling urine",
+        "Blood in the urine",
+        "Urinary symptoms in a pregnant woman. UTI in pregnancy requires prompt treatment",
+        "Urinary symptoms in a person with diabetes, kidney disease, or a known urinary tract abnormality, these are high-risk groups",
+        "Recurrent UTIs (more than 2 in 6 months or 3 in a year)",
+        "Symptoms not improving after a full course of prescribed antibiotics"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Refer to Higher Centre",
+      "page": 1,
+      "items": [
+        "Any red flag sign is present, fever, chills, flank pain, fast heartbeat, low blood pressure",
+        "Signs of kidney infection (pyelonephritis): fever, flank pain, very unwell",
+        "UTI in pregnancy that is complicated or not responding to first treatment",
+        "Recent urological procedure or surgery with new urinary symptoms",
+        "Recurrent UTI requiring investigation (cystoscopy or urodynamics)",
+        "UTI in a person with known kidney stones or urinary tract obstruction",
+        "Prostatitis: UTI symptoms combined with pelvic pain or a tender prostate in men"
+      ]
+    }
+  ],
+  "high_risk_groups": [
+    "Pregnant women",
+    "People with kidney stones",
+    "People with urinary tract obstruction or anatomical abnormality",
+    "People who are immunocompromised",
+    "People with chronic kidney disease",
+    "People who have recently had a urological procedure"
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antibiotic names, dosing schedules, and lab result thresholds for prescribing excluded. The red flag list and high-risk group list are directly from the source document and are essential for safe triage."
+  }
+}

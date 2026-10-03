@@ -1,0 +1,1216 @@
+{
+  "meta": {
+    "description": "AIRA deterministic triage and safety rules (Schema v2).",
+    "version": "2.0.0",
+    "last_updated": "2026-10-03"
+  },
+  "rules": [
+    {
+      "id": "ER-009",
+      "kind": "emergency",
+      "condition": "Airway obstruction, epiglottitis, deep neck infection, or peritonsillar abscess",
+      "source_id": "icmr-stw-pharyngitis-sore-throat",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "drooling saliva",
+          "drooling",
+          "unable to swallow liquids",
+          "cannot swallow liquids",
+          "stridor",
+          "muffled voice",
+          "cannot open mouth",
+          "unable to open mouth",
+          "trismus",
+          "grey membrane in throat",
+          "gray membrane in throat",
+          "neck swelling"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Inability to swallow saliva, stridor (noisy high-pitched breathing), muffled voice, or a grey throat membrane indicate dangerous airway infections like epiglottitis or peritonsillar abscess. Go to a hospital emergency room immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-001",
+      "kind": "emergency",
+      "condition": "Urticaria and Angioedema airway compromise",
+      "source_id": "icmr-stw-urticaria-angioedema",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "throat swelling",
+          "tongue swelling",
+          "lip swelling",
+          "throat is swelling",
+          "severe lip swelling",
+          "choking sensation",
+          "anaphylaxis",
+          "throat closing",
+          "airway swelling",
+          "laryngeal angioedema",
+          "respiratory distress",
+          "swelling of lips",
+          "swelling of tongue",
+          "swelling of throat"
+        ],
+        "requires_all": [
+          [
+            "throat",
+            "tongue",
+            "lips",
+            "mouth",
+            "face"
+          ],
+          [
+            "swelling",
+            "swollen",
+            "closing",
+            "closing up"
+          ],
+          [
+            "cant breathe",
+            "cannot breathe",
+            "difficulty breathing",
+            "choking sensation"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "This sounds like a severe allergic reaction (angioedema or anaphylaxis) affecting the airway. Call 112 or go to the nearest emergency room immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-023",
+      "kind": "emergency",
+      "condition": "Choking and acute foreign body airway obstruction",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "choking on food",
+          "choking on object",
+          "airway blocked food",
+          "blocked airway",
+          "blocking airway",
+          "airway blocked",
+          "clutching neck",
+          "clutching throat"
+        ],
+        "requires_all": [
+          [
+            "food",
+            "bone",
+            "object",
+            "seed",
+            "coin",
+            "choking"
+          ],
+          [
+            "stuck in throat",
+            "in throat",
+            "in airway",
+            "at neck",
+            "cannot breathe",
+            "unable to breathe",
+            "struggling to breathe",
+            "cant breathe"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Choking is a life-threatening airway emergency. Perform back blows or the Heimlich maneuver and call 112 immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-007",
+      "kind": "emergency",
+      "condition": "Severe asthma exacerbation / acute respiratory distress",
+      "source_id": "icmr-stw-acute-respiratory-infections",
+      "source_page": 2,
+      "match": {
+        "phrases": [
+          "severe asthma attack",
+          "asthma attack",
+          "chest indrawing",
+          "chest in drawing",
+          "stridor",
+          "severe wheezing",
+          "cannot complete sentences",
+          "too breathless to talk",
+          "too breathless to speak"
+        ],
+        "requires_all": [
+          [
+            "wheeze",
+            "wheezing",
+            "asthma",
+            "severe asthma",
+            "asthma flare",
+            "inhaler",
+            "pump",
+            "chest locked",
+            "chest tight",
+            "chest tightness"
+          ],
+          [
+            "not helping",
+            "not working",
+            "no relief",
+            "getting worse",
+            "worsening",
+            "cannot speak",
+            "cant speak",
+            "cant breathe",
+            "cannot breathe",
+            "short of breath",
+            "breathless"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Severe asthma attacks not relieved by inhalers or accompanied by chest indrawing are life-threatening. Call 112 or go to an emergency room immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-006",
+      "kind": "emergency",
+      "condition": "Severe respiratory distress / respiratory failure",
+      "source_id": "icmr-stw-acute-respiratory-infections",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "struggling to breathe",
+          "lips turning blue",
+          "blue lips",
+          "cannot breathe",
+          "cant breathe",
+          "gasping",
+          "gasping for air",
+          "cyanosis",
+          "breathless and gasping",
+          "speak few words",
+          "too breathless to talk",
+          "breathing very fast"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Severe difficulty breathing, gasping, or bluish lips indicate respiratory distress. Call 112 or go to the nearest hospital immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-004",
+      "kind": "emergency",
+      "condition": "Heart attack warning signs",
+      "source_id": "asha-ncd-hypertension",
+      "source_page": 31,
+      "match": {
+        "phrases": [
+          "chest pain",
+          "chest pressure",
+          "chest tightness",
+          "tight chest discomfort",
+          "heart attack",
+          "crushing chest pain",
+          "severe crushing chest pain",
+          "chest heaviness",
+          "chest pain spreading",
+          "radiating to left arm",
+          "chest pain radiating",
+          "chest discomfort radiating",
+          "discomfort radiating to jaw",
+          "pain in chest spreading"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Severe chest pain, chest tightness, or pain spreading to the arm or jaw are warning signs of a heart attack. Call 112 or go to the nearest hospital emergency department immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-005",
+      "kind": "emergency",
+      "condition": "Stroke warning signs",
+      "source_id": "asha-ncd-hypertension",
+      "source_page": 31,
+      "match": {
+        "phrases": [
+          "stroke",
+          "facial droop",
+          "face drooping",
+          "slurred speech",
+          "jumbled words",
+          "words jumbled",
+          "cannot speak",
+          "cant speak",
+          "trouble speaking",
+          "sudden vision loss",
+          "speech difficulty"
+        ],
+        "requires_all": [
+          [
+            "one side",
+            "half of body",
+            "left side",
+            "right side",
+            "face",
+            "arm",
+            "leg"
+          ],
+          [
+            "numb",
+            "numbness",
+            "weak",
+            "weakness",
+            "droop",
+            "drooping",
+            "paralysis",
+            "cannot move",
+            "cant move"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Sudden weakness on one side of the face or body, difficulty speaking, or sudden loss of vision are signs of a stroke. Time is critical. Call 112 or go to the nearest hospital with stroke facilities immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-014",
+      "kind": "emergency",
+      "condition": "Diabetic foot ulcer with severe spreading infection or gangrene",
+      "source_id": "icmr-stw-diabetes-type2",
+      "source_page": 3,
+      "match": {
+        "phrases": [
+          "diabetic foot",
+          "gangrene in diabetic foot",
+          "diabetic ulcer swelling",
+          "black toe in diabetic"
+        ],
+        "requires_all": [
+          [
+            "diabetic",
+            "diabetes",
+            "sugar patient"
+          ],
+          [
+            "foot",
+            "heel",
+            "toe",
+            "leg",
+            "calf",
+            "sole",
+            "ulcer",
+            "wound"
+          ],
+          [
+            "red streaks",
+            "streaks",
+            "spreading",
+            "black",
+            "dark",
+            "foul",
+            "pus",
+            "necrotic",
+            "gangrene",
+            "swelling rapidly",
+            "rapidly swelling",
+            "chills",
+            "high fever",
+            "fever",
+            "swelling"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Spreading redness, black discoloration (gangrene), foul odor, or high fever in a person with a diabetic foot ulcer indicates severe tissue infection or sepsis. Go to a hospital immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-002",
+      "kind": "emergency",
+      "condition": "Bacterial skin infection with sepsis or necrosis",
+      "source_id": "icmr-stw-bacterial-skin-infections",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "black skin",
+          "dark skin",
+          "skin turning black",
+          "turning black",
+          "skin turning dark",
+          "necrotic",
+          "necrotising",
+          "necrotizing",
+          "dying tissue",
+          "dead tissue",
+          "gangrene",
+          "pain stopped suddenly",
+          "widespread peeling",
+          "sloughing skin",
+          "peeling blisters"
+        ],
+        "requires_all": [
+          [
+            "skin",
+            "wound",
+            "infection",
+            "redness",
+            "red",
+            "swelling",
+            "boil",
+            "abscess",
+            "ulcer",
+            "sore",
+            "cellulitis",
+            "blister"
+          ],
+          [
+            "rapidly",
+            "fast",
+            "red streaks",
+            "streaks",
+            "rapidly spreading",
+            "severe pain",
+            "pain",
+            "unconscious",
+            "collapsed",
+            "unresponsive"
+          ],
+          [
+            "confusion",
+            "chills",
+            "foul smell",
+            "foul odor",
+            "black",
+            "dark",
+            "necrotic",
+            "dying",
+            "dead",
+            "high fever",
+            "no pain",
+            "pain stopped",
+            "loss of sensation",
+            "after infection"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Severe skin infections with rapidly spreading discoloration, dead tissue, or signs of sepsis are dangerous emergencies. Call 112 or go to the nearest hospital immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-003",
+      "kind": "emergency",
+      "condition": "Urinary tract infection with sepsis / pyelonephritis",
+      "source_id": "icmr-stw-urinary-tract-infection",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "shaking chills",
+          "severe shaking chills",
+          "pyelonephritis",
+          "uti fever",
+          "urine infection fever",
+          "back pain with fever"
+        ],
+        "requires_all": [
+          [
+            "flank pain",
+            "kidney pain",
+            "kidney area",
+            "loin pain",
+            "side back pain",
+            "burning urination",
+            "painful urination",
+            "uti",
+            "urine infection",
+            "urinary infection",
+            "kidney infection"
+          ],
+          [
+            "fever",
+            "chills",
+            "shivering",
+            "rigors",
+            "vomiting",
+            "hematuria",
+            "blood in urine",
+            "back pain",
+            "high fever"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Fever or chills with flank/kidney pain or urinary symptoms indicates a serious upper kidney infection (pyelonephritis) or sepsis. Go to a hospital emergency department immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-008",
+      "kind": "emergency",
+      "condition": "Acute rhinosinusitis with orbital or intracranial complications",
+      "source_id": "icmr-stw-acute-rhinosinusitis",
+      "source_page": 2,
+      "match": {
+        "phrases": [
+          "proptosis",
+          "orbital swelling",
+          "stiff neck",
+          "black discharge from nose",
+          "black nasal discharge",
+          "reduced vision",
+          "swelling around eyes",
+          "eye swelling with fever",
+          "eye swelling"
+        ],
+        "requires_all": [
+          [
+            "eye",
+            "eyelid",
+            "eyeball"
+          ],
+          [
+            "bulging",
+            "bulge",
+            "protruding",
+            "double vision",
+            "vision loss",
+            "swollen shut",
+            "reduced vision"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Sinus or facial symptoms accompanied by eye bulging, vision changes, stiff neck, or dark tissue discharge indicate severe complications. Go to a hospital emergency department immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-010",
+      "kind": "emergency",
+      "condition": "Severe dehydration and shock in acute diarrhoea",
+      "source_id": "icmr-stw-acute-diarrhea",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "skin pinch slow",
+          "skin pinch very slow",
+          "skin pinch 2s",
+          "cholera",
+          "sunken eyes",
+          "rapid weak pulse",
+          "low blood pressure"
+        ],
+        "requires_all": [
+          [
+            "diarrhoea",
+            "diarrhea",
+            "loose stools",
+            "loose stool",
+            "rice water",
+            "watery stools",
+            "watery diarrhoea",
+            "watery diarrhea",
+            "vomiting",
+            "passing many stools",
+            "skin pinch",
+            "skin turgor"
+          ],
+          [
+            "cold clammy",
+            "cold hands",
+            "no urine",
+            "not passed urine",
+            "very weak",
+            "sunken eyes",
+            "cannot drink",
+            "unable to drink",
+            "unconscious",
+            "limp",
+            "rapid weak pulse",
+            "low blood pressure",
+            "slow",
+            "very slow",
+            "very slowly",
+            "delayed",
+            "seconds"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Signs of severe dehydration (sunken eyes, skin pinch taking >2 seconds, inability to drink) can rapidly lead to shock. Go to a hospital or primary health centre immediately for IV fluids.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-011",
+      "kind": "emergency",
+      "condition": "Dengue warning signs and severe dengue / dengue shock",
+      "source_id": "icmr-stw-dengue-fever",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "dengue warning signs",
+          "dengue shock"
+        ],
+        "requires_all": [
+          [
+            "dengue",
+            "dengue fever"
+          ],
+          [
+            "persistent vomiting",
+            "severe abdominal pain",
+            "cold hands",
+            "cold feet",
+            "cold extremities",
+            "cold clammy skin",
+            "clammy skin",
+            "drop in temperature",
+            "sudden drop in temperature",
+            "bleeding",
+            "bleeding gums",
+            "no urine",
+            "unconscious",
+            "restlessness",
+            "extreme lethargy"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Persistent vomiting, severe stomach pain, bleeding gums, or cold clammy skin in dengue are critical warning signs of severe dengue or shock. Go to a hospital immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-012",
+      "kind": "emergency",
+      "condition": "Severe hypoglycaemia in diabetes",
+      "source_id": "icmr-stw-diabetes-type2",
+      "source_page": 2,
+      "match": {
+        "phrases": [
+          "severe hypoglycaemia",
+          "severe hypoglycemia",
+          "diabetic ketoacidosis"
+        ],
+        "requires_all": [
+          [
+            "diabetic",
+            "diabetes",
+            "sugar patient",
+            "insulin"
+          ],
+          [
+            "confused",
+            "cannot swallow",
+            "passing out",
+            "unconscious",
+            "unarousable",
+            "fainting",
+            "seizure",
+            "not responding",
+            "drowsy"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Severe low blood sugar (hypoglycaemia) causing unconsciousness or inability to swallow is a medical emergency. Call 112 or go to the nearest emergency room immediately.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-013",
+      "kind": "emergency",
+      "condition": "Severe or uncontrolled nosebleed (epistaxis)",
+      "source_id": "icmr-stw-epistaxis-nosebleed",
+      "source_page": 1,
+      "min_minutes": 20,
+      "match": {
+        "phrases": [
+          "nosebleed",
+          "nose bleed",
+          "nose bleeding",
+          "bleeding from nose",
+          "epistaxis"
+        ],
+        "requires_all": [
+          [
+            "nosebleed",
+            "nose bleed",
+            "nose bleeding",
+            "bleeding from nose",
+            "epistaxis"
+          ],
+          [
+            "wont stop",
+            "not stopping",
+            "heavy",
+            "heavily",
+            "massive",
+            "profuse",
+            "both nostrils",
+            "dizzy",
+            "fainting",
+            "faint",
+            "feeling faint",
+            "flowing down throat",
+            "facial injury",
+            "high blood pressure"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "A nosebleed that does not stop after 20 minutes of firm continuous pressure, causes heavy bleeding, follows facial trauma, or causes dizziness requires emergency care. Go to the nearest emergency room or hospital.",
+      "review_status": "source_backed"
+    },
+    {
+      "id": "ER-022",
+      "kind": "emergency",
+      "condition": "Bleeding during pregnancy",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "antepartum hemorrhage",
+          "bleeding in pregnancy",
+          "bleeding during pregnancy",
+          "spotting in pregnancy",
+          "pregnancy bleeding"
+        ],
+        "requires_all": [
+          [
+            "pregnant",
+            "pregnancy",
+            "expecting"
+          ],
+          [
+            "vaginal bleeding",
+            "bleeding heavily",
+            "heavy bleeding",
+            "soaking pads",
+            "passing clots",
+            "bleeding",
+            "spotting",
+            "spotting blood",
+            "belly pain",
+            "abdominal pain",
+            "cramping",
+            "severe cramping"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Vaginal bleeding during pregnancy requires immediate emergency obstetric assessment. Go to the nearest maternity hospital or call 112 or 102 immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-015",
+      "kind": "emergency",
+      "condition": "Severe or uncontrolled bleeding",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "spurting",
+          "spurting blood",
+          "arterial bleeding",
+          "bleeding uncontrollably",
+          "uncontrollable bleeding",
+          "bleeding wont stop",
+          "blood wont stop",
+          "soaked through",
+          "bleeding heavily",
+          "massive bleeding",
+          "heavy bleeding",
+          "profuse bleeding",
+          "bleeding profusely"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Severe or uncontrolled bleeding is a medical emergency. Apply firm, continuous pressure with a clean cloth and call 112 or go to the nearest hospital immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-016",
+      "kind": "emergency",
+      "condition": "Vomiting blood, black or tarry stools",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "vomiting blood",
+          "blood in vomit",
+          "vomit blood",
+          "black stools",
+          "black stool",
+          "tarry stools",
+          "tarry stool",
+          "blood in throw up",
+          "black potty",
+          "tarry potty",
+          "dark blood",
+          "throwing up dark blood"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Vomiting blood or passing black, tarry stools indicates internal bleeding. Call 112 or go to the nearest hospital immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-017",
+      "kind": "emergency",
+      "condition": "Seizure or fits",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "convulsion",
+          "convulsions",
+          "convulsing",
+          "seizure",
+          "seizures",
+          "fits",
+          "foaming at mouth",
+          "jerking",
+          "shaking uncontrollably",
+          "violent twitching",
+          "status epilepticus"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Seizures or convulsions require immediate medical evaluation. Ensure the person is in a safe space on their side and call 112 or go to the nearest hospital.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-018",
+      "kind": "emergency",
+      "condition": "Unconscious or not responding",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "unconscious",
+          "passed out",
+          "not responding",
+          "unresponsive",
+          "not waking up",
+          "collapsed",
+          "cannot wake up",
+          "not waking up"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Loss of consciousness or unresponsiveness is a critical emergency. Call 112 or go to the nearest hospital immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-019",
+      "kind": "emergency",
+      "condition": "Poisoning, overdose, swallowed pesticide or chemicals",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "overdose",
+          "drug overdose",
+          "poisoning",
+          "chemical poisoning"
+        ],
+        "requires_all": [
+          [
+            "swallowed",
+            "ingested",
+            "drank",
+            "consumed",
+            "ate",
+            "took too many"
+          ],
+          [
+            "acid",
+            "poison",
+            "pesticide",
+            "bleach",
+            "cleaner",
+            "kerosene",
+            "phenyl",
+            "insecticide",
+            "rat poison",
+            "toxic"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Poisoning or chemical ingestion is a life-threatening emergency. Call 112 or go to the nearest hospital immediately with the container of the substance.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-020",
+      "kind": "emergency",
+      "condition": "Snake bite",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "snakebite",
+          "snake bite"
+        ],
+        "requires_all": [
+          [
+            "snake",
+            "viper",
+            "cobra",
+            "krait",
+            "serpent"
+          ],
+          [
+            "bite",
+            "bitten",
+            "bit",
+            "bites",
+            "fang"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "A snake bite requires immediate emergency treatment with anti-venom. Keep the bitten limb still, do not cut or suck the bite, and go to the nearest hospital immediately. Call 112.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-021",
+      "kind": "emergency",
+      "condition": "Head injury with vomiting, drowsiness or confusion",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "skull fracture",
+          "head trauma vomiting",
+          "hit head vomiting",
+          "fall on head vomiting",
+          "head injury confusion"
+        ],
+        "requires_all": [
+          [
+            "head injury",
+            "hit head",
+            "hit my head",
+            "banged head",
+            "head blow",
+            "struck head",
+            "fell on head",
+            "fall on head",
+            "head trauma",
+            "blow to head"
+          ],
+          [
+            "vomiting",
+            "vomit",
+            "confused",
+            "confusion",
+            "drowsy",
+            "drowsiness",
+            "unconscious",
+            "lost consciousness",
+            "loss of consciousness",
+            "memory loss",
+            "fluid from ear",
+            "blood from ear",
+            "seizure",
+            "blurred vision"
+          ]
+        ]
+      },
+      "negatable": true,
+      "response": "Head injury accompanied by vomiting, drowsiness, or confusion may indicate bleeding in the brain. Go to the nearest hospital or call 112 immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "CR-001",
+      "kind": "crisis",
+      "condition": "Self-harm or suicide crisis",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "suicide",
+          "want to die",
+          "kill myself",
+          "end my life",
+          "suicidal",
+          "self harm",
+          "harm myself",
+          "thinking of suicide",
+          "commit suicide"
+        ],
+        "requires_all": []
+      },
+      "negatable": false,
+      "response": "If you are feeling overwhelmed or having thoughts of self-harm, support is available right now. Please call the national mental health helpline Tele-MANAS at 14416 (toll-free, 24/7) or call 112. You do not have to go through this alone.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "RF-001",
+      "kind": "refusal",
+      "condition": "Medication dosage request",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [],
+        "requires_all": [
+          [
+            "how much",
+            "how many",
+            "what dose",
+            "dose of",
+            "dosage",
+            "how often",
+            "how long to take",
+            "what dosage",
+            "how many tablets",
+            "prescribe",
+            "prescription",
+            "write me a prescription",
+            "authorize you to prescribe",
+            "mg",
+            "mcg",
+            "ml",
+            "puff",
+            "puffs",
+            "drops",
+            "how long",
+            "how many days",
+            "course of"
+          ],
+          [
+            "tablet",
+            "tablets",
+            "capsule",
+            "capsules",
+            "syrup",
+            "drops",
+            "pill",
+            "pills",
+            "sleeping pills",
+            "injection",
+            "cream",
+            "lotion",
+            "ointment",
+            "gel",
+            "inhaler",
+            "antibiotic",
+            "antibiotics",
+            "painkiller",
+            "painkillers",
+            "steroid",
+            "steroids",
+            "antihistamine",
+            "antifungal",
+            "medicine",
+            "medication",
+            "drug",
+            "@drugs"
+          ]
+        ]
+      },
+      "negatable": false,
+      "response": "AIRA cannot give medication doses or drug prescription instructions. Please consult a doctor or pharmacist for safe, personalized medication advice.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "RF-002",
+      "kind": "refusal",
+      "condition": "Direct diagnosis request",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "do i have",
+          "diagnose me",
+          "is this cancer",
+          "do i suffer from",
+          "diagnose my condition",
+          "diagnose my illness",
+          "what disease do i",
+          "what illness do i",
+          "what am i suffering",
+          "tell what i have"
+        ],
+        "requires_all": [
+          [
+            "do i have",
+            "what disease",
+            "what illness",
+            "what condition",
+            "diagnose",
+            "is this",
+            "am i suffering",
+            "tell me what",
+            "tell me if i"
+          ],
+          [
+            "cancer",
+            "disease",
+            "illness",
+            "infection",
+            "condition",
+            "i have",
+            "suffering from",
+            "my diagnosis",
+            "sick with"
+          ]
+        ]
+      },
+      "negatable": false,
+      "response": "AIRA provides guideline information only and cannot diagnose medical conditions. Please see a qualified healthcare professional for a clinical examination and diagnosis.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "RF-003",
+      "kind": "refusal",
+      "condition": "Drug interaction advice request",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "with alcohol",
+          "with beer",
+          "with wine",
+          "with whisky",
+          "with rum"
+        ],
+        "requires_all": [
+          [
+            "take with",
+            "mix with",
+            "combine with",
+            "together with",
+            "interaction",
+            "interactions",
+            "safe with",
+            "can i take with",
+            "can i mix",
+            "along with",
+            "taken with",
+            "together",
+            "mix",
+            "combine",
+            "interact"
+          ],
+          [
+            "medicine",
+            "medication",
+            "tablet",
+            "tablets",
+            "syrup",
+            "drug",
+            "@drugs",
+            "alcohol",
+            "beer",
+            "wine",
+            "whisky",
+            "rum"
+          ]
+        ]
+      },
+      "negatable": false,
+      "response": "AIRA cannot evaluate drug-drug or drug-alcohol interactions. Please consult a doctor or pharmacist before combining any medications.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "RF-004",
+      "kind": "refusal",
+      "condition": "Jailbreak and role-play prompt injection attempt",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "ignore previous instructions",
+          "ignore prior guardrails",
+          "act as dan",
+          "do anything now",
+          "you are now",
+          "pretend you are",
+          "developer mode",
+          "system prompt"
+        ],
+        "requires_all": []
+      },
+      "negatable": false,
+      "response": "AIRA cannot change its rules. Describe your symptoms and AIRA will tell you what the guidelines say.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "RF-005",
+      "kind": "refusal",
+      "condition": "Authority claim and override attempt",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "i am a doctor",
+          "i am dr",
+          "i authorize you",
+          "as chief medical officer",
+          "as a physician"
+        ],
+        "requires_all": []
+      },
+      "negatable": false,
+      "response": "AIRA cannot change its rules. Describe your symptoms and AIRA will tell you what the guidelines say.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SC-100",
+      "kind": "scope",
+      "condition": "Pediatric / child scope exclusion",
+      "source_id": null,
+      "source_page": null,
+      "match": {
+        "phrases": [
+          "baby",
+          "infant",
+          "newborn",
+          "toddler",
+          "my child",
+          "my son",
+          "my daughter",
+          "my kid",
+          "my baby",
+          "months old",
+          "month old",
+          "1 year old",
+          "2 year old",
+          "3 year old",
+          "4 year old",
+          "5 year old",
+          "6 year old",
+          "7 year old",
+          "8 year old",
+          "9 year old",
+          "10 year old",
+          "11 year old",
+          "12 year old",
+          "1 years old",
+          "2 years old",
+          "3 years old",
+          "4 years old",
+          "5 years old",
+          "6 years old",
+          "7 years old",
+          "8 years old",
+          "9 years old",
+          "10 years old",
+          "11 years old",
+          "12 years old"
+        ],
+        "requires_all": []
+      },
+      "negatable": false,
+      "response": "AIRA version 1 covers adults. For a child who is unwell, see a doctor or health worker today. In an emergency call 112.",
+      "review_status": "pending_clinical_review"
+    }
+  ]
+}

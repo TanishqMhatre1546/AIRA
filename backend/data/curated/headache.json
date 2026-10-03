@@ -1,0 +1,94 @@
+{
+  "id": "icmr-stw-headache",
+  "condition": "Headache",
+  "icd_code": "ICD-10-G43-44",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Headache",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "prophylaxis regimens",
+      "neurological investigation protocols"
+    ]
+  },
+  "types_covered": [
+    "Tension headache",
+    "Migraine",
+    "Cluster headache",
+    "Secondary headache due to serious underlying conditions"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "The worst headache of your life, a sudden, extremely severe headache that reaches maximum intensity within seconds to minutes (thunderclap headache). This can be a sign of bleeding in the brain.",
+        "First ever severe headache, especially in a person who does not usually get headaches",
+        "Headache with fever and stiff neck, may indicate meningitis",
+        "Headache with fever and change in behaviour, personality, or level of consciousness",
+        "Headache with confusion or disorientation",
+        "Headache with weakness, numbness, or paralysis on one side of the body or face",
+        "Headache with sudden vision changes or vision loss",
+        "Severe headache that wakes you up from sleep",
+        "Headache in a pregnant woman or someone who has recently given birth",
+        "New headache type in a person with cancer or a weakened immune system",
+        "Progressive headache that is steadily getting worse over days or weeks",
+        "Headache associated with a recent head injury"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care for Common Tension Headache or Known Migraine",
+      "page": 1,
+      "items": [
+        "Rest in a quiet, dark, and cool room, this is especially helpful for migraine",
+        "Paracetamol can be taken for pain relief as per the dosage on the pack",
+        "Stay hydrated, dehydration is a common trigger for headaches",
+        "Apply a cold or warm compress to the forehead or the back of the neck",
+        "Avoid known personal triggers: irregular sleep, skipping meals, too much screen time, bright lights, strong smells, stress",
+        "Ensure at least 6 hours of sleep regularly, sleep deprivation is a major trigger for both tension headache and migraine",
+        "Reduce caffeine intake gradually if you consume large amounts, sudden stopping can also trigger headaches",
+        "Stress management: take short breaks, practice deep breathing, and avoid overwork",
+        "For migraine, lie down in a dark room and sleep if possible, sleep often relieves migraine",
+        "Do not take painkillers more than 3 days a week for headaches, overuse of painkillers causes its own rebound headaches"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Headaches occurring more than twice a month",
+        "Headaches that are interfering with daily work or sleep",
+        "Headaches that are getting more frequent or more severe over time",
+        "Migraine not responding to paracetamol",
+        "Headache always on the same side of the head",
+        "Headache with nausea and vomiting regularly",
+        "Tension headache persisting for many years with significant sleep disturbance",
+        "Any new or unusual headache pattern that you have not had before"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any red flag sign listed above, thunderclap headache, fever with stiff neck, confusion, one-sided weakness, vision loss, worst headache of your life",
+        "Headache that is progressively worsening over days and not responding to any treatment",
+        "Headache with seizures or loss of consciousness",
+        "Headache in someone with a known cancer or on immunosuppressive drugs",
+        "Severe migraine with hemiplegia (arm or leg weakness on one side), vertigo, or significant visual impairment, these are atypical and need urgent evaluation to rule out stroke"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All drug names and dosing excluded, including paracetamol dosing for migraine (listed in source). Retained paracetamol as a named option only in self-care because it is available OTC and the instruction to use it as labelled is safe. Red flag signs retained in full, these are the most clinically critical content in this document and map directly to the emergency and refer rules."
+  }
+}

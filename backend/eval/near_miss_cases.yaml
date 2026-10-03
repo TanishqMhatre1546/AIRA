@@ -1,0 +1,171 @@
+version: "1.0.0"
+description: "AIRA near-miss precision evaluation cases containing emergency-like words that must not trigger EMERGENCY or CRISIS."
+
+cases:
+  - id: "NM-001"
+    text: "Mild skin peeling between my toes with slight itch."
+    expected_outcome: "PASS"
+
+  - id: "NM-002"
+    text: "A few specks of blood on a tissue after blowing my nose gently."
+    expected_outcome: "PASS"
+
+  - id: "NM-003"
+    text: "My small kitchen cut stopped bleeding after two minutes."
+    expected_outcome: "PASS"
+
+  - id: "NM-004"
+    text: "My head hurts a little after a long day in front of computer."
+    expected_outcome: "PASS"
+
+  - id: "NM-005"
+    text: "I felt slightly breathless after climbing 4 flights of stairs with heavy grocery bags."
+    expected_outcome: "PASS"
+
+  - id: "NM-006"
+    text: "Small dry scabs on my knee after a minor scrape last week."
+    expected_outcome: "PASS"
+
+  - id: "NM-007"
+    text: "Had mild dizzy sensation when standing up too fast this morning."
+    expected_outcome: "PASS"
+
+  - id: "NM-008"
+    text: "Felt very thirsty after running in the hot sun afternoon."
+    expected_outcome: "PASS"
+
+  - id: "NM-009"
+    text: "My child is studying hard for exams and feeling sleepy."
+    expected_outcome: "PASS"
+
+  - id: "NM-010"
+    text: "Mild chest muscle soreness after doing pushups at gym yesterday."
+    expected_outcome: "PASS"
+
+  - id: "NM-011"
+    text: "Minor skin redness on arm after mosquito bite that stopped itching."
+    expected_outcome: "PASS"
+
+  - id: "NM-012"
+    text: "My nose was dry and had a tiny speck of dried blood."
+    expected_outcome: "PASS"
+
+  - id: "NM-013"
+    text: "Felt mild stomach cramping before passing normal stool."
+    expected_outcome: "PASS"
+
+  - id: "NM-014"
+    text: "Slight twitching in my left eyelid after lack of sleep."
+    expected_outcome: "PASS"
+
+  - id: "NM-015"
+    text: "I bit my tongue while chewing food, bled for a minute then stopped."
+    expected_outcome: "PASS"
+
+  - id: "NM-016"
+    text: "Minor scrape on finger while chopping onions, no active bleeding."
+    expected_outcome: "PASS"
+
+  - id: "NM-017"
+    text: "My throat felt dry and scratchy upon waking up with AC on."
+    expected_outcome: "PASS"
+
+  - id: "NM-018"
+    text: "Slight redness on skin after wearing tight elastic waistband."
+    expected_outcome: "PASS"
+
+  - id: "NM-019"
+    text: "Small paper cut on thumb that stopped bleeding immediately."
+    expected_outcome: "PASS"
+
+  - id: "NM-020"
+    text: "Felt mild fatigue after working a 12 hour shift."
+    expected_outcome: "PASS"
+
+  - id: "NM-021"
+    text: "Mild skin peeling on sunburned shoulders from beach trip."
+    expected_outcome: "PASS"
+
+  - id: "NM-022"
+    text: "Tiny spot of blood after shaving my chin this morning."
+    expected_outcome: "PASS"
+
+  - id: "NM-023"
+    text: "Brief cough after inhaling dust while cleaning the ceiling fan."
+    expected_outcome: "PASS"
+
+  - id: "NM-024"
+    text: "Mild muscle twitch in my calf after playing football."
+    expected_outcome: "PASS"
+
+  - id: "NM-025"
+    text: "Had mild nausea for 10 minutes after car journey on winding hill road."
+    expected_outcome: "PASS"
+
+  - id: "NM-026"
+    text: "Felt momentary lightheadedness after skipping breakfast."
+    expected_outcome: "PASS"
+
+  - id: "NM-027"
+    text: "Slightly scratchy voice after cheering at cricket match."
+    expected_outcome: "PASS"
+
+  - id: "NM-028"
+    text: "Mild dry skin flaking on legs during dry winter days."
+    expected_outcome: "PASS"
+
+  - id: "NM-029"
+    text: "Tiny red pimple on forehead that is resolving."
+    expected_outcome: "PASS"
+
+  - id: "NM-030"
+    text: "Slight burning in eyes after chopping raw onions."
+    expected_outcome: "PASS"
+
+  - id: "NM-031"
+    text: "Sneezed twice after walking through grass pollen in the garden."
+    expected_outcome: "PASS"
+
+  - id: "NM-032"
+    text: "Felt brief flutter in chest after drinking large strong espresso."
+    expected_outcome: "PASS"
+
+  - id: "NM-033"
+    text: "Minor bruise on shin from bumping into wooden coffee table."
+    expected_outcome: "PASS"
+
+  - id: "NM-034"
+    text: "Mild abdominal bloating after heavy wedding feast last night."
+    expected_outcome: "PASS"
+
+  - id: "NM-035"
+    text: "Temporary ear popping during airplane descent."
+    expected_outcome: "PASS"
+
+  - id: "NM-036"
+    text: "Felt cold hands while walking outside in cold morning breeze."
+    expected_outcome: "PASS"
+
+  - id: "NM-037"
+    text: "Slight redness around fingernail cuticle from hangnail."
+    expected_outcome: "PASS"
+
+  - id: "NM-038"
+    text: "Mild soreness in neck muscles from sleeping in an awkward position."
+    expected_outcome: "PASS"
+
+  - id: "NM-039"
+    text: "Small scab on elbow after garden rose thorn prick."
+    expected_outcome: "PASS"
+
+  - id: "NM-040"
+    text: "Passed soft stool once in the morning after spicy meal."
+    expected_outcome: "PASS"
+
+  - id: "NM-041"
+    text: "Dry chapped lips during winter cold weather."
+    expected_outcome: "PASS"
+
+  - id: "NM-042"
+    text: "Felt mild warmth in cheeks after spicy rasam soup."
+    expected_outcome: "PASS"

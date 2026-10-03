@@ -1,0 +1,96 @@
+{
+  "id": "icmr-stw-acute-diarrhea",
+  "condition": "Acute Diarrhea and Dehydration",
+  "icd_code": "ICD-10-R19.7",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Acute Diarrhea",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "antibiotic names",
+      "IV fluid regimens",
+      "dosing schedules",
+      "anti-emetic drug names",
+      "antiparasitic drug names"
+    ]
+  },
+  "condition_description": "Diarrhea means three or more loose or watery stools per day. Acute diarrhea lasts less than 14 days. Diarrhea lasting more than 14 days is persistent diarrhea. Dysentery means blood is present in the stools.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Signs of Severe Dehydration: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Lethargy or unconsciousness",
+        "Sunken eyes",
+        "Not able to drink at all, or drinking very poorly",
+        "Skin pinch test: pinch the skin on the abdomen, if the skin goes back very slowly (takes more than 2 seconds to flatten), this indicates severe dehydration",
+        "Very rapid or weak pulse",
+        "Very low blood pressure",
+        "Rapid breathing",
+        "Passing many watery stools very frequently with no improvement",
+        "Repeated vomiting preventing any fluid intake",
+        "Blood in stools with no improvement after 2 days of treatment",
+        "Diarrhea with high fever and worsening general condition",
+        "Diarrhea in a person with severe malnutrition or known HIV",
+        "Persistent diarrhea lasting more than 14 days with signs of dehydration or serious illness"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home: Fluid Replacement is the Most Important Step",
+      "page": 1,
+      "items": [
+        "Start oral rehydration immediately, the most important treatment for diarrhea at home is replacing lost fluids and salts",
+        "Use ORS (Oral Rehydration Salt) sachets available at any pharmacy or government health centre: dissolve one sachet in the amount of clean water shown on the packet (usually 200 ml or 1 litre) and sip frequently",
+        "If ORS sachets are not available, a homemade alternative can be used temporarily: add a pinch of salt and a small amount of sugar to a glass of clean water, stir well, and sip frequently",
+        "Other suitable homemade fluids: salted rice water, salted yogurt drink (lassi with salt), vegetable or chicken soup with salt, unsweetened fresh fruit juice, coconut water",
+        "Give extra fluids after each loose stool, adults should drink at least 200 ml after each episode",
+        "Unsuitable fluids that worsen diarrhea: carbonated beverages (cold drinks/soda), commercial sweetened fruit juices, sweetened tea or coffee",
+        "Continue eating, do not fast. Eat light, easily digestible foods. Avoid oily or spicy food during illness",
+        "Wash hands thoroughly with soap and water before eating, after using the toilet, and after handling stool",
+        "Use clean, safe drinking water only, boil water if safety is uncertain",
+        "Return for medical attention immediately if: passing many watery stools, repeatedly vomiting, unable to drink, developing fever, noticing blood in stool, or condition is not improving in 5 days"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Diarrhea not improving after 5 days of home management",
+        "Any blood in the stools (dysentery)",
+        "Significant vomiting along with diarrhea making it hard to keep fluids down",
+        "Signs of moderate dehydration: restlessness, sunken eyes, feeling very thirsty, skin pinch goes back slowly",
+        "Fever along with diarrhea",
+        "Diarrhea in a person with diabetes, heart disease, or kidney disease",
+        "Diarrhea lasting more than 14 days (persistent diarrhea)",
+        "Diarrhea after travel to a new place or after eating outside food with suspected contamination"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any sign of severe dehydration listed above, unconsciousness, unable to drink, skin pinch very slow, very weak pulse",
+        "Blood in stools with no improvement after 2 days of treatment",
+        "Persistent diarrhea (more than 14 days) with dehydration or serious infection signs",
+        "Diarrhea with severe vomiting and complete inability to keep fluids down",
+        "Suspected cholera: sudden onset of very profuse watery diarrhea (rice-water stool), especially in an area with known cholera"
+      ]
+    }
+  ],
+  "dehydration_assessment": {
+    "label": "Simple Home Dehydration Check (Skin Pinch Test)",
+    "source_page": 1,
+    "description": "Pinch the skin on the abdomen between two fingers, hold for one second, then let go. Watch how quickly it returns to normal: if it goes back immediately, no significant dehydration; if it stays raised for a brief instant, some dehydration, needs ORS urgently; if it goes back very slowly, taking more than 2 seconds, severe dehydration, go to hospital immediately."
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antibiotic names, IV fluid regimens, drug dosing, and lab investigation thresholds excluded. ORS preparation instructions retained as these are non-drug public health measures essential for safe home management. The dehydration skin pinch test is included as a self-assessment tool directly from the source document, it requires no drug or clinical knowledge to apply."
+  }
+}

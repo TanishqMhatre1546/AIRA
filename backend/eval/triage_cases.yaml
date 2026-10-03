@@ -1,0 +1,321 @@
+version: "1.0.0"
+description: "AIRA symptom triage evaluation suite covering all 15 conditions across triage levels."
+
+cases:
+  # 1. Headache
+  - id: "TR-HEAD-01"
+    condition: "headache"
+    text: "I have a mild tension headache for 2 days after office work."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-HEAD-02"
+    condition: "headache"
+    text: "Throbbing forehead pain for 10 days that is not going away."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-HEAD-03"
+    condition: "headache"
+    text: "Severe unbearable headache with intense nausea and light sensitivity."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-HEAD-04"
+    condition: "headache"
+    text: "Mild head pain on both sides since yesterday afternoon."
+    expected_level: "SELF_CARE"
+
+  # 2. Pharyngitis (Sore Throat)
+  - id: "TR-PHAR-01"
+    condition: "pharyngitis_sore_throat"
+    text: "Scratchy dry sore throat for 1 day, no difficulty breathing."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-PHAR-02"
+    condition: "pharyngitis_sore_throat"
+    text: "Throat pain lasting for 6 days with difficulty swallowing food."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-PHAR-03"
+    condition: "pharyngitis_sore_throat"
+    text: "Sore throat with fever, swollen neck glands, and white pus spots on tonsils."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-PHAR-04"
+    condition: "pharyngitis_sore_throat"
+    text: "Mild throat irritation after drinking cold water yesterday."
+    expected_level: "SELF_CARE"
+
+  # 3. Acute Diarrhea
+  - id: "TR-DIAR-01"
+    condition: "acute_diarrhea"
+    text: "I have loose motions for 1 day, drinking ORS fluids and feeling okay."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-DIAR-02"
+    condition: "acute_diarrhea"
+    text: "Watery diarrhea lasting for 5 days with mild fever."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DIAR-03"
+    condition: "acute_diarrhea"
+    text: "Loose stools with visible red blood in dysentery for 2 days."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DIAR-04"
+    condition: "acute_diarrhea"
+    text: "Severe diarrhea with sunken eyes, skin pinch slow, and unable to drink."
+    expected_level: "EMERGENCY"
+
+  # 4. Acute Respiratory Infections
+  - id: "TR-RESP-01"
+    condition: "acute_respiratory_infections"
+    text: "Runny nose, sneezing, and mild dry cough for 3 days."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-RESP-02"
+    condition: "acute_respiratory_infections"
+    text: "Productive cough with thick yellow mucus lasting for 16 days."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-RESP-03"
+    condition: "acute_respiratory_infections"
+    text: "Persistent cough with high fever and chest discomfort during breathing."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-RESP-04"
+    condition: "acute_respiratory_infections"
+    text: "Severe breathlessness, struggling to breathe and lips turning blue."
+    expected_level: "EMERGENCY"
+
+  # 5. Acute Rhinosinusitis
+  - id: "TR-SINU-01"
+    condition: "acute_rhinosinusitis"
+    text: "Stuffy blocked nose and mild facial heaviness for 3 days."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-SINU-02"
+    condition: "acute_rhinosinusitis"
+    text: "Sinus pressure and green nasal discharge lasting for 12 days."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SINU-03"
+    condition: "acute_rhinosinusitis"
+    text: "Severe sinus headache on one side with facial swelling and high temperature."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SINU-04"
+    condition: "acute_rhinosinusitis"
+    text: "Mild nasal congestion and forehead ache from seasonal weather change."
+    expected_level: "SELF_CARE"
+
+  # 6. Bacterial Skin Infections
+  - id: "TR-SKIN-01"
+    condition: "bacterial_skin_infections"
+    text: "Single small red pimple on arm with mild tenderness for 1 day."
+    expected_level: "UNKNOWN"
+    note: "Acne/single pimple without bacterial abscess is not in corpus; expected level UNKNOWN per Section 9."
+
+  - id: "TR-SKIN-02"
+    condition: "bacterial_skin_infections"
+    text: "Spreading painful red skin boil on leg with pus discharge for 4 days."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SKIN-03"
+    condition: "bacterial_skin_infections"
+    text: "Multiple painful boils spreading across thigh with fever and warmth."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SKIN-04"
+    condition: "bacterial_skin_infections"
+    text: "Rapidly spreading skin infection with black dying tissue and high fever."
+    expected_level: "EMERGENCY"
+
+  # 7. Dengue Fever
+  - id: "TR-DENG-01"
+    condition: "dengue_fever"
+    text: "Sudden high fever with retro-orbital eye pain and severe body ache."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DENG-02"
+    condition: "dengue_fever"
+    text: "High fever during dengue season with rash and joint pains on day 3."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DENG-03"
+    condition: "dengue_fever"
+    text: "Dengue with persistent vomiting, severe abdominal pain, and cold extremities."
+    expected_level: "EMERGENCY"
+
+  - id: "TR-DENG-04"
+    condition: "dengue_fever"
+    text: "Dengue fever with spontaneous bleeding from gums and extreme lethargy."
+    expected_level: "EMERGENCY"
+
+  # 8. Dermatophytosis (Ringworm)
+  - id: "TR-DERM-01"
+    condition: "dermatophytosis"
+    text: "Mild circular itchy red ringworm patch on inner thigh for 3 days."
+    expected_level: "SEE_DOCTOR"
+    note: "Dermatophytosis floor level is SEE_DOCTOR matching corpus per Section 9."
+
+  - id: "TR-DERM-02"
+    condition: "dermatophytosis"
+    text: "Spreading ringworm covering large body surface for 4 weeks."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DERM-03"
+    condition: "dermatophytosis"
+    text: "Itchy fungal patch between toes with mild skin peeling."
+    expected_level: "SEE_DOCTOR"
+    note: "Tinea pedis / ringworm floor level is SEE_DOCTOR; peeling without necrosis is not EMERGENCY per Section 9."
+
+  - id: "TR-DERM-04"
+    condition: "dermatophytosis"
+    text: "Severe recurrent fungal rash on groin with cracked painful skin."
+    expected_level: "SEE_DOCTOR"
+
+  # 9. Diabetes (Type 2)
+  - id: "TR-DIAB-01"
+    condition: "diabetes_type2"
+    text: "Excessive thirst, frequent urination at night, and unexplained weight loss."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DIAB-02"
+    condition: "diabetes_type2"
+    text: "Adult over 40 seeking guidance on diabetes blood sugar screening."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DIAB-03"
+    condition: "diabetes_type2"
+    text: "Diabetic patient has a slow healing non-painful sore on sole of foot."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-DIAB-04"
+    condition: "diabetes_type2"
+    text: "Diabetic father is unconscious and drenched in cold shivering sweat."
+    expected_level: "EMERGENCY"
+
+  # 10. Eczema / Dermatitis
+  - id: "TR-ECZE-01"
+    condition: "eczema_dermatitis"
+    text: "Dry itchy flaky skin patches on wrists and inside elbows."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-ECZE-02"
+    condition: "eczema_dermatitis"
+    text: "Severe weeping eczema rash with yellow crusts and painful cracks."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-ECZE-03"
+    condition: "eczema_dermatitis"
+    text: "Mild contact dermatitis redness on hands after cleaning dishes."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-ECZE-04"
+    condition: "eczema_dermatitis"
+    text: "Eczema flare up covering entire arms and legs with sleep disturbance."
+    expected_level: "SEE_DOCTOR"
+
+  # 11. Epistaxis (Nosebleed)
+  - id: "TR-EPIS-01"
+    condition: "epistaxis"
+    text: "Minor nosebleed from one nostril that stopped in 5 minutes with pressure."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-EPIS-02"
+    condition: "epistaxis"
+    text: "Recurrent nosebleeds occurring 4 times this past week."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-EPIS-03"
+    condition: "epistaxis"
+    text: "Heavy nosebleed pouring down throat for 25 minutes without stopping."
+    expected_level: "EMERGENCY"
+
+  - id: "TR-EPIS-04"
+    condition: "epistaxis"
+    text: "Slight specks of blood on tissue paper when gently blowing dry nose."
+    expected_level: "SELF_CARE"
+
+  # 12. Hypertension
+  - id: "TR-HYPE-01"
+    condition: "hypertension"
+    text: "Routine blood pressure check measured 148/94 mmHg at community health camp."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-HYPE-02"
+    condition: "hypertension"
+    text: "Adult seeking medical consultation for newly discovered high blood pressure."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-HYPE-03"
+    condition: "hypertension"
+    text: "Occasional mild morning occipital headache with elevated blood pressure."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-HYPE-04"
+    condition: "hypertension"
+    text: "Sudden crushing chest pain and severe shortness of breath with high BP."
+    expected_level: "EMERGENCY"
+
+  # 13. Scabies
+  - id: "TR-SCAB-01"
+    condition: "scabies"
+    text: "Intense skin itching between fingers and on wrists that worsens at night."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SCAB-02"
+    condition: "scabies"
+    text: "Multiple family members itching with small red burrows on waistline."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SCAB-03"
+    condition: "scabies"
+    text: "Severe night-time itch on hands, genitals, and armpits."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-SCAB-04"
+    condition: "scabies"
+    text: "Itchy scabies rash with secondary bacterial pus blisters and sores."
+    expected_level: "SEE_DOCTOR"
+
+  # 14. Urinary Tract Infection (UTI)
+  - id: "TR-UTI-01"
+    condition: "urinary_tract_infection"
+    text: "Mild burning sensation during urination and increased frequency for 1 day."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-UTI-02"
+    condition: "urinary_tract_infection"
+    text: "Painful urination with lower abdomen discomfort and cloudy urine."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-UTI-03"
+    condition: "urinary_tract_infection"
+    text: "Urgent need to pass urine with slight blood in urine."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-UTI-04"
+    condition: "urinary_tract_infection"
+    text: "Burning urination accompanied by high fever with shaking chills and loin pain."
+    expected_level: "EMERGENCY"
+
+  # 15. Urticaria (Hives) and Angioedema
+  - id: "TR-URTI-01"
+    condition: "urticaria_angioedema"
+    text: "Itchy red raised skin wheals on back that fade away within hours."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-URTI-02"
+    condition: "urticaria_angioedema"
+    text: "Recurrent daily hives and itchy wheals for the past 6 weeks."
+    expected_level: "SEE_DOCTOR"
+
+  - id: "TR-URTI-03"
+    condition: "urticaria_angioedema"
+    text: "Mild allergic skin rash with itching after wearing synthetic shirt."
+    expected_level: "SELF_CARE"
+
+  - id: "TR-URTI-04"
+    condition: "urticaria_angioedema"
+    text: "Sudden hives with swelling of tongue, lips, and difficulty breathing."
+    expected_level: "EMERGENCY"

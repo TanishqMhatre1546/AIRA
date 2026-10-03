@@ -1,0 +1,85 @@
+{
+  "id": "icmr-stw-urticaria-angioedema",
+  "condition": "Urticaria (Hives) and Angioedema",
+  "icd_code": "ICD-10-L50.9",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Urticaria and Angioedema",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "injectable adrenaline protocol",
+      "immunosuppressant regimens"
+    ]
+  },
+  "condition_description": {
+    "urticaria": "Sudden appearance of raised, itchy welts (wheals) on the skin of variable size and shape, surrounded by redness. Individual welts usually resolve within 1 to 24 hours but new ones may keep appearing. Chronic urticaria means it has lasted more than 6 weeks.",
+    "angioedema": "Sudden, deep swelling of the skin, often affecting the face, lips, tongue, throat, or genitals. It can take up to 72 hours to resolve. When it affects the throat or airway, it is a medical emergency."
+  },
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Emergency Signs: Call 112 or Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Swelling of the lips, tongue, or throat",
+        "Difficulty breathing, choking, or shortness of breath",
+        "Hoarse voice or difficulty speaking after swelling",
+        "Swelling of the airway (laryngeal angioedema), this is a life-threatening emergency",
+        "Respiratory distress combined with hives, this may indicate anaphylaxis",
+        "Shock: dizziness, loss of consciousness, very low blood pressure after exposure to an allergen"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home for Mild Urticaria",
+      "page": 1,
+      "items": [
+        "Mild hives that are itchy but not affecting breathing can often be managed with an antihistamine prescribed by a doctor",
+        "Identify and avoid triggers: common triggers include certain foods, medicines (especially pain relievers like NSAIDs), insect stings, latex, and stress",
+        "Avoid common drug triggers if you have a history of urticaria: pain relievers such as ibuprofen or aspirin can trigger or worsen hives in some people, always inform your doctor of your history",
+        "Apply a cool compress to itchy areas for temporary relief",
+        "Wear loose, cool clothing to reduce skin irritation",
+        "Avoid vigorous exercise if exercise is a known trigger for your urticaria",
+        "Urticaria that resolves within 24 hours and does not recur may not need further treatment, reassurance is appropriate",
+        "About half of chronic urticaria cases resolve on their own within 12 to 24 months",
+        "Do not stop antihistamines abruptly if a doctor has prescribed a prolonged course"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Hives that appear repeatedly over several days or are not going away",
+        "Any swelling of the face, lips, or eyes even without breathing difficulty",
+        "Urticaria lasting more than 6 weeks, this is chronic urticaria and needs evaluation",
+        "Hives that last longer than 24 to 48 hours in one spot, are painful, and leave bruising, this may be urticarial vasculitis, which is different from ordinary hives",
+        "Hives that seem related to a specific food, drug, or situation, allergy testing may be needed",
+        "Urticaria that is not improving with antihistamines",
+        "Urticaria associated with joint pain, fever, or feeling generally unwell"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Refer to Higher Centre",
+      "page": 1,
+      "items": [
+        "Any breathing difficulty, throat swelling, or signs of anaphylaxis, refer after emergency stabilisation",
+        "Angioedema affecting the throat or airway",
+        "Urticaria not controlled by standard antihistamines even at higher doses",
+        "Unusual urticaria: welts lasting more than 24 to 48 hours with bruising",
+        "Angioedema without urticaria, this may indicate a rare hereditary condition (C1 inhibitor deficiency) that requires specialist investigation",
+        "Urticaria with associated systemic symptoms (fever, joint pain, weight loss)"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antihistamine names, dosing, injectable adrenaline protocols, and immunosuppressant regimens excluded. Emergency signs retained in full as they are triage-critical. The angioedema throat-swelling sign maps directly to the emergency banner rule."
+  }
+}

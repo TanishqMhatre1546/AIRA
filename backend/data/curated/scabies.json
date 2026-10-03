@@ -1,0 +1,75 @@
+{
+  "id": "icmr-stw-scabies",
+  "condition": "Scabies",
+  "icd_code": "ICD-10-B86",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Scabies",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "topical permethrin application details",
+      "oral ivermectin regimens"
+    ]
+  },
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Signs of Severe or Complicated Scabies: See a Doctor",
+      "page": 1,
+      "items": [
+        "Crusted (Norwegian) scabies: thick, yellow-brown crusts on the skin, particularly on the hands and feet, this is a severe form seen in people with weak immunity and is highly contagious",
+        "Signs of secondary bacterial infection: skin that is red, swollen, warm, and has pus or a foul smell",
+        "Scabies in someone who is immunocompromised (on steroids, with HIV, or on chemotherapy), this can become very severe quickly",
+        "Widespread scabies outbreak in a school, orphanage, or shared-living setting"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care and Household Measures",
+      "page": 1,
+      "items": [
+        "All family members and close physical contacts must be treated at the same time, even if they have no symptoms, treating only the affected person will lead to re-infestation",
+        "Wash all clothes, towels, and bedlinen used in the past three days in hot water and dry them in the sun",
+        "Items that cannot be washed (shoes, bags) can be sealed in a plastic bag for at least 3 days, the mite cannot survive without human contact",
+        "Do not share clothing, towels, or bedding with others during the infestation",
+        "Maintain good general hygiene throughout treatment",
+        "Important: itching can continue for several weeks after successful treatment, this is normal and does not mean the treatment has failed",
+        "Do not repeat the treatment application just because itching continues, continue antihistamines for relief instead",
+        "If new lesions appear or itching continues for more than 3 to 4 weeks after treatment, re-infestation is likely, this usually means a close contact was not treated"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Intense itching that is worse at night, especially in the fingers, wrists, belly button area, breasts, buttocks, or genitals",
+        "Other family members developing the same symptoms",
+        "Small, red, itchy bumps or burrow marks between the fingers or on the wrists",
+        "Itching and rash with no obvious cause in a child",
+        "Persistent itching and new lesions after completing a course of treatment",
+        "Any sign of secondary skin infection (pus, crusting, fever)"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Refer to Higher Centre",
+      "page": 1,
+      "items": [
+        "Crusted (Norwegian) scabies, requires specialised treatment and isolation precautions",
+        "Scabies in an immunocompromised person",
+        "Secondary bacterial infection that is spreading or not responding to treatment",
+        "Persistent, treatment-resistant nodular lesions over the genitals"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All topical and oral drug names, application instructions, and dosing excluded. Core household and contact-tracing measures retained as these are essential for treatment success and do not involve drug advice."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "icmr-stw-eczema-dermatitis",
+  "condition": "Eczema / Dermatitis",
+  "icd_code": "ICD-10-L20",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Eczema / Dermatitis",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "corticosteroid regimens",
+      "immunosuppressant names"
+    ]
+  },
+  "types_covered": [
+    "Atopic dermatitis",
+    "Contact dermatitis (allergic and irritant)",
+    "Seborrhoeic dermatitis",
+    "Nummular eczema",
+    "Venous eczema",
+    "Hand eczema"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Signs That Need Urgent Medical Attention",
+      "page": 1,
+      "items": [
+        "Eczema with pus discharge, yellow crusting, or increasing warmth, this indicates a secondary bacterial infection",
+        "Widespread skin involvement with blistering or skin breakdown",
+        "Eczema associated with fever",
+        "Severe eczema covering large parts of the body that is not responding to any treatment"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home",
+      "page": 1,
+      "items": [
+        "Apply a moisturiser immediately after bathing while the skin is still slightly damp, this is the most important step in managing eczema",
+        "Apply moisturiser multiple times during the day, not just once",
+        "Bathe daily with a mild soap and normal temperature water; avoid hot water",
+        "Keep fingernails short to reduce damage from scratching",
+        "Avoid scratching, scratching worsens eczema and risks infection",
+        "Identify and avoid triggers: specific soaps, detergents, fabrics, plants, or foods that make the skin worse",
+        "Wear loose, cotton clothing to reduce irritation",
+        "Avoid high-risk occupational exposures if possible: agricultural work, construction, hairdressing involve frequent skin contact with irritants",
+        "For contact dermatitis, identify and remove the cause (e.g. a specific soap, metal, or plant)",
+        "Atopic dermatitis is often worse in winter, extra moisturising is important in cold weather",
+        "Do not use any steroid creams on your own without a doctor's guidance, especially on the face or skin folds"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Any new rash with redness, scaling, or itching that is not improving within a week of basic care",
+        "Eczema on the face, eyelids, or genitals",
+        "Rash that you suspect may be caused by an allergen or irritant at work",
+        "Eczema that keeps recurring in the same areas",
+        "Skin that has become thickened or leathery in patches from long-standing eczema",
+        "Eczema with signs of infection: pus, yellow crust, or increasing redness",
+        "Eczema in a child, particularly if involving the face, skin folds, or causing disturbed sleep from itching"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Refer to Higher Centre",
+      "page": 1,
+      "items": [
+        "Severe eczema not responding to treatment at the primary care level",
+        "Widespread disease requiring phototherapy or systemic treatment",
+        "Suspected allergic contact dermatitis where patch testing is needed to identify the allergen",
+        "Unusual presentations that may be mistaken for eczema: psoriasis, fungal infection, or cutaneous lymphoma"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All corticosteroid names, potency classifications, calcineurin inhibitor names, and systemic drug regimens excluded. Key safety message retained: do not self-apply steroid creams without medical guidance."
+  }
+}

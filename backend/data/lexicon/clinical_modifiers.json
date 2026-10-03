@@ -1,0 +1,133 @@
+[
+  {
+    "id": "MOD-PREGNANCY",
+    "name": "Pregnancy Clinical Modifier",
+    "trigger_terms": [
+      "pregnant",
+      "pregnancy",
+      "expecting",
+      "maternity",
+      "trimester",
+      "gestational"
+    ],
+    "target_conditions": [
+      "headache",
+      "urinary_tract_infection",
+      "dengue_fever"
+    ],
+    "target_symptoms": [
+      "headache",
+      "burning urination",
+      "urine",
+      "uti",
+      "dengue"
+    ],
+    "escalate_to": "SEE_DOCTOR",
+    "source_id": "icmr-stw-headache",
+    "source_page": 1,
+    "rationale": "Pregnancy is a high risk state for headache, UTI, and dengue fever requiring clinical assessment."
+  },
+  {
+    "id": "MOD-DIABETES",
+    "name": "Diabetes Infection Modifier",
+    "trigger_terms": [
+      "diabetic",
+      "diabetes",
+      "sugar patient",
+      "sugar problem",
+      "high blood sugar",
+      "type 2 diabetes"
+    ],
+    "target_conditions": [
+      "urinary_tract_infection",
+      "bacterial_skin_infections",
+      "acute_rhinosinusitis",
+      "acute_respiratory_infections",
+      "acute_diarrhea",
+      "dengue_fever",
+      "epistaxis_nosebleed"
+    ],
+    "target_symptoms": [
+      "infection",
+      "wound",
+      "ulcer",
+      "boil",
+      "sinus",
+      "urine",
+      "uti",
+      "cough",
+      "cold",
+      "diarrhoea",
+      "dengue",
+      "nosebleed"
+    ],
+    "escalate_to": "SEE_DOCTOR",
+    "source_id": "icmr-stw-bacterial-skin-infections",
+    "source_page": 1,
+    "rationale": "Patients with diabetes have elevated risks for rapid spread of bacterial skin, sinus, respiratory, and urinary infections."
+  },
+  {
+    "id": "MOD-IMMUNOCOMPROMISED",
+    "name": "Immunocompromised Vulnerability Modifier",
+    "trigger_terms": [
+      "immunocompromised",
+      "hiv",
+      "on chemotherapy",
+      "chemotherapy",
+      "on steroids",
+      "steroids",
+      "steroid treatment",
+      "immunosuppressed",
+      "low immunity"
+    ],
+    "target_conditions": [
+      "bacterial_skin_infections",
+      "acute_rhinosinusitis",
+      "headache",
+      "scabies"
+    ],
+    "target_symptoms": [
+      "infection",
+      "wound",
+      "sinus",
+      "skin",
+      "headache",
+      "scabies",
+      "crusted"
+    ],
+    "escalate_to": "SEE_DOCTOR",
+    "source_id": "icmr-stw-bacterial-skin-infections",
+    "source_page": 1,
+    "rationale": "Immunocompromised status significantly elevates infection severity and progression risk."
+  },
+  {
+    "id": "MOD-ELDERLY",
+    "name": "Elderly High-Risk Group Modifier",
+    "trigger_terms": [
+      "elderly",
+      "senior citizen",
+      "old person",
+      "aged person",
+      "grandfather",
+      "grandmother"
+    ],
+    "min_age": 65,
+    "target_conditions": [
+      "dengue_fever",
+      "acute_respiratory_infections"
+    ],
+    "target_symptoms": [
+      "dengue",
+      "cough",
+      "cold",
+      "fever",
+      "chest congestion",
+      "flu",
+      "respiratory"
+    ],
+    "escalate_to": "SEE_DOCTOR",
+    "source_id": "icmr-stw-dengue-fever",
+    "source_page": 1,
+    "rationale": "Individuals aged 65 and above have higher vulnerability to severe dengue and acute respiratory complications."
+  }
+]

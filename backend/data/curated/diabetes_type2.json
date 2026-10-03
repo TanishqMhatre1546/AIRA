@@ -1,0 +1,95 @@
+{
+  "id": "icmr-stw-diabetes-type2",
+  "condition": "Diabetes (Type 2): Awareness, Symptoms, and When to Seek Care",
+  "icd_code": "ICD-10-E11",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Diabetes Mellitus Type 2",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "HbA1c treatment targets",
+      "pharmacotherapy algorithms",
+      "lab diagnostic thresholds for prescribing"
+    ]
+  },
+  "scope_note": "AIRA covers diabetes awareness, symptom recognition, and triage only. Diabetes management, medication, and dose advice must come from a doctor.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Diabetic Emergency Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Hypoglycaemia (low blood sugar), symptoms: trembling or shaking, sudden sweating, anxiety or irritability, confusion, fast heartbeat, dizziness, blurred vision, weakness, seizures, or unconsciousness. These can occur if a person with diabetes skips meals or takes too much diabetes medicine. Immediate action: if the person is conscious and able to swallow, give sugar immediately, loose sugar, a sweet biscuit, misri (rock candy), or any sweet drink. If unconscious, do not give anything by mouth, go to hospital immediately.",
+        "Very high blood sugar with confusion, rapid breathing, and extreme thirst, may indicate diabetic ketoacidosis (DKA), which is a medical emergency",
+        "Chest pain or severe breathlessness in a person with diabetes, diabetes significantly increases the risk of heart attack",
+        "Stroke warning signs in a person with diabetes: sudden one-sided weakness, speech difficulty, severe headache, vision loss, go to hospital immediately",
+        "Non-healing wound or foot ulcer with spreading redness, swelling, pus, or bad smell, diabetic foot infections can become life-threatening quickly",
+        "High fever with severe infection signs in a diabetic person, diabetes worsens the severity of infections"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Daily Self-Care for Persons with Diabetes",
+      "page": 1,
+      "items": [
+        "Take your diabetes medicines exactly as prescribed by your doctor, do not stop or change the dose on your own",
+        "Eat regular meals at consistent times, skipping meals can cause low blood sugar in those on certain diabetes medicines",
+        "Always carry something sweet (sugar, misri, a biscuit) in case of low blood sugar symptoms",
+        "Follow a diet low in refined sugar, white rice, maida, and sweet drinks. Eat more vegetables, whole grains, pulses, and fruits in moderate amounts",
+        "Be physically active, at least 30 minutes of walking or light exercise daily helps control blood sugar",
+        "Do not smoke, smoking dramatically increases the risk of heart attack and kidney damage in diabetics",
+        "Avoid alcohol or use it very minimally",
+        "Inspect your feet every day for cuts, blisters, redness, swelling, or wounds, even small injuries can become serious in diabetics",
+        "Wear proper footwear at all times, avoid going barefoot",
+        "Monitor your blood sugar regularly as advised by your doctor",
+        "Keep all follow-up appointments, diabetes requires regular monitoring of blood sugar, blood pressure, kidney function, and eyes"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Symptoms that may suggest undiagnosed diabetes: frequent urination, excessive thirst, increased hunger, unexplained weight loss, extreme tiredness, blurred vision, slow-healing wounds, or recurring infections",
+        "Blood sugar reading on a home glucometer that is consistently high",
+        "Any person above 30 years of age who is overweight, has a family history of diabetes, or has high blood pressure, they should be screened annually",
+        "Any wound or cut on the foot in a diabetic that is not healing within a few days",
+        "Recurring infections: skin infections, fungal infections, urinary infections, or oral thrush in a person not known to be diabetic",
+        "A diabetic person whose blood sugar is not well controlled despite following advice",
+        "A diabetic person starting any new illness, even a common cold or fever needs closer monitoring"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any emergency danger sign listed above, hypoglycaemia with unconsciousness, chest pain, stroke signs, severe infection, spreading foot wound",
+        "A diabetic person who is very unwell, confused, or unable to eat or drink",
+        "Diabetic foot ulcer with spreading redness or foul smell, this requires urgent specialist care to prevent amputation",
+        "A diabetic with very high or very low blood sugar readings and symptoms"
+      ]
+    }
+  ],
+  "screening_note": {
+    "label": "Who Should Be Screened for Diabetes",
+    "source_page": 1,
+    "items": [
+      "All adults above 30 years of age, at least once a year",
+      "Anyone who is overweight or obese",
+      "Anyone with a first-degree relative (parent or sibling) with diabetes",
+      "Anyone with high blood pressure or high cholesterol",
+      "Women with a history of diabetes during pregnancy (gestational diabetes)",
+      "Anyone with symptoms: frequent urination, excessive thirst, unexplained weight loss, repeated infections, or slow-healing wounds"
+    ]
+  },
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All drug names, HbA1c thresholds for treatment decisions, and prescribing algorithms excluded. Hypoglycaemia emergency retained in full including the immediate sugar treatment, this is a first-aid response, not a prescribing recommendation, and is directly sourced from the NCD ASHA module page 38. Foot care and infection warning signs retained as critical for Indian diabetic patients."
+  }
+}

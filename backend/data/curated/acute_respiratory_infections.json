@@ -1,0 +1,92 @@
+{
+  "id": "icmr-stw-acute-respiratory-infections",
+  "condition": "Acute Respiratory Infections (Cough, Cold, Bronchitis, Pneumonia)",
+  "icd_code": "ICD-10-J09-J18; J00-06; J40",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Management of Acute Respiratory Infection in Adults",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "antibiotic names",
+      "dosing schedules",
+      "IV regimens",
+      "bronchodilator protocols"
+    ]
+  },
+  "types_covered": [
+    "Acute Upper Respiratory Infection (common cold, catarrh)",
+    "Acute Bronchitis",
+    "Community Acquired Pneumonia (CAP)"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Signs of Respiratory Failure: Call 112 or Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Breathing rate above 30 breaths per minute",
+        "Breathing with the belly moving opposite to the chest (abdominal-thoracic paradox), a sign of severe breathing difficulty",
+        "Blue or purple colour on the lips, fingertips, or face (cyanosis), indicates critically low oxygen",
+        "Only able to speak a few words at a time due to breathlessness",
+        "Oxygen saturation at or below 92% in a person aged 50 or below, or below 90% in a person over 50",
+        "Confusion or disorientation along with breathing problems",
+        "Coughing up blood (frank haemoptysis), may also suggest TB or a more serious condition",
+        "Very low blood pressure combined with breathing difficulty",
+        "Very high or very low body temperature alongside breathing difficulty",
+        "Suspected flu with breathing difficulty, especially if there is a history of recent travel or an ongoing flu epidemic"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home for Mild Upper Respiratory Infection or Mild Bronchitis",
+      "page": 1,
+      "items": [
+        "Rest and stay home away from others to avoid spreading the infection",
+        "Drink plenty of fluids, water, warm soups, warm water with honey and ginger, coconut water",
+        "Paracetamol can be taken for fever or body aches as per the dosage on the pack",
+        "Steam inhalation can help relieve nasal and chest congestion",
+        "Warm salt water gargling helps relieve throat discomfort",
+        "Avoid smoking and exposure to smoke or dust",
+        "Avoid cold beverages and cold environments",
+        "Viral upper respiratory infections (common cold) do not benefit from antibiotics, do not self-medicate with antibiotics",
+        "Most mild colds and coughs in a healthy adult resolve within 7 to 10 days without medication"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Cough lasting more than 10 to 14 days without improvement",
+        "Fever that is persistent, high, or accompanied by chills",
+        "Cough producing yellow, green, or blood-tinged sputum",
+        "Chest pain that worsens with breathing or coughing",
+        "Significant breathlessness during light activity or at rest",
+        "Cough or cold with wheezing (whistling sound in chest)",
+        "Sore throat with high fever and swollen neck glands",
+        "Any respiratory illness in a person with diabetes, heart disease, chronic lung disease, or kidney disease, these are high-risk groups",
+        "Cough with night sweats, unexplained weight loss, or prolonged fatigue, these may be signs of TB",
+        "Symptoms that started improving but then got significantly worse"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any danger sign listed above, breathing rate above 30, blue lips, inability to speak, confusion, coughing blood",
+        "Oxygen saturation at or below 92%",
+        "Suspected pneumonia in a person aged 65 or above, or with confusion, low blood pressure, or fast breathing",
+        "Suspected epidemic flu with breathing difficulty",
+        "No improvement after 2 to 3 days of treatment for bronchitis or a prescribed antibiotic course"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antibiotic names, dosing, IV regimens, bronchodilator protocols, and severity scoring thresholds requiring specialist interpretation excluded. TB warning sign retained as it is a critical public health signal and instructs to see a doctor, not self-treat."
+  }
+}

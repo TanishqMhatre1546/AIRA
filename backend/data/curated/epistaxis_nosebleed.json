@@ -1,0 +1,83 @@
+{
+  "id": "icmr-stw-epistaxis",
+  "condition": "Epistaxis (Nosebleed)",
+  "icd_code": "ICD-10-R04.0",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Epistaxis",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "cauterization procedures",
+      "nasal packing techniques",
+      "surgical ligation details"
+    ]
+  },
+  "condition_description": "Epistaxis means bleeding from the nose. Most nosebleeds in adults are minor and related to dry air, nose picking, trauma, or uncontrolled blood pressure. Most can be managed at home with simple first aid.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Go to Hospital",
+      "page": 1,
+      "items": [
+        "Nosebleed that does not stop after 20 minutes of correct first aid",
+        "Nosebleed with very heavy or rapid blood loss causing dizziness, weakness, or faintness",
+        "Nosebleed only from one side of the nose persistently, without a clear cause like trauma, this may need investigation",
+        "Nosebleed with nasal blockage, a visible mass, or changes in vision or the eye, could indicate a serious nasal or sinus condition",
+        "Nosebleed in a person on blood thinners or with a known bleeding disorder",
+        "Nosebleed in a person with uncontrolled high blood pressure",
+        "Nosebleed in a person after head trauma",
+        "Nosebleed with bleeding from other sites at the same time, gums, skin bruising, blood in urine or stool, may indicate a blood disorder",
+        "Recurrent, profuse nosebleeds in a teenage boy, requires specialist evaluation"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "First Aid for Nosebleed at Home",
+      "page": 1,
+      "items": [
+        "Sit upright and lean slightly forward, do not tilt the head back, as this causes blood to flow down the throat and may cause vomiting or choking",
+        "Breathe through your mouth",
+        "Pinch the soft part of the nose (just below the bony bridge) firmly with your thumb and index finger, this is called Trotter's position",
+        "Hold the nose pinched continuously for 10 minutes without releasing, use a clock to time it, as most people underestimate the time",
+        "Apply a cold compress or ice wrapped in a cloth to the nose and cheeks",
+        "After 10 minutes, gently release and check if bleeding has stopped",
+        "If bleeding continues, repeat the pinching for another 10 minutes",
+        "Avoid blowing the nose forcefully immediately after the bleeding stops",
+        "Avoid hot drinks, physical exertion, and bending over for several hours after a nosebleed",
+        "Apply a small amount of petroleum jelly or liquid paraffin inside the nostril daily if you get recurrent nosebleeds due to dry air, this helps keep the mucosa moist",
+        "Most nosebleeds in children are from the front of the nose (Little's area) due to dry air or nose picking and stop quickly with simple pressure"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Nosebleed that stopped but recurs frequently",
+        "Known high blood pressure with recurring nosebleeds, blood pressure needs to be checked and controlled",
+        "Nosebleed in a person with diabetes",
+        "Nosebleed in a child that keeps coming back despite no obvious cause"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Nosebleed not stopping after 20 minutes of sustained pressure",
+        "Heavy blood loss with dizziness, weakness, or rapid pulse",
+        "Nosebleed following a head injury",
+        "Nosebleed with associated bleeding from other sites",
+        "Nosebleed with one-sided nasal blockage, vision changes, or a visible swelling in the nose or face"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All nasal packing, cauterization, drug, and surgical steps excluded. First aid pinching technique retained as it is a non-drug emergency response step sourced directly from the document and essential for safe home management."
+  }
+}

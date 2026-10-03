@@ -1,0 +1,87 @@
+{
+  "id": "icmr-stw-dermatophytosis",
+  "condition": "Dermatophytosis (Ringworm / Fungal Skin Infection)",
+  "icd_code": "ICD-10-B35.9",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Dermatophytoses",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "antifungal regimens"
+    ]
+  },
+  "types_covered": [
+    "Tinea corporis (ringworm on body)",
+    "Tinea cruris (groin area)",
+    "Tinea pedis (athlete's foot)",
+    "Tinea manuum (hands)",
+    "Onychomycosis (nail infection)"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Signs That Need Specialist Attention",
+      "page": 1,
+      "items": [
+        "Very extensive infection covering large areas of the body",
+        "No improvement at all after 4 weeks of regular treatment",
+        "Infection that keeps coming back repeatedly despite completing full treatment",
+        "Infection present during pregnancy or in someone with liver, kidney, or heart disease",
+        "Suspected or known history of prolonged use of steroid-containing creams, these can significantly worsen fungal infections and make them very difficult to treat"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home",
+      "page": 1,
+      "items": [
+        "Take a daily bath with regular soap and normal temperature water",
+        "Dry the skin thoroughly after bathing, especially the area between the toes and skin folds",
+        "Wash clothes separately in hot water and dry them inside-out in the sun",
+        "Do not share towels, clothes, or undergarments with others",
+        "Do not re-wear clothes before washing them",
+        "Keep nails trimmed short, infected nails are fragile and can spread the fungus",
+        "Avoid walking barefoot in public places such as swimming pools or community bathing areas",
+        "Wear cotton socks and change them daily",
+        "Do not use any steroid-containing cream (often sold as combination creams at chemists), these make fungal infections much worse",
+        "Do not stop treatment as soon as the itching improves, always complete the full course as the infection is still present",
+        "Do not self-medicate; this can make the infection harder to treat later"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Any itchy, ring-shaped, scaly rash on the skin, groin, feet, or hands",
+        "Nail discoloration, thickening, or crumbling",
+        "Infection that has not responded to treatment after 4 weeks",
+        "Infection spreading to other family members",
+        "Infection in the groin, palms, or soles",
+        "Scaling along the creases of palms or soles, or dried blisters on feet",
+        "If you are pregnant or have a chronic illness before starting any treatment"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Refer to Specialist or Tertiary Centre",
+      "page": 1,
+      "items": [
+        "Very extensive body-wide disease",
+        "No improvement after 4 weeks of regular treatment with correct antifungals",
+        "Infection not clearing despite prolonged treatment and good compliance",
+        "Recurrent infection",
+        "Presence of conditions that affect treatment choices: pregnancy, liver disease, kidney disease, or heart disease"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antifungal drug names, dosing schedules, and topical cream formulations excluded per AIRA refusal policy. Important patient safety warning included: steroid-containing OTC creams worsen fungal infections."
+  }
+}

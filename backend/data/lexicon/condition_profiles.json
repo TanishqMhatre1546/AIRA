@@ -1,0 +1,379 @@
+{
+  "headache": {
+    "condition_id": "headache",
+    "condition_name": "Headache",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 7,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Headache lasting 7 days or more requires medical assessment."
+      }
+    ],
+    "aliases": [
+      "headache",
+      "head pain",
+      "head ache",
+      "migraine",
+      "forehead pain",
+      "throbbing head",
+      "temple pain",
+      "head throbbing",
+      "morning occipital headache"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "pharyngitis_sore_throat": {
+    "condition_id": "pharyngitis_sore_throat",
+    "condition_name": "Pharyngitis (Sore Throat)",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 5,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Sore throat lasting 5 days or more requires medical assessment."
+      }
+    ],
+    "aliases": [
+      "sore throat",
+      "throat pain",
+      "throat ache",
+      "pain swallowing",
+      "itchy throat",
+      "scratchy throat",
+      "throat irritation",
+      "tonsillitis",
+      "tonsil pain",
+      "raw throat",
+      "pus spots on tonsils",
+      "white pus spots",
+      "pus spots",
+      "swollen neck glands",
+      "swollen glands"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "acute_respiratory_infections": {
+    "condition_id": "acute_respiratory_infections",
+    "condition_name": "Acute Respiratory Infections",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 10,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Cough or respiratory symptoms lasting 10 days or more require medical assessment."
+      }
+    ],
+    "aliases": [
+      "cough",
+      "cold",
+      "cough and cold",
+      "runny nose",
+      "sneezing",
+      "chest congestion",
+      "productive cough",
+      "dry cough",
+      "flu",
+      "fever and cough",
+      "persistent cough",
+      "chest discomfort during breathing",
+      "chest discomfort"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "acute_rhinosinusitis": {
+    "condition_id": "acute_rhinosinusitis",
+    "condition_name": "Acute Rhinosinusitis",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 7,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Sinus symptoms lasting 7 days or more require medical assessment."
+      }
+    ],
+    "aliases": [
+      "sinusitis",
+      "sinus pain",
+      "sinus headache",
+      "blocked nose",
+      "nasal congestion",
+      "facial pressure",
+      "nasal discharge",
+      "stuffy nose",
+      "sinus infection",
+      "nose block",
+      "sinus congestion",
+      "facial pain"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "acute_diarrhea": {
+    "condition_id": "acute_diarrhea",
+    "condition_name": "Acute Diarrhea",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 5,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Diarrhea lasting 5 days or more requires medical assessment."
+      }
+    ],
+    "aliases": [
+      "diarrhea",
+      "diarrhoea",
+      "loose motions",
+      "loose motion",
+      "watery stools",
+      "watery stool",
+      "stomach upset",
+      "loose stools",
+      "frequent motions",
+      "watery motions",
+      "dysentery",
+      "red blood in dysentery",
+      "loose stools with visible red blood"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "epistaxis_nosebleed": {
+    "condition_id": "epistaxis_nosebleed",
+    "condition_name": "Epistaxis (Nosebleed)",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [],
+    "aliases": [
+      "nosebleed",
+      "nose bleed",
+      "bleeding from nose",
+      "bleeding nose",
+      "blood from nose",
+      "nakseer",
+      "minor nosebleed",
+      "recurrent nosebleeds",
+      "specks of blood",
+      "blood on tissue"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "eczema_dermatitis": {
+    "condition_id": "eczema_dermatitis",
+    "condition_name": "Eczema and Dermatitis",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [],
+    "aliases": [
+      "eczema",
+      "dermatitis",
+      "dry itchy skin",
+      "dry itch skin",
+      "skin redness",
+      "scaly skin",
+      "skin itching",
+      "skin itch",
+      "itchy patch",
+      "itch patch",
+      "itchy skin",
+      "itch skin",
+      "atopic eczema",
+      "itchy skin patches",
+      "itch skin patches",
+      "dry itchy flaky",
+      "dry itchy flaky skin",
+      "flaky skin",
+      "flaky",
+      "eczema flare up"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "urticaria_angioedema": {
+    "condition_id": "urticaria_angioedema",
+    "condition_name": "Urticaria and Angioedema",
+    "floor_level": "SELF_CARE",
+    "duration_rules": [
+      {
+        "threshold_days": 2,
+        "escalate_to": "SEE_DOCTOR",
+        "reason": "Urticaria lasting more than 2 days requires medical evaluation."
+      }
+    ],
+    "aliases": [
+      "urticaria",
+      "hives",
+      "wheals",
+      "itchy welts",
+      "itch welts",
+      "skin rash",
+      "pitti",
+      "hives rash",
+      "itchy bumps",
+      "itch bumps",
+      "allergic skin rash",
+      "allergic rash",
+      "rash after wearing"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "dermatophytosis": {
+    "condition_id": "dermatophytosis",
+    "condition_name": "Dermatophytosis (Fungal Skin Infection)",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "ringworm",
+      "fungal infection",
+      "tinea",
+      "itchy ring rash",
+      "itch ring rash",
+      "dad",
+      "daadh",
+      "jock itch",
+      "athletes foot",
+      "fungal skin infection",
+      "ringworm rash",
+      "ringworm patch",
+      "fungal patch",
+      "patch between toes",
+      "fungal rash on groin",
+      "rash on groin"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "scabies": {
+    "condition_id": "scabies",
+    "condition_name": "Scabies",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "scabies",
+      "night itching",
+      "night itch",
+      "night-time itch",
+      "night time itch",
+      "itchy web spaces",
+      "itch web spaces",
+      "finger itch",
+      "khaj",
+      "khujli rash",
+      "intense itching at night",
+      "intense itch at night",
+      "itching between my fingers",
+      "itch between my fingers",
+      "small red burrows",
+      "burrows on waistline",
+      "itch on hands genitals and armpits",
+      "itch on hands",
+      "itch on genitals",
+      "itch on armpits",
+      "itching in family"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "urinary_tract_infection": {
+    "condition_id": "urinary_tract_infection",
+    "condition_name": "Urinary Tract Infection",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "urinary tract infection",
+      "uti",
+      "burning urination",
+      "burning when passing urine",
+      "painful urination",
+      "urine burning",
+      "frequent urination",
+      "urgency urination",
+      "burning when i pass urine",
+      "burning sensation during urination",
+      "burning while passing urine",
+      "increased frequency",
+      "urgent need to pass urine",
+      "slight blood in urine",
+      "blood in urine"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "bacterial_skin_infections": {
+    "condition_id": "bacterial_skin_infections",
+    "condition_name": "Bacterial Skin Infections",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "bacterial skin infection",
+      "boil",
+      "boils",
+      "furuncle",
+      "carbuncle",
+      "cellulitis",
+      "impetigo",
+      "pus filled blister",
+      "pus blister",
+      "infected wound",
+      "skin abscess",
+      "folliculitis",
+      "boil with pus",
+      "pustule",
+      "pustules"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "dengue_fever": {
+    "condition_id": "dengue_fever",
+    "condition_name": "Dengue Fever",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "dengue",
+      "dengue fever",
+      "breakbone fever",
+      "high fever with body ache",
+      "retro orbital pain",
+      "retro-orbital",
+      "retro orbital",
+      "retro orbital eye pain",
+      "eye pain with fever",
+      "bone breaking fever",
+      "body ache and pain behind eyes",
+      "pain behind eyes",
+      "pain behind the eyes",
+      "fever with body ache"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "diabetes_type2": {
+    "condition_id": "diabetes_type2",
+    "condition_name": "Type 2 Diabetes",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "diabetes",
+      "high sugar",
+      "sugar disease",
+      "blood sugar",
+      "type 2 diabetes",
+      "madhumeha",
+      "sugar level high",
+      "frequent urination and thirst",
+      "slow healing sore",
+      "sore on foot",
+      "sore on sole",
+      "non painful sore"
+    ],
+    "review_status": "pending_clinical_review"
+  },
+  "hypertension": {
+    "condition_id": "hypertension",
+    "condition_name": "Hypertension",
+    "floor_level": "SEE_DOCTOR",
+    "duration_rules": [],
+    "aliases": [
+      "hypertension",
+      "high bp",
+      "high blood pressure",
+      "elevated bp",
+      "high tension",
+      "bp high",
+      "blood pressure check",
+      "elevated blood pressure"
+    ],
+    "review_status": "pending_clinical_review"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "icmr-stw-dengue-fever",
+  "condition": "Dengue Fever",
+  "icd_code": "ICD-10-A90",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Dengue Fever",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "IV fluid regimens",
+      "blood product transfusion protocols",
+      "lab investigation thresholds for treatment"
+    ]
+  },
+  "condition_description": "Dengue is a mosquito-borne viral fever. Suspect dengue if a person has fever and two or more of the following: nausea, vomiting, rash, muscle pain, headache, pain behind the eyes, joint pain, or unusual bleeding, especially if they live in or recently travelled to a dengue-prone area.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Dengue Warning Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Severe abdominal pain or tenderness",
+        "Persistent vomiting that does not stop",
+        "Bleeding from any site: black or tarry stools, bleeding gums, nosebleed, blood in urine, or unusual bruising",
+        "Fluid accumulation visible as swelling of the abdomen or difficulty breathing due to fluid around the lungs",
+        "Liver enlargement (swollen or tender abdomen on the right side)",
+        "Signs of shock: weak and rapid pulse, cold and clammy skin, extreme restlessness or sudden fatigue, low blood pressure",
+        "Decreased or no urine output for several hours",
+        "Sudden drop in fever combined with worsening of general condition, this is a dangerous phase in dengue",
+        "Confusion, altered behaviour, or loss of consciousness"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home for Dengue Without Warning Signs",
+      "page": 1,
+      "items": [
+        "Rest completely, do not attempt to go to work or school",
+        "Drink plenty of fluids: water, ORS, coconut water, fruit juices, soups, dengue causes significant fluid loss",
+        "Take paracetamol for fever only, do not take aspirin, ibuprofen, or other NSAIDs as these increase the risk of bleeding in dengue",
+        "Apply a cold compress or sponge with lukewarm water for high fever",
+        "Monitor closely for any warning sign listed above, if any appear, go to hospital immediately",
+        "Daily monitoring is essential even at home: check if the person can drink fluids, passes urine, and has no new bleeding",
+        "Protect the patient from further mosquito bites to prevent spreading dengue to others, use mosquito nets and repellents",
+        "Do not self-medicate with any anti-inflammatory or blood-thinning medicines"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor on the Same Day",
+      "page": 1,
+      "items": [
+        "Fever with severe headache, pain behind the eyes, and body aches, especially in a dengue-prone area or after recent travel",
+        "Fever with a skin rash",
+        "Fever that persists beyond 2 to 3 days without improvement",
+        "Fever suddenly dropping but the person feeling worse, this is a critical phase requiring monitoring",
+        "Any dengue fever in a child, elderly person, pregnant woman, or someone with diabetes, heart disease, or kidney disease, these groups are at higher risk of severe dengue"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any warning sign listed above, severe abdominal pain, persistent vomiting, bleeding, signs of shock, confusion, no urine output",
+        "Dengue with suspected shock: cold extremities, restlessness, weak pulse",
+        "Dengue with active bleeding from any site",
+        "Dengue with severe difficulty breathing",
+        "Dengue with impaired consciousness"
+      ]
+    }
+  ],
+  "critical_note": "Dengue must be managed under medical supervision with daily monitoring of blood counts and clinical status. Do not treat dengue at home beyond basic supportive care. The transition from mild to severe dengue can happen quickly.",
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All IV fluid regimens, blood product transfusion thresholds, and lab-based management steps excluded. The warning signs section is reproduced in full from the ICMR STW as these are triage-critical and the key differentiator between safe home care and emergency care in dengue."
+  }
+}

@@ -1,0 +1,641 @@
+version: "1.0.0"
+description: "AIRA emergency symptom interception test suite."
+
+cases:
+  # ER-001: Urticaria / Angioedema airway compromise
+  - id: "EM-001-A"
+    rule_id: "ER-001"
+    text: "I developed hives and now my THROAT SWELLING is getting worse."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-001-B"
+    rule_id: "ER-001"
+    text: "Sudden tongue swelling after eating peanuts, finding it hard to breathe."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-001-C"
+    rule_id: "ER-001"
+    text: "lip swelling with breathing difficulty and itching all over body"
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-001-D"
+    rule_id: "ER-001"
+    text: "Help! mouth and throat swelling up rapidly after bee sting!!!"
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-002: Bacterial skin infection with sepsis / necrosis
+  - id: "EM-002-A"
+    rule_id: "ER-002"
+    text: "The boil on my leg is spreading and the skin turning black."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-002-B"
+    rule_id: "ER-002"
+    text: "SKIN TURNING DARK rapidly around the wound with high shivering fever."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-002-C"
+    rule_id: "ER-002"
+    text: "Severely painful skin redness spreading fast with high fever and confusion."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-002-D"
+    rule_id: "ER-002"
+    text: "Thigh infection has foul smelling discharge and necrotic black skin."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-003: UTI with sepsis / pyelonephritis
+  - id: "EM-003-A"
+    rule_id: "ER-003"
+    text: "I have burning urination along with severe fever with chills and vomiting."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-003-B"
+    rule_id: "ER-003"
+    text: "Severe flank pain, high fever with chills, unable to keep anything down."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-003-C"
+    rule_id: "ER-003"
+    text: "UTI FEVER with intense shaking chills and severe lower back loin pain."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-003-D"
+    rule_id: "ER-003"
+    text: "Extreme kidney area pain on right side with shivering chills and burning urine."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-004: Heart attack warning signs
+  - id: "EM-004-A"
+    rule_id: "ER-004"
+    text: "I have severe CHEST PAIN radiating to my left arm and sweating."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-004-B"
+    rule_id: "ER-004"
+    text: "Heavy crushing chest pressure like an elephant sitting on my chest."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-004-C"
+    rule_id: "ER-004"
+    text: "sudden tight chest discomfort radiating to jaw and breathlessness"
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-004-D"
+    rule_id: "ER-004"
+    text: "My father is experiencing sudden chest pain and sweating profusely."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-005: Stroke warning signs
+  - id: "EM-005-A"
+    rule_id: "ER-005"
+    text: "My mother has sudden face drooping on the right side and cannot smile."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-005-B"
+    rule_id: "ER-005"
+    text: "Sudden arm weakness on one side and slurred speech when trying to talk."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-005-C"
+    rule_id: "ER-005"
+    text: "FACE DROOPING suddenly with severe inability to speak clearly."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-005-D"
+    rule_id: "ER-005"
+    text: "One side of body suddenly numb and weak, words coming out jumbled."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-006: Severe respiratory distress / failure
+  - id: "EM-006-A"
+    rule_id: "ER-006"
+    text: "Patient is struggling to breathe and gasping for air continuously."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-006-B"
+    rule_id: "ER-006"
+    text: "LIPS TURNING BLUE and unable to breathe properly."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-006-C"
+    rule_id: "ER-006"
+    text: "Extreme breathlessness, fingernails turning blue, cannot speak full words."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-006-D"
+    rule_id: "ER-006"
+    text: "Severe gasping and suffocating feeling in chest, chest drawing in."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-007: Severe asthma exacerbation
+  - id: "EM-007-A"
+    rule_id: "ER-007"
+    text: "Having a severe asthma attack, inhaler is not providing any relief."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-007-B"
+    rule_id: "ER-007"
+    text: "ASTHMA ATTACK and too breathless to speak a single sentence."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-007-C"
+    rule_id: "ER-007"
+    text: "Loud wheezing, chest feels locked, rescue pump not helping."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-007-D"
+    rule_id: "ER-007"
+    text: "Severe asthma flare up with extreme shortness of breath and exhaustion."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-008: Acute rhinosinusitis with complications
+  - id: "EM-008-A"
+    rule_id: "ER-008"
+    text: "Sinus infection with swelling around eyes and high fever."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-008-B"
+    rule_id: "ER-008"
+    text: "Double vision with fever and severe facial pressure above eye."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-008-C"
+    rule_id: "ER-008"
+    text: "Sinus pain with eyelid redness, bulging eye, and high temperature."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-008-D"
+    rule_id: "ER-008"
+    text: "Severe forehead swelling, stiff neck, and intense sinus headache."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-009: Airway obstruction / Epiglottitis / Peritonsillar abscess
+  - id: "EM-009-A"
+    rule_id: "ER-009"
+    text: "Severe sore throat and drooling saliva, unable to swallow anything."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-009-B"
+    rule_id: "ER-009"
+    text: "DROOLING because cannot swallow spit, high fever and leaning forward."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-009-C"
+    rule_id: "ER-009"
+    text: "High pitched stridor sound while breathing in with severe throat swelling."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-009-D"
+    rule_id: "ER-009"
+    text: "Cannot swallow liquids or saliva, throat feels completely closed up."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-010: Severe dehydration / Shock in diarrhoea
+  - id: "EM-010-A"
+    rule_id: "ER-010"
+    text: "Diarrhea for 2 days, skin pinch goes back very slowly and eyes sunken."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-010-B"
+    rule_id: "ER-010"
+    text: "SKIN PINCH SLOW, patient is lethargic and unable to drink liquids."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-010-C"
+    rule_id: "ER-010"
+    text: "Severe watery loose stools, person is limp, floppy, and unresponsive."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-010-D"
+    rule_id: "ER-010"
+    text: "Cholera like diarrhoea, cold clammy hands, no urine output all day."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-011: Dengue warning signs / Severe dengue
+  - id: "EM-011-A"
+    rule_id: "ER-011"
+    text: "Dengue fever with persistent vomiting and severe abdominal pain."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-011-B"
+    rule_id: "ER-011"
+    text: "Diagnosed with dengue, now has bleeding from gums and extreme lethargy."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-011-C"
+    rule_id: "ER-011"
+    text: "DENGUE WARNING SIGNS showing: severe belly pain and restlessness."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-011-D"
+    rule_id: "ER-011"
+    text: "Dengue shock symptoms with cold clammy extremities and rapid pulse."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-012: Severe hypoglycaemia in diabetes
+  - id: "EM-012-A"
+    rule_id: "ER-012"
+    text: "My diabetic father is unconscious and drenched in cold sweat."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-012-B"
+    rule_id: "ER-012"
+    text: "DIABETIC UNCONSCIOUS after taking morning insulin injection."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-012-C"
+    rule_id: "ER-012"
+    text: "Severe hypoglycaemia, sugar dropped to 30, patient is seizing."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-012-D"
+    rule_id: "ER-012"
+    text: "Diabetic patient is confused, unable to swallow juice, and passing out."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-013: Severe or uncontrolled epistaxis
+  - id: "EM-013-A"
+    rule_id: "ER-013"
+    text: "My nosebleed is not stopping even after 25 minutes of firm pressure."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-013-B"
+    rule_id: "ER-013"
+    text: "NOSE BLEEDING HEAVILY, blood flowing down back of throat, feeling faint."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-013-C"
+    rule_id: "ER-013"
+    text: "Massive nose bleed from both nostrils for 30 minutes without stopping."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-013-D"
+    rule_id: "ER-013"
+    text: "Continuous heavy nosebleed after high blood pressure spike, getting dizzy."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-014: Diabetic foot ulcer complications / Gangrene
+  - id: "EM-014-A"
+    rule_id: "ER-014"
+    text: "Diabetic foot wound with red streaks spreading rapidly up the calf."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-014-B"
+    rule_id: "ER-014"
+    text: "DIABETIC FOOT RED STREAKS and black discoloration of great toe."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-014-C"
+    rule_id: "ER-014"
+    text: "Gangrene on diabetic foot with foul smell and high shivering fever."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-014-D"
+    rule_id: "ER-014"
+    text: "Rapidly spreading swelling and dark black skin near diabetic heel ulcer."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-015: Severe or uncontrolled bleeding
+  - id: "EM-015-A"
+    rule_id: "ER-015"
+    text: "Heavy bleeding from a deep knife cut, soaked 3 towels already."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-015-B"
+    rule_id: "ER-015"
+    text: "BLEEDING PROFUSELY from leg laceration and won't stop with pressure."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-015-C"
+    rule_id: "ER-015"
+    text: "Arterial blood spurting from arm injury, patient getting very pale."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-015-D"
+    rule_id: "ER-015"
+    text: "Large wound bleeding uncontrollably after glass shatter accident."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-016: Vomiting blood / Black tarry stools
+  - id: "EM-016-A"
+    rule_id: "ER-016"
+    text: "I am vomiting blood and feeling extremely weak and dizzy."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-016-B"
+    rule_id: "ER-016"
+    text: "VOMITING BLOOD like coffee grounds since this morning."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-016-C"
+    rule_id: "ER-016"
+    text: "Passing pitch black tarry stools with lightheadedness and nausea."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-016-D"
+    rule_id: "ER-016"
+    text: "Large amount of red blood in vomit after severe upper stomach pain."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-017: Seizure or fits
+  - id: "EM-017-A"
+    rule_id: "ER-017"
+    text: "My brother is having a seizure right now on the floor."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-017-B"
+    rule_id: "ER-017"
+    text: "SEIZURE with full body convulsions and eyes rolling back."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-017-C"
+    rule_id: "ER-017"
+    text: "Patient had fits for 3 minutes and is currently unresponsive."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-017-D"
+    rule_id: "ER-017"
+    text: "Sudden violent twitching, foaming at mouth, and loss of consciousness."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-018: Unconscious or unresponsive
+  - id: "EM-018-A"
+    rule_id: "ER-018"
+    text: "Person collapsed and is unconscious, not responding to shaking."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-018-B"
+    rule_id: "ER-018"
+    text: "UNCONSCIOUS on bed, breathing slowly, cannot wake him up."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-018-C"
+    rule_id: "ER-018"
+    text: "Fainted suddenly and has been completely unarousable for 5 minutes."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-018-D"
+    rule_id: "ER-018"
+    text: "Passed out in bathroom, no verbal response when called."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-019: Poisoning / Overdose
+  - id: "EM-019-A"
+    rule_id: "ER-019"
+    text: "Someone accidentally drank poison from a farm bottle."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-019-B"
+    rule_id: "ER-019"
+    text: "SWALLOWED PESTICIDE liquid and is vomiting and sweating."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-019-C"
+    rule_id: "ER-019"
+    text: "Drug overdose with multiple prescription pills taken at once."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-019-D"
+    rule_id: "ER-019"
+    text: "Ingested toilet cleaning acid by accident, burning in mouth and throat."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-020: Snake bite
+  - id: "EM-020-A"
+    rule_id: "ER-020"
+    text: "I was bitten by a snake in the field, leg is swelling up fast."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-020-B"
+    rule_id: "ER-020"
+    text: "SNAKE BITE on hand with severe pain and two puncture bleeding marks."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-020-C"
+    rule_id: "ER-020"
+    text: "Viper bite 20 minutes ago, swelling spreading to knee and blurred vision."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-020-D"
+    rule_id: "ER-020"
+    text: "Cobra snakebite on ankle, numbness spreading up the leg."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-021: Head injury with red flags
+  - id: "EM-021-A"
+    rule_id: "ER-021"
+    text: "Fell from motorcycle, hit head and vomiting repeatedly now."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-021-B"
+    rule_id: "ER-021"
+    text: "HEAD INJURY VOMITING and extreme drowsiness after sports impact."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-021-C"
+    rule_id: "ER-021"
+    text: "Severe head blow with confusion, memory loss, and clear fluid from ear."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-021-D"
+    rule_id: "ER-021"
+    text: "Hit head on concrete floor, lost consciousness briefly and now very confused."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-022: Bleeding in pregnancy
+  - id: "EM-022-A"
+    rule_id: "ER-022"
+    text: "I am 6 months pregnant and having sudden vaginal bleeding."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-022-B"
+    rule_id: "ER-022"
+    text: "PREGNANT AND BLEEDING bright red blood with severe lower belly cramps."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-022-C"
+    rule_id: "ER-022"
+    text: "First trimester pregnancy with heavy bleeding and passing large clots."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-022-D"
+    rule_id: "ER-022"
+    text: "Pregnant woman experiencing sudden heavy vaginal bleeding and dizziness."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # ER-023: Choking / Foreign body obstruction
+  - id: "EM-023-A"
+    rule_id: "ER-023"
+    text: "Someone is choking on food and turning red, cannot make a sound."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-023-B"
+    rule_id: "ER-023"
+    text: "CHOKING CANNOT BREATHE after meat stuck in throat!"
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-023-C"
+    rule_id: "ER-023"
+    text: "Fish bone or food piece blocking airway, clutching neck in distress."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  - id: "EM-023-D"
+    rule_id: "ER-023"
+    text: "Choking on apple slice, gasping frantically and unable to speak."
+    should_fire: true
+    expected_outcome: "EMERGENCY"
+
+  # -------------------------------------------------------------------------
+  # 10 Negation Cases: Emergency terms are negated and must NOT fire emergency
+  # -------------------------------------------------------------------------
+  - id: "EM-NEG-001"
+    rule_id: "ER-004"
+    text: "I have a mild runny nose, no chest pain at all."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-002"
+    rule_id: "ER-017"
+    text: "Patient has headache but has no history of seizure or fits."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-003"
+    rule_id: "ER-018"
+    text: "My grandfather is awake and talking, not unconscious."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-004"
+    rule_id: "ER-023"
+    text: "My throat is scratchy but I am eating normally and not choking."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-005"
+    rule_id: "ER-005"
+    text: "I have slight tension headache, without face drooping or arm weakness."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-006"
+    rule_id: "ER-001"
+    text: "I have mild hives on my forearm, no throat swelling."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-007"
+    rule_id: "ER-016"
+    text: "I have stomach cramps, no vomiting blood and no black stools."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-008"
+    rule_id: "ER-015"
+    text: "I got a minor paper cut on finger, not bleeding heavily."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-009"
+    rule_id: "ER-007"
+    text: "Mild seasonal cough without severe asthma attack."
+    should_fire: false
+    expected_outcome: "PASS"
+
+  - id: "EM-NEG-010"
+    rule_id: "ER-022"
+    text: "Missed period but not pregnant and no bleeding."
+    should_fire: false
+    expected_outcome: "PASS"

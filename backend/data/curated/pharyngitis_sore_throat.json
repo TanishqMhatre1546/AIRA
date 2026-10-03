@@ -1,0 +1,82 @@
+{
+  "id": "icmr-stw-pharyngitis-sore-throat",
+  "condition": "Sore Throat and Pharyngitis",
+  "icd_code": "ICD-10-J02",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for the Management of Pharyngitis and Sore Throat",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "October 2019",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "antibiotic names",
+      "dosing schedules",
+      "parenteral antibiotic protocols"
+    ]
+  },
+  "condition_description": "Sore throat is pain in the throat on swallowing. It may be caused by a virus (most common) or bacteria. Viral sore throats do not need antibiotics. Bacterial sore throat (streptococcal) has specific features and needs a doctor to decide on treatment.",
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Go to Hospital Immediately",
+      "page": 1,
+      "items": [
+        "Sore throat with high fever, drooling of saliva, and difficulty or inability to swallow, this may indicate epiglottitis or a deep neck infection, which can close the airway",
+        "Breathing difficulty or noisy breathing with a sore throat",
+        "Muffled or hot potato voice (very thick, muffled speech) with sore throat",
+        "Swelling of the throat visible from outside the neck",
+        "One tonsil significantly larger than the other, especially with severe throat pain and fever, may be a peritonsillar abscess",
+        "White or grey membrane in the throat that extends beyond the tonsils with a very unwell appearance, may be diphtheria",
+        "Sore throat with generalised swollen glands across the body (neck, armpits, groin) and feeling very unwell",
+        "Sore throat with new cardiac symptoms or joint swelling after recovery, may suggest rheumatic fever, a complication of streptococcal infection"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "Self-Care at Home for Mild Sore Throat",
+      "page": 1,
+      "items": [
+        "Gargle with warm salt water several times a day, dissolve half a teaspoon of salt in a glass of warm water and gargle for 30 seconds. This reduces swelling and kills surface bacteria",
+        "Drink warm liquids: warm water, warm water with honey and ginger, warm soups, warm herbal teas",
+        "Rest your voice and avoid shouting or excessive talking",
+        "Paracetamol or ibuprofen can be taken for pain relief as directed on the pack",
+        "Avoid very cold drinks and ice cream if they worsen the pain",
+        "Avoid smoking and exposure to tobacco smoke, smoke irritates the throat and slows healing",
+        "Address GERD (acid reflux) if it is a known issue, acid coming back up is a common cause of throat irritation",
+        "Most viral sore throats resolve on their own within 7 to 10 days with home care",
+        "Do not demand or self-purchase antibiotics for a sore throat, most sore throats are viral and antibiotics will not help"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor",
+      "page": 1,
+      "items": [
+        "Sore throat with high fever (above 38.5 degrees Celsius) and swollen, tender glands in the neck",
+        "Pus or white spots visible on the tonsils",
+        "Sore throat that is not improving after 5 to 7 days of home care",
+        "Throat pain that is severe enough to make swallowing very difficult",
+        "Sore throat with ear pain",
+        "Recurring sore throats or tonsillitis (more than 5 episodes a year)",
+        "Sore throat in a person with a history of rheumatic fever or rheumatic heart disease, streptococcal throat infection can trigger a relapse",
+        "Sore throat with runny nose, cough, and red eyes, likely a viral infection but should be assessed if it is severe"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any red flag sign listed above, drooling, breathing difficulty, muffled voice, single very swollen tonsil, throat membrane, inability to open the mouth",
+        "Suspected epiglottitis or deep neck space infection, these can close the airway rapidly",
+        "Suspected diphtheria in a child who is unvaccinated or incompletely vaccinated",
+        "Complications after a sore throat: new swelling in the neck, inability to open mouth, high fever returning after initial improvement"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "All antibiotic names and dosing excluded. Warm salt water gargle retained as a non-drug self-care measure directly cited in the document. Danger signs for epiglottitis and diphtheria retained in full given their airway-critical and public health significance."
+  }
+}

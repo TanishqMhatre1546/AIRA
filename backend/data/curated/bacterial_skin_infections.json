@@ -1,0 +1,105 @@
+{
+  "id": "icmr-stw-bacterial-skin-infections",
+  "condition": "Bacterial Skin Infections",
+  "icd_code": "ICD-10-L01, L73.9, L08, L02, L03, A46, L00",
+  "source": {
+    "title": "Standard Treatment Workflow (STW) for Bacterial Skin Infections",
+    "publisher": "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+    "edition_year": "July 2022",
+    "url": "https://stw.icmr.org.in",
+    "retrieved": "2026-10-02",
+    "restricted_content_excluded": [
+      "drug names",
+      "dosing schedules",
+      "IV/antibiotic regimens"
+    ]
+  },
+  "types_covered": [
+    "Impetigo",
+    "Ecthyma",
+    "Folliculitis",
+    "Furuncle (boil)",
+    "Carbuncle",
+    "Cutaneous abscess",
+    "Cellulitis",
+    "Erysipelas",
+    "Staphylococcal scalded skin syndrome"
+  ],
+  "sections": [
+    {
+      "type": "danger_signs",
+      "label": "Red Flag Signs: Seek Emergency Care Immediately",
+      "page": 1,
+      "items": [
+        "Fever above 100.4 degrees Fahrenheit",
+        "Heart rate above 90 beats per minute",
+        "Breathing rate above 24 breaths per minute",
+        "Very high white blood cell count (signs of sepsis)",
+        "Severe pain in the skin followed by a sudden, deceptive absence of pain, this may indicate necrotising fasciitis, a life-threatening infection",
+        "Dark discoloration of the overlying skin",
+        "Skin blistering, sloughing (peeling off), or tissue breakdown",
+        "Low blood pressure or signs of shock"
+      ]
+    },
+    {
+      "type": "danger_signs",
+      "label": "Danger Signs in Staphylococcal Scalded Skin Syndrome",
+      "page": 1,
+      "items": [
+        "Widespread peeling or scaling of skin across the body",
+        "Skin that appears tender and warm before it starts to peel",
+        "Fever with general feeling of being very unwell",
+        "Signs of dehydration"
+      ]
+    },
+    {
+      "type": "self_care",
+      "label": "General Self-Care at Home",
+      "page": 1,
+      "items": [
+        "Maintain good skin hygiene and wash hands regularly",
+        "Avoid applying oil on affected skin",
+        "Eat adequate nutritious food to support healing",
+        "For small wounds or minor folliculitis, keep the area clean and dry",
+        "Do not squeeze, pick, or burst a boil or abscess, this can spread the infection",
+        "Wash clothes and towels separately in hot water and dry them in sunlight",
+        "Avoid sharing towels, clothes, or personal items with others"
+      ]
+    },
+    {
+      "type": "see_doctor",
+      "label": "See a Doctor Within 1 to 2 Days",
+      "page": 1,
+      "items": [
+        "A boil, abscess, or skin swelling that is growing larger, becoming more painful, or not improving",
+        "Redness spreading outward from a wound or infection site",
+        "Any skin infection with mild fever",
+        "Skin infection in a person with diabetes, skin infections tend to be more severe in diabetic patients",
+        "Recurrent boils or folliculitis in multiple family members",
+        "Infection affecting the lower limbs with redness, pain, and swelling (cellulitis)",
+        "A thick black crust with an underlying sore (ecthyma)",
+        "Impetigo (wet yellow-brown crusts over inflamed skin) that is widespread or not improving"
+      ]
+    },
+    {
+      "type": "refer_urgently",
+      "label": "Go to Hospital Without Delay",
+      "page": 1,
+      "items": [
+        "Any red flag sign listed above, fever, fast heartbeat, fast breathing, low blood pressure",
+        "Severe pain followed by sudden relief, possible necrotising fasciitis",
+        "Dark skin over an infected area",
+        "Widespread skin peeling or blistering",
+        "A skin infection in someone who is immunocompromised (on steroids, chemotherapy, or with HIV)",
+        "A large abscess or carbuncle that requires drainage",
+        "No improvement after 2 to 3 days of treatment",
+        "Signs of blood poisoning (septicaemia): high fever, confusion, rapid deterioration"
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "notes": "Dosing, antibiotic names, and IV regimens excluded per AIRA refusal policy. All clinical content sourced directly from the ICMR STW document listed above."
+  }
+}
