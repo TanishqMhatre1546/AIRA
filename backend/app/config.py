@@ -65,9 +65,13 @@ class Settings(BaseSettings):
             if self.llm_enabled and (
                 self.gemini_api_key is None or not self.gemini_api_key.get_secret_value().strip()
             ):
-                raise ValueError(
-                    "gemini_api_key is required in production when llm_enabled is True"
+                # Gracefully disable LLM if no API key is provided
+                import logging
+                logging.getLogger("aira.config").warning(
+                    "GEMINI_API_KEY not set in production. Disabling LLM and running in "
+                    "offline deterministic mode (extractive fallback only)."
                 )
+                self.llm_enabled = False
         return self
 
 

@@ -5,7 +5,7 @@ services:
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
     plan: free
-    healthCheckPath: /api/ready
+    healthCheckPath: /api/health
     autoDeploy: true
     envVars:
       - key: ENVIRONMENT
@@ -13,13 +13,13 @@ services:
       - key: GEMINI_API_KEY
         sync: false
       - key: CHAT_MODEL
-        value: gemini-1.5-flash
+        value: gemini-2.5-flash
       - key: EMBEDDING_MODEL
-        value: text-embedding-004
+        value: gemini-embedding-001
       - key: CORS_ORIGINS
         value: https://aira-frontend.onrender.com
       - key: LLM_ENABLED
-        value: "true"
+        value: "false"
       - key: ALLOW_UNVERIFIED_CONTENT
         value: "false"
 
