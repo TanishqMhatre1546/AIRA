@@ -17,7 +17,7 @@ services:
       - key: EMBEDDING_MODEL
         value: gemini-embedding-001
       - key: CORS_ORIGINS
-        value: https://aira-frontend.onrender.com
+        value: https://aira-frontend-cf3y.onrender.com
       - key: LLM_ENABLED
         value: "false"
       - key: ALLOW_UNVERIFIED_CONTENT
@@ -30,7 +30,7 @@ services:
     staticPublishPath: ./frontend/dist
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://aira-backend.onrender.com
+        value: https://aira-backend-wp37.onrender.com
     routes:
       - type: rewrite
         source: /*
