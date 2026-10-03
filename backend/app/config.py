@@ -19,9 +19,9 @@ class Settings(BaseSettings):
 
     environment: Literal["development", "production", "test"] = "development"
     log_level: str = "INFO"
-    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:3000"]
+    cors_origins: str | list[str] = ["http://localhost:5173", "http://localhost:3000"]
 
-    @field_validator("cors_origins", mode="before")
+    @field_validator("cors_origins", mode="after")
     @classmethod
     def parse_cors_origins(cls, v: str | list[str]) -> list[str]:
         """Parse CORS origins from JSON list, comma-separated string, or list."""
