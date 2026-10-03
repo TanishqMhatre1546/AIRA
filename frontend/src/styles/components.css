@@ -1,0 +1,656 @@
+/* Purpose statement */
+.purpose-paragraph {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+/* Symptom Form */
+.symptom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.form-label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.symptom-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  resize: vertical;
+  transition: var(--transition-fast);
+}
+
+.symptom-textarea:focus {
+  border-color: var(--color-information);
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.char-counter {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+}
+
+.char-counter.limit-near {
+  color: var(--color-caution);
+}
+
+.char-counter.limit-reached {
+  color: var(--color-emergency);
+  font-weight: 600;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+  background-color: var(--color-information);
+  color: var(--color-emergency-text);
+  border: 1px solid var(--color-information);
+  border-radius: var(--radius-base);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.submit-button:hover:not(:disabled),
+.submit-button:focus-visible:not(:disabled) {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Example Prompts */
+.example-prompts-section {
+  margin-bottom: 2rem;
+}
+
+.examples-heading {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.examples-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.example-button {
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  min-height: 44px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.example-button:hover,
+.example-button:focus-visible {
+  background-color: var(--color-background);
+  border-color: var(--color-information);
+  color: var(--color-information);
+}
+
+/* Status Line / Loading */
+.status-line {
+  padding: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  margin-bottom: 1.5rem;
+}
+
+.status-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.status-slow-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  margin-bottom: 0;
+}
+
+/* Reset / Actions Area */
+.reset-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.print-button {
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  color: var(--color-information);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.print-button:hover,
+.print-button:focus-visible {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.reset-button {
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  color: var(--color-muted-text);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.reset-button:hover,
+.reset-button:focus-visible {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* Result Card Base */
+.result-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Triage Header */
+.triage-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.triage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.375rem;
+}
+
+.triage-badge.self_care {
+  color: var(--color-self-care);
+}
+
+.triage-badge.see_doctor {
+  color: var(--color-caution);
+}
+
+.triage-badge.unknown {
+  color: var(--color-muted-text);
+}
+
+.triage-badge.emergency {
+  color: var(--color-emergency);
+}
+
+.triage-meaning {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+/* Section Lists */
+.guideline-section {
+  margin-bottom: 1.5rem;
+}
+
+.guideline-section-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.guideline-list {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.guideline-item {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.citation-ref {
+  font-size: var(--font-size-sm);
+  color: var(--color-information);
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+.mode-notice {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Sources List */
+.sources-section {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.sources-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.sources-list {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.source-item {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.source-title {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.source-meta {
+  color: var(--color-muted-text);
+}
+
+/* Emergency Banner */
+.emergency-banner {
+  background-color: var(--color-emergency);
+  color: var(--color-emergency-text);
+  padding: 1.5rem;
+  border-radius: var(--radius-base);
+  margin-bottom: 2rem;
+}
+
+.emergency-banner h2 {
+  color: var(--color-emergency-text);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.emergency-message {
+  color: var(--color-emergency-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.helplines-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.helpline-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  min-height: 44px;
+  background-color: var(--color-background);
+  color: var(--color-emergency);
+  border: 1px solid var(--color-background);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  transition: var(--transition-fast);
+}
+
+.helpline-button:hover,
+.helpline-button:focus-visible {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.helpline-name {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  font-weight: 400;
+}
+
+/* Crisis Banner */
+.crisis-banner {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-information);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.crisis-banner h2 {
+  color: var(--color-information);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.crisis-message {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.crisis-helpline-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  min-height: 44px;
+  background-color: var(--color-information);
+  color: var(--color-emergency-text);
+  border: 1px solid var(--color-information);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  transition: var(--transition-fast);
+}
+
+.crisis-helpline-button:hover,
+.crisis-helpline-button:focus-visible {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-emergency-text);
+}
+
+/* Refusal Notice */
+.refusal-notice {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.refusal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.75rem;
+}
+
+.refusal-message {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.refusal-action {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-text);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Error Banner */
+.error-card {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.error-heading {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-emergency);
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  margin-bottom: 1rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.retry-button {
+  padding: 0.625rem 1.25rem;
+  min-height: 44px;
+  background-color: var(--color-information);
+  color: var(--color-emergency-text);
+  border: 1px solid var(--color-information);
+  border-radius: var(--radius-base);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.retry-button:hover,
+.retry-button:focus-visible {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* Static Informational Pages */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.step-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.step-number {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-information);
+  margin-bottom: 0.25rem;
+}
+
+.step-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.source-condition-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-surface);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.source-condition-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+/* Print Summary Styles (Hidden on screen) */
+.print-only {
+  display: none;
+}
+
+/* Print Stylesheet */
+@media print {
+  .site-header,
+  .site-nav,
+  .site-footer,
+  .reset-area,
+  .print-button,
+  .submit-button,
+  .symptom-form,
+  .example-prompts-section,
+  .status-line,
+  .purpose-paragraph {
+    display: none !important;
+  }
+
+  body,
+  .app-layout,
+  .main-content,
+  .home-container {
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .result-card {
+    border: 1px solid var(--color-border) !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    background-color: var(--color-background) !important;
+    box-shadow: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .print-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .print-meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-muted-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .print-user-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .print-disclaimer {
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+    margin-top: 1.25rem;
+    font-size: var(--font-size-sm);
+    color: var(--color-muted-text);
+    font-weight: 600;
+  }
+
+  .guideline-section,
+  .sources-section {
+    break-inside: avoid;
+  }
+}

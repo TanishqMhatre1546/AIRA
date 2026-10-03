@@ -1,0 +1,211 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend Tests & Quality
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Lint with Ruff
+        run: ruff check .
+
+      - name: Typecheck with MyPy
+        run: mypy app
+
+      - name: Run Pytest suite
+        run: pytest
+
+  corpus:
+    name: Corpus & Index Validation
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Validate clinical corpus
+        run: python scripts/validate_corpus.py
+
+      - name: Verify search index integrity
+        run: python scripts/build_index.py --verify
+
+  safety:
+    name: Safety Gates & Evaluation Harness
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Run import isolation test
+        run: pytest tests/test_import_isolation.py
+
+      - name: Run graph reachability test
+        run: pytest tests/test_graph.py -k reachability
+
+      - name: Run evaluation harness (offline, all suites)
+        run: python -m eval.run --suite all
+
+  frontend:
+    name: Frontend Tests, Lint & Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint & Design Lint
+        run: npm run lint
+
+      - name: Run Vitest unit tests
+        run: npm test
+
+      - name: Build production bundle
+        run: npm run build
+
+  repo-hygiene:
+    name: Repository Hygiene & Policy Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for tracked .env files
+        run: |
+          if git ls-files | grep -E "(^|/)\.env($|\.)"; then
+            echo "ERROR: Tracked .env file found in repository!"
+            exit 1
+          fi
+          echo "No .env files tracked in repository."
+
+      - name: Check for forbidden em dashes (U+2014)
+        run: |
+          python -c "
+          import os, sys
+
+          violations = []
+          for root, dirs, files in os.walk('.'):
+              if 'node_modules' in root or '.git' in root or '.venv' in root or '.mypy_cache' in root or '.pytest_cache' in root or 'dist' in root:
+                  continue
+              for f in files:
+                  if f.endswith(('.lock', '-lock.json', '.png', '.jpg', '.jpeg', '.svg', '.pyc', '.npy', '.bin', '.pdf')):
+                      continue
+                  p = os.path.join(root, f)
+                  try:
+                      with open(p, 'r', encoding='utf-8', errors='ignore') as fp:
+                          for line_no, line in enumerate(fp, 1):
+                              if '\u2014' in line:
+                                  violations.append(f'{p}:{line_no}: {line.strip()[:80]}')
+                  except Exception:
+                      pass
+
+          if violations:
+              print(f'ERROR: Found {len(violations)} em dash (U+2014) violation(s):')
+              for v in violations[:15]:
+                  print('  ' + v)
+              sys.exit(1)
+          else:
+              print('Zero em dash violations found across repository.')
+          "
+
+  docker:
+    name: Docker Packaging & Memory Benchmark
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install measurement dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install psutil
+
+      - name: Set up Docker Buildx
+        uses: actions/docker/setup-buildx-action@v3
+
+      - name: Build backend Docker image
+        run: docker build -t aira-backend:latest ./backend
+
+      - name: Run memory benchmark against container
+        run: python backend/scripts/measure_memory.py --docker-test --image aira-backend:latest
+
+  publish-reports:
+    name: Upload Evaluation Reports
+    runs-on: ubuntu-latest
+    needs: [backend, corpus, safety, frontend, repo-hygiene, docker]
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload reports artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aira-reports
+          path: |
+            backend/reports/
+            reports/
+          if-no-files-found: ignore

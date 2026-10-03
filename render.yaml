@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: aira-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /api/ready
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CHAT_MODEL
+        value: gemini-1.5-flash
+      - key: EMBEDDING_MODEL
+        value: text-embedding-004
+      - key: CORS_ORIGINS
+        value: https://aira-frontend.onrender.com
+      - key: LLM_ENABLED
+        value: "true"
+      - key: ALLOW_UNVERIFIED_CONTENT
+        value: "false"
+
+  - type: web
+    name: aira-frontend
+    runtime: static
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://aira-backend.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin

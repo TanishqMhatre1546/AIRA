@@ -14,9 +14,12 @@ htmlcov/
 .git
 .gitignore
 .env
+.env.*
 tests/
 eval/
 scripts/
 data/raw/
+data/extracted/
 reports/
+node_modules/
 *.md

@@ -421,7 +421,6 @@ def symptom_urgency_scorer(
         trigger_terms = mod.get("trigger_terms", [])
         min_age = mod.get("min_age")
         target_conditions = mod.get("target_conditions", [])
-        target_symptoms = mod.get("target_symptoms", [])
 
         # Check term match
         term_matched = False
@@ -442,27 +441,42 @@ def symptom_urgency_scorer(
             age_matched = True
 
         if term_matched or age_matched:
-            # Check if target conditions or symptom terms are present
-            condition_relevant = any(c in target_conditions for c in detected_conditions)
-            symptom_relevant = False
-            if not condition_relevant:
-                for symp in target_symptoms:
-                    s_toks = symp.strip().lower().split()
-                    matches = find_phrase(tok_list, s_toks)
-                    if matches and any(not is_negated(tok_list, m) for m in matches):
-                        symptom_relevant = True
-                        break
-
-            if condition_relevant or symptom_relevant or not target_conditions:
-                if level == "SELF_CARE" or level == "UNKNOWN":
-                    level = mod.get("escalate_to", "SEE_DOCTOR")
-                modifiers_applied.append(
+            # Check which detected conditions match the modifier pairs
+            pairs_list = mod.get("pairs", [])
+            matching_pairs = [
+                p for p in pairs_list
+                if p.get("condition_id") in detected_conditions
+            ]
+            if (
+                not matching_pairs
+                and not pairs_list
+                and (
+                    any(c in target_conditions for c in detected_conditions)
+                    or not target_conditions
+                )
+            ):
+                fallback_cid = detected_conditions[0] if detected_conditions else "unknown"
+                matching_pairs = [
                     {
-                        "name": mod.get("name", mod_id),
+                        "condition_id": fallback_cid,
                         "source_id": mod.get("source_id", "clinical-guidelines"),
                         "source_page": mod.get("source_page", 1),
                     }
-                )
+                ]
+
+            if matching_pairs:
+                if level == "SELF_CARE" or level == "UNKNOWN":
+                    level = mod.get("escalate_to", "SEE_DOCTOR")
+                for p in matching_pairs:
+                    modifiers_applied.append(
+                        {
+                            "name": mod.get("name", mod_id),
+                            "condition_id": p.get("condition_id", ""),
+                            "source_id": p.get("source_id", "clinical-guidelines"),
+                            "source_page": p.get("source_page", 1),
+                            "quote": p.get("quote", ""),
+                        }
+                    )
                 phrase_detail = matched_term or (f"age {extracted_age}" if age_matched else "")
                 reasons_list.append(
                     {

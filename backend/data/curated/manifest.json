@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "overall_corpus_hash": "0c3fc2639ff895555afd4ed9759c73b0f01e2b0c1263b0372e07a7cd1d58a000",
+  "overall_corpus_hash": "0118f7356f27934d7ebea64e19c9e70b4bf762aaf28196b9d838c15a4689cebb",
   "files": {
     "acute_diarrhea.json": "361e8679a15b94d00d610e2ed1e2ec3538264fdaab3a24f06785ed4dec3356de",
     "acute_respiratory_infections.json": "ff893c36389e7805523b087ef15696a036d922015cacc00d7976c0ee74a4ed2e",
@@ -12,10 +12,10 @@
     "eczema_dermatitis.json": "9b9dec4ce61f233ef0e53e68d0fe9d04c1ebc639864e79a3a13ed8270cfaf456",
     "epistaxis_nosebleed.json": "3ec3a215bba55b6c7c546be03caaae61e4b3ae624ac6d4662f023b2aa378c332",
     "headache.json": "8c2658c876cf71f60693771efc44b10aa4c598ab2a631f8f78bf8d01cd311d83",
-    "hypertension.json": "06c09969f3c1d64ba6a4998e4f3dd1f526ce1af89d19bfb6c4d1055505c19791",
+    "hypertension.json": "011067acfad684a81cf3ef63886bc01e0fe787e30f2e5b7ca161ed2ab6e2b7d0",
     "pharyngitis_sore_throat.json": "6a92e18276124fa27df8ef1a1878655290c4b2224f760c718496d1a9cd8eff70",
     "scabies.json": "9ec041291d8c4b34268ed34442fd49f029bd06b9b59145c448bd2a7c1d21b426",
-    "urgency_rules.json": "474d938cf3abdc0a3ba1d8a6254f8a3dfdeb3370a482f69ca6fd8b57f50615e9",
+    "urgency_rules.json": "9b0fc87f16f5abf5464fe2851055a2d7027d70426cb4b0207b292eca21905eff",
     "urinary_tract_infection.json": "351b7ab24a1d2cdf4dc4ac886edc06b118ca6da0dd5bd4a3ba4b0a22a5317677",
     "urticaria_angioedema.json": "f10cf1c6e2b4a234072cfb5530233f1f5d33b6021e69f1f2173cb16eb82d04da",
     "provenance.csv": "6b047fc3e979910fdf2d8504b63fe4fc7381bb639d627b19fdf2812a80eb1e67"

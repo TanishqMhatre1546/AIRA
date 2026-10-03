@@ -230,14 +230,14 @@ def test_diabetes_infection_modifier(
     assert any(m["name"] == "Diabetes Infection Modifier" for m in res.modifiers_applied)
 
 
-def test_elderly_respiratory_modifier(
+def test_elderly_dengue_modifier(
     rule_engine: RuleEngine,
     profiles: dict[str, Any],
     watch_for_map: dict[str, list[str]],
 ) -> None:
-    """Age 65 or above raises acute respiratory symptoms to SEE_DOCTOR."""
+    """Age 65 or above raises dengue symptoms to SEE_DOCTOR."""
     res = symptom_urgency_scorer(
-        "I am 72 years old with a mild cold and runny nose for 2 days",
+        "I am 72 years old with dengue fever and body ache for 2 days",
         engine=rule_engine,
         profiles=profiles,
         watch_for=watch_for_map,

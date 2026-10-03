@@ -10,22 +10,40 @@
       "trimester",
       "gestational"
     ],
+    "pairs": [
+      {
+        "condition_id": "headache",
+        "source_id": "icmr-stw-headache",
+        "source_page": 1,
+        "quote": "Headache in a pregnant woman or someone who has recently given birth"
+      },
+      {
+        "condition_id": "urinary_tract_infection",
+        "source_id": "icmr-stw-urinary-tract-infection",
+        "source_page": 1,
+        "quote": "Urinary symptoms in a pregnant woman. UTI in pregnancy requires prompt treatment"
+      },
+      {
+        "condition_id": "dengue_fever",
+        "source_id": "icmr-stw-dengue-fever",
+        "source_page": 1,
+        "quote": "Any dengue fever in a child, elderly person, pregnant woman, or someone"
+      },
+      {
+        "condition_id": "dermatophytosis",
+        "source_id": "icmr-stw-dermatophytosis",
+        "source_page": 1,
+        "quote": "Infection present during pregnancy or in someone with liver, kidney, or heart"
+      }
+    ],
     "target_conditions": [
       "headache",
       "urinary_tract_infection",
-      "dengue_fever"
-    ],
-    "target_symptoms": [
-      "headache",
-      "burning urination",
-      "urine",
-      "uti",
-      "dengue"
+      "dengue_fever",
+      "dermatophytosis"
     ],
     "escalate_to": "SEE_DOCTOR",
-    "source_id": "icmr-stw-headache",
-    "source_page": 1,
-    "rationale": "Pregnancy is a high risk state for headache, UTI, and dengue fever requiring clinical assessment."
+    "rationale": "Pregnancy is a high risk state for headache, UTI, dengue fever, and dermatophytosis requiring clinical assessment."
   },
   {
     "id": "MOD-DIABETES",
@@ -38,33 +56,47 @@
       "high blood sugar",
       "type 2 diabetes"
     ],
-    "target_conditions": [
-      "urinary_tract_infection",
-      "bacterial_skin_infections",
-      "acute_rhinosinusitis",
-      "acute_respiratory_infections",
-      "acute_diarrhea",
-      "dengue_fever",
-      "epistaxis_nosebleed"
+    "pairs": [
+      {
+        "condition_id": "acute_rhinosinusitis",
+        "source_id": "icmr-stw-acute-rhinosinusitis",
+        "source_page": 1,
+        "quote": "Signs of sinusitis in a person with diabetes or on immunosuppressive treatment"
+      },
+      {
+        "condition_id": "bacterial_skin_infections",
+        "source_id": "icmr-stw-bacterial-skin-infections",
+        "source_page": 1,
+        "quote": "Skin infection in a person with diabetes, skin infections tend to be"
+      },
+      {
+        "condition_id": "dengue_fever",
+        "source_id": "icmr-stw-dengue-fever",
+        "source_page": 1,
+        "quote": "Any dengue fever in a child, elderly person, pregnant woman, or someone"
+      },
+      {
+        "condition_id": "epistaxis_nosebleed",
+        "source_id": "icmr-stw-epistaxis-nosebleed",
+        "source_page": 1,
+        "quote": "Nosebleed in a person with diabetes"
+      },
+      {
+        "condition_id": "urinary_tract_infection",
+        "source_id": "icmr-stw-urinary-tract-infection",
+        "source_page": 1,
+        "quote": "Urinary symptoms in a person with diabetes, kidney disease, or a known"
+      }
     ],
-    "target_symptoms": [
-      "infection",
-      "wound",
-      "ulcer",
-      "boil",
-      "sinus",
-      "urine",
-      "uti",
-      "cough",
-      "cold",
-      "diarrhoea",
-      "dengue",
-      "nosebleed"
+    "target_conditions": [
+      "acute_rhinosinusitis",
+      "bacterial_skin_infections",
+      "dengue_fever",
+      "epistaxis_nosebleed",
+      "urinary_tract_infection"
     ],
     "escalate_to": "SEE_DOCTOR",
-    "source_id": "icmr-stw-bacterial-skin-infections",
-    "source_page": 1,
-    "rationale": "Patients with diabetes have elevated risks for rapid spread of bacterial skin, sinus, respiratory, and urinary infections."
+    "rationale": "Patients with diabetes have elevated risks for severe sinusitis, bacterial skin infections, dengue, epistaxis, and UTIs."
   },
   {
     "id": "MOD-IMMUNOCOMPROMISED",
@@ -80,25 +112,47 @@
       "immunosuppressed",
       "low immunity"
     ],
+    "pairs": [
+      {
+        "condition_id": "acute_diarrhea",
+        "source_id": "icmr-stw-acute-diarrhea",
+        "source_page": 1,
+        "quote": "Diarrhea in a person with severe malnutrition or known HIV"
+      },
+      {
+        "condition_id": "acute_rhinosinusitis",
+        "source_id": "icmr-stw-acute-rhinosinusitis",
+        "source_page": 1,
+        "quote": "Signs of sinusitis in a person with diabetes or on immunosuppressive treatment"
+      },
+      {
+        "condition_id": "bacterial_skin_infections",
+        "source_id": "icmr-stw-bacterial-skin-infections",
+        "source_page": 1,
+        "quote": "A skin infection in someone who is immunocompromised (on steroids, chemotherapy, or"
+      },
+      {
+        "condition_id": "headache",
+        "source_id": "icmr-stw-headache",
+        "source_page": 1,
+        "quote": "New headache type in a person with cancer or a weakened immune"
+      },
+      {
+        "condition_id": "scabies",
+        "source_id": "icmr-stw-scabies",
+        "source_page": 1,
+        "quote": "Scabies in someone who is immunocompromised (on steroids, with HIV, or on"
+      }
+    ],
     "target_conditions": [
-      "bacterial_skin_infections",
+      "acute_diarrhea",
       "acute_rhinosinusitis",
+      "bacterial_skin_infections",
       "headache",
       "scabies"
     ],
-    "target_symptoms": [
-      "infection",
-      "wound",
-      "sinus",
-      "skin",
-      "headache",
-      "scabies",
-      "crusted"
-    ],
     "escalate_to": "SEE_DOCTOR",
-    "source_id": "icmr-stw-bacterial-skin-infections",
-    "source_page": 1,
-    "rationale": "Immunocompromised status significantly elevates infection severity and progression risk."
+    "rationale": "Immunocompromised status significantly elevates infection severity and progression risk across diarrhea, sinusitis, skin infections, headache, and scabies."
   },
   {
     "id": "MOD-ELDERLY",
@@ -112,22 +166,18 @@
       "grandmother"
     ],
     "min_age": 65,
-    "target_conditions": [
-      "dengue_fever",
-      "acute_respiratory_infections"
+    "pairs": [
+      {
+        "condition_id": "dengue_fever",
+        "source_id": "icmr-stw-dengue-fever",
+        "source_page": 1,
+        "quote": "Any dengue fever in a child, elderly person, pregnant woman, or someone"
+      }
     ],
-    "target_symptoms": [
-      "dengue",
-      "cough",
-      "cold",
-      "fever",
-      "chest congestion",
-      "flu",
-      "respiratory"
+    "target_conditions": [
+      "dengue_fever"
     ],
     "escalate_to": "SEE_DOCTOR",
-    "source_id": "icmr-stw-dengue-fever",
-    "source_page": 1,
-    "rationale": "Individuals aged 65 and above have higher vulnerability to severe dengue and acute respiratory complications."
+    "rationale": "Individuals aged 65 and above have higher vulnerability to severe dengue."
   }
 ]

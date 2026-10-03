@@ -109,10 +109,22 @@ class EvaluationRunner:
             data_dir=self.data_dir,
             llm_enabled=self.live,
         )
+        embedder = None
+        if self.live and self.settings.gemini_api_key:
+            try:
+                from langchain_google_genai import GoogleGenerativeAIEmbeddings
+
+                embedder = GoogleGenerativeAIEmbeddings(
+                    model=self.settings.embedding_model,
+                    google_api_key=self.settings.gemini_api_key.get_secret_value(),
+                )
+            except Exception:
+                embedder = None
+
         self.retriever = Retriever.from_disk(
             index_dir=self.data_dir / "index",
             curated_dir=self.data_dir / "curated",
-            embedder=None if not self.live else None,
+            embedder=embedder,
             settings=self.settings,
         )
         self.watch_for = extract_watch_for_map(self.retriever.chunks)
@@ -516,7 +528,7 @@ class EvaluationRunner:
                         modifiers_def=self.modifiers,
                     )
                     if var_res.level != base_level:
-                        # Ensure difference is a documented upward escalation from modifiers
+                        # Ensure difference is a documented upward escalation from a valid pair
                         applied = var_res.modifiers_applied
                         level_order = {
                             "UNKNOWN": 0,
@@ -524,18 +536,34 @@ class EvaluationRunner:
                             "SEE_DOCTOR": 2,
                             "EMERGENCY": 3,
                         }
+                        # Build set of valid (modifier_name, condition_id) pairs from configuration
+                        valid_pairs = {
+                            (mod.get("name", ""), p.get("condition_id", ""))
+                            for mod in self.modifiers
+                            for p in mod.get("pairs", [])
+                        }
+
+                        has_valid_pair = False
+                        if applied:
+                            for m in applied:
+                                m_name = m.get("name", "")
+                                c_id = m.get("condition_id", "")
+                                if (m_name, c_id) in valid_pairs and c_id in var_res.conditions:
+                                    has_valid_pair = True
+
                         is_valid_escalation = (
-                            bool(applied)
+                            has_valid_pair
                             and level_order.get(var_res.level, 0) >= level_order.get(base_level, 0)
                         )
                         if is_valid_escalation:
                             for m in applied:
+                                mod_display = f"{m.get('name', '')} ({m.get('condition_id', '')})"
                                 documented_diffs.append(
                                     asdict(
                                         DocumentedDifference(
                                             base_id=base_id,
                                             axis=axis_name,
-                                            modifier_name=m.get("name", "modifier"),
+                                            modifier_name=mod_display,
                                             source_id=m.get("source_id", "corpus"),
                                             source_page=m.get("source_page"),
                                             base_level=base_level,
