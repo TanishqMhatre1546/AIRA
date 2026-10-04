@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Hero from "../components/landing/Hero";
+import SourceStrip from "../components/landing/SourceStrip";
 import WhatYouGet from "../components/landing/WhatYouGet";
 import WhoFor from "../components/landing/WhoFor";
 import Coverage from "../components/landing/Coverage";
@@ -18,14 +19,44 @@ export function Landing() {
 
   return (
     <div className="landing-container">
-      <Hero />
-      <WhatYouGet />
-      <WhoFor />
-      <Coverage />
-      <HowItWorks />
-      <Limits />
-      <Privacy />
-      <Terms />
+      <div className="landing-band landing-band-surface">
+        <div className="landing-band-inner">
+          <Hero />
+        </div>
+      </div>
+
+      <div className="landing-band landing-band-tint">
+        <div className="landing-band-inner">
+          <SourceStrip />
+          <WhatYouGet />
+        </div>
+      </div>
+
+      <div className="landing-band landing-band-surface">
+        <div className="landing-band-inner">
+          <WhoFor />
+          <Coverage />
+        </div>
+      </div>
+
+      <div className="landing-band landing-band-tint">
+        <div className="landing-band-inner">
+          <HowItWorks />
+        </div>
+      </div>
+
+      <div className="landing-band landing-band-surface">
+        <div className="landing-band-inner">
+          <Limits />
+        </div>
+      </div>
+
+      <div className="landing-band landing-band-tint">
+        <div className="landing-band-inner landing-band-prose">
+          <Privacy />
+          <Terms />
+        </div>
+      </div>
     </div>
   );
 }

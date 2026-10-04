@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function SymptomForm({
   message,
@@ -56,14 +56,27 @@ export default function SymptomForm({
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         placeholder="Example: I have had a runny nose and mild headache for 2 days"
-        rows={4}
+        rows={6}
         maxLength={500}
         disabled={loading}
         aria-describedby="symptom-char-counter symptom-hint"
       />
       <div className="form-footer">
-        <div id="symptom-char-counter" className={counterClass} aria-live="polite">
-          {charCount}/500 characters
+        <div className="form-counter-group">
+          <div id="symptom-char-counter" className={counterClass} aria-live="polite">
+            {charCount}/500 characters
+          </div>
+          {charCount > 0 && !loading && (
+            <button
+              type="button"
+              className="clear-button"
+              onClick={() => setMessage("")}
+              aria-label="Clear symptoms text"
+            >
+              <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
+              <span>Clear</span>
+            </button>
+          )}
         </div>
         <button
           type="submit"

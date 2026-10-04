@@ -45,6 +45,7 @@ export function Coverage() {
 
   return (
     <section id="coverage" className="landing-section">
+      <span className="section-kicker">GUIDELINE COVERAGE</span>
       <h2 className="landing-section-title">{coverage.heading}</h2>
 
       {status === "loading" && (

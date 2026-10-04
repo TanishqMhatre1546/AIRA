@@ -9,6 +9,7 @@ export function Terms() {
 
   return (
     <section id="terms" className="landing-section">
+      <span className="section-kicker">LEGAL TERMS</span>
       <h2 className="landing-section-title">{terms.heading}</h2>
 
       {terms.statements.map((statement, index) => (

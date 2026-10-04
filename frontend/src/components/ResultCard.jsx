@@ -22,6 +22,7 @@ export default function ResultCard({
   userQuery,
   onReset,
   onRetry,
+  isStaticExample = false,
 }) {
   if (error) {
     return (
@@ -112,28 +113,31 @@ export default function ResultCard({
         );
 
       case "ANSWER":
-      default:
+      default: {
+        const levelClass = triage_level ? `result-card-${triage_level.toLowerCase()}` : "";
         return (
-          <div className="result-card" data-testid="triage-result-card">
-            <div className="print-only print-header" data-testid="print-header">
-              <h2 className="print-title">AIRA Clinical Guideline Summary</h2>
-              <div className="print-meta" data-testid="print-date">Date: {todayDate}</div>
-              {userQuery && (
-                <div className="print-user-description" data-testid="print-user-description">
-                  <strong>User description:</strong> {userQuery}
-                </div>
-              )}
-              {result.answers_summary && result.answers_summary.length > 0 && (
-                <div className="print-answers-summary" data-testid="print-answers-summary">
-                  <strong>Answers given:</strong>
-                  <ul>
-                    {result.answers_summary.map((item, idx) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
+          <div className={`result-card ${levelClass}`} data-testid="triage-result-card">
+            {!isStaticExample && (
+              <div className="print-only print-header" data-testid="print-header">
+                <h2 className="print-title">AIRA Clinical Guideline Summary</h2>
+                <div className="print-meta" data-testid="print-date">Date: {todayDate}</div>
+                {userQuery && (
+                  <div className="print-user-description" data-testid="print-user-description">
+                    <strong>User description:</strong> {userQuery}
+                  </div>
+                )}
+                {result.answers_summary && result.answers_summary.length > 0 && (
+                  <div className="print-answers-summary" data-testid="print-answers-summary">
+                    <strong>Answers given:</strong>
+                    <ul>
+                      {result.answers_summary.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
 
             {triage_level && <TriageHeader level={triage_level} />}
 
@@ -157,39 +161,46 @@ export default function ResultCard({
               </p>
             )}
 
-            <div className="print-only print-disclaimer" data-testid="print-disclaimer">
-              This is a summary of public guidelines, not a diagnosis.
-            </div>
+            {!isStaticExample && (
+              <div className="print-only print-disclaimer" data-testid="print-disclaimer">
+                This is a summary of public guidelines, not a diagnosis.
+              </div>
+            )}
           </div>
         );
+      }
     }
   };
 
   return (
     <div className="result-wrapper">
-      <div className="reset-area">
-        {response_type === "ANSWER" && (
-          <button
-            type="button"
-            className="print-button"
-            onClick={handlePrint}
-            aria-label="Print clinical summary for doctor or health worker"
-            data-testid="print-summary-button"
-          >
-            <FontAwesomeIcon icon={faPrint} aria-hidden="true" />
-            <span>Print summary</span>
-          </button>
-        )}
-        <button
-          type="button"
-          className="reset-button"
-          onClick={onReset}
-          aria-label="Start a new symptom query"
-        >
-          <FontAwesomeIcon icon={faRotateRight} aria-hidden="true" />
-          <span>New query</span>
-        </button>
-      </div>
+      {!isStaticExample && (
+        <div className="reset-area">
+          {response_type === "ANSWER" && (
+            <button
+              type="button"
+              className="print-button"
+              onClick={handlePrint}
+              aria-label="Print clinical summary for doctor or health worker"
+              data-testid="print-summary-button"
+            >
+              <FontAwesomeIcon icon={faPrint} aria-hidden="true" />
+              <span>Print summary</span>
+            </button>
+          )}
+          {onReset && (
+            <button
+              type="button"
+              className="reset-button"
+              onClick={onReset}
+              aria-label="Start a new symptom query"
+            >
+              <FontAwesomeIcon icon={faRotateRight} aria-hidden="true" />
+              <span>New query</span>
+            </button>
+          )}
+        </div>
+      )}
       {renderContent()}
     </div>
   );

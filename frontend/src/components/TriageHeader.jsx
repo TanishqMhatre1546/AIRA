@@ -38,7 +38,7 @@ export default function TriageHeader({ level }) {
   const config = TRIAGE_CONFIG[level] || TRIAGE_CONFIG.UNKNOWN;
 
   return (
-    <div className="triage-header">
+    <div className={`triage-header triage-header-${config.cssClass}`}>
       <div className={`triage-badge ${config.cssClass}`} data-testid="triage-badge">
         <FontAwesomeIcon icon={config.icon} aria-hidden="true" />
         <span>{config.label}</span>

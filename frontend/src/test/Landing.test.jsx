@@ -12,12 +12,21 @@ import * as client from "../api/client";
 vi.mock("../api/client", () => ({
   checkHealth: vi.fn(),
   getMeta: vi.fn(),
+  getSources: vi.fn(),
 }));
 
 describe("Landing Page", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     client.checkHealth.mockResolvedValue(true);
+    client.getSources.mockResolvedValue({
+      sources: [
+        {
+          publisher: "Indian Council of Medical Research (ICMR)",
+          title: "STW",
+        },
+      ],
+    });
     client.getMeta.mockResolvedValue({
       content_verification: "verified",
       supported_conditions: ["Acute Diarrhea", "Dengue Fever"],

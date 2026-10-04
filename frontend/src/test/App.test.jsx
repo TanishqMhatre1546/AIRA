@@ -8,12 +8,14 @@ import * as client from "../api/client";
 vi.mock("../api/client", () => ({
   checkHealth: vi.fn(),
   getMeta: vi.fn(),
+  getSources: vi.fn(),
 }));
 
 describe("App Prototype Banner", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     client.checkHealth.mockResolvedValue(true);
+    client.getSources.mockResolvedValue({ sources: [] });
   });
 
   it("shows prototype banner when content_verification is unverified", async () => {

@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false }) {
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -127,6 +129,13 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
                         className="intake-option-input"
                         disabled={isLoading}
                       />
+                      {isChecked && (
+                        <FontAwesomeIcon
+                          icon={faCheck}
+                          aria-hidden="true"
+                          className="intake-check-icon"
+                        />
+                      )}
                       <span className="intake-option-text">{opt.label}</span>
                     </label>
                   );

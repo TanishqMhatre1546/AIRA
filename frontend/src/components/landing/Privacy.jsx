@@ -6,6 +6,7 @@ export function Privacy() {
 
   return (
     <section id="privacy" className="landing-section">
+      <span className="section-kicker">DATA PROTECTION</span>
       <h2 className="landing-section-title">{privacy.heading}</h2>
 
       <p className="landing-text">{privacy.statements[0]}</p>

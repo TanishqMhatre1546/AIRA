@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function SourceList({ citations }) {
   if (!citations || citations.length === 0) return null;
@@ -10,22 +12,36 @@ export default function SourceList({ citations }) {
       </h4>
       <ol className="sources-list">
         {citations.map((cite) => {
+          const title = cite.title || cite.source_title;
+          const publisher = cite.publisher || cite.source_publisher;
+          const year = cite.year || cite.source_year;
+          const url = cite.url || cite.source_url;
           const pageText = cite.page ? ` (p. ${cite.page})` : "";
-          const metaText = `${cite.publisher}, ${cite.year}${pageText}`;
+          const metaText = `${publisher}, ${year}${pageText}`;
 
           return (
-            <li key={cite.id || cite.title} className="source-item" value={cite.id}>
-              <span className="source-title">{cite.title}</span>
+            <li
+              key={cite.id || title}
+              id={`source-${cite.id}`}
+              className="source-item"
+              value={cite.id}
+            >
+              <span className="source-title">{title}</span>
               <span className="source-meta"> - {metaText}</span>
-              {cite.url && (
-                <div>
+              {url && (
+                <div className="source-link-wrap">
                   <a
-                    href={cite.url}
+                    href={url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="source-link"
                   >
-                    View guideline
+                    <span>View guideline</span>
+                    <FontAwesomeIcon
+                      icon={faArrowUpRightFromSquare}
+                      aria-hidden="true"
+                      className="source-ext-icon"
+                    />
                   </a>
                 </div>
               )}

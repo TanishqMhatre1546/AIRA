@@ -33,11 +33,15 @@ export function HowItWorks() {
 
   return (
     <section id="how-it-works" className="landing-section">
+      <span className="section-kicker">SAFETY AND PROCESS</span>
       <h2 className="landing-section-title">{howItWorks.heading}</h2>
-      <ol className="landing-steps-list">
+      <ol className="how-it-works-grid landing-steps-list">
         {howItWorks.steps.map((step, index) => (
-          <li key={index} className="landing-step-item">
-            {step}
+          <li key={index} className="how-step-card landing-step-item">
+            <div className="how-step-num" aria-hidden="true">
+              0{index + 1}
+            </div>
+            <p className="how-step-text">{step}</p>
           </li>
         ))}
       </ol>

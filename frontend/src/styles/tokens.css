@@ -1,24 +1,55 @@
 :root {
-  --color-background: #ffffff;
-  --color-surface: #f6f7f9;
-  --color-border: #d5d9e0;
-  --color-text: #1a1a2e;
-  --color-muted-text: #4a4f5c;
+  color-scheme: light;
+
+  /* Palette (Flat colors only) */
+  --color-page: #f4f9f9;
+  --color-surface: #ffffff;
+  --color-tint: #e1f1f1;
+  --color-border: #cfe0e0;
+  --color-border-strong: #5f8a8a;
+  --color-text: #12303a;
+  --color-text-muted: #475b63;
+  --color-primary: #0b6e72;
+  --color-primary-dark: #084f52;
   --color-emergency: #b3261e;
+  --color-emergency-tint: #fdecea;
+  --color-emergency-dark: #8c1d18;
+  --color-self-care: #1b7a4b;
+  --color-self-care-tint: #e4f4eb;
+  --color-see-doctor: #8a5a00;
+  --color-see-doctor-tint: #fff4db;
+  --color-unknown: #3f6670;
+  --color-unknown-tint: #eaf1f3;
+
+  /* Backwards-compatibility aliases */
+  --color-background: var(--color-page);
+  --color-information: var(--color-primary);
+  --color-caution: var(--color-see-doctor);
   --color-emergency-text: #ffffff;
-  --color-information: #1d6a8a;
-  --color-self-care: #1e8449;
-  --color-caution: #8a5a00;
 
-  --font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
+  /* Typography */
+  --font-family-system: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
 
-  --radius-sm: 2px;
-  --radius-base: 4px;
+  --line-height-body: 1.55;
+  --line-height-heading: 1.2;
 
+  /* Shapes (Strictly 8px maximum) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-base: 6px;
+  --radius-card: 8px;
+
+  /* Elevation (Single approved shadow on cards only) */
+  --shadow-card: 0 1px 2px rgba(18, 48, 58, 0.08);
+
+  /* Transitions (150ms maximum) */
   --transition-fast: color 150ms ease, background-color 150ms ease, border-color 150ms ease, opacity 150ms ease;
 }

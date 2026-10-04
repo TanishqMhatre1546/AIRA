@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { getMeta } from "../api/client";
 
 export default function Footer() {
@@ -35,11 +37,15 @@ export default function Footer() {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="footer-container">
-        <div className="footer-line">
-          In an emergency call <a href="tel:112">112</a>.{" "}
-          <span className="footer-status" data-testid="clinical-review-status">
-            {reviewStatus}
+        <div className="footer-emergency-strip">
+          <FontAwesomeIcon icon={faPhone} className="footer-phone-icon" aria-hidden="true" />
+          <span>
+            In an emergency call <a href="tel:112">112</a>.
           </span>
+        </div>
+
+        <div className="footer-status" data-testid="clinical-review-status">
+          {reviewStatus}
         </div>
 
         {!isLanding && (

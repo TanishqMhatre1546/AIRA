@@ -6,6 +6,7 @@ export function WhoFor() {
 
   return (
     <section id="who-for" className="landing-section">
+      <span className="section-kicker">AUDIENCE</span>
       <h2 className="landing-section-title">{whoFor.heading}</h2>
       <p className="landing-text">{whoFor.text}</p>
     </section>

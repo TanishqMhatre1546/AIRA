@@ -56,3 +56,47 @@ export const landingContent = {
     ],
   },
 };
+
+export const sampleEpistaxisResult = {
+  response_type: "ANSWER",
+  triage_level: "SELF_CARE",
+  headline: "Guideline Self-Care Advice",
+  message: "Most nosebleeds can be managed at home with simple first aid.",
+  sections: {
+    guidelines_say: [
+      {
+        text: "Sit upright and lean slightly forward, do not tilt the head back, as this causes blood to flow down the throat and may cause vomiting or choking.",
+        citation_ids: [1],
+      },
+    ],
+    do_now: [
+      {
+        text: "Pinch the soft part of the nose (just below the bony bridge) firmly with your thumb and index finger, this is called Trotter's position.",
+        citation_ids: [1],
+      },
+    ],
+    watch_for: [
+      {
+        text: "Nosebleed that does not stop after 20 minutes of correct first aid.",
+        citation_ids: [1],
+      },
+    ],
+  },
+  citations: [
+    {
+      id: 1,
+      title: "Standard Treatment Workflow (STW) for the Management of Epistaxis",
+      source_title: "Standard Treatment Workflow (STW) for the Management of Epistaxis",
+      publisher: "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+      source_publisher:
+        "Department of Health Research, Ministry of Health and Family Welfare, Government of India",
+      year: "October 2019",
+      source_year: "October 2019",
+      url: "https://stw.icmr.org.in",
+      source_url: "https://stw.icmr.org.in",
+      page: 1,
+    },
+  ],
+  mode: "extractive",
+  disclaimer: "General information from published guidelines. Not a diagnosis.",
+};

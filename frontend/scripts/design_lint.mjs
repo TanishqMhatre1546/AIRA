@@ -5,17 +5,27 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const srcDir = path.resolve(__dirname, "../src");
+const indexHtmlPath = path.resolve(__dirname, "../index.html");
 
 const ALLOWED_HEX = new Set([
+  "#f4f9f9",
   "#ffffff",
-  "#f6f7f9",
-  "#d5d9e0",
-  "#1a1a2e",
-  "#4a4f5c",
+  "#e1f1f1",
+  "#cfe0e0",
+  "#5f8a8a",
+  "#12303a",
+  "#475b63",
+  "#0b6e72",
+  "#084f52",
   "#b3261e",
-  "#1d6a8a",
-  "#1e8449",
+  "#fdecea",
+  "#8c1d18",
+  "#1b7a4b",
+  "#e4f4eb",
   "#8a5a00",
+  "#fff4db",
+  "#3f6670",
+  "#eaf1f3",
 ]);
 
 // WCAG Contrast Calculation
@@ -50,8 +60,10 @@ const FORBIDDEN_PATTERNS = [
   { name: "Gradient", regex: /gradient\(/i },
   { name: "Keyframes / Animation", regex: /@keyframes|animation:|animation-name:/i },
   { name: "Scroll behavior", regex: /scroll-behavior:/i },
+  { name: "Prefers color scheme", regex: /prefers-color-scheme/i },
   { name: "IntersectionObserver", regex: /IntersectionObserver/ },
   { name: "Mousemove listener", regex: /mousemove/i },
+  { name: "External font or style URL", regex: /https?:\/\/[a-zA-Z0-9.-]+\/(?:css|font|webfont)/i },
   { name: "Emoji characters", regex: /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u },
   { name: "Purple keywords", regex: /\b(purple|rebeccapurple|magenta|violet)\b/i },
 ];
@@ -76,24 +88,32 @@ function runLint() {
 
   // 1. Check WCAG contrast pairings
   const pairings = [
-    { fg: "#1a1a2e", bg: "#ffffff", label: "Text on Background" },
-    { fg: "#1a1a2e", bg: "#f6f7f9", label: "Text on Surface" },
-    { fg: "#4a4f5c", bg: "#ffffff", label: "Muted text on Background" },
-    { fg: "#4a4f5c", bg: "#f6f7f9", label: "Muted text on Surface" },
-    { fg: "#ffffff", bg: "#b3261e", label: "White on Emergency" },
-    { fg: "#ffffff", bg: "#1d6a8a", label: "White on Information" },
-    { fg: "#ffffff", bg: "#1e8449", label: "White on Self-Care" },
-    { fg: "#ffffff", bg: "#8a5a00", label: "White on Caution" },
-    { fg: "#b3261e", bg: "#ffffff", label: "Emergency on Background" },
-    { fg: "#1d6a8a", bg: "#ffffff", label: "Information on Background" },
-    { fg: "#1e8449", bg: "#ffffff", label: "Self-Care on Background" },
-    { fg: "#8a5a00", bg: "#ffffff", label: "Caution on Background" },
+    { fg: "#12303a", bg: "#f4f9f9", min: 4.5, label: "Text on Page" },
+    { fg: "#12303a", bg: "#ffffff", min: 4.5, label: "Text on Surface" },
+    { fg: "#12303a", bg: "#e1f1f1", min: 4.5, label: "Text on Tint" },
+    { fg: "#475b63", bg: "#f4f9f9", min: 4.5, label: "Muted text on Page" },
+    { fg: "#475b63", bg: "#ffffff", min: 4.5, label: "Muted text on Surface" },
+    { fg: "#475b63", bg: "#e1f1f1", min: 4.5, label: "Muted text on Tint" },
+    { fg: "#0b6e72", bg: "#ffffff", min: 4.5, label: "Primary on Surface" },
+    { fg: "#0b6e72", bg: "#f4f9f9", min: 4.5, label: "Primary on Page" },
+    { fg: "#084f52", bg: "#e1f1f1", min: 4.5, label: "Primary-dark on Tint" },
+    { fg: "#ffffff", bg: "#0b6e72", min: 4.5, label: "White on Primary" },
+    { fg: "#ffffff", bg: "#b3261e", min: 4.5, label: "White on Emergency" },
+    { fg: "#8c1d18", bg: "#fdecea", min: 4.5, label: "Emergency-dark on Emergency-tint" },
+    { fg: "#b3261e", bg: "#ffffff", min: 4.5, label: "Emergency on Surface" },
+    { fg: "#1b7a4b", bg: "#e4f4eb", min: 4.5, label: "Self-Care on Tint" },
+    { fg: "#1b7a4b", bg: "#ffffff", min: 4.5, label: "Self-Care on Surface" },
+    { fg: "#8a5a00", bg: "#fff4db", min: 4.5, label: "See-Doctor on Tint" },
+    { fg: "#8a5a00", bg: "#ffffff", min: 4.5, label: "See-Doctor on Surface" },
+    { fg: "#3f6670", bg: "#eaf1f3", min: 4.5, label: "Unknown on Tint" },
+    { fg: "#3f6670", bg: "#ffffff", min: 4.5, label: "Unknown on Surface" },
+    { fg: "#5f8a8a", bg: "#ffffff", min: 3.0, label: "Input border on Surface" },
   ];
 
-  console.log("Validating WCAG AA Contrast (>= 4.5:1 for normal text):");
+  console.log("Validating WCAG AA Contrast (>= 4.5:1 text, >= 3.0:1 controls):");
   for (const pair of pairings) {
     const ratio = contrastRatio(pair.fg, pair.bg);
-    const pass = ratio >= 4.5;
+    const pass = ratio >= pair.min;
     console.log(`  ${pair.label} (${pair.fg} on ${pair.bg}): ${ratio.toFixed(2)}:1 [${pass ? "PASS" : "FAIL"}]`);
     if (!pass) {
       console.error(`  Contrast violation for ${pair.label}!`);
@@ -102,7 +122,16 @@ function runLint() {
   }
   console.log("");
 
-  // 2. Scan all files in src/
+  // 2. Check HTML color-scheme
+  if (fs.existsSync(indexHtmlPath)) {
+    const indexHtml = fs.readFileSync(indexHtmlPath, "utf-8");
+    if (!indexHtml.includes('<meta name="color-scheme" content="light"')) {
+      console.error("[FAIL] Missing <meta name=\"color-scheme\" content=\"light\"> in index.html");
+      errorCount++;
+    }
+  }
+
+  // 3. Scan all files in src/
   const allFiles = scanDirectory(srcDir);
 
   for (const filePath of allFiles) {
@@ -124,7 +153,6 @@ function runLint() {
       const hexMatches = content.match(/#[0-9a-fA-F]{3,8}\b/g) || [];
       for (const hex of hexMatches) {
         const lowerHex = hex.toLowerCase();
-        // Allow 3-digit shorthand expansion if needed
         const normHex =
           lowerHex.length === 4
             ? `#${lowerHex[1]}${lowerHex[1]}${lowerHex[2]}${lowerHex[2]}${lowerHex[3]}${lowerHex[3]}`
@@ -142,6 +170,21 @@ function runLint() {
         const pxVal = parseInt(match.replace(/[^0-9]/g, ""), 10);
         if (pxVal > 8) {
           console.error(`[FAIL] Disallowed border-radius '${match}' in src/${relPath} (> 8px).`);
+          errorCount++;
+        }
+      }
+
+      // Check box-shadow
+      const shadowMatches = content.match(/box-shadow:\s*([^;]+);/g) || [];
+      for (const shadow of shadowMatches) {
+        const shadowVal = shadow.replace(/box-shadow:\s*/, "").replace(";", "").trim();
+        const isAllowed =
+          shadowVal === "none" ||
+          shadowVal === "none !important" ||
+          shadowVal === "var(--shadow-card)" ||
+          shadowVal === "0 1px 2px rgba(18, 48, 58, 0.08)";
+        if (!isAllowed) {
+          console.error(`[FAIL] Unapproved box-shadow '${shadowVal}' in src/${relPath}.`);
           errorCount++;
         }
       }
