@@ -1,0 +1,1103 @@
+{
+  "version": 1,
+  "review_status": "pending_clinical_review",
+  "duration_question": {
+    "id": "Q_DURATION",
+    "type": "single_select",
+    "text": "How long has this been going on?",
+    "options": [
+      {
+        "id": "dur_1",
+        "label": "Since today",
+        "duration_days": 1
+      },
+      {
+        "id": "dur_2",
+        "label": "1 to 2 days",
+        "duration_days": 2
+      },
+      {
+        "id": "dur_6",
+        "label": "3 to 6 days",
+        "duration_days": 6
+      },
+      {
+        "id": "dur_14",
+        "label": "1 to 2 weeks",
+        "duration_days": 14
+      },
+      {
+        "id": "dur_15",
+        "label": "More than 2 weeks",
+        "duration_days": 15
+      }
+    ]
+  },
+  "risk_question": {
+    "id": "Q_RISK",
+    "type": "multi_select",
+    "text": "Do any of these apply to you?",
+    "options": [
+      {
+        "id": "risk_pregnant",
+        "label": "I am pregnant",
+        "modifier": "pregnancy"
+      },
+      {
+        "id": "risk_diabetes",
+        "label": "I have diabetes",
+        "modifier": "diabetes"
+      },
+      {
+        "id": "risk_immune",
+        "label": "My immunity is weak (for example HIV, chemotherapy or long-term steroids)",
+        "modifier": "immunocompromised"
+      },
+      {
+        "id": "risk_65",
+        "label": "I am 65 or older",
+        "modifier": "elderly"
+      },
+      {
+        "id": "risk_none",
+        "label": "None of these",
+        "exclusive": true
+      }
+    ]
+  },
+  "area_question": {
+    "id": "Q_AREA",
+    "type": "single_select",
+    "text": "What is the main problem?",
+    "options": [
+      {
+        "id": "area_cough",
+        "label": "Cough, cold or blocked nose",
+        "condition_ids": [
+          "acute_respiratory_infections",
+          "acute_rhinosinusitis"
+        ]
+      },
+      {
+        "id": "area_throat",
+        "label": "Sore throat",
+        "condition_ids": [
+          "pharyngitis_sore_throat"
+        ]
+      },
+      {
+        "id": "area_diarrhea",
+        "label": "Diarrhoea (loose stools)",
+        "condition_ids": [
+          "acute_diarrhea"
+        ]
+      },
+      {
+        "id": "area_headache",
+        "label": "Headache",
+        "condition_ids": [
+          "headache"
+        ]
+      },
+      {
+        "id": "area_urine",
+        "label": "Burning or pain when passing urine",
+        "condition_ids": [
+          "urinary_tract_infection"
+        ]
+      },
+      {
+        "id": "area_skin",
+        "label": "Skin rash, itching or infection",
+        "condition_ids": [
+          "bacterial_skin_infections",
+          "dermatophytosis",
+          "eczema_dermatitis",
+          "scabies"
+        ]
+      },
+      {
+        "id": "area_nosebleed",
+        "label": "Nosebleed",
+        "condition_ids": [
+          "epistaxis_nosebleed"
+        ]
+      },
+      {
+        "id": "area_fever",
+        "label": "Fever with body ache and rash",
+        "condition_ids": [
+          "dengue_fever",
+          "urticaria_angioedema"
+        ]
+      },
+      {
+        "id": "area_bp_sugar",
+        "label": "High blood pressure or high sugar",
+        "condition_ids": [
+          "hypertension",
+          "diabetes_type2"
+        ]
+      },
+      {
+        "id": "area_other",
+        "label": "Something else",
+        "condition_ids": []
+      }
+    ]
+  },
+  "general_signs_question": {
+    "id": "Q_GENERAL_SIGNS",
+    "type": "multi_select",
+    "text": "Do you have any of these right now?",
+    "options": [
+      {
+        "id": "gen_breath",
+        "label": "Trouble breathing or gasping for air",
+        "kind": "danger",
+        "canonical_phrase": "cannot breathe",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-006"
+      },
+      {
+        "id": "gen_chest",
+        "label": "Chest pain, pressure or tightness",
+        "kind": "danger",
+        "canonical_phrase": "chest pain",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-004"
+      },
+      {
+        "id": "gen_neck",
+        "label": "Severe headache with stiff neck",
+        "kind": "danger",
+        "canonical_phrase": "stiff neck",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-008"
+      },
+      {
+        "id": "gen_bleeding",
+        "label": "Heavy bleeding that will not stop",
+        "kind": "danger",
+        "canonical_phrase": "bleeding uncontrollably",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-015"
+      },
+      {
+        "id": "gen_unresponsive",
+        "label": "Very sleepy, passed out or not responding",
+        "kind": "danger",
+        "canonical_phrase": "not responding",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-018"
+      },
+      {
+        "id": "gen_speech",
+        "label": "Face drooping, one-sided weakness or slurred speech",
+        "kind": "danger",
+        "canonical_phrase": "slurred speech",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-005"
+      },
+      {
+        "id": "gen_vomit_blood",
+        "label": "Vomiting blood or dark black sticky stools",
+        "kind": "danger",
+        "canonical_phrase": "vomiting blood",
+        "min_level": "EMERGENCY",
+        "rule_id": "ER-016"
+      },
+      {
+        "id": "gen_none",
+        "label": "None of these",
+        "exclusive": true
+      }
+    ]
+  },
+  "condition_questions": {
+    "acute_diarrhea": {
+      "id": "Q_ACUTE_DIARRHEA_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_diarrhea_skin_pinch",
+          "label": "Skin pinch on belly takes more than two seconds to go flat",
+          "kind": "danger",
+          "canonical_phrase": "skin pinch slow",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-010",
+          "source_id": "icmr-stw-acute-diarrhea",
+          "source_page": 1,
+          "item_id": "dac5212923b0"
+        },
+        {
+          "id": "opt_diarrhea_sunken_eyes",
+          "label": "Sunken eyes",
+          "kind": "danger",
+          "canonical_phrase": "sunken eyes",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-010",
+          "source_id": "icmr-stw-acute-diarrhea",
+          "source_page": 1,
+          "item_id": "4c486ee5948d"
+        },
+        {
+          "id": "opt_diarrhea_weak_pulse",
+          "label": "Very fast or weak pulse",
+          "kind": "danger",
+          "canonical_phrase": "rapid weak pulse",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-010",
+          "source_id": "icmr-stw-acute-diarrhea",
+          "source_page": 1,
+          "item_id": "5a374e1a5b5b"
+        },
+        {
+          "id": "opt_diarrhea_bloody_stools",
+          "label": "Blood in stools or dark black tarry stools",
+          "kind": "danger",
+          "canonical_phrase": "black stools",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-016",
+          "source_id": "icmr-stw-acute-diarrhea",
+          "source_page": 1,
+          "item_id": "489fc1c8c5c6"
+        },
+        {
+          "id": "opt_diarrhea_lethargy",
+          "label": "Unusually sleepy, confused or not responding",
+          "kind": "danger",
+          "canonical_phrase": "not responding",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-018",
+          "source_id": "icmr-stw-acute-diarrhea",
+          "source_page": 1,
+          "item_id": "a81240b543bf"
+        },
+        {
+          "id": "opt_diarrhea_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "acute_respiratory_infections": {
+      "id": "Q_ACUTE_RESPIRATORY_INFECTIONS_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_ari_blue_lips",
+          "label": "Blue or purple colour on lips, face or fingers",
+          "kind": "danger",
+          "canonical_phrase": "blue lips",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-006",
+          "source_id": "icmr-stw-acute-respiratory-infections",
+          "source_page": 1,
+          "item_id": "53b762e07069"
+        },
+        {
+          "id": "opt_ari_cannot_speak",
+          "label": "Too breathless to speak full sentences",
+          "kind": "danger",
+          "canonical_phrase": "too breathless to talk",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-007",
+          "source_id": "icmr-stw-acute-respiratory-infections",
+          "source_page": 1,
+          "item_id": "0c5ddfd9c26b"
+        },
+        {
+          "id": "opt_ari_fast_breathing",
+          "label": "Breathing very fast or struggling for air",
+          "kind": "danger",
+          "canonical_phrase": "breathing very fast",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-006",
+          "source_id": "icmr-stw-acute-respiratory-infections",
+          "source_page": 1,
+          "item_id": "d9ede560c2b9"
+        },
+        {
+          "id": "opt_ari_chest_indrawing",
+          "label": "Chest pulls in deeply when breathing in",
+          "kind": "danger",
+          "canonical_phrase": "chest indrawing",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-007",
+          "source_id": "icmr-stw-acute-respiratory-infections",
+          "source_page": 1,
+          "item_id": "c83ae21d672a"
+        },
+        {
+          "id": "opt_ari_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "acute_rhinosinusitis": {
+      "id": "Q_ACUTE_RHINOSINUSITIS_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_sinus_eye_swelling",
+          "label": "Swelling or redness around the eye, or eye bulging forward",
+          "kind": "danger",
+          "canonical_phrase": "orbital swelling",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-008",
+          "source_id": "icmr-stw-acute-rhinosinusitis",
+          "source_page": 1,
+          "item_id": "26e7ee4d20f8"
+        },
+        {
+          "id": "opt_sinus_stiff_neck",
+          "label": "Severe headache with a stiff neck",
+          "kind": "danger",
+          "canonical_phrase": "stiff neck",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-008",
+          "source_id": "icmr-stw-acute-rhinosinusitis",
+          "source_page": 1,
+          "item_id": "21736f3b0be6"
+        },
+        {
+          "id": "opt_sinus_vision_change",
+          "label": "Double vision or sudden trouble seeing",
+          "kind": "danger",
+          "canonical_phrase": "reduced vision",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-008",
+          "source_id": "icmr-stw-acute-rhinosinusitis",
+          "source_page": 1,
+          "item_id": "1a90f8555570"
+        },
+        {
+          "id": "opt_sinus_dark_tissue",
+          "label": "Black or dark discoloured tissue inside nose or mouth",
+          "kind": "danger",
+          "canonical_phrase": "black discharge from nose",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-008",
+          "source_id": "icmr-stw-acute-rhinosinusitis",
+          "source_page": 1,
+          "item_id": "71498a2a63f7"
+        },
+        {
+          "id": "opt_sinus_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "bacterial_skin_infections": {
+      "id": "Q_BACTERIAL_SKIN_INFECTIONS_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_bsi_black_skin",
+          "label": "Skin turning dark or black over the infected area",
+          "kind": "danger",
+          "canonical_phrase": "skin turning black",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-002",
+          "source_id": "icmr-stw-bacterial-skin-infections",
+          "source_page": 1,
+          "item_id": "24e8c1c5747e"
+        },
+        {
+          "id": "opt_bsi_numb_pain",
+          "label": "Severe skin pain that suddenly went numb or stopped",
+          "kind": "danger",
+          "canonical_phrase": "pain stopped suddenly",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-002",
+          "source_id": "icmr-stw-bacterial-skin-infections",
+          "source_page": 1,
+          "item_id": "72fd0cbabe24"
+        },
+        {
+          "id": "opt_bsi_peeling",
+          "label": "Skin peeling or shedding across wide parts of the body",
+          "kind": "danger",
+          "canonical_phrase": "widespread peeling",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-002",
+          "source_id": "icmr-stw-bacterial-skin-infections",
+          "source_page": 1,
+          "item_id": "2ef4e9aa5ace"
+        },
+        {
+          "id": "opt_bsi_blisters",
+          "label": "Large blisters or open peeling wounds breaking down",
+          "kind": "danger",
+          "canonical_phrase": "peeling blisters",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-002",
+          "source_id": "icmr-stw-bacterial-skin-infections",
+          "source_page": 1,
+          "item_id": "1b0cde4c5e8d"
+        },
+        {
+          "id": "opt_bsi_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "dengue_fever": {
+      "id": "Q_DENGUE_FEVER_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_dengue_vomiting",
+          "label": "Severe belly pain or vomiting that does not stop",
+          "kind": "danger",
+          "canonical_phrase": "dengue warning signs",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-011",
+          "source_id": "icmr-stw-dengue-fever",
+          "source_page": 1,
+          "item_id": "4b5e78115c89"
+        },
+        {
+          "id": "opt_dengue_shock",
+          "label": "Cold clammy skin, very weak pulse or extreme restlessness",
+          "kind": "danger",
+          "canonical_phrase": "dengue shock",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-011",
+          "source_id": "icmr-stw-dengue-fever",
+          "source_page": 1,
+          "item_id": "f509cf4a9469"
+        },
+        {
+          "id": "opt_dengue_bleeding",
+          "label": "Bleeding gums, nosebleed, black stools or vomiting blood",
+          "kind": "danger",
+          "canonical_phrase": "vomiting blood",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-016",
+          "source_id": "icmr-stw-dengue-fever",
+          "source_page": 1,
+          "item_id": "9df5558a1d05"
+        },
+        {
+          "id": "opt_dengue_drowsy",
+          "label": "Extreme drowsiness, confusion or loss of consciousness",
+          "kind": "danger",
+          "canonical_phrase": "not responding",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-018",
+          "source_id": "icmr-stw-dengue-fever",
+          "source_page": 1,
+          "item_id": "cd5e66112d45"
+        },
+        {
+          "id": "opt_dengue_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "dermatophytosis": {
+      "id": "Q_DERMATOPHYTOSIS_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_derm_extensive",
+          "label": "Rash spreading over very large parts of the body",
+          "kind": "danger",
+          "canonical_phrase": "extensive fungal infection",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-DERM-001",
+          "source_id": "icmr-stw-dermatophytosis",
+          "source_page": 1,
+          "item_id": "196755ce0e9f"
+        },
+        {
+          "id": "opt_derm_unresponsive",
+          "label": "No improvement after four weeks of antifungal treatment",
+          "kind": "danger",
+          "canonical_phrase": "no improvement four weeks",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-DERM-002",
+          "source_id": "icmr-stw-dermatophytosis",
+          "source_page": 1,
+          "item_id": "f63167d4a1c0"
+        },
+        {
+          "id": "opt_derm_recurrent",
+          "label": "Fungal rash keeps returning repeatedly after full treatment",
+          "kind": "danger",
+          "canonical_phrase": "recurrent fungal infection",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-DERM-003",
+          "source_id": "icmr-stw-dermatophytosis",
+          "source_page": 1,
+          "item_id": "f0d33fed971e"
+        },
+        {
+          "id": "opt_derm_steroid",
+          "label": "Used steroid creams on the rash for a long time",
+          "kind": "danger",
+          "canonical_phrase": "steroid cream on rash",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-DERM-004",
+          "source_id": "icmr-stw-dermatophytosis",
+          "source_page": 1,
+          "item_id": "cf262dec8dcc"
+        },
+        {
+          "id": "opt_derm_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "diabetes_type2": {
+      "id": "Q_DIABETES_TYPE2_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_diab_low_sugar",
+          "label": "Low sugar signs: sudden sweating, trembling, confusion or fainting",
+          "kind": "danger",
+          "canonical_phrase": "severe hypoglycemia",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-012",
+          "source_id": "icmr-stw-diabetes-type2",
+          "source_page": 1,
+          "item_id": "91f5895315d1"
+        },
+        {
+          "id": "opt_diab_foot_ulcer",
+          "label": "Foot wound with spreading redness, swelling, pus or black skin",
+          "kind": "danger",
+          "canonical_phrase": "diabetic foot",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-014",
+          "source_id": "icmr-stw-diabetes-type2",
+          "source_page": 1,
+          "item_id": "e62b0101b6c0"
+        },
+        {
+          "id": "opt_diab_chest_pain",
+          "label": "Chest pain or sudden shortness of breath",
+          "kind": "danger",
+          "canonical_phrase": "chest pain",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-004",
+          "source_id": "icmr-stw-diabetes-type2",
+          "source_page": 1,
+          "item_id": "11e03a22cd27"
+        },
+        {
+          "id": "opt_diab_dka",
+          "label": "Very high blood sugar with rapid breathing, confusion or severe thirst",
+          "kind": "danger",
+          "canonical_phrase": "diabetic ketoacidosis",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-012",
+          "source_id": "icmr-stw-diabetes-type2",
+          "source_page": 1,
+          "item_id": "a2c3aa5c46ae"
+        },
+        {
+          "id": "opt_diab_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "eczema_dermatitis": {
+      "id": "Q_ECZEMA_DERMATITIS_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_ecz_pus",
+          "label": "Skin oozing pus, yellow crusts or feeling very warm",
+          "kind": "danger",
+          "canonical_phrase": "eczema with pus",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-ECZ-001",
+          "source_id": "icmr-stw-eczema-dermatitis",
+          "source_page": 1,
+          "item_id": "27c159090b62"
+        },
+        {
+          "id": "opt_ecz_breakdown",
+          "label": "Widespread skin blistering or severe raw skin breakdown",
+          "kind": "danger",
+          "canonical_phrase": "eczema skin breakdown",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-ECZ-002",
+          "source_id": "icmr-stw-eczema-dermatitis",
+          "source_page": 1,
+          "item_id": "34cd6dc77436"
+        },
+        {
+          "id": "opt_ecz_fever",
+          "label": "Skin rash accompanied by fever or feeling unwell",
+          "kind": "danger",
+          "canonical_phrase": "eczema with fever",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-ECZ-003",
+          "source_id": "icmr-stw-eczema-dermatitis",
+          "source_page": 1,
+          "item_id": "e4b574dd231f"
+        },
+        {
+          "id": "opt_ecz_severe",
+          "label": "Severe rash covering large parts of body not responding to treatment",
+          "kind": "danger",
+          "canonical_phrase": "severe widespread eczema",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-ECZ-004",
+          "source_id": "icmr-stw-eczema-dermatitis",
+          "source_page": 1,
+          "item_id": "72f26e816f76"
+        },
+        {
+          "id": "opt_ecz_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "epistaxis_nosebleed": {
+      "id": "Q_EPISTAXIS_NOSEBLEED_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_epistaxis_continuous",
+          "label": "Nosebleed continues after 20 minutes of pressing the nose",
+          "kind": "danger",
+          "canonical_phrase": "bleeding uncontrollably",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-015",
+          "source_id": "icmr-stw-epistaxis",
+          "source_page": 1,
+          "item_id": "bd6b635816d4"
+        },
+        {
+          "id": "opt_epistaxis_faintness",
+          "label": "Heavy blood loss causing dizziness, weakness or faintness",
+          "kind": "danger",
+          "canonical_phrase": "heavy bleeding",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-015",
+          "source_id": "icmr-stw-epistaxis",
+          "source_page": 1,
+          "item_id": "bf8abefafd55"
+        },
+        {
+          "id": "opt_epistaxis_head_injury",
+          "label": "Nosebleed started after a fall or head injury",
+          "kind": "danger",
+          "canonical_phrase": "hit head vomiting",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-021",
+          "source_id": "icmr-stw-epistaxis",
+          "source_page": 1,
+          "item_id": "accddb7e26dd"
+        },
+        {
+          "id": "opt_epistaxis_other_bleeding",
+          "label": "Nosebleed combined with unusual bruising or bleeding from other areas",
+          "kind": "danger",
+          "canonical_phrase": "spurting blood",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-015",
+          "source_id": "icmr-stw-epistaxis",
+          "source_page": 1,
+          "item_id": "7bfd0e186f18"
+        },
+        {
+          "id": "opt_epistaxis_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "headache": {
+      "id": "Q_HEADACHE_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_headache_thunderclap",
+          "label": "Sudden extremely severe headache reaching peak in seconds",
+          "kind": "danger",
+          "canonical_phrase": "thunderclap headache",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-024",
+          "source_id": "icmr-stw-headache",
+          "source_page": 1,
+          "item_id": "e715978d4f1f"
+        },
+        {
+          "id": "opt_headache_stiff_neck",
+          "label": "Headache with high fever and stiff neck",
+          "kind": "danger",
+          "canonical_phrase": "stiff neck",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-008",
+          "source_id": "icmr-stw-headache",
+          "source_page": 1,
+          "item_id": "3bd016f04d20"
+        },
+        {
+          "id": "opt_headache_weakness",
+          "label": "Headache with weakness, numbness or drooping on one side",
+          "kind": "danger",
+          "canonical_phrase": "slurred speech",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-005",
+          "source_id": "icmr-stw-headache",
+          "source_page": 1,
+          "item_id": "1839789171ac"
+        },
+        {
+          "id": "opt_headache_confusion",
+          "label": "Headache with confusion, memory loss or strange behaviour",
+          "kind": "danger",
+          "canonical_phrase": "head injury confusion",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-021",
+          "source_id": "icmr-stw-headache",
+          "source_page": 1,
+          "item_id": "4a56321636a5"
+        },
+        {
+          "id": "opt_headache_seizures",
+          "label": "Headache with seizures, fits or passing out",
+          "kind": "danger",
+          "canonical_phrase": "seizure",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-017",
+          "source_id": "icmr-stw-headache",
+          "source_page": 1,
+          "item_id": "b43dce70a461"
+        },
+        {
+          "id": "opt_headache_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "hypertension": {
+      "id": "Q_HYPERTENSION_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_htn_chest_pain",
+          "label": "Pain, tightness or heavy pressure in the chest",
+          "kind": "danger",
+          "canonical_phrase": "chest pain",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-004",
+          "source_id": "asha-ncd-hypertension",
+          "source_page": 31,
+          "item_id": "11647faecfd9"
+        },
+        {
+          "id": "opt_htn_spreading_pain",
+          "label": "Chest pain spreading to left arm, neck or jaw",
+          "kind": "danger",
+          "canonical_phrase": "chest pain spreading",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-004",
+          "source_id": "asha-ncd-hypertension",
+          "source_page": 31,
+          "item_id": "592378af5858"
+        },
+        {
+          "id": "opt_htn_one_sided_weakness",
+          "label": "Sudden weakness or numbness on one side of face or body",
+          "kind": "danger",
+          "canonical_phrase": "face drooping",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-005",
+          "source_id": "asha-ncd-hypertension",
+          "source_page": 32,
+          "item_id": "1c3dbc3a265d"
+        },
+        {
+          "id": "opt_htn_speech_trouble",
+          "label": "Difficulty speaking, slurred words or trouble understanding speech",
+          "kind": "danger",
+          "canonical_phrase": "slurred speech",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-005",
+          "source_id": "asha-ncd-hypertension",
+          "source_page": 32,
+          "item_id": "e210f54ada01"
+        },
+        {
+          "id": "opt_htn_fainting",
+          "label": "Fainting or loss of consciousness",
+          "kind": "danger",
+          "canonical_phrase": "unconscious",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-018",
+          "source_id": "asha-ncd-hypertension",
+          "source_page": 31,
+          "item_id": "4c0c53e2b30b"
+        },
+        {
+          "id": "opt_htn_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "pharyngitis_sore_throat": {
+      "id": "Q_PHARYNGITIS_SORE_THROAT_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_throat_drooling",
+          "label": "Drooling saliva because you cannot swallow liquids",
+          "kind": "danger",
+          "canonical_phrase": "cannot swallow liquids",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-009",
+          "source_id": "icmr-stw-pharyngitis-sore-throat",
+          "source_page": 1,
+          "item_id": "02586f7af598"
+        },
+        {
+          "id": "opt_throat_noisy_breathing",
+          "label": "Trouble breathing or high-pitched noisy breathing",
+          "kind": "danger",
+          "canonical_phrase": "stridor",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-009",
+          "source_id": "icmr-stw-pharyngitis-sore-throat",
+          "source_page": 1,
+          "item_id": "10caf44513cf"
+        },
+        {
+          "id": "opt_throat_muffled_voice",
+          "label": "Voice sounds very thick or muffled",
+          "kind": "danger",
+          "canonical_phrase": "muffled voice",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-009",
+          "source_id": "icmr-stw-pharyngitis-sore-throat",
+          "source_page": 1,
+          "item_id": "5db67eb83059"
+        },
+        {
+          "id": "opt_throat_neck_swelling",
+          "label": "Visible swelling on the outside of the neck",
+          "kind": "danger",
+          "canonical_phrase": "neck swelling",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-009",
+          "source_id": "icmr-stw-pharyngitis-sore-throat",
+          "source_page": 1,
+          "item_id": "804d270c7d40"
+        },
+        {
+          "id": "opt_throat_cannot_open_mouth",
+          "label": "Unable to open your mouth due to severe pain",
+          "kind": "danger",
+          "canonical_phrase": "cannot open mouth",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-009",
+          "source_id": "icmr-stw-pharyngitis-sore-throat",
+          "source_page": 1,
+          "item_id": "99c17f82d128"
+        },
+        {
+          "id": "opt_throat_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "scabies": {
+      "id": "Q_SCABIES_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_scabies_crusted",
+          "label": "Thick yellow-brown crusts on the hands or feet",
+          "kind": "danger",
+          "canonical_phrase": "thick yellow crusts",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-SCAB-001",
+          "source_id": "icmr-stw-scabies",
+          "source_page": 1,
+          "item_id": "2753d207dc68"
+        },
+        {
+          "id": "opt_scabies_pus",
+          "label": "Skin is red, swollen, warm and leaking pus",
+          "kind": "danger",
+          "canonical_phrase": "scabies with pus",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-SCAB-002",
+          "source_id": "icmr-stw-scabies",
+          "source_page": 1,
+          "item_id": "0deca57dfb5a"
+        },
+        {
+          "id": "opt_scabies_spreading",
+          "label": "Spreading skin redness or sores not responding to treatment",
+          "kind": "danger",
+          "canonical_phrase": "spreading skin redness",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-SCAB-003",
+          "source_id": "icmr-stw-scabies",
+          "source_page": 1,
+          "item_id": "1d1d2b268d98"
+        },
+        {
+          "id": "opt_scabies_nodules",
+          "label": "Persistent itchy bumps over the genital area",
+          "kind": "danger",
+          "canonical_phrase": "persistent genital bumps",
+          "min_level": "SEE_DOCTOR",
+          "rule_id": "SD-SCAB-004",
+          "source_id": "icmr-stw-scabies",
+          "source_page": 1,
+          "item_id": "3f173bff1417"
+        },
+        {
+          "id": "opt_scabies_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "urinary_tract_infection": {
+      "id": "Q_URINARY_TRACT_INFECTION_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_uti_chills",
+          "label": "High fever with severe shaking chills",
+          "kind": "danger",
+          "canonical_phrase": "severe shaking chills",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-003",
+          "source_id": "icmr-stw-urinary-tract-infection",
+          "source_page": 1,
+          "item_id": "b81696593fa0"
+        },
+        {
+          "id": "opt_uti_back_pain",
+          "label": "Pain in the side of the back below the ribs with fever",
+          "kind": "danger",
+          "canonical_phrase": "back pain with fever",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-003",
+          "source_id": "icmr-stw-urinary-tract-infection",
+          "source_page": 1,
+          "item_id": "fa317fd691a8"
+        },
+        {
+          "id": "opt_uti_fever",
+          "label": "Fever above 100 degrees with urinary burning",
+          "kind": "danger",
+          "canonical_phrase": "uti fever",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-003",
+          "source_id": "icmr-stw-urinary-tract-infection",
+          "source_page": 1,
+          "item_id": "4497bf9a1903"
+        },
+        {
+          "id": "opt_uti_sepsis",
+          "label": "Feeling very unwell, confused or racing heartbeat",
+          "kind": "danger",
+          "canonical_phrase": "pyelonephritis",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-003",
+          "source_id": "icmr-stw-urinary-tract-infection",
+          "source_page": 1,
+          "item_id": "3892256d600b"
+        },
+        {
+          "id": "opt_uti_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    },
+    "urticaria_angioedema": {
+      "id": "Q_URTICARIA_ANGIOEDEMA_SIGNS",
+      "type": "multi_select",
+      "text": "Do you have any of these?",
+      "options": [
+        {
+          "id": "opt_urticaria_throat_swelling",
+          "label": "Swelling of the lips, tongue or throat",
+          "kind": "danger",
+          "canonical_phrase": "throat swelling",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-001",
+          "source_id": "icmr-stw-urticaria-angioedema",
+          "source_page": 1,
+          "item_id": "2ebee71b399a"
+        },
+        {
+          "id": "opt_urticaria_choking",
+          "label": "Difficulty breathing, choking sensation or wheezing",
+          "kind": "danger",
+          "canonical_phrase": "choking sensation",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-001",
+          "source_id": "icmr-stw-urticaria-angioedema",
+          "source_page": 1,
+          "item_id": "e69d07be904b"
+        },
+        {
+          "id": "opt_urticaria_hoarse_voice",
+          "label": "Hoarse voice or trouble speaking after swelling started",
+          "kind": "danger",
+          "canonical_phrase": "laryngeal angioedema",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-001",
+          "source_id": "icmr-stw-urticaria-angioedema",
+          "source_page": 1,
+          "item_id": "1f40d8d17404"
+        },
+        {
+          "id": "opt_urticaria_anaphylaxis",
+          "label": "Dizziness, fainting or collapsing after contact with a trigger",
+          "kind": "danger",
+          "canonical_phrase": "anaphylaxis",
+          "min_level": "EMERGENCY",
+          "rule_id": "ER-001",
+          "source_id": "icmr-stw-urticaria-angioedema",
+          "source_page": 1,
+          "item_id": "aa7e394581ed"
+        },
+        {
+          "id": "opt_urticaria_none",
+          "label": "None of these",
+          "exclusive": true
+        }
+      ]
+    }
+  }
+}

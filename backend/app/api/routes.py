@@ -102,17 +102,36 @@ async def triage_symptoms(
     # 3. Request identification
     req_id = getattr(request.state, "request_id", None) or uuid.uuid4().hex
 
-    # 4. Execute pipeline graph
+    # 4. Intake validation if intake payload provided
+    deps = getattr(request.app.state, "deps", None)
+    if body.intake and deps and deps.intake_data:
+        from app.core.intake import validate_intake_payload
+
+        try:
+            validate_intake_payload(body.intake.model_dump(), deps.intake_data)
+        except ValueError as exc:
+            return JSONResponse(
+                status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
+                content={"detail": str(exc)},
+            )
+
+    # 5. Execute pipeline graph
     initial_state = create_initial_state(
         raw_text=body.message,
         request_id=req_id,
+        skip_intake=body.skip_intake,
+        intake=body.intake.model_dump() if body.intake else None,
     )
     graph = request.app.state.graph
     final_state = await graph.ainvoke(initial_state)
 
     pipeline_resp: PipelineResponse = final_state["response"]
 
-    # 5. Log structured completion event
+    # 6. Log structured completion event (booleans and counts only for intake telemetry)
+    intake_shown = pipeline_resp.response_type == "FOLLOW_UP"
+    intake_skipped = bool(body.skip_intake)
+    intake_q_count = len(pipeline_resp.questions) if pipeline_resp.questions else 0
+
     log_event(
         "http.triage",
         request_id=req_id,
@@ -120,6 +139,9 @@ async def triage_symptoms(
         triage_level=pipeline_resp.triage_level,
         mode=pipeline_resp.mode,
         status_code=200,
+        intake_shown=intake_shown,
+        intake_skipped=intake_skipped,
+        intake_questions_count=intake_q_count,
     )
 
     triage_response = TriageResponse.from_pipeline_response(pipeline_resp, request_id=req_id)

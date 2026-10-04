@@ -19,6 +19,13 @@ export default function Privacy() {
       </section>
 
       <section className="step-card">
+        <h2 className="step-title">Intake Questions and Answers</h2>
+        <p className="step-description">
+          When follow-up questions appear, they are fixed clinical questions reviewed by clinicians. Your answers stay in your browser until you choose to submit them. The server processes your answers in memory for that single request. Intake answers and notes are never saved to disk, database, or server logs.
+        </p>
+      </section>
+
+      <section className="step-card">
         <h2 className="step-title">No Personal Identification</h2>
         <p className="step-description">
           AIRA does not require user accounts, email addresses, phone numbers, or identity verification. We do not set tracking cookies or use advertising analytics.

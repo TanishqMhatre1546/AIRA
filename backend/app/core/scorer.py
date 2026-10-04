@@ -200,6 +200,10 @@ def symptom_urgency_scorer(
     profiles: dict[str, Any] | None = None,
     watch_for: Mapping[str, list[str]] | None = None,
     modifiers_def: list[dict[str, Any]] | None = None,
+    structured_duration: int | None = None,
+    structured_modifiers: list[str] | None = None,
+    forced_conditions: list[str] | None = None,
+    intake_option_ids: list[str] | None = None,
 ) -> ScoreResult:
     """Score symptom urgency deterministically based only on rule tables and clinical guidelines.
 
@@ -216,8 +220,9 @@ def symptom_urgency_scorer(
     # Extract patient age before demographic noise stripping
     extracted_age = extract_patient_age(symptoms)
 
-    # Extract duration in days
-    extracted_duration = extract_duration_days(symptoms)
+    # Extract duration in days (use larger of text duration and structured duration)
+    text_duration = extract_duration_days(symptoms)
+    extracted_duration = max(text_duration or 0, structured_duration or 0) or None
 
     # 1. Normalize and tokenize text
     norm_text = normalize(symptoms)
@@ -258,6 +263,12 @@ def symptom_urgency_scorer(
                 break
         if matched:
             detected_conditions.append(cond_id)
+
+    # 3b. If no conditions detected from text, use forced_conditions from intake area answer
+    if not detected_conditions and forced_conditions:
+        for fc in forced_conditions:
+            if fc in condition_profiles and fc not in detected_conditions:
+                detected_conditions.append(fc)
 
     # 4. Run see_doctor and self_care rules from engine
     other_hits = engine.match(tok_list, kinds=["see_doctor", "self_care"])
@@ -440,7 +451,24 @@ def symptom_urgency_scorer(
         if min_age is not None and extracted_age is not None and extracted_age >= min_age:
             age_matched = True
 
-        if term_matched or age_matched:
+        # Check structured modifiers from intake answers
+        struct_matched = False
+        if structured_modifiers:
+            for sm in structured_modifiers:
+                sm_clean = sm.strip().lower()
+                if (
+                    sm_clean in mod_id.lower()
+                    or sm_clean == mod.get("name", "").lower()
+                    or (sm_clean == "pregnancy" and "pregnancy" in mod_id.lower())
+                    or (sm_clean == "diabetes" and "diabetes" in mod_id.lower())
+                    or (sm_clean == "immunocompromised" and "immunocompromised" in mod_id.lower())
+                    or (sm_clean == "elderly" and "elderly" in mod_id.lower())
+                ):
+                    struct_matched = True
+                    matched_term = sm_clean
+                    break
+
+        if term_matched or age_matched or struct_matched:
             # Check which detected conditions match the modifier pairs
             pairs_list = mod.get("pairs", [])
             matching_pairs = [

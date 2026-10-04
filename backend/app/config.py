@@ -1,5 +1,6 @@
 """Configuration settings for the AIRA backend application."""
 
+import contextlib
 import json
 from pathlib import Path
 from typing import Literal
@@ -28,12 +29,10 @@ class Settings(BaseSettings):
         if isinstance(v, str):
             v_trimmed = v.strip()
             if v_trimmed.startswith("[") and v_trimmed.endswith("]"):
-                try:
+                with contextlib.suppress(Exception):
                     parsed = json.loads(v_trimmed)
                     if isinstance(parsed, list):
                         return [str(item).strip() for item in parsed if item]
-                except Exception:
-                    pass
             return [origin.strip() for origin in v_trimmed.split(",") if origin.strip()]
         return v
     gemini_api_key: SecretStr | None = None
@@ -55,6 +54,7 @@ class Settings(BaseSettings):
     clinical_review_done: bool = False
     clinical_review_by: str | None = None
     clinical_review_date: str | None = None
+    intake_enabled: bool = False
 
     @model_validator(mode="after")
     def validate_production_invariants(self) -> "Settings":
@@ -65,13 +65,9 @@ class Settings(BaseSettings):
             if self.llm_enabled and (
                 self.gemini_api_key is None or not self.gemini_api_key.get_secret_value().strip()
             ):
-                # Gracefully disable LLM if no API key is provided
-                import logging
-                logging.getLogger("aira.config").warning(
-                    "GEMINI_API_KEY not set in production. Disabling LLM and running in "
-                    "offline deterministic mode (extractive fallback only)."
+                raise ValueError(
+                    "gemini_api_key is required in production when llm_enabled is True"
                 )
-                self.llm_enabled = False
         return self
 
 

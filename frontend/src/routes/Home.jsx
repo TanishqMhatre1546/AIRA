@@ -3,11 +3,23 @@ import SymptomForm from "../components/SymptomForm";
 import ExamplePrompts from "../components/ExamplePrompts";
 import StatusLine from "../components/StatusLine";
 import ResultCard from "../components/ResultCard";
+import { IntakeForm } from "../components/IntakeForm";
 import { useTriage } from "../hooks/useTriage";
 
 export default function Home() {
   const [message, setMessage] = useState("");
-  const { status, result, error, isSlow, submitQuery, reset, lastQuery } = useTriage();
+  const {
+    status,
+    result,
+    followUp,
+    error,
+    isSlow,
+    submitQuery,
+    submitIntake,
+    skipIntake,
+    reset,
+    lastQuery,
+  } = useTriage();
 
   const handleSelectPrompt = (promptText) => {
     setMessage(promptText);
@@ -27,6 +39,7 @@ export default function Home() {
   };
 
   const isLoading = status === "loading";
+  const isFollowUp = status === "follow_up" && Boolean(followUp);
   const hasResultOrError = Boolean(result || error);
 
   return (
@@ -37,7 +50,7 @@ export default function Home() {
         guideline navigator, not a doctor. In an emergency call 112.
       </p>
 
-      {!hasResultOrError && (
+      {!hasResultOrError && !isFollowUp && (
         <>
           <SymptomForm
             message={message}
@@ -54,6 +67,18 @@ export default function Home() {
               disabled={isLoading}
             />
           )}
+        </>
+      )}
+
+      {isFollowUp && (
+        <>
+          <IntakeForm
+            questions={followUp.questions}
+            onSubmit={submitIntake}
+            onSkip={skipIntake}
+            isLoading={isLoading}
+          />
+          {isLoading && <StatusLine loading={isLoading} isSlow={isSlow} />}
         </>
       )}
 

@@ -4,6 +4,27 @@ All notable changes to the AIRA project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0-intake] - 2026-10-04
+
+### Added
+- Guided clinical intake engine in `backend/app/core/intake.py` asking up to 3 static clinical questions with client-side option stripping and 300 character note limit.
+- Deterministic intake orchestration nodes in `backend/app/core/graph.py` with strict escalate-only severity clamping and zero model calls on question planning.
+- Clinician-reviewed question data table in `backend/data/intake/intake_questions.json` covering all 15 clinical conditions, general emergency signs, area selection, duration, and vulnerabilities.
+- Accessible frontend intake component in `frontend/src/components/IntakeForm.jsx` with keyboard navigation, 44px touch targets, and visible skip action.
+- Summary handover box in `frontend/src/components/ResultCard.jsx` displaying intake answers on screen and in printable doctor summary.
+- Comprehensive intake evaluation suites in `backend/eval/run.py` covering schema validity, 50 plan cases, danger sign escalation, monotonicity, demographic invariance, and skip parity.
+- Supplementary intake planning cases in `backend/eval/intake/plan_cases_extra.yaml`.
+- Automated regression comparison tool in `backend/scripts/compare_reports.py`.
+- Automated local server smoke test script in `backend/scripts/smoke_intake.py`.
+- Read-only held-out contamination audit script in `backend/scripts/check_heldout_leakage.py`.
+- Manual browser testing protocol in `docs/MANUAL_TEST_INTAKE.md`.
+- Restored held-out emergency test set 1 in `backend/eval/heldout/emergency_heldout.yaml`.
+
+### Verified
+- 18 evaluation suites passing with 100% compliance across 2,374 test cases and permutations.
+- 299/299 passing backend tests (including recursive leak audit and logging privacy verification).
+- 24/24 passing frontend tests and 0 design lint contrast errors.
+
 ---
 
 ## [1.0.0] - 2026-10-03

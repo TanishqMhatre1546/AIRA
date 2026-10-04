@@ -12,10 +12,39 @@ from app.core.validators import Citation
 CONTROL_CHAR_REGEX = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 
 
+class IntakeAnswer(BaseModel):
+    """An intake question answer containing selected option IDs."""
+
+    question_id: str
+    selected_option_ids: list[str] = Field(default_factory=list)
+
+
+class IntakePayload(BaseModel):
+    """Payload containing round 1 answers and optional extra text."""
+
+    answers: list[IntakeAnswer] = Field(default_factory=list)
+    extra_text: str | None = None
+
+    @field_validator("extra_text", mode="before")
+    @classmethod
+    def validate_extra_text(cls, value: object) -> str | None:
+        """Strip control characters and validate length up to 300 characters."""
+        if value is None:
+            return None
+        if not isinstance(value, str):
+            raise ValueError("Extra text must be a string")
+        cleaned = CONTROL_CHAR_REGEX.sub("", value).strip()
+        if len(cleaned) > 300:
+            raise ValueError("Extra text must not exceed 300 characters")
+        return cleaned if cleaned else None
+
+
 class TriageRequest(BaseModel):
     """Request payload for symptom triage evaluation."""
 
     message: str
+    skip_intake: bool = False
+    intake: IntakePayload | None = None
 
     @field_validator("message", mode="before")
     @classmethod
@@ -35,11 +64,29 @@ class TriageRequest(BaseModel):
         return cleaned
 
 
+class IntakeQuestionOption(BaseModel):
+    """Client-facing intake option item with internal metadata stripped."""
+
+    id: str
+    label: str
+
+
+class IntakeQuestion(BaseModel):
+    """Client-facing intake question item."""
+
+    id: str
+    type: Literal["single_select", "multi_select"]
+    text: str
+    options: list[IntakeQuestionOption] = Field(default_factory=list)
+
+
 class TriageResponse(BaseModel):
     """Response payload for symptom triage evaluation."""
 
     request_id: str
-    response_type: Literal["EMERGENCY", "CRISIS", "REFUSAL", "OUT_OF_SCOPE", "NO_MATCH", "ANSWER"]
+    response_type: Literal[
+        "EMERGENCY", "CRISIS", "REFUSAL", "OUT_OF_SCOPE", "NO_MATCH", "ANSWER", "FOLLOW_UP"
+    ]
     triage_level: Literal["EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"] | None = None
     headline: str
     message: str
@@ -48,6 +95,11 @@ class TriageResponse(BaseModel):
     citations: list[Citation] = Field(default_factory=list)
     mode: Literal["static", "model", "extractive"]
     disclaimer: str
+    questions: list[IntakeQuestion] = Field(default_factory=list)
+    allow_text: bool = False
+    text_max: int = 300
+    skip_allowed: bool = False
+    answers_summary: list[str] = Field(default_factory=list)
 
     @classmethod
     def from_pipeline_response(cls, resp: PipelineResponse, request_id: str) -> "TriageResponse":
@@ -63,6 +115,14 @@ class TriageResponse(BaseModel):
             citations=resp.citations,
             mode=resp.mode,
             disclaimer=resp.disclaimer,
+            questions=[
+                IntakeQuestion.model_validate(q) if isinstance(q, dict) else q
+                for q in resp.questions
+            ],
+            allow_text=resp.allow_text,
+            text_max=resp.text_max,
+            skip_allowed=resp.skip_allowed,
+            answers_summary=resp.answers_summary,
         )
 
 

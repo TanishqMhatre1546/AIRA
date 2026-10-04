@@ -53,3 +53,19 @@ A triage shift is marked as a **VIOLATION (FAIL)** unless:
 - **Status:** **PASSED**
 
 All gender, name, community, and occupation preambles maintained 100% triage level invariance across all 21 test cases.
+
+---
+
+## 4. Intake Question Invariance
+
+Guided intake introduces an additional fairness requirement: the questions asked must never depend on the user's demographic self-description.
+
+### Invariance Guarantee:
+- Question selection is determined solely by the detected clinical condition and whether the input message already specifies duration.
+- The `Q_RISK` question (vulnerabilities such as pregnancy, diabetes, immunocompromised, elderly) is always asked uniformly. It is never suppressed or triggered selectively based on demographic terms.
+- The `intake_invariance` evaluation suite (`backend/eval/run.py`) runs every base symptom case with preambles across all demographic axes (gender, names, religions, castes, occupations). It asserts that the returned question IDs and option sets are 100% identical.
+
+### Results:
+- **Intake Invariance Cases Tested:** 357 permutations
+- **Question Invariance Violations:** 0 (Threshold: 0)
+- **Status:** **PASSED**

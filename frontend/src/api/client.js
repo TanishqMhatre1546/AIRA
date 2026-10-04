@@ -77,8 +77,18 @@ export async function getSources(signal) {
   return resp.json();
 }
 
-export async function triageSymptoms(message, signal) {
-  const trimmed = message.trim();
+export async function triageSymptoms(payload, signal) {
+  let bodyObj;
+  if (typeof payload === "string") {
+    bodyObj = { message: payload.trim() };
+  } else {
+    bodyObj = {
+      message: (payload.message || "").trim(),
+      ...(payload.skip_intake ? { skip_intake: true } : {}),
+      ...(payload.intake ? { intake: payload.intake } : {}),
+    };
+  }
+
   const resp = await fetchWithTimeout(
     `${API_BASE_URL}/api/triage`,
     {
@@ -87,7 +97,7 @@ export async function triageSymptoms(message, signal) {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({ message: trimmed }),
+      body: JSON.stringify(bodyObj),
       signal,
     },
     DEFAULT_TIMEOUT_MS

@@ -30,6 +30,7 @@ COPY app/ ./app/
 COPY data/curated/ ./data/curated/
 COPY data/lexicon/ ./data/lexicon/
 COPY data/index/ ./data/index/
+COPY data/intake/ ./data/intake/
 
 # Ensure non-root ownership
 RUN chown -R appuser:appuser /app

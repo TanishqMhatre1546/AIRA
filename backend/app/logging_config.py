@@ -21,6 +21,9 @@ ALLOWED_LOG_FIELDS: frozenset[str] = frozenset(
         "node",
         "elapsed_ms",
         "status_code",
+        "intake_shown",
+        "intake_skipped",
+        "intake_questions_count",
     }
 )
 

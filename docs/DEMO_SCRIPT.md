@@ -74,7 +74,29 @@ My 4-year-old child has high fever and ear pain
 
 ---
 
-## 5. Scenario 5: Inspecting Provenance and Methodology
+## 5. Scenario 5: Guided Intake and Clinical Escalation (When Enabled)
+
+### Input to enter:
+```text
+I have had a bad sore throat
+```
+
+### What to show:
+1. **Intake Screen:**
+   - Round 1 returns up to 3 clinical questions (sore throat danger signs, duration, and clinical vulnerabilities).
+   - Point out that questions are fixed clinical data, not model generated.
+   - Show the visible **"Skip and show result"** button. Explain: "Skipping immediately returns the standard baseline guideline advice."
+2. **Escalation via Intake:**
+   - Select: *"Cannot swallow saliva or liquids"* or *"I am pregnant"*.
+   - Click **"See guidelines"**.
+3. **Round 2 Result:**
+   - Urgency escalates deterministically to **"See a doctor"**.
+   - Notice the **"Based on your answers:"** summary box displaying the confirmed clinical modifiers.
+   - Click **"Print summary"** to show the doctor handover note containing both the initial complaint and the intake answers.
+
+---
+
+## 6. Scenario 6: Inspecting Provenance and Methodology
 
 ### Actions to show:
 1. Click **"Sources"** in the top navigation bar:
@@ -84,7 +106,7 @@ My 4-year-old child has high fever and ear pain
 
 ---
 
-## 6. Offline / Network Down Fallback
+## 7. Offline / Network Down Fallback
 
 ### If the Internet connection drops during a live exhibition:
 1. Switch to the local backup running in terminal:
