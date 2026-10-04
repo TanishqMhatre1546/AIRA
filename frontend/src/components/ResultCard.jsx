@@ -123,9 +123,31 @@ export default function ResultCard({
                   <strong>User description:</strong> {userQuery}
                 </div>
               )}
+              {result.answers_summary && result.answers_summary.length > 0 && (
+                <div className="print-answers-summary" data-testid="print-answers-summary">
+                  <strong>Answers given:</strong>
+                  <ul>
+                    {result.answers_summary.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             {triage_level && <TriageHeader level={triage_level} />}
+
+            {result.answers_summary && result.answers_summary.length > 0 && (
+              <div className="answers-summary-box" data-testid="answers-summary">
+                <h4 className="answers-summary-heading">Based on your answers:</h4>
+                <ul className="answers-summary-list">
+                  {result.answers_summary.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <SectionList sections={sections} mode={mode} />
             <SourceList citations={citations} />
 

@@ -1,0 +1,167 @@
+# Supplementary test cases for guided intake planning suite
+# Covers all 15 clinical conditions with and without duration
+version: 1
+cases:
+  - id: plan_extra_sinusitis_dur
+    condition_id: acute_rhinosinusitis
+    text: "Sinus pain and blocked nose for 4 days"
+    expected_questions:
+      - Q_ACUTE_RHINOSINUSITIS_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_fungal_dur
+    condition_id: dermatophytosis
+    text: "Circular fungal rash on groin area for 2 weeks"
+    expected_questions:
+      - Q_DERMATOPHYTOSIS_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_epistaxis_dur
+    condition_id: epistaxis_nosebleed
+    text: "Recurrent nosebleed since 2 days"
+    expected_questions:
+      - Q_EPISTAXIS_NOSEBLEED_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_headache_nodur
+    condition_id: headache
+    text: "Dull forehead headache with mild tightness"
+    expected_questions:
+      - Q_HEADACHE_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_bacterial_skin_nodur
+    condition_id: bacterial_skin_infections
+    text: "Small painful boil on my shoulder with minor pus"
+    expected_questions:
+      - Q_BACTERIAL_SKIN_INFECTIONS_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_bacterial_skin_dur
+    condition_id: bacterial_skin_infections
+    text: "Tender skin boil on my forearm for 3 days"
+    expected_questions:
+      - Q_BACTERIAL_SKIN_INFECTIONS_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_dengue_nodur
+    condition_id: dengue_fever
+    text: "Sudden high fever and body ache suspected dengue"
+    expected_questions:
+      - Q_DENGUE_FEVER_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_dengue_dur
+    condition_id: dengue_fever
+    text: "Mild breakbone fever and joint soreness for 2 days"
+    expected_questions:
+      - Q_DENGUE_FEVER_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_diabetes_nodur
+    condition_id: diabetes_type2
+    text: "Feeling very thirsty and tired with high sugar"
+    expected_questions:
+      - Q_DIABETES_TYPE2_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_diabetes_dur
+    condition_id: diabetes_type2
+    text: "High fasting sugar levels noticed over the past 2 weeks"
+    expected_questions:
+      - Q_DIABETES_TYPE2_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_eczema_nodur
+    condition_id: eczema_dermatitis
+    text: "Dry itchy skin and mild redness behind my knees"
+    expected_questions:
+      - Q_ECZEMA_DERMATITIS_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_eczema_dur
+    condition_id: eczema_dermatitis
+    text: "Patches of dermatitis and itching on arms for 10 days"
+    expected_questions:
+      - Q_ECZEMA_DERMATITIS_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_hypertension_nodur
+    condition_id: hypertension
+    text: "Mild dizziness and borderline high blood pressure reading"
+    expected_questions:
+      - Q_HYPERTENSION_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_hypertension_dur
+    condition_id: hypertension
+    text: "High bp reading on home monitor for 1 week"
+    expected_questions:
+      - Q_HYPERTENSION_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_pharyngitis_nodur
+    condition_id: pharyngitis_sore_throat
+    text: "Throat pain when swallowing and dry feeling in mouth"
+    expected_questions:
+      - Q_PHARYNGITIS_SORE_THROAT_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_pharyngitis_dur
+    condition_id: pharyngitis_sore_throat
+    text: "Sore throat and raspy voice for 3 days"
+    expected_questions:
+      - Q_PHARYNGITIS_SORE_THROAT_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_scabies_nodur
+    condition_id: scabies
+    text: "Intense night itching between fingers with fine bumps"
+    expected_questions:
+      - Q_SCABIES_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_scabies_dur
+    condition_id: scabies
+    text: "Severe night itch and itchy rash across wrists for 5 days"
+    expected_questions:
+      - Q_SCABIES_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_uti_nodur
+    condition_id: urinary_tract_infection
+    text: "Burning urination and having to pee very frequently"
+    expected_questions:
+      - Q_URINARY_TRACT_INFECTION_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_uti_dur
+    condition_id: urinary_tract_infection
+    text: "Mild burning urination noticed for 2 days"
+    expected_questions:
+      - Q_URINARY_TRACT_INFECTION_SIGNS
+      - Q_RISK
+
+  - id: plan_extra_urticaria_nodur
+    condition_id: urticaria_angioedema
+    text: "Raised itchy hives on stomach and arms"
+    expected_questions:
+      - Q_URTICARIA_ANGIOEDEMA_SIGNS
+      - Q_DURATION
+      - Q_RISK
+
+  - id: plan_extra_urticaria_dur
+    condition_id: urticaria_angioedema
+    text: "Itchy wheals and red hives appearing for 3 days"
+    expected_questions:
+      - Q_URTICARIA_ANGIOEDEMA_SIGNS
+      - Q_RISK

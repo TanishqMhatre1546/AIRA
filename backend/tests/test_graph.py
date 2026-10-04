@@ -173,6 +173,38 @@ def test_graph_reachability_from_respond_static(graph_deps: PipelineDeps) -> Non
     assert "__end__" in visited
 
 
+def test_graph_reachability_from_respond_followup(graph_deps: PipelineDeps) -> None:
+    """Formal graph proof: retrieve, generate, respond_answer unreachable from respond_followup."""
+    compiled_graph = build_graph(graph_deps)
+    graph_repr = compiled_graph.get_graph()
+
+    # Build adjacency list from edges
+    adj: dict[str, list[str]] = {}
+    for edge in graph_repr.edges:
+        src = edge.source
+        tgt = edge.target
+        if src not in adj:
+            adj[src] = []
+        adj[src].append(tgt)
+
+    # Compute reachable set from respond_followup using BFS
+    visited = set()
+    queue = deque(["respond_followup"])
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            visited.add(node)
+            for neighbor in adj.get(node, []):
+                queue.append(neighbor)
+
+    # Verified invariant: Only terminal end is reachable from respond_followup
+    forbidden_downstream = {"retrieve", "generate", "respond_answer", "score"}
+    overlap = visited.intersection(forbidden_downstream)
+    assert not overlap, f"Forbidden nodes reachable from respond_followup: {overlap}"
+    assert "__end__" in visited
+
+
+
 # ---------------------------------------------------------------------------
 # Test 2: 40 Intercepted Queries Never Call Model
 # ---------------------------------------------------------------------------

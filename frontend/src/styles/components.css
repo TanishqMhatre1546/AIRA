@@ -567,6 +567,200 @@
 }
 
 /* Print Summary Styles (Hidden on screen) */
+/* Intake Form */
+.intake-form-container {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.intake-heading {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.intake-heading:focus {
+  outline: 2px solid var(--color-information);
+  outline-offset: 2px;
+}
+
+.intake-subheading {
+  font-size: var(--font-size-base);
+  color: var(--color-muted-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.intake-fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.intake-legend {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  padding: 0 0.5rem;
+}
+
+.question-number {
+  color: var(--color-information);
+  font-weight: 700;
+}
+
+.intake-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.intake-option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.intake-option-label:hover {
+  background-color: var(--color-surface);
+}
+
+.intake-option-label.selected {
+  border-color: var(--color-information);
+  background-color: var(--color-surface);
+  font-weight: 600;
+}
+
+.intake-option-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: var(--color-information);
+}
+
+.intake-option-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.intake-textarea-block {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.intake-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.intake-textarea:focus {
+  border-color: var(--color-information);
+  outline: 2px solid var(--color-information);
+  outline-offset: 1px;
+}
+
+.intake-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.intake-submit-btn {
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-information);
+  color: #ffffff;
+  border: 1px solid var(--color-information);
+  border-radius: var(--radius-base);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+.intake-submit-btn:hover:not(:disabled),
+.intake-submit-btn:focus-visible:not(:disabled) {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.intake-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.intake-skip-btn {
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+.intake-skip-btn:hover:not(:disabled),
+.intake-skip-btn:focus-visible:not(:disabled) {
+  background-color: var(--color-surface);
+  border-color: var(--color-text);
+}
+
+.intake-skip-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Answers Summary Box */
+.answers-summary-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-information);
+  border-radius: var(--radius-base);
+  padding: 0.875rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.answers-summary-heading {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.answers-summary-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+
 .print-only {
   display: none;
 }
@@ -636,6 +830,13 @@
     padding: 0.625rem 0.875rem;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-base);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .print-answers-summary {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
     margin-bottom: 1rem;
     line-height: 1.4;
   }

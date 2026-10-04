@@ -4,7 +4,7 @@ import contextlib
 import time
 import uuid
 from collections.abc import Callable, Mapping
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Literal, TypedDict
 
 from langgraph.graph import END, START, StateGraph
@@ -15,6 +15,12 @@ from app.config import Settings
 from app.core.generator import AnswerGenerator
 from app.core.helplines import (
     get_emergency_helplines,
+)
+from app.core.intake import (
+    parse_intake_answers,
+    select_intake_questions,
+    strip_question_for_client,
+    validate_intake_payload,
 )
 from app.core.retriever import RetrievalResult, Retriever
 from app.core.rule_engine import RuleEngine
@@ -38,6 +44,13 @@ SUPPORTED_CONDITIONS_LIST = (
     "Urinary Tract Infection, Urticaria / Angioedema."
 )
 
+SEVERITY_ORDER: dict[str, int] = {
+    "UNKNOWN": 0,
+    "SELF_CARE": 1,
+    "SEE_DOCTOR": 2,
+    "EMERGENCY": 3,
+}
+
 
 class HelplineItem(BaseModel):
     """Emergency or crisis helpline reference."""
@@ -57,7 +70,9 @@ class ResponseSections(BaseModel):
 class PipelineResponse(BaseModel):
     """Top-level immutable clinical response object for AIRA pipeline."""
 
-    response_type: Literal["EMERGENCY", "CRISIS", "REFUSAL", "OUT_OF_SCOPE", "NO_MATCH", "ANSWER"]
+    response_type: Literal[
+        "EMERGENCY", "CRISIS", "REFUSAL", "OUT_OF_SCOPE", "NO_MATCH", "ANSWER", "FOLLOW_UP"
+    ]
     triage_level: Literal["EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"] | None = None
     headline: str
     message: str
@@ -66,6 +81,11 @@ class PipelineResponse(BaseModel):
     citations: list[Citation] = Field(default_factory=list)
     mode: Literal["static", "model", "extractive"]
     disclaimer: str = STANDARD_DISCLAIMER
+    questions: list[dict[str, Any]] = Field(default_factory=list)
+    allow_text: bool = False
+    text_max: int = 300
+    skip_allowed: bool = False
+    answers_summary: list[str] = Field(default_factory=list)
 
 
 class PipelineState(TypedDict):
@@ -80,6 +100,16 @@ class PipelineState(TypedDict):
     draft: GeneratedAnswer | None
     response: PipelineResponse | None
     timings: dict[str, float]
+    # Intake workflow fields
+    skip_intake: bool
+    intake: dict[str, Any] | None
+    augmented_text: str | None
+    structured_duration: int | None
+    structured_modifiers: list[str] | None
+    forced_conditions: list[str] | None
+    selected_option_ids: list[str] | None
+    answers_summary: list[str] | None
+    intake_questions: list[dict[str, Any]] | None
 
 
 @dataclass
@@ -93,10 +123,17 @@ class PipelineDeps:
     retriever: Retriever
     generator: AnswerGenerator
     settings: Settings
+    intake_data: dict[str, Any] | None = None
+    verified_item_ids: set[str] = field(default_factory=set)
     clock: Callable[[], float] = time.perf_counter
 
 
-def create_initial_state(raw_text: str, request_id: str | None = None) -> PipelineState:
+def create_initial_state(
+    raw_text: str,
+    request_id: str | None = None,
+    skip_intake: bool = False,
+    intake: dict[str, Any] | None = None,
+) -> PipelineState:
     """Helper to initialize a clean PipelineState dict."""
     return {
         "request_id": request_id or str(uuid.uuid4()),
@@ -108,6 +145,15 @@ def create_initial_state(raw_text: str, request_id: str | None = None) -> Pipeli
         "draft": None,
         "response": None,
         "timings": {},
+        "skip_intake": skip_intake,
+        "intake": intake,
+        "augmented_text": None,
+        "structured_duration": None,
+        "structured_modifiers": None,
+        "forced_conditions": None,
+        "selected_option_ids": None,
+        "answers_summary": None,
+        "intake_questions": None,
     }
 
 
@@ -165,13 +211,41 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         return wrapped
 
     # 1. Node implementations
+    def node_apply_intake(state: PipelineState) -> dict[str, Any]:
+        intake = state.get("intake")
+        if not intake or deps.intake_data is None:
+            return {}
+
+        validate_intake_payload(intake, deps.intake_data)
+        parsed = parse_intake_answers(intake, deps.intake_data)
+
+        # Format augmented text: "<message>. <extra_text>. <phrases...>"
+        parts = [state["raw_text"].strip()]
+        if parsed.get("extra_text"):
+            parts.append(parsed["extra_text"])
+        for phrase in parsed.get("canonical_phrases", []):
+            if phrase.strip():
+                parts.append(phrase.strip())
+
+        augmented_text = ". ".join(parts)
+        return {
+            "augmented_text": augmented_text,
+            "structured_duration": parsed.get("structured_duration"),
+            "structured_modifiers": parsed.get("structured_modifiers"),
+            "forced_conditions": parsed.get("forced_conditions"),
+            "selected_option_ids": parsed.get("selected_option_ids"),
+            "answers_summary": parsed.get("answers_summary"),
+        }
+
     def node_normalize(state: PipelineState) -> dict[str, Any]:
-        norm = normalize(state["raw_text"])
+        text_to_norm = state.get("augmented_text") or state["raw_text"]
+        norm = normalize(text_to_norm)
         toks = tokens(norm)
         return {"norm_tokens": toks}
 
     def node_gate(state: PipelineState) -> dict[str, Any]:
-        decision = deps.gate.evaluate_safe(state["raw_text"])
+        text_to_evaluate = state.get("augmented_text") or state["raw_text"]
+        decision = deps.gate.evaluate_safe(text_to_evaluate)
         return {"gate": decision}
 
     def node_respond_static(state: PipelineState) -> dict[str, Any]:
@@ -272,19 +346,92 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         return {"response": resp}
 
     def node_score(state: PipelineState) -> dict[str, Any]:
-        score_res = symptom_urgency_scorer(
-            symptoms=state["raw_text"],
+        raw_text = state["raw_text"]
+        aug_text = state.get("augmented_text")
+
+        base_res = symptom_urgency_scorer(
+            symptoms=raw_text,
             engine=deps.engine,
             profiles=deps.profiles,
             watch_for=deps.watch_for,
         )
-        return {"score": score_res}
+
+        has_intake_signals = (
+            bool(aug_text)
+            or state.get("structured_duration") is not None
+            or bool(state.get("structured_modifiers"))
+            or bool(state.get("forced_conditions"))
+            or bool(state.get("selected_option_ids"))
+        )
+
+        if not has_intake_signals:
+            return {"score": base_res}
+
+        aug_res = symptom_urgency_scorer(
+            symptoms=aug_text or raw_text,
+            engine=deps.engine,
+            profiles=deps.profiles,
+            watch_for=deps.watch_for,
+            structured_duration=state.get("structured_duration"),
+            structured_modifiers=state.get("structured_modifiers"),
+            forced_conditions=state.get("forced_conditions"),
+            intake_option_ids=state.get("selected_option_ids"),
+        )
+
+        base_rank = SEVERITY_ORDER.get(base_res.level, 0)
+        aug_rank = SEVERITY_ORDER.get(aug_res.level, 0)
+
+        # Monotonicity: answers can only escalate urgency, never lower it
+        final_res = base_res if aug_rank < base_rank else aug_res
+
+        return {"score": final_res}
+
+    def node_intake_plan(state: PipelineState) -> dict[str, Any]:
+        if deps.intake_data is None:
+            return {"intake_questions": []}
+
+        score_res = state.get("score")
+        questions = select_intake_questions(
+            score=score_res,
+            raw_text=state["raw_text"],
+            intake_data=deps.intake_data,
+            allow_unverified=deps.settings.allow_unverified_content,
+            verified_item_ids=deps.verified_item_ids,
+            profiles=deps.profiles,
+        )
+        return {"intake_questions": questions}
+
+    def node_respond_followup(state: PipelineState) -> dict[str, Any]:
+        raw_questions = state.get("intake_questions") or []
+        client_questions = [strip_question_for_client(q) for q in raw_questions]
+
+        resp = PipelineResponse(
+            response_type="FOLLOW_UP",
+            triage_level=None,
+            headline="A few quick questions",
+            message=(
+                "Answer these to help us check the right guideline sections, "
+                "or skip to see your results."
+            ),
+            helplines=[],
+            sections=ResponseSections(),
+            citations=[],
+            mode="static",
+            disclaimer=STANDARD_DISCLAIMER,
+            questions=client_questions,
+            allow_text=True,
+            text_max=300,
+            skip_allowed=True,
+            answers_summary=[],
+        )
+        return {"response": resp}
 
     def node_retrieve(state: PipelineState) -> dict[str, Any]:
         score_state = state.get("score")
         detected_conditions = score_state.conditions if score_state is not None else []
+        query_text = state.get("augmented_text") or state["raw_text"]
         retrieval_res = deps.retriever.search(
-            query=state["raw_text"],
+            query=query_text,
             conditions=detected_conditions,
             top_k=deps.settings.top_k,
         )
@@ -312,7 +459,8 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
     def node_generate(state: PipelineState) -> dict[str, Any]:
         retrieval = state.get("retrieval")
         chunks = [sc.chunk for sc in retrieval.chunks] if retrieval else []
-        draft = deps.generator.generate(query=state["raw_text"], chunks=chunks)
+        query_text = state.get("augmented_text") or state["raw_text"]
+        draft = deps.generator.generate(query=query_text, chunks=chunks)
         return {"draft": draft}
 
     def node_respond_answer(state: PipelineState) -> dict[str, Any]:
@@ -340,6 +488,7 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         d_now = draft.do_now if draft else []
         cits = draft.citations if draft else []
         ans_mode = draft.mode if draft else "extractive"
+        summary_items = state.get("answers_summary") or []
 
         triage_literal: Literal["EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"] | None = (
             triage_val
@@ -361,23 +510,45 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
             citations=cits,
             mode=ans_mode,
             disclaimer=STANDARD_DISCLAIMER,
+            answers_summary=summary_items,
         )
         return {"response": resp}
+
+    def should_do_intake(state: PipelineState) -> bool:
+        """Check if the query qualifies for Round 1 guided intake questions."""
+        if not deps.settings.intake_enabled:
+            return False
+        if deps.intake_data is None:
+            return False
+        if state.get("skip_intake", False):
+            return False
+        intake = state.get("intake")
+        if intake and (intake.get("answers") or intake.get("extra_text")):
+            return False
+        score_res = state.get("score")
+        if score_res and score_res.level == "EMERGENCY":
+            return False
+        gate_dec = state.get("gate")
+        return not (gate_dec and gate_dec.outcome != "PASS")
 
     # 2. Build workflow graph
     workflow = StateGraph(PipelineState)
 
+    workflow.add_node("apply_intake", wrap_node("apply_intake", node_apply_intake))
     workflow.add_node("normalize", wrap_node("normalize", node_normalize))
     workflow.add_node("gate", wrap_node("gate", node_gate))
     workflow.add_node("respond_static", wrap_node("respond_static", node_respond_static))
     workflow.add_node("score", wrap_node("score", node_score))
+    workflow.add_node("intake_plan", wrap_node("intake_plan", node_intake_plan))
+    workflow.add_node("respond_followup", wrap_node("respond_followup", node_respond_followup))
     workflow.add_node("retrieve", wrap_node("retrieve", node_retrieve))
     workflow.add_node("respond_no_match", wrap_node("respond_no_match", node_respond_no_match))
     workflow.add_node("generate", wrap_node("generate", node_generate))
     workflow.add_node("respond_answer", wrap_node("respond_answer", node_respond_answer))
 
     # Edges
-    workflow.add_edge(START, "normalize")
+    workflow.add_edge(START, "apply_intake")
+    workflow.add_edge("apply_intake", "normalize")
     workflow.add_edge("normalize", "gate")
 
     # Conditional routing from gate
@@ -394,17 +565,26 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
     )
 
     # Conditional routing from score
-    def route_score(state: PipelineState) -> Literal["respond_static", "retrieve"]:
+    def route_score(state: PipelineState) -> Literal["respond_static", "intake_plan", "retrieve"]:
         score_res = state.get("score")
         if score_res and score_res.level == "EMERGENCY":
             return "respond_static"
+        if should_do_intake(state):
+            return "intake_plan"
         return "retrieve"
 
     workflow.add_conditional_edges(
         "score",
         route_score,
-        {"respond_static": "respond_static", "retrieve": "retrieve"},
+        {
+            "respond_static": "respond_static",
+            "intake_plan": "intake_plan",
+            "retrieve": "retrieve",
+        },
     )
+
+    workflow.add_edge("intake_plan", "respond_followup")
+    workflow.add_edge("respond_followup", END)
 
     # Conditional routing from retrieve
     def route_retrieve(state: PipelineState) -> Literal["respond_no_match", "generate"]:

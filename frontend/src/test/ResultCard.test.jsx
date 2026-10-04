@@ -71,6 +71,48 @@ describe("ResultCard", () => {
     printSpy.mockRestore();
   });
 
+  it("renders answers summary when provided in ANSWER result", () => {
+    const mockAnswerWithSummary = {
+      response_type: "ANSWER",
+      triage_level: "SEE_DOCTOR",
+      message: "",
+      sections: {
+        guidelines_say: [{ text: "See a doctor within 24 hours.", citation_ids: [1] }],
+      },
+      citations: [
+        {
+          id: 1,
+          title: "ICMR STW Acute Diarrhea",
+          publisher: "ICMR",
+          year: "2022",
+          page: 4,
+          url: "https://main.icmr.nic.in/",
+        },
+      ],
+      answers_summary: ["Has been going on for 3 to 6 days", "I have diabetes"],
+      mode: "model",
+    };
+
+    render(
+      <MemoryRouter>
+        <ResultCard
+          result={mockAnswerWithSummary}
+          userQuery="I have diarrhoea"
+          onReset={vi.fn()}
+        />
+      </MemoryRouter>
+    );
+
+    const summaryBox = screen.getByTestId("answers-summary");
+    expect(summaryBox).toBeInTheDocument();
+    expect(screen.getByText("Based on your answers:")).toBeInTheDocument();
+    expect(screen.getAllByText("Has been going on for 3 to 6 days")).toHaveLength(2);
+    expect(screen.getAllByText("I have diabetes")).toHaveLength(2);
+
+    const printSummary = screen.getByTestId("print-answers-summary");
+    expect(printSummary).toBeInTheDocument();
+  });
+
   it("does not render print summary button on non-ANSWER results", () => {
     const mockEmergency = {
       response_type: "EMERGENCY",

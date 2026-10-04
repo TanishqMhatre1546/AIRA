@@ -16,6 +16,52 @@ if str(backend_root) not in sys.path:
 
 from app.data.corpus_loader import normalize_text  # noqa: E402
 from app.data.models import ConditionDocument, UrgencyRulesFile  # noqa: E402
+from pydantic import BaseModel, ConfigDict, Field  # noqa: E402
+
+
+class IntakeOptionModel(BaseModel):
+    """Pydantic schema for an option in intake_questions.json."""
+
+    model_config = ConfigDict(extra="allow")
+
+    id: str
+    label: str
+    kind: str | None = None
+    canonical_phrase: str | None = None
+    min_level: str | None = None
+    rule_id: str | None = None
+    source_id: str | None = None
+    source_page: int | None = None
+    item_id: str | None = None
+    modifier: str | None = None
+    exclusive: bool | None = None
+    duration_days: int | None = None
+    condition_ids: list[str] | None = None
+
+
+class IntakeQuestionModel(BaseModel):
+    """Pydantic schema for a question in intake_questions.json."""
+
+    model_config = ConfigDict(extra="allow")
+
+    id: str
+    type: str
+    text: str
+    options: list[IntakeOptionModel] = Field(default_factory=list)
+
+
+class IntakeQuestionsFile(BaseModel):
+    """Pydantic schema for intake_questions.json."""
+
+    model_config = ConfigDict(extra="allow")
+
+    version: int
+    review_status: str
+    duration_question: IntakeQuestionModel
+    risk_question: IntakeQuestionModel
+    area_question: IntakeQuestionModel
+    general_signs_question: IntakeQuestionModel
+    condition_questions: dict[str, IntakeQuestionModel] = Field(default_factory=dict)
 
 ALLOWED_DRUG_NAMES = frozenset(
     {
@@ -200,7 +246,8 @@ class CorpusValidator:
             return
 
         all_rules = (
-            rules_file.emergency_rules + rules_file.see_doctor_rules + rules_file.self_care_rules
+            rules_file.rules
+            or (rules_file.emergency_rules + rules_file.see_doctor_rules + rules_file.self_care_rules)
         )
 
         for rule in all_rules:
@@ -249,6 +296,124 @@ class CorpusValidator:
             print(f"  - {cid}: {ver}/{tot} verified ({pct:.1f}%)")
         print("-------------------------------------------\n")
 
+    def validate_intake_questions(
+        self,
+        intake_path: Path,
+        provenance_path: Path,
+        urgency_rules_path: Path,
+    ) -> None:
+        """Check 10: Validate intake_questions.json structure and cross-references."""
+        if not intake_path.exists():
+            self.add_error(10, intake_path.name, "intake_questions.json file does not exist")
+            return
+
+        rel_loc = intake_path.name
+        try:
+            with open(intake_path, encoding="utf-8") as f:
+                raw = json.load(f)
+        except Exception as e:
+            self.add_error(10, rel_loc, f"JSON syntax error: {e}")
+            return
+
+        self.check_em_dashes(raw, rel_loc)
+
+        try:
+            intake_file = IntakeQuestionsFile.model_validate(raw)
+        except Exception as e:
+            self.add_error(10, rel_loc, f"Schema validation failed: {e}")
+            return
+
+        # Load rules map
+        rules_map: dict[str, dict[str, Any]] = {}
+        if urgency_rules_path.exists():
+            with open(urgency_rules_path, encoding="utf-8") as f:
+                r_raw = json.load(f)
+                for r in r_raw.get("rules", []):
+                    rules_map[r["id"]] = r
+
+        # Load provenance map
+        prov_map: dict[str, dict[str, Any]] = {}
+        if provenance_path.exists():
+            with open(provenance_path, encoding="utf-8") as f:
+                for row in csv.DictReader(f):
+                    prov_map[row["item_id"]] = row
+
+        seen_opt_ids: set[str] = set()
+        seen_q_ids: set[str] = set()
+
+        def check_opt(opt: IntakeOptionModel, q_id: str, is_danger: bool) -> None:
+            opt_loc = f"{rel_loc}.{q_id}.options[{opt.id}]"
+            if opt.id in seen_opt_ids:
+                self.add_error(10, opt_loc, f"Duplicate option id '{opt.id}'")
+            seen_opt_ids.add(opt.id)
+
+            words = opt.label.split()
+            if len(words) > 14:
+                self.add_error(
+                    10,
+                    opt_loc,
+                    f"Option label exceeds 14 words ({len(words)}): '{opt.label}'",
+                )
+
+            if is_danger and not opt.exclusive:
+                if not opt.rule_id or opt.rule_id not in rules_map:
+                    self.add_error(10, opt_loc, f"Option rule_id '{opt.rule_id}' not found in rules")
+                else:
+                    rule = rules_map[opt.rule_id]
+                    rule_phrases = rule.get("match", {}).get("phrases", [])
+                    if opt.canonical_phrase not in rule_phrases:
+                        self.add_error(
+                            10,
+                            opt_loc,
+                            f"Canonical phrase '{opt.canonical_phrase}' not in rule {opt.rule_id}",
+                        )
+
+                if opt.source_id:
+                    if opt.source_id not in self.known_condition_ids:
+                        self.add_error(10, opt_loc, f"Unknown source_id '{opt.source_id}'")
+
+                if opt.item_id:
+                    if opt.item_id not in prov_map:
+                        self.add_error(10, opt_loc, f"item_id '{opt.item_id}' not in provenance.csv")
+                    else:
+                        p_row = prov_map[opt.item_id]
+                        if opt.source_id and p_row.get("condition_id") != opt.source_id:
+                            self.add_error(
+                                10,
+                                opt_loc,
+                                f"Option source_id '{opt.source_id}' != provenance '{p_row.get('condition_id')}'",
+                            )
+                        if (
+                            opt.source_page
+                            and p_row.get("page")
+                            and int(p_row["page"]) != opt.source_page
+                        ):
+                            self.add_error(
+                                10,
+                                opt_loc,
+                                f"Option source_page {opt.source_page} != provenance page {p_row.get('page')}",
+                            )
+
+        base_questions = [
+            intake_file.duration_question,
+            intake_file.risk_question,
+            intake_file.area_question,
+            intake_file.general_signs_question,
+        ]
+        for q in base_questions:
+            if q.id in seen_q_ids:
+                self.add_error(10, rel_loc, f"Duplicate question id '{q.id}'")
+            seen_q_ids.add(q.id)
+            for opt in q.options:
+                check_opt(opt, q.id, is_danger=(q.id == "Q_GENERAL_SIGNS"))
+
+        for _cid, q in intake_file.condition_questions.items():
+            if q.id in seen_q_ids:
+                self.add_error(10, rel_loc, f"Duplicate condition question id '{q.id}'")
+            seen_q_ids.add(q.id)
+            for opt in q.options:
+                check_opt(opt, q.id, is_danger=True)
+
     def write_manifest(self, manifest_path: Path) -> None:
         """Check & Part E: Write manifest.json with SHA-256 hashes."""
         file_hashes: dict[str, str] = {}
@@ -260,6 +425,10 @@ class CorpusValidator:
         prov_path = self.curated_dir / "provenance.csv"
         if prov_path.exists():
             file_hashes["provenance.csv"] = compute_file_sha256(prov_path)
+
+        intake_path = self.curated_dir.parent / "intake" / "intake_questions.json"
+        if intake_path.exists():
+            file_hashes["intake/intake_questions.json"] = compute_file_sha256(intake_path)
 
         corpus_hasher = hashlib.sha256()
         for fname, fhash in sorted(file_hashes.items()):
@@ -281,6 +450,7 @@ class CorpusValidator:
 def main() -> None:
     """Main corpus validation entry point."""
     curated_dir = backend_root / "data" / "curated"
+    intake_path = backend_root / "data" / "intake" / "intake_questions.json"
     lexicon_path = backend_root / "data" / "lexicon" / "drug_lexicon.txt"
     manifest_path = curated_dir / "manifest.json"
     provenance_path = curated_dir / "provenance.csv"
@@ -301,6 +471,7 @@ def main() -> None:
     else:
         validator.add_error(1, "urgency_rules.json", "File does not exist")
 
+    validator.validate_intake_questions(intake_path, provenance_path, urgency_rules_path)
     validator.generate_provenance_report(provenance_path)
 
     if validator.errors:

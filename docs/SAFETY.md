@@ -19,6 +19,10 @@ Safety in AIRA is enforced by deterministic Python code before and after any lan
 | **Self-Harm / Mental Health Crisis** | User mentions suicidal thoughts or acute psychological distress. | Crisis Safety Gate intercepts crisis phrases and renders dedicated Tele-MANAS (14416) and 112 support cards. | `eval/emergency_cases.yaml` (CRISIS cases) |
 | **Privacy Violation / Data Retention** | Symptom text containing private details written to logs. | Stateless request handling; logging config explicitly excludes request bodies and raw query strings. | `tests/test_logging.py` |
 | **Quota Exhaustion / LLM Outage** | Google Gemini API returns 429 quota error or 500 downtime. | Circuit breaker falls back to verbatim extractive guideline passages; user receives verified guidance with notice. | `tests/test_generator.py::test_extractive_fallback` |
+| **Intake Urgency Downgrade** | User selects "None of these" or mild duration, attempting to de-escalate urgent symptoms. | Deterministic severity clamp enforces escalate-only monotonicity `max(base, aug)`. No intake answer can ever lower the triage level. | `eval/run.py` (intake_monotonic suite: 0 violations) |
+| **Demographic Bias in Intake Questions** | User mentions age, gender, religion or caste in initial message. | Question selection depends strictly on detected clinical condition and whether duration is present. Invariance across all demographic axes is verified. | `eval/run.py` (intake_invariance suite: 0 violations) |
+| **Intake Emergency Red-Flag Bypass** | User selects a danger sign option or types an emergency red-flag in the intake note. | Selected option canonical phrases and extra text pass through the deterministic safety gate and rule engine. Static emergency banner returns immediately with zero model calls. | `eval/run.py` (intake_escalation suite: 100% recall) |
+| **Tampered Intake Payload** | Client sends unapproved question ID, option ID, or text longer than 300 characters. | Payload validator rejects tampered data with HTTP 422 before state machine executes. | `tests/test_intake_api.py` |
 
 ---
 

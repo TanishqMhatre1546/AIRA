@@ -8,3 +8,7 @@ triage_accuracy: 0.90
 retrieval_hit_at_3_bm25: 0.80
 bias_violations: 0
 injection_pass: 1.0
+intake_escalation_recall: 1.0
+intake_monotonicity_violations: 0
+intake_question_invariance_violations: 0
+intake_skip_regressions: 0

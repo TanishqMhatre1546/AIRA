@@ -139,7 +139,8 @@
           "severe wheezing",
           "cannot complete sentences",
           "too breathless to talk",
-          "too breathless to speak"
+          "too breathless to speak",
+          "too short of breath to talk"
         ],
         "requires_all": [
           [
@@ -414,7 +415,8 @@
           "pyelonephritis",
           "uti fever",
           "urine infection fever",
-          "back pain with fever"
+          "back pain with fever",
+          "urinary tract infection fever"
         ],
         "requires_all": [
           [
@@ -621,7 +623,7 @@
       "id": "ER-013",
       "kind": "emergency",
       "condition": "Severe or uncontrolled nosebleed (epistaxis)",
-      "source_id": "icmr-stw-epistaxis-nosebleed",
+      "source_id": "icmr-stw-epistaxis",
       "source_page": 1,
       "min_minutes": 20,
       "match": {
@@ -1210,6 +1212,229 @@
       },
       "negatable": false,
       "response": "AIRA version 1 covers adults. For a child who is unwell, see a doctor or health worker today. In an emergency call 112.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "ER-024",
+      "kind": "emergency",
+      "condition": "Sudden severe thunderclap headache or subarachnoid hemorrhage",
+      "source_id": "icmr-stw-headache",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "thunderclap headache",
+          "worst headache of your life",
+          "worst headache of life",
+          "sudden severe thunderclap headache"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "A sudden, extremely severe headache reaching peak intensity within seconds (thunderclap headache) can indicate bleeding in the brain. Go to a hospital emergency room immediately.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-DERM-001",
+      "kind": "see_doctor",
+      "condition": "Dermatophytosis (Ringworm)",
+      "source_id": "icmr-stw-dermatophytosis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "extensive fungal infection",
+          "widespread fungal infection"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Extensive fungal skin infection covering large areas of the body requires a medical consultation for oral antifungal prescription.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-DERM-002",
+      "kind": "see_doctor",
+      "condition": "Dermatophytosis (Ringworm)",
+      "source_id": "icmr-stw-dermatophytosis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "no improvement four weeks",
+          "fungal infection not improving"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Fungal infection with no improvement after four weeks of regular treatment requires medical assessment.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-DERM-003",
+      "kind": "see_doctor",
+      "condition": "Dermatophytosis (Ringworm)",
+      "source_id": "icmr-stw-dermatophytosis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "recurrent fungal infection",
+          "fungal infection keeps returning"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Fungal skin infection that keeps returning repeatedly requires a medical evaluation to confirm diagnosis and resistance.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-DERM-004",
+      "kind": "see_doctor",
+      "condition": "Dermatophytosis (Ringworm)",
+      "source_id": "icmr-stw-dermatophytosis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "steroid cream on rash",
+          "steroid cream on fungal infection"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Prolonged use of steroid creams on a fungal rash can worsen the infection and requires medical review.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-ECZ-001",
+      "kind": "see_doctor",
+      "condition": "Eczema / Dermatitis",
+      "source_id": "icmr-stw-eczema-dermatitis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "eczema with pus",
+          "infected eczema"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Eczema with pus discharge, yellow crusts, or increasing warmth indicates a bacterial infection requiring medical treatment.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-ECZ-002",
+      "kind": "see_doctor",
+      "condition": "Eczema / Dermatitis",
+      "source_id": "icmr-stw-eczema-dermatitis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "eczema skin breakdown",
+          "blistering eczema"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Widespread skin blistering or skin breakdown in eczema requires medical evaluation.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-ECZ-003",
+      "kind": "see_doctor",
+      "condition": "Eczema / Dermatitis",
+      "source_id": "icmr-stw-eczema-dermatitis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "eczema with fever",
+          "rash with fever"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Eczema associated with fever requires prompt medical examination to rule out systemic infection.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-ECZ-004",
+      "kind": "see_doctor",
+      "condition": "Eczema / Dermatitis",
+      "source_id": "icmr-stw-eczema-dermatitis",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "severe widespread eczema",
+          "unresponsive eczema"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Severe eczema covering large parts of the body not responding to primary care treatment requires a doctor consultation.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-SCAB-001",
+      "kind": "see_doctor",
+      "condition": "Scabies",
+      "source_id": "icmr-stw-scabies",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "thick yellow crusts",
+          "crusted scabies"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Thick, yellow-brown crusts on the skin suggest crusted scabies and require specialized clinical management.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-SCAB-002",
+      "kind": "see_doctor",
+      "condition": "Scabies",
+      "source_id": "icmr-stw-scabies",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "scabies with pus",
+          "infected scabies"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Scabies skin that is red, warm, and leaking pus indicates a secondary bacterial infection requiring antibiotics.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-SCAB-003",
+      "kind": "see_doctor",
+      "condition": "Scabies",
+      "source_id": "icmr-stw-scabies",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "spreading skin redness",
+          "spreading redness around bites"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Spreading skin redness or sores not responding to treatment require medical examination.",
+      "review_status": "pending_clinical_review"
+    },
+    {
+      "id": "SD-SCAB-004",
+      "kind": "see_doctor",
+      "condition": "Scabies",
+      "source_id": "icmr-stw-scabies",
+      "source_page": 1,
+      "match": {
+        "phrases": [
+          "persistent genital bumps",
+          "nodular scabies"
+        ],
+        "requires_all": []
+      },
+      "negatable": true,
+      "response": "Persistent itchy nodules over the genital area require doctor evaluation for nodular scabies.",
       "review_status": "pending_clinical_review"
     }
   ]

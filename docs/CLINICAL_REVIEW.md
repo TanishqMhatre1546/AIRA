@@ -98,3 +98,34 @@ Clinical status preambles that deterministically escalate triage urgency from `S
   ____________________________________________________________________
   ____________________________________________________________________
   ____________________________________________________________________
+
+---
+
+## 6. Guided Intake Rules and Questions Audit (Pending Clinical Review)
+
+The following intake question set and newly mapped escalation rules were added for guided intake under `review_status: pending_clinical_review`.
+
+### A. Emergency and See-Doctor Rules Added:
+| Rule ID | Level | Condition | Trigger Criteria | Source Document | Provenance Item ID | Review Status |
+|---|---|---|---|---|---|---|
+| **ER-024** | `EMERGENCY` | `headache` | Sudden severe thunderclap headache or headache after injury | `icmr-stw-headache` (p.1) | `headache-danger-1` | pending_clinical_review |
+| **SD-001** | `SEE_DOCTOR` | `acute_diarrhea` | Fever or persistent vomiting with diarrhea | `icmr-stw-acute-diarrhea` (p.1) | `diarrhea-danger-3` | pending_clinical_review |
+| **SD-002** | `SEE_DOCTOR` | `acute_respiratory_infections` | High fever or worsening cough with phlegm | `icmr-stw-acute-respiratory-infections` (p.1) | `ari-danger-2` | pending_clinical_review |
+| **SD-003** | `SEE_DOCTOR` | `acute_rhinosinusitis` | Severe facial pain, swelling or high fever | `icmr-stw-acute-rhinosinusitis` (p.1) | `sinusitis-danger-1` | pending_clinical_review |
+| **SD-004** | `SEE_DOCTOR` | `pharyngitis_sore_throat` | Inability to swallow saliva or severe earache | `icmr-stw-pharyngitis-sore-throat` (p.1) | `pharyngitis-danger-1` | pending_clinical_review |
+| **SD-005** | `SEE_DOCTOR` | `headache` | Headache worsening on coughing or bending | `icmr-stw-headache` (p.1) | `headache-danger-2` | pending_clinical_review |
+| **SD-006** | `SEE_DOCTOR` | `urinary_tract_infection` | Shivering with high fever or flank pain | `icmr-stw-urinary-tract-infection` (p.1) | `uti-danger-1` | pending_clinical_review |
+| **SD-007** | `SEE_DOCTOR` | `dengue_fever` | Persistent abdominal pain or persistent vomiting | `icmr-stw-dengue-fever` (p.1) | `dengue-danger-1` | pending_clinical_review |
+| **SD-008** | `SEE_DOCTOR` | `epistaxis_nosebleed` | Nosebleed lasting more than 15 minutes | `icmr-stw-epistaxis-nosebleed` (p.1) | `epistaxis-danger-1` | pending_clinical_review |
+| **SD-009** | `SEE_DOCTOR` | `bacterial_skin_infections` | Spreading redness or warm tender skin sore | `icmr-stw-bacterial-skin-infections` (p.1) | `skin-danger-1` | pending_clinical_review |
+| **SD-010** | `SEE_DOCTOR` | `scabies` | Crusted skin sores or secondary pus discharge | `icmr-stw-scabies` (p.1) | `scabies-danger-1` | pending_clinical_review |
+| **SD-011** | `SEE_DOCTOR` | `eczema_dermatitis` | Weeping skin lesions with yellow crusts | `icmr-stw-eczema-dermatitis` (p.1) | `eczema-danger-1` | pending_clinical_review |
+| **SD-012** | `SEE_DOCTOR` | `urticaria_angioedema` | Swelling of lips or eyes without breathing issues | `icmr-stw-urticaria-angioedema` (p.1) | `urticaria-danger-2` | pending_clinical_review |
+
+### B. Intake Questions File:
+- Location: `backend/data/intake/intake_questions.json`
+- Total conditions mapped: 15
+- General emergency signs mapped: 7
+- Area options mapped: 10
+- All options traceable to curated ICMR STW item IDs and page numbers.
+- Decision: [ ] Approved [ ] Revision Needed

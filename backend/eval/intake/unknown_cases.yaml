@@ -1,0 +1,62 @@
+# 20 realistic vague adult symptom queries that classify as UNKNOWN in AIRA baseline
+cases:
+  - id: unk_01
+    text: "I feel sick and uneasy since yesterday"
+    expected_level: "UNKNOWN"
+  - id: unk_02
+    text: "My body is aching all over and I feel weak"
+    expected_level: "UNKNOWN"
+  - id: unk_03
+    text: "I have a weird feeling in my stomach and feel low"
+    expected_level: "UNKNOWN"
+  - id: unk_04
+    text: "Feeling very tired and generally unwell today"
+    expected_level: "UNKNOWN"
+  - id: unk_05
+    text: "Not feeling well at all and have low energy"
+    expected_level: "UNKNOWN"
+  - id: unk_06
+    text: "General weakness and lack of appetite"
+    expected_level: "UNKNOWN"
+  - id: unk_07
+    text: "Just feeling ill and need some rest"
+    expected_level: "UNKNOWN"
+  - id: unk_08
+    text: "Feeling run down and heavy headed"
+    expected_level: "UNKNOWN"
+  - id: unk_09
+    text: "My body feels uneasy and exhausted"
+    expected_level: "UNKNOWN"
+  - id: unk_10
+    text: "Feeling indisposed and uncomfortable"
+    expected_level: "UNKNOWN"
+  - id: unk_11
+    text: "I have mild body ache and malaise"
+    expected_level: "UNKNOWN"
+  - id: unk_12
+    text: "Feeling sluggish and slightly nauseous"
+    expected_level: "UNKNOWN"
+  - id: unk_13
+    text: "Something feels off with my digestion"
+    expected_level: "UNKNOWN"
+  - id: unk_14
+    text: "Mild tummy discomfort and feeling bloated"
+    expected_level: "UNKNOWN"
+  - id: unk_15
+    text: "Feeling uneasy in the abdomen since morning"
+    expected_level: "UNKNOWN"
+  - id: unk_16
+    text: "I feel under the weather today"
+    expected_level: "UNKNOWN"
+  - id: unk_17
+    text: "Just feeling worn out and fatigued"
+    expected_level: "UNKNOWN"
+  - id: unk_18
+    text: "Loss of energy and feeling washed out"
+    expected_level: "UNKNOWN"
+  - id: unk_19
+    text: "Vague discomfort in my throat and chest area"
+    expected_level: "UNKNOWN"
+  - id: unk_20
+    text: "Feeling completely drained and slightly dizzy"
+    expected_level: "UNKNOWN"

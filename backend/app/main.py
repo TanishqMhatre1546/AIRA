@@ -27,7 +27,11 @@ from app.core.retriever import Retriever
 from app.core.rule_engine import RuleEngine
 from app.core.safety_gate import SafetyGate
 from app.core.scorer import load_condition_profiles
-from app.data.corpus_loader import extract_watch_for_map, load_condition_documents
+from app.data.corpus_loader import (
+    extract_watch_for_map,
+    load_condition_documents,
+    load_provenance_statuses,
+)
 from app.data.rules_loader import load_drug_lexicon_list, load_raw_rules
 from app.logging_config import log_event, setup_logging
 
@@ -97,7 +101,22 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             budget=app.state.budget,
         )
 
-        # 6. Assemble LangGraph orchestration pipeline
+        # 6. Load intake questions and verified item IDs
+        provenance_file = data_dir / "curated" / "provenance.csv"
+        verified_item_ids: set[str] = set()
+        if provenance_file.exists():
+            prov_statuses = load_provenance_statuses(provenance_file)
+            verified_item_ids = {iid for iid, st in prov_statuses.items() if st == "verified"}
+
+        intake_data = None
+        intake_file = data_dir / "intake" / "intake_questions.json"
+        if intake_file.exists():
+            with open(intake_file, encoding="utf-8") as f:
+                intake_data = json.load(f)
+        elif settings.intake_enabled:
+            raise FileNotFoundError(f"Intake questions file not found: {intake_file}")
+
+        # 7. Assemble LangGraph orchestration pipeline
         deps = PipelineDeps(
             gate=gate,
             engine=scorer_engine,
@@ -106,6 +125,8 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             retriever=retriever,
             generator=generator,
             settings=settings,
+            intake_data=intake_data,
+            verified_item_ids=verified_item_ids,
             clock=time.perf_counter,
         )
         graph = build_graph(deps)
