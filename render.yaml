@@ -9,7 +9,7 @@ services:
     autoDeploy: true
     envVars:
       - key: ENVIRONMENT
-        value: production
+        value: staging
       - key: GEMINI_API_KEY
         sync: false
       - key: CHAT_MODEL
@@ -21,7 +21,7 @@ services:
       - key: LLM_ENABLED
         value: "false"
       - key: ALLOW_UNVERIFIED_CONTENT
-        value: "false"
+        value: "true"
       - key: INTAKE_ENABLED
         value: "false"
 

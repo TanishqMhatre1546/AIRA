@@ -59,6 +59,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.supported_conditions = []
     app.state.corpus_hash = "unknown"
     app.state.rule_table_version = "unknown"
+    app.state.content_verification = "verified"
 
     try:
         data_dir = settings.data_dir
@@ -107,6 +108,22 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         if provenance_file.exists():
             prov_statuses = load_provenance_statuses(provenance_file)
             verified_item_ids = {iid for iid, st in prov_statuses.items() if st == "verified"}
+
+        # Determine content verification status across all indexed chunks
+        manifest_unverified = bool(
+            retriever.manifest and retriever.manifest.get("include_unverified", False)
+        )
+        has_unverified = manifest_unverified
+        if not has_unverified:
+            for chunk in retriever.chunks:
+                for item_id in chunk.item_ids:
+                    if item_id not in verified_item_ids:
+                        has_unverified = True
+                        break
+                if has_unverified:
+                    break
+
+        app.state.content_verification = "unverified" if has_unverified else "verified"
 
         intake_data = None
         intake_file = data_dir / "intake" / "intake_questions.json"

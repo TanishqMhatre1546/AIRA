@@ -1,6 +1,7 @@
 """API route handlers for user queries, system health, and guideline metadata."""
 
 import uuid
+from typing import Literal
 
 from fastapi import APIRouter, Request, Response, status
 from fastapi.responses import JSONResponse
@@ -171,6 +172,11 @@ async def get_metadata(request: Request) -> MetaResponse:
     reviewer = settings.clinical_review_by if review_done else None
     review_date = settings.clinical_review_date if review_done else None
 
+    cv_raw = getattr(request.app.state, "content_verification", "verified")
+    content_verification: Literal["verified", "unverified"] = (
+        "unverified" if cv_raw == "unverified" else "verified"
+    )
+
     return MetaResponse(
         version="0.1.0",
         corpus_hash=corpus_hash,
@@ -187,6 +193,7 @@ async def get_metadata(request: Request) -> MetaResponse:
             date=review_date,
         ),
         disclaimer=STANDARD_DISCLAIMER,
+        content_verification=content_verification,
     )
 
 

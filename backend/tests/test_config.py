@@ -51,3 +51,65 @@ def test_development_allows_missing_key() -> None:
         allow_unverified_content=True,
     )
     assert cfg.environment == "development"
+
+
+def test_staging_allows_unverified_content() -> None:
+    """Staging mode allows unverified content for demos."""
+    cfg = Settings(
+        environment="staging",
+        llm_enabled=False,
+        allow_unverified_content=True,
+    )
+    assert cfg.environment == "staging"
+    assert cfg.allow_unverified_content is True
+
+
+def test_test_environment_allows_unverified_content() -> None:
+    """Test environment allows unverified content."""
+    cfg = Settings(
+        environment="test",
+        llm_enabled=False,
+        allow_unverified_content=True,
+    )
+    assert cfg.environment == "test"
+    assert cfg.allow_unverified_content is True
+
+
+def test_invalid_environment_raises_validation_error() -> None:
+    """Settings rejects unrecognized environment names."""
+    with pytest.raises(ValidationError):
+        Settings(
+            environment="sandbox",  # type: ignore[arg-type]
+        )
+
+
+def test_retriever_refuses_unverified_index_in_production(tmp_path: pytest.TempPathFactory) -> None:
+    """Retriever.from_disk must refuse an index with include_unverified=True in production."""
+    from app.core.retriever import Retriever
+
+    prod_settings = Settings(
+        environment="production",
+        llm_enabled=False,
+        allow_unverified_content=False,
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="Production environment cannot start with an index built",
+    ):
+        Retriever.from_disk(settings=prod_settings)
+
+
+def test_retriever_allows_unverified_index_in_staging() -> None:
+    """Retriever.from_disk allows an index with include_unverified=True in staging."""
+    from app.core.retriever import Retriever
+
+    staging_settings = Settings(
+        environment="staging",
+        llm_enabled=False,
+        allow_unverified_content=True,
+    )
+
+    retriever = Retriever.from_disk(settings=staging_settings)
+    assert retriever is not None
+    assert len(retriever.chunks) > 0

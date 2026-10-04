@@ -18,7 +18,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    environment: Literal["development", "production", "test"] = "development"
+    environment: Literal["development", "staging", "production", "test"] = "development"
     log_level: str = "INFO"
     cors_origins: str | list[str] = ["http://localhost:5173", "http://localhost:3000"]
 

@@ -207,6 +207,16 @@ class Retriever:
                     f"({expected_corpus_hash})"
                 )
 
+        # In production, startup must refuse an index built with include_unverified=True
+        if (
+            app_settings.environment == "production"
+            and manifest.get("include_unverified", False)
+        ):
+            raise ValueError(
+                "Production environment cannot start with an index built with "
+                "include_unverified=True"
+            )
+
         return cls(
             chunks=chunks,
             matrix=matrix,

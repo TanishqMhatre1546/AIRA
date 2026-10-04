@@ -855,3 +855,20 @@
     break-inside: avoid;
   }
 }
+
+/* Prototype Unverified Content Banner */
+.prototype-banner {
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-caution);
+  padding: 0.625rem 1rem;
+  width: 100%;
+}
+
+.prototype-banner-text {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}

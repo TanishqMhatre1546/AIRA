@@ -171,6 +171,7 @@ class MetaResponse(BaseModel):
     supported_conditions: list[str]
     clinical_review_status: ClinicalReviewStatus
     disclaimer: str
+    content_verification: Literal["verified", "unverified"] = "verified"
 
 
 class SourceItem(BaseModel):

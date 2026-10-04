@@ -248,6 +248,8 @@ async def test_metadata_endpoint() -> None:
         assert data["clinical_review_status"]["reviewed"] is False
         assert data["clinical_review_status"]["reviewer"] is None
         assert "AIRA provides general health information" in data["disclaimer"]
+        assert data["content_verification"] in ("verified", "unverified")
+        assert data["content_verification"] == "unverified"
 
 
 @pytest.mark.asyncio

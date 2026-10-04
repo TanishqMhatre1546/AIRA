@@ -167,6 +167,43 @@ jobs:
               print('Zero em dash violations found across repository.')
           "
 
+      - name: Verify production index unverified invariant
+        run: |
+          python -c "
+          import json, sys, yaml
+          from pathlib import Path
+
+          manifest_path = Path('backend/data/index/manifest.json')
+          if not manifest_path.exists():
+              print('Index manifest not found.')
+              sys.exit(0)
+
+          with open(manifest_path, encoding='utf-8') as f:
+              manifest = json.load(f)
+
+          include_unverified = bool(manifest.get('include_unverified', False))
+
+          render_path = Path('render.yaml')
+          if render_path.exists():
+              with open(render_path, encoding='utf-8') as f:
+                  cfg = yaml.safe_load(f)
+              for svc in cfg.get('services', []):
+                  env_vars = {item['key']: str(item.get('value', '')).lower() for item in svc.get('envVars', []) if 'key' in item}
+                  if env_vars.get('ENVIRONMENT') == 'production' and include_unverified:
+                      print('ERROR: render.yaml specifies ENVIRONMENT=production with index include_unverified=true!')
+                      sys.exit(1)
+
+          env_example_path = Path('backend/.env.example')
+          if env_example_path.exists():
+              text = env_example_path.read_text(encoding='utf-8')
+              for line in text.splitlines():
+                  if line.strip().startswith('ENVIRONMENT=production') and include_unverified:
+                      print('ERROR: .env.example specifies ENVIRONMENT=production with index include_unverified=true!')
+                      sys.exit(1)
+
+          print('Production index verification invariant check passed.')
+          "
+
   docker:
     name: Docker Packaging & Memory Benchmark
     runs-on: ubuntu-latest
