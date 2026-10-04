@@ -4,13 +4,18 @@ This script provides a structured walkthrough for demonstrating AIRA to clinicia
 
 ---
 
-## 0. Context and Cold-Start Handling
+## 0. Context and Landing Page Navigation
 
 ### Presenter Intro (30 seconds):
 > "AIRA is an open-source clinical guidelines assistant designed for adults in India. It navigates official ICMR Standard Treatment Workflows to help people understand symptom urgency, recommended home care, and warning signs. It is a guideline navigator, not a doctor. Every safety check is deterministic code, not prompt engineering."
 
+### Starting at the Landing Page (`/`):
+1. Open the AIRA root URL (`/`).
+2. Point out the hero title, "What you get", "Conditions covered", and "How it works" sections explaining the deterministic rule gates and ICMR sources.
+3. Click the **"Check symptoms"** button to navigate to the assistant interface at `/app`.
+
 ### If Server is on a Cold Start:
-If the hosted free-tier server takes a few seconds to spin up, the UI displays: *"Waking the server, this may take a few seconds on a cold start..."*
+If the hosted free-tier server takes a few seconds to spin up, the background health check on `/` or status line on `/app` displays: *"Waking the server, this may take a few seconds on a cold start..."*
 > **Presenter note:** "Render spins down idle containers on free tiers. The UI informs the user immediately while the container loads its in-memory rules and BM25 index."
 
 ---

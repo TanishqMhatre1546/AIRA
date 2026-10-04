@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./routes/Home";
-import HowItWorks from "./routes/HowItWorks";
+import Landing from "./routes/Landing";
+import Assistant from "./routes/Assistant";
 import Sources from "./routes/Sources";
-import Privacy from "./routes/Privacy";
-import Terms from "./routes/Terms";
+import NotFound from "./routes/NotFound";
 import { checkHealth, getMeta } from "./api/client";
 
 export default function App() {
@@ -42,11 +41,22 @@ export default function App() {
       <Header />
       <main id="main-content" className="main-content" tabIndex={-1}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/app" element={<Assistant />} />
           <Route path="/sources" element={<Sources />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route
+            path="/how-it-works"
+            element={<Navigate to="/#how-it-works" replace />}
+          />
+          <Route
+            path="/privacy"
+            element={<Navigate to="/#privacy" replace />}
+          />
+          <Route
+            path="/terms"
+            element={<Navigate to="/#terms" replace />}
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

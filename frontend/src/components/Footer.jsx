@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { getMeta } from "../api/client";
 
 export default function Footer() {
-  const [reviewStatus, setReviewStatus] = useState("Clinical review: pending expert panel");
+  const [reviewStatus, setReviewStatus] = useState("Clinical review: pending");
+  const location = useLocation();
+  const isLanding = location.pathname === "/";
 
   useEffect(() => {
     let active = true;
     getMeta()
       .then((data) => {
         if (!active) return;
-        if (data && data.clinical_review && data.clinical_review.reviewed) {
-          const rev = data.clinical_review;
-          setReviewStatus(`Clinically reviewed: yes, by ${rev.reviewer || "expert"} on ${rev.date || "recent"}`);
+        const review = data?.clinical_review_status || data?.clinical_review;
+        if (review && review.reviewed) {
+          const reviewer = review.reviewer || "expert";
+          const date = review.date || "recent";
+          setReviewStatus(`Clinically reviewed: yes, by ${reviewer} on ${date}`);
         } else {
-          setReviewStatus("Clinical review: pending expert panel");
+          setReviewStatus("Clinical review: pending");
         }
       })
       .catch(() => {
         if (active) {
-          setReviewStatus("Clinical review: pending expert panel");
+          setReviewStatus("Clinical review: pending");
         }
       });
 
@@ -31,20 +35,20 @@ export default function Footer() {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="footer-container">
-        <div className="footer-emergency">
-          In an emergency call <a href="tel:112">112</a>.
+        <div className="footer-line">
+          In an emergency call <a href="tel:112">112</a>.{" "}
+          <span className="footer-status" data-testid="clinical-review-status">
+            {reviewStatus}
+          </span>
         </div>
-        <nav className="footer-links" aria-label="Secondary navigation">
-          <Link to="/privacy" className="footer-link">
-            Privacy
-          </Link>
-          <Link to="/terms" className="footer-link">
-            Terms
-          </Link>
-        </nav>
-        <div className="footer-status" data-testid="clinical-review-status">
-          {reviewStatus}
-        </div>
+
+        {!isLanding && (
+          <div className="footer-secondary">
+            <Link to="/#privacy" className="footer-small-link">
+              Privacy and terms
+            </Link>
+          </div>
+        )}
       </div>
     </footer>
   );
