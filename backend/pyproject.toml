@@ -15,6 +15,8 @@ ignore = []
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
+# Calls docker with fixed arguments and no user input.
+"scripts/measure_memory.py" = ["S603", "S607", "S310"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -28,8 +30,12 @@ module = ["app.core.*", "app.data.*"]
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["rank_bm25.*"]
+module = ["rank_bm25.*", "pymupdf.*", "fitz.*"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["scripts.prescreen_provenance", "tests.test_prescreen_provenance"]
+disallow_untyped_calls = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

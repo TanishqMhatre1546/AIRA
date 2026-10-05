@@ -192,12 +192,18 @@ def measure_docker(image_name: str, port: int = 8000) -> None:
         print("=====================================================\n")
 
         if rss_mb > MEMORY_LIMIT_MB:
-            print(f"ERROR: Resident memory ({rss_mb:.2f} MB) exceeds limit of {MEMORY_LIMIT_MB} MB!")
+            print(
+                f"ERROR: Resident memory ({rss_mb:.2f} MB) exceeds limit of {MEMORY_LIMIT_MB} MB!"
+            )
             sys.exit(1)
 
     finally:
         print(f"Stopping and cleaning up container '{container_name}'...")
-        subprocess.run(["docker", "rm", "-f", container_name], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(
+            ["docker", "rm", "-f", container_name],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
 
 
 def measure_in_process() -> None:
@@ -215,7 +221,9 @@ def measure_in_process() -> None:
     with TestClient(app) as client:
         # Check ready
         resp = client.get("/api/ready")
-        assert resp.status_code == 200, f"/api/ready returned {resp.status_code}"
+        if resp.status_code != 200:
+            print(f"/api/ready returned {resp.status_code}")
+            sys.exit(1)
 
         for i, q in enumerate(MIXED_QUERIES, 1):
             start_t = time.time()
@@ -225,7 +233,9 @@ def measure_in_process() -> None:
                 headers={"X-Forwarded-For": f"198.51.100.{i}"},
             )
             elapsed = (time.time() - start_t) * 1000
-            assert t_resp.status_code == 200, f"Query {i} returned {t_resp.status_code}"
+            if t_resp.status_code != 200:
+                print(f"Query {i} returned {t_resp.status_code}")
+                sys.exit(1)
             data = t_resp.json()
             resp_type = data.get("response_type", "UNKNOWN")
             print(f"  [{i:02d}/30] {elapsed:5.1f}ms | Type: {resp_type:10s} | Query: {q[:45]}...")

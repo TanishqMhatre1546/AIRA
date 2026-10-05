@@ -14,9 +14,10 @@ backend_root = Path(__file__).resolve().parent.parent
 if str(backend_root) not in sys.path:
     sys.path.insert(0, str(backend_root))
 
+from pydantic import BaseModel, ConfigDict, Field  # noqa: E402
+
 from app.data.corpus_loader import normalize_text  # noqa: E402
 from app.data.models import ConditionDocument, UrgencyRulesFile  # noqa: E402
-from pydantic import BaseModel, ConfigDict, Field  # noqa: E402
 
 
 class IntakeOptionModel(BaseModel):
@@ -62,6 +63,7 @@ class IntakeQuestionsFile(BaseModel):
     area_question: IntakeQuestionModel
     general_signs_question: IntakeQuestionModel
     condition_questions: dict[str, IntakeQuestionModel] = Field(default_factory=dict)
+
 
 ALLOWED_DRUG_NAMES = frozenset(
     {
@@ -245,9 +247,8 @@ class CorpusValidator:
             self.add_error(1, rel_loc, f"Urgency rules schema validation failed: {e}")
             return
 
-        all_rules = (
-            rules_file.rules
-            or (rules_file.emergency_rules + rules_file.see_doctor_rules + rules_file.self_care_rules)
+        all_rules = rules_file.rules or (
+            rules_file.emergency_rules + rules_file.see_doctor_rules + rules_file.self_care_rules
         )
 
         for rule in all_rules:
@@ -357,7 +358,9 @@ class CorpusValidator:
 
             if is_danger and not opt.exclusive:
                 if not opt.rule_id or opt.rule_id not in rules_map:
-                    self.add_error(10, opt_loc, f"Option rule_id '{opt.rule_id}' not found in rules")
+                    self.add_error(
+                        10, opt_loc, f"Option rule_id '{opt.rule_id}' not found in rules"
+                    )
                 else:
                     rule = rules_map[opt.rule_id]
                     rule_phrases = rule.get("match", {}).get("phrases", [])
@@ -368,30 +371,34 @@ class CorpusValidator:
                             f"Canonical phrase '{opt.canonical_phrase}' not in rule {opt.rule_id}",
                         )
 
-                if opt.source_id:
-                    if opt.source_id not in self.known_condition_ids:
-                        self.add_error(10, opt_loc, f"Unknown source_id '{opt.source_id}'")
+                if opt.source_id and opt.source_id not in self.known_condition_ids:
+                    self.add_error(10, opt_loc, f"Unknown source_id '{opt.source_id}'")
 
                 if opt.item_id:
                     if opt.item_id not in prov_map:
-                        self.add_error(10, opt_loc, f"item_id '{opt.item_id}' not in provenance.csv")
+                        self.add_error(
+                            10, opt_loc, f"item_id '{opt.item_id}' not in provenance.csv"
+                        )
                     else:
                         p_row = prov_map[opt.item_id]
                         if opt.source_id and p_row.get("condition_id") != opt.source_id:
+                            prov_cid = p_row.get("condition_id")
                             self.add_error(
                                 10,
                                 opt_loc,
-                                f"Option source_id '{opt.source_id}' != provenance '{p_row.get('condition_id')}'",
+                                f"Option source_id '{opt.source_id}' != provenance '{prov_cid}'",
                             )
                         if (
                             opt.source_page
                             and p_row.get("page")
                             and int(p_row["page"]) != opt.source_page
                         ):
+                            prov_page = p_row.get("page")
                             self.add_error(
                                 10,
                                 opt_loc,
-                                f"Option source_page {opt.source_page} != provenance page {p_row.get('page')}",
+                                f"Option source_page {opt.source_page} != "
+                                f"provenance page {prov_page}",
                             )
 
         base_questions = [
