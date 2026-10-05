@@ -1,7 +1,7 @@
 """API route handlers for user queries, system health, and guideline metadata."""
 
 import uuid
-from typing import Literal
+from typing import Any, Literal
 
 from fastapi import APIRouter, Request, Response, status
 from fastapi.responses import JSONResponse
@@ -133,17 +133,25 @@ async def triage_symptoms(
     intake_skipped = bool(body.skip_intake)
     intake_q_count = len(pipeline_resp.questions) if pipeline_resp.questions else 0
 
-    log_event(
-        "http.triage",
-        request_id=req_id,
-        response_type=pipeline_resp.response_type,
-        triage_level=pipeline_resp.triage_level,
-        mode=pipeline_resp.mode,
-        status_code=200,
-        intake_shown=intake_shown,
-        intake_skipped=intake_skipped,
-        intake_questions_count=intake_q_count,
-    )
+    draft_obj = final_state.get("draft")
+    dropped_claims_val = draft_obj.dropped_claims if draft_obj else 0
+    llm_err_val = draft_obj.llm_error if draft_obj else None
+
+    log_kwargs: dict[str, Any] = {
+        "request_id": req_id,
+        "response_type": pipeline_resp.response_type,
+        "triage_level": pipeline_resp.triage_level,
+        "mode": pipeline_resp.mode,
+        "status_code": 200,
+        "intake_shown": intake_shown,
+        "intake_skipped": intake_skipped,
+        "intake_questions_count": intake_q_count,
+        "dropped_claims": dropped_claims_val,
+    }
+    if llm_err_val:
+        log_kwargs["llm_error"] = llm_err_val
+
+    log_event("http.triage", **log_kwargs)
 
     triage_response = TriageResponse.from_pipeline_response(pipeline_resp, request_id=req_id)
     return JSONResponse(
@@ -177,6 +185,9 @@ async def get_metadata(request: Request) -> MetaResponse:
         "unverified" if cv_raw == "unverified" else "verified"
     )
 
+    generator = getattr(request.app.state, "generator", None)
+    llm_available = bool(getattr(generator, "llm_available", False)) if generator else False
+
     return MetaResponse(
         version="0.1.0",
         corpus_hash=corpus_hash,
@@ -194,6 +205,7 @@ async def get_metadata(request: Request) -> MetaResponse:
         ),
         disclaimer=STANDARD_DISCLAIMER,
         content_verification=content_verification,
+        llm_available=llm_available,
     )
 
 

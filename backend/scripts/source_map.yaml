@@ -1,0 +1,79 @@
+# Mapping of condition IDs to raw guideline source PDFs in backend/data/raw/.
+# For single-page STW workflows, page_range is [1, 1] and page_offset is 0.
+# For multi-page documents, page_range defines printed pages and page_offset maps printed to PDF physical page.
+
+conditions:
+  icmr-stw-acute-diarrhea:
+    file: "Diarrhea.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-acute-respiratory-infections:
+    file: "Acute Respiratory Infections.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-acute-rhinosinusitis:
+    file: "Acute Rhinosinusitis.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-bacterial-skin-infections:
+    file: "Bacterial Skin Infections.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-dengue-fever:
+    file: "Dengue Fever.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-dermatophytosis:
+    file: "Dermatophytosis.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-diabetes-type2:
+    file: "Diabetes Type II.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-eczema-dermatitis:
+    file: "EczemaDermatitis.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-epistaxis:
+    file: "Epistaxis.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-headache:
+    file: "Headache.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  asha-ncd-hypertension:
+    file: "Non-Communicable Diseases.pdf.pdf"
+    page_range: [27, 33]
+    page_offset: 8
+
+  icmr-stw-pharyngitis-sore-throat:
+    file: "Pharyngitis and Sore Throat.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-scabies:
+    file: "Scabies.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-urinary-tract-infection:
+    file: "Urinary Tract Infection.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0
+
+  icmr-stw-urticaria-angioedema:
+    file: "Urticaria.pdf.pdf"
+    page_range: [1, 1]
+    page_offset: 0

@@ -276,8 +276,13 @@ class Retriever:
         # 2. Condition filtering: restrict to detected conditions if at least 2 chunks match
         active_conditions = [c.strip() for c in (conditions or []) if c.strip()]
         if active_conditions:
+            from app.data.corpus_loader import to_corpus_condition_id
+
+            target_cids = {
+                to_corpus_condition_id(c) for c in active_conditions
+            } | set(active_conditions)
             cond_filtered = [
-                i for i in eligible_indices if self.chunks[i].condition_id in active_conditions
+                i for i in eligible_indices if self.chunks[i].condition_id in target_cids
             ]
             if len(cond_filtered) >= 2:
                 eligible_indices = cond_filtered
@@ -329,14 +334,27 @@ class Retriever:
 
         # 5. BM25 Scoring
         q_tokens = bm25_tokenize(query)
+        content_words = [t for t in q_tokens if t not in STOPWORDS and len(t) > 1]
         all_bm25_scores = self.bm25.get_scores(q_tokens) if q_tokens else np.zeros(len(self.chunks))
         bm25_scores: dict[int, float] = {i: float(all_bm25_scores[i]) for i in eligible_indices}
+
+        if mode == "bm25_only" and not active_conditions and len(content_words) >= 2:
+            # Require that at least 2 content words appear in chunk
+            valid_content_indices = []
+            for idx in eligible_indices:
+                chunk_toks = set(bm25_tokenize(self.chunks[idx].text))
+                overlap = sum(1 for w in set(content_words) if w in chunk_toks)
+                if overlap >= 2:
+                    valid_content_indices.append(idx)
+            eligible_indices = valid_content_indices
+            bm25_scores = {i: bm25_scores[i] for i in eligible_indices}
+
         best_bm25 = max(bm25_scores.values()) if bm25_scores else 0.0
 
         if (
             mode == "bm25_only"
             and not active_conditions
-            and best_bm25 < self.settings.retrieval_min_bm25
+            and (best_bm25 < self.settings.retrieval_min_bm25 or not eligible_indices)
         ):
             return RetrievalResult(
                 chunks=[],

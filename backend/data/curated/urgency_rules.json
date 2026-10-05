@@ -1344,7 +1344,11 @@
       "match": {
         "phrases": [
           "eczema with fever",
-          "rash with fever"
+          "rash with fever",
+          "fever with rash",
+          "fever with a rash",
+          "fever with skin rash",
+          "fever with a skin rash"
         ],
         "requires_all": []
       },

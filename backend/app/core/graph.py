@@ -202,6 +202,11 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 log_kwargs["rule_id"] = rule_id
             if mode_val:
                 log_kwargs["mode"] = mode_val
+            draft_obj = patch.get("draft") or state.get("draft")
+            if draft_obj:
+                log_kwargs["dropped_claims"] = draft_obj.dropped_claims
+                if draft_obj.llm_error:
+                    log_kwargs["llm_error"] = draft_obj.llm_error
 
             with contextlib.suppress(Exception):
                 log_event(f"node.{node_name}", **log_kwargs)
@@ -439,14 +444,13 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
 
     def node_respond_no_match(state: PipelineState) -> dict[str, Any]:
         msg = (
-            "AIRA covers common primary care conditions based on Indian clinical guidelines. "
-            "You can view all supported conditions on our Sources page: "
-            f"{SUPPORTED_CONDITIONS_LIST}"
+            "AIRA could not match this to its guidelines. If you are worried, see a doctor.\n\n"
+            f"Covered conditions: {SUPPORTED_CONDITIONS_LIST}"
         )
         resp = PipelineResponse(
             response_type="NO_MATCH",
-            triage_level=None,
-            headline="Condition Not Covered in Current Guidelines",
+            triage_level="UNKNOWN",
+            headline="Not enough to decide",
             message=msg,
             helplines=[],
             sections=ResponseSections(),
@@ -459,8 +463,25 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
     def node_generate(state: PipelineState) -> dict[str, Any]:
         retrieval = state.get("retrieval")
         chunks = [sc.chunk for sc in retrieval.chunks] if retrieval else []
+        score_state = state.get("score")
+        triage_level = score_state.level if score_state else "UNKNOWN"
+        detected_conditions = score_state.conditions if score_state else []
         query_text = state.get("augmented_text") or state["raw_text"]
-        draft = deps.generator.generate(query=query_text, chunks=chunks)
+        model_chunks = chunks
+        if triage_level != "EMERGENCY":
+            non_danger = [
+                ch for ch in chunks if ch.section_type not in ("danger_signs", "refer_urgently")
+            ]
+            if non_danger:
+                model_chunks = non_danger
+
+        draft = deps.generator.generate(
+            query=query_text,
+            chunks=model_chunks,
+            triage_level=triage_level,
+            detected_conditions=detected_conditions,
+            all_chunks=deps.retriever.chunks,
+        )
         return {"draft": draft}
 
     def node_respond_answer(state: PipelineState) -> dict[str, Any]:
@@ -468,25 +489,83 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         draft = state.get("draft")
 
         triage_val = score_res.level if score_res else "UNKNOWN"
+        detected_conditions = score_res.conditions if score_res else []
+
         if triage_val == "SEE_DOCTOR":
             headline = "Medical Consultation Recommended"
         elif triage_val == "SELF_CARE":
             headline = "Guideline Self-Care Advice"
+        elif triage_val == "EMERGENCY":
+            headline = "Immediate Emergency Medical Attention Required"
         else:
-            headline = "Clinical Guideline Information"
+            headline = "Not enough to decide"
 
         msg = (
             score_res.urgency_note if score_res else None
-        ) or "Guideline recommendations for your reported symptoms."
-
-        watch_claims = (
-            [ValidatedClaim(text=w, citation_ids=[]) for w in score_res.watch_for]
-            if score_res
-            else []
+        ) or (
+            "AIRA could not match this to its guidelines. If you are worried, see a doctor."
+            if triage_val == "UNKNOWN"
+            else "Guideline recommendations for your reported symptoms."
         )
+
+        draft_cits = draft.citations if draft else []
+        citation_map: dict[tuple[str, int | None], Citation] = {
+            (c.title, c.page): c for c in draft_cits
+        }
+        next_cit_id = max([c.id for c in draft_cits], default=0) + 1
+
+        watch_claims: list[ValidatedClaim] = []
+        if detected_conditions and triage_val != "UNKNOWN":
+            from app.core.validators import extract_items_from_chunk
+            from app.data.corpus_loader import to_corpus_condition_id, to_profile_condition_id
+
+            target_cids = set()
+            for cid in detected_conditions:
+                target_cids.add(cid)
+                target_cids.add(to_corpus_condition_id(cid))
+                target_cids.add(to_profile_condition_id(cid))
+
+            danger_chunks = [
+                ch
+                for ch in deps.retriever.chunks
+                if ch.condition_id in target_cids
+                and ch.section_type in ("danger_signs", "refer_urgently")
+            ]
+
+            collected_watch_items: list[tuple[str, Any]] = []
+            for ch in danger_chunks:
+                items = extract_items_from_chunk(ch)
+                for itm in items:
+                    if len(itm) > 220:
+                        itm = itm[:217] + "..."
+                    collected_watch_items.append((itm, ch))
+                    if len(collected_watch_items) >= 5:
+                        break
+                if len(collected_watch_items) >= 5:
+                    break
+
+            for text_str, ch in collected_watch_items:
+                key = (ch.source_title, ch.page)
+                if key not in citation_map:
+                    cit = Citation(
+                        id=next_cit_id,
+                        title=ch.source_title,
+                        publisher=ch.source_publisher,
+                        year=str(ch.source_year),
+                        page=ch.page,
+                        url=ch.source_url,
+                    )
+                    citation_map[key] = cit
+                    cit_id = next_cit_id
+                    next_cit_id += 1
+                else:
+                    cit_id = citation_map[key].id
+                watch_claims.append(ValidatedClaim(text=text_str, citation_ids=[cit_id]))
+
+        all_citations = sorted(citation_map.values(), key=lambda c: c.id)
+
         g_say = draft.guidelines_say if draft else []
         d_now = draft.do_now if draft else []
-        cits = draft.citations if draft else []
         ans_mode = draft.mode if draft else "extractive"
         summary_items = state.get("answers_summary") or []
 
@@ -507,7 +586,7 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 do_now=d_now,
                 watch_for=watch_claims,
             ),
-            citations=cits,
+            citations=all_citations,
             mode=ans_mode,
             disclaimer=STANDARD_DISCLAIMER,
             answers_summary=summary_items,
@@ -588,6 +667,10 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
 
     # Conditional routing from retrieve
     def route_retrieve(state: PipelineState) -> Literal["respond_no_match", "generate"]:
+        score_state = state.get("score")
+        detected_conditions = score_state.conditions if score_state is not None else []
+        if not detected_conditions:
+            return "respond_no_match"
         retrieval = state.get("retrieval")
         if not retrieval or not retrieval.chunks:
             return "respond_no_match"

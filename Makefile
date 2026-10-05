@@ -1,4 +1,4 @@
-.PHONY: install lint typecheck test eval index run docker-build
+.PHONY: install lint typecheck test eval index contract run docker-build
 
 install:
 	cd backend && pip install -r requirements-dev.txt
@@ -18,6 +18,9 @@ eval:
 
 index:
 	cd backend && python scripts/build_index.py
+
+contract:
+	cd backend && python scripts/verify_condition_contracts.py
 
 run:
 	cd backend && uvicorn app.main:create_app --factory --reload --port 8000

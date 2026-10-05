@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRotateRight,
-  faBookMedical,
   faPhone,
   faChild,
   faPrint,
@@ -97,18 +96,21 @@ export default function ResultCard({
 
       case "NO_MATCH":
         return (
-          <div className="refusal-notice" role="region" aria-label="No matching condition notice">
-            <div className="refusal-header">
-              <FontAwesomeIcon icon={faBookMedical} aria-hidden="true" />
-              <span>Condition Not Covered</span>
+          <div className="result-card result-card-unknown" data-testid="triage-result-card" role="region" aria-label="Not enough to decide">
+            <TriageHeader level="UNKNOWN" />
+            <div className="no-match-content" style={{ marginTop: "1rem" }}>
+              <p className="no-match-covered">
+                <strong>Covered conditions:</strong> Acute Diarrhea, Acute Respiratory Infections, Acute Rhinosinusitis, Bacterial Skin Infections, Dengue Fever, Dermatophytosis (Ringworm), Type 2 Diabetes, Eczema / Dermatitis, Epistaxis (Nosebleed), Headache, Hypertension, Pharyngitis (Sore Throat), Scabies, Urinary Tract Infection, Urticaria / Angioedema.
+              </p>
+              <p className="refusal-action">
+                View all <Link to="/sources">15 supported conditions and sources</Link> or consult a doctor.
+              </p>
             </div>
-            <p className="refusal-message">
-              {message ||
-                "AIRA did not find guidance for these symptoms in its 15 supported clinical guidelines."}
-            </p>
-            <p className="refusal-action">
-              View all <Link to="/sources">15 supported conditions and sources</Link> or consult a doctor.
-            </p>
+            {disclaimer && (
+              <p className="mode-notice" style={{ marginTop: "1.5rem" }}>
+                {disclaimer}
+              </p>
+            )}
           </div>
         );
 

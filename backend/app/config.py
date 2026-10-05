@@ -36,13 +36,13 @@ class Settings(BaseSettings):
             return [origin.strip() for origin in v_trimmed.split(",") if origin.strip()]
         return v
     gemini_api_key: SecretStr | None = None
-    chat_model: str = "gemini-2.5-flash"
+    chat_model: str = "gemini-2.0-flash"
     embedding_model: str = "gemini-embedding-001"
     llm_enabled: bool = True
     max_input_chars: int = 500
     top_k: int = 5
     retrieval_min_cosine: float = 0.65
-    retrieval_min_bm25: float = 2.0
+    retrieval_min_bm25: float = 6.0
     retrieval_timeout_seconds: float = 5.0
     rate_limit_per_minute: int = 20
     daily_model_call_budget: int = 1000

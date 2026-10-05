@@ -12,3 +12,4 @@ intake_escalation_recall: 1.0
 intake_monotonicity_violations: 0
 intake_question_invariance_violations: 0
 intake_skip_regressions: 0
+vague_no_passages: 1.0

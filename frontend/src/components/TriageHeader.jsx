@@ -22,8 +22,8 @@ const TRIAGE_CONFIG = {
   },
   UNKNOWN: {
     icon: faQuestion,
-    label: "Guideline navigation",
-    meaning: "General information from standard guidelines.",
+    label: "Not enough to decide",
+    meaning: "AIRA could not match this to its guidelines. If you are worried, see a doctor.",
     cssClass: "unknown",
   },
   EMERGENCY: {

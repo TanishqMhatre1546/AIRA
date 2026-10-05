@@ -66,6 +66,9 @@ jobs:
       - name: Verify search index integrity
         run: python scripts/build_index.py --verify
 
+      - name: Verify per-condition clinical contracts
+        run: python scripts/verify_condition_contracts.py
+
   safety:
     name: Safety Gates & Evaluation Harness
     runs-on: ubuntu-latest

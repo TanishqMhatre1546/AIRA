@@ -484,17 +484,57 @@ def load_condition_documents(curated_dir: Path | None = None) -> list[ConditionD
     return docs
 
 
+PROFILE_TO_CORPUS_CONDITION_ID: dict[str, str] = {
+    "acute_diarrhea": "icmr-stw-acute-diarrhea",
+    "acute_respiratory_infections": "icmr-stw-acute-respiratory-infections",
+    "acute_rhinosinusitis": "icmr-stw-acute-rhinosinusitis",
+    "bacterial_skin_infections": "icmr-stw-bacterial-skin-infections",
+    "dengue_fever": "icmr-stw-dengue-fever",
+    "dermatophytosis": "icmr-stw-dermatophytosis",
+    "diabetes_type2": "icmr-stw-diabetes-type2",
+    "eczema_dermatitis": "icmr-stw-eczema-dermatitis",
+    "epistaxis_nosebleed": "icmr-stw-epistaxis",
+    "headache": "icmr-stw-headache",
+    "hypertension": "asha-ncd-hypertension",
+    "pharyngitis_sore_throat": "icmr-stw-pharyngitis-sore-throat",
+    "scabies": "icmr-stw-scabies",
+    "urinary_tract_infection": "icmr-stw-urinary-tract-infection",
+    "urticaria_angioedema": "icmr-stw-urticaria-angioedema",
+}
+
+CORPUS_TO_PROFILE_CONDITION_ID: dict[str, str] = {
+    v: k for k, v in PROFILE_TO_CORPUS_CONDITION_ID.items()
+}
+
+
+def to_corpus_condition_id(cond_id: str) -> str:
+    """Map profile condition id to corpus chunk condition id."""
+    return PROFILE_TO_CORPUS_CONDITION_ID.get(cond_id, cond_id)
+
+
+def to_profile_condition_id(cond_id: str) -> str:
+    """Map corpus chunk condition id to profile condition id."""
+    return CORPUS_TO_PROFILE_CONDITION_ID.get(cond_id, cond_id)
+
+
 def extract_watch_for_map(chunks: Sequence[GuidelineChunk]) -> dict[str, list[str]]:
     """Extract danger signs and refer urgently items from chunks for scorer."""
     watch_for: dict[str, list[str]] = {}
     for c in chunks:
         if c.section_type in ("danger_signs", "refer_urgently"):
-            if c.condition_id not in watch_for:
-                watch_for[c.condition_id] = []
+            keys = [c.condition_id]
+            profile_id = to_profile_condition_id(c.condition_id)
+            if profile_id != c.condition_id:
+                keys.append(profile_id)
+            for k in keys:
+                if k not in watch_for:
+                    watch_for[k] = []
             items = [
                 s.strip()
                 for s in c.text.split(". ")
                 if s.strip() and not s.startswith("Condition:") and not s.startswith("Section:")
             ]
-            watch_for[c.condition_id].extend(items[:5])
+            for k in keys:
+                watch_for[k].extend(items[:5])
     return watch_for
+

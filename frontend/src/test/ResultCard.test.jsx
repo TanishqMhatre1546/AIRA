@@ -201,7 +201,7 @@ describe("ResultCard", () => {
     expect(screen.getByText(/Adult Guidelines Only/i)).toBeInTheDocument();
   });
 
-  it("renders NO_MATCH variant linking to /sources", () => {
+  it("renders NO_MATCH variant with not enough to decide heading and covered conditions", () => {
     const mockNoMatch = {
       response_type: "NO_MATCH",
       message: "No matching guideline found.",
@@ -213,11 +213,48 @@ describe("ResultCard", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText(/Condition Not Covered/i)).toBeInTheDocument();
+    expect(screen.getByText("Not enough to decide")).toBeInTheDocument();
+    expect(
+      screen.getByText(/AIRA could not match this to its guidelines. If you are worried, see a doctor./i)
+    ).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /15 supported conditions and sources/i })).toHaveAttribute(
       "href",
       "/sources"
     );
+  });
+
+  it("hides sections when they are empty", () => {
+    const mockAnswer = {
+      response_type: "ANSWER",
+      triage_level: "SELF_CARE",
+      message: "",
+      sections: {
+        guidelines_say: [{ text: "Rest and recover.", citation_ids: [1] }],
+        do_now: [],
+        watch_for: [],
+      },
+      citations: [
+        {
+          id: 1,
+          title: "Guideline Title",
+          publisher: "MOHFW",
+          year: "2024",
+          page: 1,
+          url: "https://example.com",
+        },
+      ],
+      mode: "model",
+    };
+
+    render(
+      <MemoryRouter>
+        <ResultCard result={mockAnswer} onReset={vi.fn()} />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText("What the guidelines say")).toBeInTheDocument();
+    expect(screen.queryByText("What to do now")).not.toBeInTheDocument();
+    expect(screen.queryByText("Watch for these signs")).not.toBeInTheDocument();
   });
 
   it("renders ERROR state with 112 helpline and retry button", () => {

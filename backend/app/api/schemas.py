@@ -172,6 +172,7 @@ class MetaResponse(BaseModel):
     clinical_review_status: ClinicalReviewStatus
     disclaimer: str
     content_verification: Literal["verified", "unverified"] = "verified"
+    llm_available: bool = False
 
 
 class SourceItem(BaseModel):

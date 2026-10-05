@@ -36,12 +36,8 @@ def main() -> None:
     base_data = load_report(base_path)
     cand_data = load_report(cand_path)
 
-    base_suites: dict[str, dict[str, Any]] = {
-        s["name"]: s for s in base_data.get("suites", [])
-    }
-    cand_suites: dict[str, dict[str, Any]] = {
-        s["name"]: s for s in cand_data.get("suites", [])
-    }
+    base_suites: dict[str, dict[str, Any]] = {s["name"]: s for s in base_data.get("suites", [])}
+    cand_suites: dict[str, dict[str, Any]] = {s["name"]: s for s in cand_data.get("suites", [])}
 
     base_names = set(base_suites.keys())
     cand_names = set(cand_suites.keys())

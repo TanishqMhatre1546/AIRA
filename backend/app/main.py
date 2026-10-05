@@ -41,16 +41,17 @@ logger = logging.getLogger("aira.main")
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Application lifecycle context manager performing startup checks and dependency loading."""
-    setup_logging(settings.log_level)
+    app_settings = getattr(app.state, "settings", None) or settings
+    setup_logging(app_settings.log_level)
 
     # Initialize state defaults
     app.state.is_ready = False
     app.state.ready_reason = "INITIALIZING"
     app.state.rate_limiter = SlidingWindowRateLimiter(
-        default_limit=settings.rate_limit_per_minute,
+        default_limit=app_settings.rate_limit_per_minute,
         window_seconds=60.0,
     )
-    app.state.budget = ModelCallBudget(limit=settings.daily_model_call_budget)
+    app.state.budget = ModelCallBudget(limit=app_settings.daily_model_call_budget)
     app.state.graph = None
     app.state.deps = None
     app.state.condition_docs = []
@@ -62,7 +63,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     app.state.content_verification = "verified"
 
     try:
-        data_dir = settings.data_dir
+        data_dir = app_settings.data_dir
 
         # 1. Load rules, lexicon, and safety gate
         rules = load_raw_rules(data_dir)
@@ -200,6 +201,7 @@ def create_app(custom_settings: Settings | None = None) -> FastAPI:
         version="0.1.0",
         lifespan=lifespan,
     )
+    app.state.settings = app_settings
 
     # Register Middlewares in proper execution order
     app.add_middleware(

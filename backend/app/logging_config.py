@@ -24,6 +24,8 @@ ALLOWED_LOG_FIELDS: frozenset[str] = frozenset(
         "intake_shown",
         "intake_skipped",
         "intake_questions_count",
+        "llm_error",
+        "dropped_claims",
     }
 )
 

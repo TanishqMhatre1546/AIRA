@@ -183,13 +183,10 @@ def main() -> None:
     if rules_file_path.exists():
         with open(rules_file_path, encoding="utf-8") as f:
             rdata = json.load(f)
-        rules = (
-            rdata.get("rules")
-            or (
-                rdata.get("emergency_rules", [])
-                + rdata.get("see_doctor_rules", [])
-                + rdata.get("self_care_rules", [])
-            )
+        rules = rdata.get("rules") or (
+            rdata.get("emergency_rules", [])
+            + rdata.get("see_doctor_rules", [])
+            + rdata.get("self_care_rules", [])
         )
         for rule in rules:
             rule_id = rule.get("id", "unknown")
@@ -210,7 +207,7 @@ def main() -> None:
     if rule_phrase_failures:
         print("FAIL: The following 5+ token rule phrases appear as substrings in held-out cases:")
         for rf in rule_phrase_failures:
-            print(f"  - Rule {rf['rule_id']}: \"{rf['phrase']}\"")
+            print(f'  - Rule {rf["rule_id"]}: "{rf["phrase"]}"')
     else:
         print("PASS: Zero rule phrases with 5 or more tokens appear in held-out test inputs.")
 

@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 from app.config import Settings
 from app.config import settings as default_settings
 from app.core.text import normalize
+from app.data.corpus_loader import to_corpus_condition_id, to_profile_condition_id
 from app.data.models import GuidelineChunk
 
 # Allowed drug names from the clinical safety protocol
@@ -154,6 +155,7 @@ class GeneratedAnswer(BaseModel):
     citations: list[Citation]
     mode: Literal["model", "extractive"]
     dropped_claims: int
+    llm_error: str | None = None
 
 
 def get_content_tokens(text: str) -> list[str]:
@@ -278,49 +280,168 @@ def build_citations_and_claims(
     return validated_claims, all_citations
 
 
+def extract_items_from_chunk(chunk: GuidelineChunk) -> list[str]:
+    """Extract individual clinical guidance items or sentences from a chunk."""
+    text = chunk.text
+    if "Section:" in text:
+        parts = text.split("Section:", 1)[1]
+        body = parts.split(".", 1)[1].strip() if "." in parts else parts.strip()
+    else:
+        body = text.strip()
+
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
+    return sentences
+
+
 def build_extractive_fallback(
     chunks: Sequence[GuidelineChunk],
     dropped_count: int = 0,
+    triage_level: str | None = None,
+    detected_conditions: Sequence[str] | None = None,
+    all_chunks: Sequence[GuidelineChunk] | None = None,
+    llm_error: str | None = None,
 ) -> GeneratedAnswer:
-    """Construct verbatim guideline items from top retrieved chunks without model generation."""
-    if not chunks:
+    """Construct level-appropriate verbatim guideline items without model generation.
+
+    Strict rules:
+    - Never show danger_signs or refer_urgently items under guidelines_say or do_now
+      unless the level is EMERGENCY.
+    - SELF_CARE: guidelines_say and do_now come from the self_care section of the
+      detected condition (verbatim, up to 4 items in total, each with its citation).
+    - SEE_DOCTOR: guidelines_say comes from the see_doctor section of the detected
+      condition. do_now comes from the self_care section if the condition has one
+      (home measures until seen), otherwise left empty.
+    - EMERGENCY: guidelines_say comes from danger_signs / refer_urgently sections.
+    - If no condition is detected or level is UNKNOWN: no passages are returned.
+    """
+    if triage_level == "UNKNOWN" or (
+        detected_conditions is not None and len(detected_conditions) == 0
+    ):
         return GeneratedAnswer(
             guidelines_say=[],
             do_now=[],
             citations=[],
             mode="extractive",
             dropped_claims=dropped_count,
+            llm_error=llm_error,
         )
 
-    fallback_chunks = list(chunks[:2])
-    claims_raw: list[Claim] = []
+    # Chunk pool: prefer all_chunks if supplied, else fallback to chunks
+    pool = list(all_chunks) if all_chunks is not None else list(chunks)
+    if not pool:
+        return GeneratedAnswer(
+            guidelines_say=[],
+            do_now=[],
+            citations=[],
+            mode="extractive",
+            dropped_claims=dropped_count,
+            llm_error=llm_error,
+        )
 
-    # Extract sentences/items verbatim
-    for idx, ch in enumerate(fallback_chunks, start=1):
-        text = ch.text
-        # Strip header prefix if present
-        if "Section:" in text:
-            parts = text.split("Section:", 1)[1]
-            body = parts.split(".", 1)[1].strip() if "." in parts else parts.strip()
-        else:
-            body = text.strip()
+    # Match chunks belonging to detected conditions
+    if detected_conditions is not None:
+        target_cids = set()
+        for cid in detected_conditions:
+            target_cids.add(cid)
+            target_cids.add(to_corpus_condition_id(cid))
+            target_cids.add(to_profile_condition_id(cid))
 
-        # Split into individual sentences
-        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
-        for s in sentences:
-            if len(s) > 220:
-                s = s[:217] + "..."
-            if len(claims_raw) < 4:
-                claims_raw.append(Claim(text=s, passage_ids=[idx]))
+        cond_chunks = [ch for ch in pool if ch.condition_id in target_cids]
+        if not cond_chunks:
+            cond_chunks = list(chunks)
+    else:
+        cond_chunks = list(chunks)
 
-    validated_claims, citations = build_citations_and_claims(claims_raw, fallback_chunks)
+    self_care_chunks = [ch for ch in cond_chunks if ch.section_type == "self_care"]
+    see_doctor_chunks = [ch for ch in cond_chunks if ch.section_type == "see_doctor"]
+    danger_chunks = [
+        ch for ch in cond_chunks if ch.section_type in ("danger_signs", "refer_urgently")
+    ]
+
+    def collect_items(
+        source_chunks: list[GuidelineChunk], limit: int
+    ) -> list[tuple[str, GuidelineChunk]]:
+        items: list[tuple[str, GuidelineChunk]] = []
+        for ch in source_chunks:
+            extracted = extract_items_from_chunk(ch)
+            for itm in extracted:
+                if len(itm) > 220:
+                    itm = itm[:217] + "..."
+                items.append((itm, ch))
+                if len(items) >= limit:
+                    return items
+        return items
+
+    guidelines_pairs: list[tuple[str, GuidelineChunk]] = []
+    do_now_pairs: list[tuple[str, GuidelineChunk]] = []
+
+    if triage_level == "SELF_CARE":
+        # Up to 4 items in total from self_care section
+        all_self_care = collect_items(self_care_chunks, limit=4)
+        if len(all_self_care) >= 4:
+            guidelines_pairs = all_self_care[0:2]
+            do_now_pairs = all_self_care[2:4]
+        elif len(all_self_care) == 3:
+            guidelines_pairs = all_self_care[0:2]
+            do_now_pairs = all_self_care[2:3]
+        elif len(all_self_care) == 2:
+            guidelines_pairs = all_self_care[0:1]
+            do_now_pairs = all_self_care[1:2]
+        elif len(all_self_care) == 1:
+            guidelines_pairs = all_self_care[0:1]
+            do_now_pairs = []
+    elif triage_level == "SEE_DOCTOR":
+        # What the guidelines say: see_doctor section (up to 4 items)
+        guidelines_pairs = collect_items(see_doctor_chunks, limit=4)
+        # What to do now: self_care section if available (up to 2 items)
+        do_now_pairs = collect_items(self_care_chunks, limit=2)
+    elif triage_level == "EMERGENCY":
+        guidelines_pairs = collect_items(danger_chunks, limit=4)
+        do_now_pairs = []
+    else:
+        # Fallback for generic/other: do not include danger signs
+        guidelines_pairs = collect_items(
+            see_doctor_chunks or self_care_chunks or cond_chunks, limit=4
+        )
+        do_now_pairs = []
+
+    # Build citations and claims for guidelines_say and do_now
+    citation_map: dict[tuple[str, int | None], Citation] = {}
+    citation_counter = 1
+
+    def make_claims(pairs: list[tuple[str, GuidelineChunk]]) -> list[ValidatedClaim]:
+        nonlocal citation_counter
+        claims_out: list[ValidatedClaim] = []
+        for text_str, ch in pairs:
+            key = (ch.source_title, ch.page)
+            if key not in citation_map:
+                cit = Citation(
+                    id=citation_counter,
+                    title=ch.source_title,
+                    publisher=ch.source_publisher,
+                    year=str(ch.source_year),
+                    page=ch.page,
+                    url=ch.source_url,
+                )
+                citation_map[key] = cit
+                cit_id = citation_counter
+                citation_counter += 1
+            else:
+                cit_id = citation_map[key].id
+            claims_out.append(ValidatedClaim(text=text_str, citation_ids=[cit_id]))
+        return claims_out
+
+    g_claims = make_claims(guidelines_pairs)
+    d_claims = make_claims(do_now_pairs)
+    citations_list = sorted(citation_map.values(), key=lambda c: c.id)
 
     return GeneratedAnswer(
-        guidelines_say=validated_claims,
-        do_now=[],
-        citations=citations,
+        guidelines_say=g_claims,
+        do_now=d_claims,
+        citations=citations_list,
         mode="extractive",
         dropped_claims=dropped_count,
+        llm_error=llm_error,
     )
 
 
@@ -329,6 +450,10 @@ def validate_draft(
     chunks: Sequence[GuidelineChunk],
     settings: Settings | None = None,
     drug_lexicon: list[str] | None = None,
+    triage_level: str | None = None,
+    detected_conditions: Sequence[str] | None = None,
+    all_chunks: Sequence[GuidelineChunk] | None = None,
+    llm_error: str | None = None,
 ) -> GeneratedAnswer:
     """Execute validation pipeline on drafted claims and build citations.
 
@@ -340,7 +465,14 @@ def validate_draft(
     valid_passage_ids = set(range(1, len(chunk_list) + 1))
 
     if not draft or not chunk_list:
-        return build_extractive_fallback(chunk_list, dropped_count=0)
+        return build_extractive_fallback(
+            chunk_list,
+            dropped_count=0,
+            triage_level=triage_level,
+            detected_conditions=detected_conditions,
+            all_chunks=all_chunks,
+            llm_error=llm_error,
+        )
 
     # Combine passage text lookup
     passage_text_map: dict[int, str] = {i + 1: chunk_list[i].text for i in range(len(chunk_list))}
@@ -361,6 +493,17 @@ def validate_draft(
             if not clm.passage_ids or not all(pid in valid_passage_ids for pid in clm.passage_ids):
                 dropped_count += 1
                 continue
+
+            # If triage level is not EMERGENCY, never show danger_signs or refer_urgently
+            if triage_level != "EMERGENCY":
+                cites_danger = any(
+                    1 <= pid <= len(chunk_list)
+                    and chunk_list[pid - 1].section_type in ("danger_signs", "refer_urgently")
+                    for pid in clm.passage_ids
+                )
+                if cites_danger:
+                    dropped_count += 1
+                    continue
 
             # Collect text of all cited passages
             cited_texts = " ".join(passage_text_map[pid] for pid in clm.passage_ids)
@@ -391,7 +534,14 @@ def validate_draft(
     total_valid = len(valid_guidelines) + len(valid_do_now)
     if total_valid == 0:
         # Fallback to extractive
-        return build_extractive_fallback(chunk_list, dropped_count=dropped_count)
+        return build_extractive_fallback(
+            chunk_list,
+            dropped_count=dropped_count,
+            triage_level=triage_level,
+            detected_conditions=detected_conditions,
+            all_chunks=all_chunks,
+            llm_error=llm_error,
+        )
 
     # Build citations across surviving claims
     all_surviving = valid_guidelines + valid_do_now
@@ -407,4 +557,5 @@ def validate_draft(
         citations=citations,
         mode="model",
         dropped_claims=dropped_count,
+        llm_error=llm_error,
     )

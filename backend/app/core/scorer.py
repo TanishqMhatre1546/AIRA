@@ -17,6 +17,7 @@ from app.core.text import (
     normalize,
     tokens,
 )
+from app.data.corpus_loader import to_corpus_condition_id, to_profile_condition_id
 
 SEVERITY_WORDS = frozenset(
     {
@@ -274,6 +275,13 @@ def symptom_urgency_scorer(
     other_hits = engine.match(tok_list, kinds=["see_doctor", "self_care"])
     active_other_hits = [h for h in other_hits if not h.skipped_by_negation]
 
+    # Register condition from rule hit if present
+    for h in active_other_hits:
+        if h.source_id:
+            prof_cid = to_profile_condition_id(h.source_id)
+            if prof_cid in condition_profiles and prof_cid not in detected_conditions:
+                detected_conditions.append(prof_cid)
+
     # 5. Start from highest level reached by any matched rule or floor level
     level = "UNKNOWN"
     reasons_list: list[dict[str, str]] = []
@@ -525,7 +533,7 @@ def symptom_urgency_scorer(
     # 10. Gather watch_for items up to 5 plain strings
     watch_for_items: list[str] = []
     for cid in detected_conditions:
-        items = watch_map.get(cid, [])
+        items = watch_map.get(cid, []) or watch_map.get(to_corpus_condition_id(cid), [])
         for it in items:
             if it not in watch_for_items:
                 watch_for_items.append(it)

@@ -78,6 +78,8 @@ class AnswerGenerator:
         self.settings = settings or default_settings
         self._chat_model = chat_model
         self.budget = budget
+        self.llm_available: bool = False
+        self.last_error: str | None = None
 
     def _get_structured_llm(self) -> Any:
         """Initialize or return cached structured LLM client."""
@@ -85,6 +87,7 @@ class AnswerGenerator:
             return self._chat_model
 
         if not self.settings.llm_enabled:
+            self.llm_available = False
             return None
 
         if (
@@ -92,6 +95,7 @@ class AnswerGenerator:
             or not self.settings.gemini_api_key.get_secret_value().strip()
         ):
             logger.warning("Gemini API key is not configured; using extractive mode")
+            self.llm_available = False
             return None
 
         from langchain_google_genai import ChatGoogleGenerativeAI
@@ -109,22 +113,52 @@ class AnswerGenerator:
         self,
         query: str,
         chunks: Sequence[GuidelineChunk],
+        triage_level: str | None = None,
+        detected_conditions: Sequence[str] | None = None,
+        all_chunks: Sequence[GuidelineChunk] | None = None,
     ) -> GeneratedAnswer:
         """Generate validated clinical summary from retrieved guideline passages."""
         chunk_list = list(chunks)
         if not chunk_list:
-            return build_extractive_fallback(chunk_list, dropped_count=0)
+            return build_extractive_fallback(
+                chunk_list,
+                dropped_count=0,
+                triage_level=triage_level,
+                detected_conditions=detected_conditions,
+                all_chunks=all_chunks,
+            )
 
         if not self.settings.llm_enabled:
-            return build_extractive_fallback(chunk_list, dropped_count=0)
+            self.llm_available = False
+            return build_extractive_fallback(
+                chunk_list,
+                dropped_count=0,
+                triage_level=triage_level,
+                detected_conditions=detected_conditions,
+                all_chunks=all_chunks,
+            )
 
         if self.budget is not None and not self.budget.can_call():
             logger.warning("Daily model call budget exceeded; degrading to extractive mode")
-            return build_extractive_fallback(chunk_list, dropped_count=0)
+            self.llm_available = False
+            return build_extractive_fallback(
+                chunk_list,
+                dropped_count=0,
+                triage_level=triage_level,
+                detected_conditions=detected_conditions,
+                all_chunks=all_chunks,
+            )
 
         structured_llm = self._get_structured_llm()
         if structured_llm is None:
-            return build_extractive_fallback(chunk_list, dropped_count=0)
+            self.llm_available = False
+            return build_extractive_fallback(
+                chunk_list,
+                dropped_count=0,
+                triage_level=triage_level,
+                detected_conditions=detected_conditions,
+                all_chunks=all_chunks,
+            )
 
         user_content = format_user_prompt(query, chunk_list)
         messages = [
@@ -144,6 +178,8 @@ class AnswerGenerator:
                     draft = raw_response
                 elif isinstance(raw_response, dict):
                     draft = Draft.model_validate(raw_response)
+                self.llm_available = True
+                self.last_error = None
                 break
             except Exception as err:
                 err_str = str(err).lower()
@@ -171,10 +207,26 @@ class AnswerGenerator:
                     time.sleep(jitter)
                     continue
 
+                self.llm_available = False
+                self.last_error = err.__class__.__name__
                 logger.warning(
                     "LLM generation failed with error (%s); falling back to extractive",
                     err.__class__.__name__,
                 )
-                return build_extractive_fallback(chunk_list, dropped_count=0)
+                return build_extractive_fallback(
+                    chunk_list,
+                    dropped_count=0,
+                    triage_level=triage_level,
+                    detected_conditions=detected_conditions,
+                    all_chunks=all_chunks,
+                    llm_error=err.__class__.__name__,
+                )
 
-        return validate_draft(draft, chunk_list, settings=self.settings)
+        return validate_draft(
+            draft,
+            chunk_list,
+            settings=self.settings,
+            triage_level=triage_level,
+            detected_conditions=detected_conditions,
+            all_chunks=all_chunks,
+        )

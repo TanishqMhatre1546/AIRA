@@ -1467,6 +1467,97 @@ class EvaluationRunner:
             },
         )
 
+    def run_vague_suite(self) -> SuiteResult:
+        """Evaluate vague queries ensuring NO_MATCH or UNKNOWN with zero passages."""
+        suite_path = self.eval_dir / "vague_cases.yaml"
+        if not suite_path.exists():
+            return SuiteResult(
+                name="vague",
+                total=0,
+                passed=0,
+                metric_name="vague_no_passages",
+                metric_value=1.0,
+                threshold_value=1.0,
+                is_passing=True,
+            )
+
+        data = load_yaml_file(suite_path)
+        cases = data.get("cases", [])
+
+        if not hasattr(self, "_eval_graph") or self._eval_graph is None:
+            from app.core.generator import AnswerGenerator
+            from app.core.graph import PipelineDeps, build_graph
+
+            gen = AnswerGenerator(settings=self.settings)
+            deps = PipelineDeps(
+                gate=self.gate,
+                engine=self.engine,
+                profiles=self.profiles,
+                watch_for=self.watch_for,
+                retriever=self.retriever,
+                generator=gen,
+                settings=self.settings,
+                intake_data=self.intake_data,
+            )
+            self._eval_graph = build_graph(deps)
+
+        from app.core.graph import create_initial_state
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+
+            state = create_initial_state(raw_text=text, skip_intake=True)
+            res = self._eval_graph.invoke(state)
+            resp = res.get("response")
+
+            total_passages = 0
+            if resp and resp.sections:
+                total_passages = len(resp.sections.guidelines_say) + len(resp.sections.do_now)
+
+            is_no_match_or_unknown = (
+                resp
+                and (
+                    resp.response_type in ("NO_MATCH", "REFUSAL", "OUT_OF_SCOPE")
+                    or resp.triage_level == "UNKNOWN"
+                )
+            )
+            if is_no_match_or_unknown and total_passages == 0:
+                passed += 1
+            else:
+                resp_desc = (
+                    f"{resp.response_type if resp else 'None'} "
+                    f"({resp.triage_level if resp else 'None'}), "
+                    f"{total_passages} passages"
+                )
+                failures.append(
+                    TestCaseFailure(
+                        suite="vague",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result="NO_MATCH/UNKNOWN with 0 passages",
+                        actual_result=resp_desc,
+                    )
+                )
+
+        metric = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("vague_no_passages", 1.0))
+        is_passing = metric >= target
+
+        return SuiteResult(
+            name="vague",
+            total=len(cases),
+            passed=passed,
+            metric_name="vague_no_passages",
+            metric_value=round(metric, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
     def run_all(self, selected_suite: str = "all") -> list[SuiteResult]:
         """Run selected or all evaluation test suites."""
         suite_map = {
@@ -1478,6 +1569,7 @@ class EvaluationRunner:
             "retrieval": self.run_retrieval_suite,
             "bias": self.run_bias_suite,
             "injection": self.run_injection_suite,
+            "vague": self.run_vague_suite,
             "intake_data": self.run_intake_data_validation,
             "intake_plan": self.run_intake_plan_suite,
             "intake_escalation": self.run_intake_escalation_suite,
@@ -1668,6 +1760,7 @@ def main() -> None:
             "retrieval",
             "bias",
             "injection",
+            "vague",
             "intake_data",
             "intake_plan",
             "intake_escalation",

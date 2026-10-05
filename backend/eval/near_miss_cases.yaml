@@ -169,3 +169,23 @@ cases:
   - id: "NM-042"
     text: "Felt mild warmth in cheeks after spicy rasam soup."
     expected_outcome: "PASS"
+
+  - id: "NM-043"
+    text: "Tiny drop of blood on shaving cut that stopped immediately."
+    expected_outcome: "PASS"
+
+  - id: "NM-044"
+    text: "Heart rate was elevated for two minutes while rushing to catch the bus."
+    expected_outcome: "PASS"
+
+  - id: "NM-045"
+    text: "Felt out of breath briefly after jogging up a steep hill."
+    expected_outcome: "PASS"
+
+  - id: "NM-046"
+    text: "Mild chest wall soreness from coughing during a common cold yesterday."
+    expected_outcome: "PASS"
+
+  - id: "NM-047"
+    text: "Felt lightheaded for a few seconds when standing up abruptly from sofa."
+    expected_outcome: "PASS"

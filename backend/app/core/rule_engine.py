@@ -53,6 +53,7 @@ class RuleHit:
     negated: bool
     skipped_by_negation: bool
     response: str
+    source_id: str = ""
 
 
 def _get_clause_tokens(norm_tokens: list[str], match_pos: int) -> list[str]:
@@ -80,6 +81,7 @@ class CompiledRule:
         self.negatable: bool = rule_data.get("negatable", True)
         self.min_minutes: int | None = rule_data.get("min_minutes")
         self.response: str = rule_data.get("response", "")
+        self.source_id: str = rule_data.get("source_id", "") or ""
 
         match_block = rule_data.get("match", {})
         raw_phrases = match_block.get("phrases", [])
@@ -176,6 +178,7 @@ class RuleEngine:
                             negated=all_negated,
                             skipped_by_negation=skipped,
                             response=rule.response,
+                            source_id=rule.source_id,
                         )
                         break
 
@@ -212,6 +215,7 @@ class RuleEngine:
                         negated=any_negated,
                         skipped_by_negation=skipped,
                         response=rule.response,
+                        source_id=rule.source_id,
                     )
 
             if matched_hit is not None:

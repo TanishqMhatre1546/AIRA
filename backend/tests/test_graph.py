@@ -416,3 +416,89 @@ def test_static_intercept_performance_under_50ms(graph_deps: PipelineDeps) -> No
     resp: PipelineResponse = result_state["response"]
     assert resp.response_type == "EMERGENCY"
     assert elapsed_ms < 50.0, f"Static intercept took {elapsed_ms:.2f} ms (expected < 50ms)"
+
+
+# ---------------------------------------------------------------------------
+# Test 7: Section and Level Passages Separation Tests
+# ---------------------------------------------------------------------------
+def test_self_care_results_contain_no_danger_signs(graph_deps: PipelineDeps) -> None:
+    """SELF_CARE results must never show danger_signs items in guidelines_say or do_now."""
+    app = build_graph(graph_deps)
+    init_state = create_initial_state(raw_text="I have a mild headache since yesterday")
+    result_state = app.invoke(init_state)
+
+    resp: PipelineResponse = result_state["response"]
+    assert resp.response_type == "ANSWER"
+    assert resp.triage_level == "SELF_CARE"
+
+    # guidelines_say and do_now must not contain danger signs
+    for claim in resp.sections.guidelines_say + resp.sections.do_now:
+        lower_text = claim.text.lower()
+        assert "thunderclap" not in lower_text
+        assert "bleeding in the brain" not in lower_text
+        assert "meningitis" not in lower_text
+        assert "worst headache of your life" not in lower_text
+
+    # watch_for must be filled from danger signs with citations
+    assert len(resp.sections.watch_for) > 0
+    assert len(resp.sections.watch_for) <= 5
+    for claim in resp.sections.watch_for:
+        assert len(claim.citation_ids) > 0
+
+
+def test_watch_for_filled_in_both_model_and_extractive_modes(graph_deps: PipelineDeps) -> None:
+    """watch_for is filled for detected conditions in both model and extractive modes."""
+    # 1. Extractive mode
+    disabled_settings = Settings(
+        llm_enabled=False,
+        retrieval_min_cosine=-1.0,
+        retrieval_min_bm25=0.0,
+    )
+    generator_extractive = AnswerGenerator(settings=disabled_settings, chat_model=MagicMock())
+    deps_extractive = PipelineDeps(
+        gate=graph_deps.gate,
+        engine=graph_deps.engine,
+        profiles=graph_deps.profiles,
+        watch_for=graph_deps.watch_for,
+        retriever=graph_deps.retriever,
+        generator=generator_extractive,
+        settings=disabled_settings,
+    )
+    app_extractive = build_graph(deps_extractive)
+    query_str = "burning sensation when I pass urine"
+    res_extractive = app_extractive.invoke(create_initial_state(raw_text=query_str))
+    resp_ext = res_extractive["response"]
+    assert resp_ext.mode == "extractive"
+    assert len(resp_ext.sections.watch_for) > 0
+    assert all(len(c.citation_ids) > 0 for c in resp_ext.sections.watch_for)
+
+    # 2. Model mode
+    app_model = build_graph(graph_deps)
+    res_model = app_model.invoke(create_initial_state(raw_text=query_str))
+    resp_model = res_model["response"]
+    assert len(resp_model.sections.watch_for) > 0
+    assert all(len(c.citation_ids) > 0 for c in resp_model.sections.watch_for)
+
+
+def test_vague_queries_return_no_match_with_no_passages(graph_deps: PipelineDeps) -> None:
+    """Vague queries must return NO_MATCH or UNKNOWN with zero passages."""
+    app = build_graph(graph_deps)
+    vague_queries = [
+        "I feel tired and a bit off since morning",
+        "i have fever",
+        "i have fever and weakness",
+        "i feel weak",
+        "body pain",
+    ]
+    for q in vague_queries:
+        res = app.invoke(create_initial_state(raw_text=q))
+        resp = res["response"]
+        is_unknown = (
+            resp.response_type in ("NO_MATCH", "REFUSAL", "OUT_OF_SCOPE")
+            or resp.triage_level == "UNKNOWN"
+        )
+        assert is_unknown
+        assert len(resp.sections.guidelines_say) == 0
+        assert len(resp.sections.do_now) == 0
+        assert len(resp.sections.watch_for) == 0
+        assert resp.headline == "Not enough to decide"

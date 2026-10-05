@@ -1,0 +1,115 @@
+version: "1.0.0"
+description: "Vague, non-specific, and non-clinical messages that must return NO_MATCH or UNKNOWN with no passages."
+
+cases:
+  - id: "VG-001"
+    text: "I feel tired and a bit off since morning"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-002"
+    text: "not feeling well"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-003"
+    text: "feeling weak"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-004"
+    text: "body feels heavy"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-005"
+    text: "something is wrong"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-006"
+    text: "how to lose weight quickly"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-007"
+    text: "which smartphone should i buy under 20000"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-008"
+    text: "what is the cricket score today"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-009"
+    text: "i feel uneasy today"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-010"
+    text: "just generally unwell since evening"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-011"
+    text: "feeling exhausted without reason"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-012"
+    text: "low energy and feeling lazy"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-013"
+    text: "i have body pain"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-014"
+    text: "feeling out of sorts"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-015"
+    text: "i feel sick"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-016"
+    text: "how to invest in stock market"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-017"
+    text: "weather forecast for mumbai"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-018"
+    text: "recipe for biryani at home"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-019"
+    text: "my car engine is making strange noise"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-020"
+    text: "tell me a funny joke"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-021"
+    text: "who won the election in 2024"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-022"
+    text: "i feel drowsy after lunch"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-023"
+    text: "feeling a bit down today"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-024"
+    text: "i feel dull and unmotivated"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-025"
+    text: "something feels strange in my body"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-026"
+    text: "uncomfortable sensation overall"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-027"
+    text: "tips for learning python programming"
+    expected_outcome: "NO_MATCH"
+
+  - id: "VG-028"
+    text: "where to go on vacation in south india"
+    expected_outcome: "NO_MATCH"
