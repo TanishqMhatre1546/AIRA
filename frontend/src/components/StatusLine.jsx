@@ -1,8 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompass } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function StatusLine({ loading, isSlow }) {
+  const { t } = useT();
+
   if (!loading) {
     return null;
   }
@@ -16,11 +19,11 @@ export default function StatusLine({ loading, isSlow }) {
     >
       <div className="status-text">
         <FontAwesomeIcon icon={faCompass} aria-hidden="true" className="status-icon" />
-        <span>Checking guidelines...</span>
+        <span>{t("statusLine.checking")}</span>
       </div>
       {isSlow && (
         <p className="status-slow-note">
-          Waking the server, this may take a few seconds on a cold start.
+          {t("statusLine.slow")}
         </p>
       )}
     </div>

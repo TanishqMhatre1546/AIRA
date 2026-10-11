@@ -5,8 +5,11 @@ import {
   faCircleCheck,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function SectionList({ sections, mode }) {
+  const { t } = useT();
+
   if (!sections) return null;
 
   const { guidelines_say = [], do_now = [], watch_for = [] } = sections;
@@ -37,7 +40,7 @@ export default function SectionList({ sections, mode }) {
                       key={cid}
                       href={`#source-${cid}`}
                       className="citation-ref"
-                      aria-label={`Source citation ${cid}`}
+                      aria-label={t("sectionList.sourceCitationAria", { id: cid })}
                     >
                       [{cid}]
                     </a>
@@ -54,14 +57,14 @@ export default function SectionList({ sections, mode }) {
   return (
     <div className="guideline-sections">
       {isExtractive && (
-        <p className="mode-notice">These are passages copied from the guideline.</p>
+        <p className="mode-notice">{t("sectionList.extractiveNotice")}</p>
       )}
 
       {guidelines_say.length > 0 && (
         <section className="guideline-section" aria-labelledby="heading-guidelines-say">
           <h3 id="heading-guidelines-say" className="guideline-section-title">
             <FontAwesomeIcon icon={faBookMedical} aria-hidden="true" className="section-title-icon" />
-            <span>What the guidelines say</span>
+            <span>{t("sectionList.guidelinesSay")}</span>
           </h3>
           {renderClaims(guidelines_say)}
         </section>
@@ -71,7 +74,7 @@ export default function SectionList({ sections, mode }) {
         <section className="guideline-section" aria-labelledby="heading-do-now">
           <h3 id="heading-do-now" className="guideline-section-title">
             <FontAwesomeIcon icon={faCircleCheck} aria-hidden="true" className="section-title-icon" />
-            <span>What to do now</span>
+            <span>{t("sectionList.doNow")}</span>
           </h3>
           {renderClaims(do_now)}
         </section>
@@ -81,7 +84,7 @@ export default function SectionList({ sections, mode }) {
         <section className="guideline-section watch-for-section" aria-labelledby="heading-watch-for">
           <h3 id="heading-watch-for" className="guideline-section-title watch-for-title">
             <FontAwesomeIcon icon={faTriangleExclamation} aria-hidden="true" className="section-title-icon" />
-            <span>Watch for these signs</span>
+            <span>{t("sectionList.watchFor")}</span>
           </h3>
           <div className="watch-for-panel">
             {renderClaims(watch_for, true)}

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getSources } from "../../api/client";
+import { useT } from "../../i18n/useT";
 
 export function SourceStrip() {
+  const { t } = useT();
   const [publishers, setPublishers] = useState([]);
   const [visible, setVisible] = useState(false);
 
@@ -38,7 +40,7 @@ export function SourceStrip() {
   return (
     <div className="source-strip" data-testid="source-strip">
       <div className="source-strip-container">
-        <span className="source-strip-label">Based on documents from:</span>{" "}
+        <span className="source-strip-label">{t("landing.sourceStrip.label")}</span>{" "}
         <span className="source-strip-names">{publishers.join(", ")}</span>
       </div>
     </div>

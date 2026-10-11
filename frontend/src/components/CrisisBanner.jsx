@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandHoldingHeart, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function CrisisBanner({ message, helplines = [] }) {
+  const { t } = useT();
   const bannerRef = useRef(null);
 
   useEffect(() => {
@@ -12,8 +14,8 @@ export default function CrisisBanner({ message, helplines = [] }) {
   }, []);
 
   const defaultHelplines = [
-    { label: "Tele-MANAS Mental Health Helpline", number: "14416" },
-    { label: "National Emergency Helpline", number: "112" },
+    { label: t("crisisBanner.telemanas"), number: "14416" },
+    { label: t("crisisBanner.nationalHelpline"), number: "112" },
   ];
 
   const displayHelplines = helplines.length > 0 ? helplines : defaultHelplines;
@@ -28,11 +30,10 @@ export default function CrisisBanner({ message, helplines = [] }) {
     >
       <h2>
         <FontAwesomeIcon icon={faHandHoldingHeart} aria-hidden="true" />
-        <span>Support Is Available</span>
+        <span>{t("crisisBanner.heading")}</span>
       </h2>
       <p className="crisis-message">
-        {message ||
-          "If you or someone you know is in distress or needs mental health support, trained counselors are available 24/7."}
+        {message || t("crisisBanner.defaultMessage")}
       </p>
       <div className="helplines-grid">
         {displayHelplines.map((item, idx) => (
@@ -40,10 +41,10 @@ export default function CrisisBanner({ message, helplines = [] }) {
             key={idx}
             href={`tel:${item.number}`}
             className="crisis-helpline-button"
-            aria-label={`Call ${item.label} at ${item.number}`}
+            aria-label={t("crisisBanner.callAria", { label: item.label, number: item.number })}
           >
             <span>
-              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> Call {item.number}
+              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> {t("crisisBanner.call", { number: item.number })}
             </span>
             <span className="helpline-name">{item.label}</span>
           </a>

@@ -1,0 +1,249 @@
+{
+  "translation_review": "pending",
+  "translation_review_notice": "English translation review pending.",
+  "language": {
+    "en": "English",
+    "hi": "हिन्दी",
+    "mr": "मराठी",
+    "changeLanguage": "Change language"
+  },
+  "header": {
+    "skipLink": "Skip to main content",
+    "brandName": "AIRA",
+    "brandTagline": "Clinical guidelines assistant",
+    "navHowItWorks": "How it works",
+    "navPrivacy": "Privacy",
+    "navTerms": "Terms",
+    "navSources": "Sources",
+    "checkSymptoms": "Check symptoms",
+    "changeLanguage": "Change language"
+  },
+  "footer": {
+    "emergency": "In an emergency call {helpline}.",
+    "clinicalReviewPending": "Clinical review: pending",
+    "clinicalReviewed": "Clinically reviewed: yes, by {reviewer} on {date}",
+    "privacyAndTerms": "Privacy and terms"
+  },
+  "app": {
+    "prototypeBanner": "Prototype. The guideline content has not been checked against the source documents yet."
+  },
+  "landing": {
+    "hero": {
+      "title": "Check what Indian health guidelines say about your symptoms",
+      "paragraph": "AIRA matches the symptoms you describe against a written rule table and shows how urgent they are. Each answer lists the guideline document and page it comes from. AIRA does not diagnose illness and does not give medicine doses.",
+      "checkSymptomsButton": "Check symptoms",
+      "howItWorksLink": "How it works",
+      "emergencyNotice": "If this is an emergency, call 112 now.",
+      "exampleBadge": "Example result",
+      "exampleCaption": "Illustrative example, not medical advice"
+    },
+    "whatYouGet": {
+      "heading": "What you get",
+      "kicker": "OVERVIEW",
+      "urgencyLead": "An urgency level.",
+      "urgencyText": "Emergency, see a doctor soon, or can usually be managed at home.",
+      "guidelinesLead": "What the guidelines say.",
+      "guidelinesText": "A short summary written only from guideline passages, with the document and page.",
+      "signsLead": "Signs to watch for.",
+      "signsText": "The warning signs the guidelines list for your condition."
+    },
+    "whoFor": {
+      "heading": "Who it is for",
+      "kicker": "AUDIENCE",
+      "text": "Adults in India with everyday symptoms and the people who look after them, and community health workers who want to look up a protocol quickly."
+    },
+    "coverage": {
+      "heading": "Conditions covered",
+      "kicker": "GUIDELINE COVERAGE",
+      "loadingText": "Loading the list",
+      "fallbackText": "The full list is on the Sources page.",
+      "sourcesLinkText": "Sources page"
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "kicker": "SAFETY AND PROCESS",
+      "step1": "Fixed rules check your message first. Emergency signs, thoughts of self-harm, requests for a diagnosis or a dose, and messages about children are handled by written rules before any AI is used. For an emergency, AIRA shows a fixed message and helplines and writes nothing else.",
+      "step2": "A rule table sets the urgency. The level comes from a table that cites its guideline source. The AI cannot change it.",
+      "step3": "A short summary is written from guideline passages only. Every statement points to a source. If the text cannot be checked against the passages, AIRA shows the passages themselves.",
+      "reviewPending": "Clinical review: pending.",
+      "reviewDonePrefix": "Clinically reviewed: yes, by "
+    },
+    "limits": {
+      "heading": "What AIRA does not do",
+      "kicker": "SAFETY BOUNDARIES",
+      "item1": "It does not diagnose.",
+      "item2": "It does not give medicine doses or advice on mixing medicines.",
+      "item3": "It is for adults only (messages about babies and children get a notice to see a doctor).",
+      "item4": "It is in English only.",
+      "item5": "It covers only the listed conditions.",
+      "item6": "It is not a replacement for a doctor or emergency services."
+    },
+    "privacy": {
+      "heading": "Privacy",
+      "kicker": "DATA PROTECTION",
+      "statement1": "AIRA does not store your messages. There is no account and no database of messages.",
+      "statement2": "Messages that match an emergency, self-harm, refusal or child rule are handled on the AIRA server and are not sent to Google.",
+      "statement3Prefix": "Other messages are sent to Google's Gemini API: first to turn the message into a search vector and, when the model is enabled, to write the summary.",
+      "statement3Link": "Google Gemini API terms",
+      "statement3Suffix": "Google handles those messages under its terms.",
+      "statement4": "AIRA server logs do not contain message text.",
+      "statement5": "The site sets no cookies and uses no analytics or advertising trackers. It stores only your chosen language in your browser and nothing else.",
+      "statement6": "The hosting provider, Render, may record technical request data such as IP addresses in its own logs.",
+      "statement7": "The printed summary is created in your browser and is not sent anywhere.",
+      "lastUpdated": "Last updated: 4 October 2026"
+    },
+    "terms": {
+      "heading": "Terms of use",
+      "kicker": "LEGAL TERMS",
+      "statement1": "AIRA gives general information from published guidelines. It is not medical advice, not a diagnosis, and not a substitute for a doctor.",
+      "statement2": "In an emergency, call 112 or go to the nearest hospital. Do not wait for AIRA.",
+      "statement3": "AIRA is a prototype. Its clinical content has not been reviewed by a doctor unless the review status above says so.",
+      "statement4": "Guideline documents belong to their publishers. AIRA links to them on the Sources page.",
+      "statement5": "The service may be slow, unavailable or change without notice. Free hosting can pause it when it is idle, and the first request after a pause can take about a minute.",
+      "statement6": "You decide what to do with the information. The people who built AIRA are not responsible for decisions made using it, to the extent the law allows.",
+      "operatedBy": "Operated by {name}.",
+      "contact": "Contact: {email}",
+      "lastUpdated": "Last updated: 4 October 2026",
+      "sourcesLinkLabel": "Guideline documents used by AIRA"
+    },
+    "sourceStrip": {
+      "label": "Based on documents from:"
+    }
+  },
+  "assistant": {
+    "lead": "AIRA shows what Indian health guidelines say. It does not diagnose or give medicine doses.",
+    "emptyHeading": "Your result will appear here.",
+    "emptyHint": "Enter your symptoms to check official Indian clinical guidelines.",
+    "emptyEmergency": "In an emergency call 112."
+  },
+  "symptomForm": {
+    "label": "Describe your symptoms or ask about clinical guidelines:",
+    "placeholder": "Example: I have had a runny nose and mild headache for 2 days",
+    "charCount": "{count}/500 characters",
+    "clear": "Clear",
+    "clearAria": "Clear symptoms text",
+    "submit": "Check guidelines",
+    "submitHint": "Press Enter to submit or Shift+Enter for a new line. Maximum 500 characters."
+  },
+  "examplePrompts": {
+    "heading": "Or try an example question:",
+    "prompt1": "I have had a runny nose and mild headache for 2 days",
+    "prompt2": "My left eye is red and has yellow discharge",
+    "prompt3": "I have had loose stools 3 times today, no blood",
+    "prompt4": "My throat hurts when I swallow and I have a fever"
+  },
+  "statusLine": {
+    "checking": "Checking guidelines...",
+    "slow": "Waking the server, this may take a few seconds on a cold start."
+  },
+  "emergencyBanner": {
+    "heading": "Emergency Warning",
+    "defaultMessage": "Immediate emergency care is required. Do not wait.",
+    "call": "Call {number}",
+    "callAria": "Call {label} at {number}",
+    "nationalHelpline": "National Emergency Helpline",
+    "ambulance": "Ambulance / Emergency Relief"
+  },
+  "crisisBanner": {
+    "heading": "Support Is Available",
+    "defaultMessage": "If you or someone you know is in distress or needs mental health support, trained counselors are available 24/7.",
+    "call": "Call {number}",
+    "callAria": "Call {label} at {number}",
+    "telemanas": "Tele-MANAS Mental Health Helpline",
+    "nationalHelpline": "National Emergency Helpline"
+  },
+  "refusalNotice": {
+    "heading": "Outside Guideline Scope",
+    "defaultMessage": "AIRA does not provide medical diagnoses, medication dosages, or prescription drug advice.",
+    "action": "A doctor or pharmacist can answer this."
+  },
+  "outOfScope": {
+    "heading": "Adult Guidelines Only",
+    "defaultMessage": "AIRA covers adult primary care guidelines only. For infants, children, or specialized conditions, please consult a pediatrician or doctor immediately.",
+    "emergency": "In an emergency call 112."
+  },
+  "triage": {
+    "selfCareLabel": "Self care at home",
+    "selfCareMeaning": "Guideline suggests home care while monitoring symptoms.",
+    "seeDoctorLabel": "See a doctor",
+    "seeDoctorMeaning": "Guideline recommends consultation with a healthcare provider.",
+    "unknownLabel": "Not enough to decide",
+    "unknownMeaning": "AIRA could not match this to its guidelines. If you are worried, see a doctor.",
+    "emergencyLabel": "Emergency symptoms detected",
+    "emergencyMeaning": "Immediate in-person emergency care is required."
+  },
+  "resultCard": {
+    "connectionError": "Connection Error",
+    "connectionErrorMessage": "Could not reach AIRA. If this is an emergency call 112.",
+    "call112Emergency": "Call 112 (Emergency)",
+    "nationalHelpline": "National Helpline",
+    "tryAgain": "Try again",
+    "clearQuery": "Clear query",
+    "coveredConditionsPrefix": "Covered conditions:",
+    "viewSupportedSources": "View all 15 supported conditions and sources or consult a doctor.",
+    "printTitle": "AIRA Clinical Guideline Summary",
+    "printDate": "Date: {date}",
+    "printUserDescription": "User description:",
+    "printAnswersGiven": "Answers given:",
+    "basedOnAnswers": "Based on your answers:",
+    "printDisclaimer": "This is a summary of public guidelines, not a diagnosis.",
+    "printSummary": "Print summary",
+    "printSummaryAria": "Print clinical summary for doctor or health worker",
+    "newQuery": "New query",
+    "newQueryAria": "Start a new symptom query",
+    "correctionNotice": "AIRA read this as: {phrase}"
+  },
+  "sectionList": {
+    "guidelinesSay": "What the guidelines say",
+    "doNow": "What to do now",
+    "watchFor": "Watch for these signs",
+    "extractiveNotice": "These are passages copied from the guideline.",
+    "sourceCitationAria": "Source citation {id}"
+  },
+  "sourceList": {
+    "heading": "Sources",
+    "viewGuideline": "View guideline"
+  },
+  "intake": {
+    "heading": "A few quick questions",
+    "subheading": "Answer these to help us check the right guideline sections, or skip to see your results.",
+    "questionNumber": "Question {current} of {total}:",
+    "extraTextLabel": "Anything else to add? (optional)",
+    "extraTextPlaceholder": "Type other symptoms or details here...",
+    "charsRemaining": "{count} characters remaining",
+    "seeGuidelines": "See guidelines",
+    "checkingGuidelines": "Checking guidelines...",
+    "skipAndShowResult": "Skip and show result",
+    "durationQuestion": "How long has this been going on?",
+    "dur1": "Since today",
+    "dur2": "1 to 2 days",
+    "dur6": "3 to 6 days",
+    "dur14": "1 to 2 weeks",
+    "dur15": "More than 2 weeks",
+    "riskQuestion": "Do any of these apply to you?",
+    "riskPregnant": "I am pregnant",
+    "riskDiabetes": "I have diabetes",
+    "riskImmune": "My immunity is weak (for example HIV, chemotherapy or long-term steroids)",
+    "risk65": "I am 65 or older",
+    "riskNone": "None of these apply to me"
+  },
+  "sourcesPage": {
+    "title": "Authoritative Clinical Sources",
+    "intro": "AIRA draws exclusively from published clinical guidelines issued by the Indian Council of Medical Research (ICMR) and the Ministry of Health and Family Welfare (MOHFW), Government of India.",
+    "searchPlaceholder": "Search guidelines or conditions (e.g. Diarrhea, Fever, ICMR)...",
+    "searchAria": "Filter clinical sources",
+    "clearSearchAria": "Clear sources search",
+    "countShowing": "Showing {filtered} of {total} guidelines",
+    "loading": "Loading latest source metadata...",
+    "noSourcesFound": "No clinical guidelines match your search.",
+    "publisherLabel": "Publisher:",
+    "editionLabel": "Edition:",
+    "supportedConditionsLabel": "Supported conditions:",
+    "accessPublication": "Access official publication"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "The requested page does not exist.",
+    "homeLink": "Return to the home page"
+  }
+}

@@ -3,9 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { getMeta } from "../api/client";
+import { useT } from "../i18n/useT";
 
 export default function Footer() {
-  const [reviewStatus, setReviewStatus] = useState("Clinical review: pending");
+  const { language, t } = useT();
+  const [reviewStatus, setReviewStatus] = useState(() => t("footer.clinicalReviewPending"));
   const location = useLocation();
   const isLanding = location.pathname === "/";
 
@@ -18,21 +20,26 @@ export default function Footer() {
         if (review && review.reviewed) {
           const reviewer = review.reviewer || "expert";
           const date = review.date || "recent";
-          setReviewStatus(`Clinically reviewed: yes, by ${reviewer} on ${date}`);
+          setReviewStatus(t("footer.clinicalReviewed", { reviewer, date }));
         } else {
-          setReviewStatus("Clinical review: pending");
+          setReviewStatus(t("footer.clinicalReviewPending"));
         }
       })
       .catch(() => {
         if (active) {
-          setReviewStatus("Clinical review: pending");
+          setReviewStatus(t("footer.clinicalReviewPending"));
         }
       });
 
     return () => {
       active = false;
     };
-  }, []);
+  }, [language, t]);
+
+  const emergencyString = t("footer.emergency", { helpline: "112" });
+  const emergencyParts = emergencyString.includes("112")
+    ? emergencyString.split("112")
+    : [emergencyString, ""];
 
   return (
     <footer className="site-footer" role="contentinfo">
@@ -40,7 +47,9 @@ export default function Footer() {
         <div className="footer-emergency-strip">
           <FontAwesomeIcon icon={faPhone} className="footer-phone-icon" aria-hidden="true" />
           <span>
-            In an emergency call <a href="tel:112">112</a>.
+            {emergencyParts[0]}
+            <a href="tel:112">112</a>
+            {emergencyParts[1]}
           </span>
         </div>
 
@@ -48,10 +57,16 @@ export default function Footer() {
           {reviewStatus}
         </div>
 
+        {language !== "en" && (
+          <div className="footer-translation-review" data-testid="translation-review-notice">
+            {t("translation_review_notice")}
+          </div>
+        )}
+
         {!isLanding && (
           <div className="footer-secondary">
             <Link to="/#privacy" className="footer-small-link">
-              Privacy and terms
+              {t("footer.privacyAndTerms")}
             </Link>
           </div>
         )}

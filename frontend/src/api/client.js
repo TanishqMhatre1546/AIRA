@@ -84,6 +84,7 @@ export async function triageSymptoms(payload, signal) {
   } else {
     bodyObj = {
       message: (payload.message || "").trim(),
+      ...(payload.lang ? { lang: payload.lang } : {}),
       ...(payload.skip_intake ? { skip_intake: true } : {}),
       ...(payload.intake ? { intake: payload.intake } : {}),
     };

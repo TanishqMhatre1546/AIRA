@@ -45,6 +45,7 @@ class TriageRequest(BaseModel):
     message: str
     skip_intake: bool = False
     intake: IntakePayload | None = None
+    lang: Literal["en", "hi", "mr"] = "en"
 
     @field_validator("message", mode="before")
     @classmethod
@@ -100,9 +101,15 @@ class TriageResponse(BaseModel):
     text_max: int = 300
     skip_allowed: bool = False
     answers_summary: list[str] = Field(default_factory=list)
+    lang: Literal["en", "hi", "mr"] = "en"
 
     @classmethod
-    def from_pipeline_response(cls, resp: PipelineResponse, request_id: str) -> "TriageResponse":
+    def from_pipeline_response(
+        cls,
+        resp: PipelineResponse,
+        request_id: str,
+        lang: Literal["en", "hi", "mr"] = "en",
+    ) -> "TriageResponse":
         """Construct a TriageResponse from a PipelineResponse and request identifier."""
         return cls(
             request_id=request_id,
@@ -123,6 +130,7 @@ class TriageResponse(BaseModel):
             text_max=resp.text_max,
             skip_allowed=resp.skip_allowed,
             answers_summary=resp.answers_summary,
+            lang=lang,
         )
 
 

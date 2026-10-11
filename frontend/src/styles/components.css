@@ -1412,3 +1412,90 @@
   color: var(--color-text-muted);
   font-size: var(--font-size-base);
 }
+
+/* --------------------------------------------------------------------------
+   Language Toggle Dropdown
+   -------------------------------------------------------------------------- */
+.language-toggle-container {
+  position: relative;
+  display: inline-block;
+}
+
+.language-toggle-button {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-base);
+  min-height: 44px;
+  padding: 0.5rem 0.875rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  line-height: 1;
+}
+
+.language-toggle-button:hover,
+.language-toggle-button:focus-visible {
+  background-color: var(--color-tint);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.language-toggle-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.language-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-card);
+  padding: 0.25rem 0;
+  min-width: 130px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.language-option-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  min-height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-option-button:hover,
+.language-option-button:focus-visible {
+  background-color: var(--color-tint);
+  color: var(--color-primary-dark);
+  outline: none;
+}
+
+.language-option-button.selected {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.language-option-check {
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  margin-left: 0.5rem;
+}
+

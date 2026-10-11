@@ -7,8 +7,11 @@ import Assistant from "./routes/Assistant";
 import Sources from "./routes/Sources";
 import NotFound from "./routes/NotFound";
 import { checkHealth, getMeta } from "./api/client";
+import { LanguageProvider } from "./i18n/LanguageContext";
+import { useT } from "./i18n/useT";
 
-export default function App() {
+function AppContent() {
+  const { t } = useT();
   const [contentVerification, setContentVerification] = useState("verified");
 
   useEffect(() => {
@@ -33,7 +36,7 @@ export default function App() {
         <div className="prototype-banner" role="status" aria-live="polite">
           <div className="container">
             <p className="prototype-banner-text">
-              Prototype. The guideline content has not been checked against the source documents yet.
+              {t("app.prototypeBanner")}
             </p>
           </div>
         </div>
@@ -61,5 +64,13 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

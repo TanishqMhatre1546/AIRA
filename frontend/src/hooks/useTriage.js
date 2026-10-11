@@ -1,7 +1,9 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { triageSymptoms } from "../api/client.js";
+import { useT } from "../i18n/useT.js";
 
 export function useTriage() {
+  const { language } = useT();
   const [state, setState] = useState("idle"); // idle | loading | follow_up | success | error
   const [result, setResult] = useState(null);
   const [followUp, setFollowUp] = useState(null);
@@ -52,7 +54,10 @@ export function useTriage() {
       }, 4000);
 
       try {
-        const data = await triageSymptoms(payload, controller.signal);
+        const data = await triageSymptoms(
+          { ...payload, lang: payload.lang || language },
+          controller.signal
+        );
         clearTimers();
         setIsSlow(false);
 
@@ -74,7 +79,7 @@ export function useTriage() {
         setIsSlow(false);
       }
     },
-    [clearTimers]
+    [clearTimers, language]
   );
 
   const checkGuidelines = useCallback(

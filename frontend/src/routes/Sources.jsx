@@ -6,6 +6,7 @@ import {
   faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { getSources } from "../api/client";
+import { useT } from "../i18n/useT";
 
 const FALLBACK_SOURCES = [
   {
@@ -116,6 +117,7 @@ const FALLBACK_SOURCES = [
 ];
 
 export default function Sources() {
+  const { t } = useT();
   const [sources, setSources] = useState(FALLBACK_SOURCES);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
@@ -155,11 +157,11 @@ export default function Sources() {
   return (
     <div className="page-container sources-page">
       <h1 className="sources-page-title">
-        Authoritative Clinical Sources
+        {t("sourcesPage.title")}
       </h1>
 
       <p className="page-intro">
-        AIRA draws exclusively from published clinical guidelines issued by the Indian Council of Medical Research (ICMR) and the Ministry of Health and Family Welfare (MOHFW), Government of India.
+        {t("sourcesPage.intro")}
       </p>
 
       <div className="sources-filter-bar">
@@ -173,32 +175,32 @@ export default function Sources() {
             type="search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search guidelines or conditions (e.g. Diarrhea, Fever, ICMR)..."
+            placeholder={t("sourcesPage.searchPlaceholder")}
             className="sources-search-input"
-            aria-label="Filter clinical sources"
+            aria-label={t("sourcesPage.searchAria")}
           />
           {searchQuery && (
             <button
               type="button"
               className="sources-search-clear"
               onClick={() => setSearchQuery("")}
-              aria-label="Clear sources search"
+              aria-label={t("sourcesPage.clearSearchAria")}
             >
               <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
             </button>
           )}
         </div>
         <div className="sources-filter-count" aria-live="polite">
-          Showing {filteredSources.length} of {sources.length} guidelines
+          {t("sourcesPage.countShowing", { filtered: filteredSources.length, total: sources.length })}
         </div>
       </div>
 
-      {loading && <p className="status-text">Loading latest source metadata...</p>}
+      {loading && <p className="status-text">{t("sourcesPage.loading")}</p>}
 
       <div className="sources-directory">
         {filteredSources.length === 0 ? (
           <div className="no-sources-found">
-            <p>No clinical guidelines match your search.</p>
+            <p>{t("sourcesPage.noSourcesFound")}</p>
           </div>
         ) : (
           filteredSources.map((item, idx) => {
@@ -216,14 +218,14 @@ export default function Sources() {
                 <div className="source-accordion-body">
                   <h3 className="source-doc-title">{item.title}</h3>
                   <p className="source-meta-line">
-                    <span className="source-meta-label">Publisher:</span> {item.publisher}
+                    <span className="source-meta-label">{t("sourcesPage.publisherLabel")}</span> {item.publisher}
                     {item.edition_year && (
-                      <span> | <span className="source-meta-label">Edition:</span> {item.edition_year}</span>
+                      <span> | <span className="source-meta-label">{t("sourcesPage.editionLabel")}</span> {item.edition_year}</span>
                     )}
                   </p>
                   {item.conditions && item.conditions.length > 0 && (
                     <p className="source-meta-line">
-                      <span className="source-meta-label">Supported conditions:</span> {item.conditions.join(", ")}
+                      <span className="source-meta-label">{t("sourcesPage.supportedConditionsLabel")}</span> {item.conditions.join(", ")}
                     </p>
                   )}
                   {item.url && (
@@ -234,7 +236,7 @@ export default function Sources() {
                         rel="noopener noreferrer"
                         className="source-link"
                       >
-                        <span>Access official publication</span>
+                        <span>{t("sourcesPage.accessPublication")}</span>
                         <FontAwesomeIcon
                           icon={faArrowUpRightFromSquare}
                           aria-hidden="true"

@@ -1,14 +1,14 @@
 import React from "react";
-import { landingContent } from "../../content/landing";
+import { useT } from "../../i18n/useT";
 
 export function WhoFor() {
-  const { whoFor } = landingContent;
+  const { t } = useT();
 
   return (
     <section id="who-for" className="landing-section">
-      <span className="section-kicker">AUDIENCE</span>
-      <h2 className="landing-section-title">{whoFor.heading}</h2>
-      <p className="landing-text">{whoFor.text}</p>
+      <span className="section-kicker">{t("landing.whoFor.kicker")}</span>
+      <h2 className="landing-section-title">{t("landing.whoFor.heading")}</h2>
+      <p className="landing-text">{t("landing.whoFor.text")}</p>
     </section>
   );
 }

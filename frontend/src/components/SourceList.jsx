@@ -1,14 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function SourceList({ citations }) {
+  const { t } = useT();
+
   if (!citations || citations.length === 0) return null;
 
   return (
     <section className="sources-section" aria-labelledby="sources-heading">
       <h4 id="sources-heading" className="sources-title">
-        Sources
+        {t("sourceList.heading")}
       </h4>
       <ol className="sources-list">
         {citations.map((cite) => {
@@ -36,7 +39,7 @@ export default function SourceList({ citations }) {
                     rel="noopener noreferrer"
                     className="source-link"
                   >
-                    <span>View guideline</span>
+                    <span>{t("sourceList.viewGuideline")}</span>
                     <FontAwesomeIcon
                       icon={faArrowUpRightFromSquare}
                       aria-hidden="true"

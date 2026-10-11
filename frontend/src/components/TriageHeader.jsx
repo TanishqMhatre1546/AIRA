@@ -6,35 +6,38 @@ import {
   faQuestion,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
-
-const TRIAGE_CONFIG = {
-  SELF_CARE: {
-    icon: faHouseUser,
-    label: "Self care at home",
-    meaning: "Guideline suggests home care while monitoring symptoms.",
-    cssClass: "self_care",
-  },
-  SEE_DOCTOR: {
-    icon: faUserDoctor,
-    label: "See a doctor",
-    meaning: "Guideline recommends consultation with a healthcare provider.",
-    cssClass: "see_doctor",
-  },
-  UNKNOWN: {
-    icon: faQuestion,
-    label: "Not enough to decide",
-    meaning: "AIRA could not match this to its guidelines. If you are worried, see a doctor.",
-    cssClass: "unknown",
-  },
-  EMERGENCY: {
-    icon: faTriangleExclamation,
-    label: "Emergency symptoms detected",
-    meaning: "Immediate in-person emergency care is required.",
-    cssClass: "emergency",
-  },
-};
+import { useT } from "../i18n/useT";
 
 export default function TriageHeader({ level }) {
+  const { t } = useT();
+
+  const TRIAGE_CONFIG = {
+    SELF_CARE: {
+      icon: faHouseUser,
+      label: t("triage.selfCareLabel"),
+      meaning: t("triage.selfCareMeaning"),
+      cssClass: "self_care",
+    },
+    SEE_DOCTOR: {
+      icon: faUserDoctor,
+      label: t("triage.seeDoctorLabel"),
+      meaning: t("triage.seeDoctorMeaning"),
+      cssClass: "see_doctor",
+    },
+    UNKNOWN: {
+      icon: faQuestion,
+      label: t("triage.unknownLabel"),
+      meaning: t("triage.unknownMeaning"),
+      cssClass: "unknown",
+    },
+    EMERGENCY: {
+      icon: faTriangleExclamation,
+      label: t("triage.emergencyLabel"),
+      meaning: t("triage.emergencyMeaning"),
+      cssClass: "emergency",
+    },
+  };
+
   const config = TRIAGE_CONFIG[level] || TRIAGE_CONFIG.UNKNOWN;
 
   return (

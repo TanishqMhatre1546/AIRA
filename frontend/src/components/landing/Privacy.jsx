@@ -1,34 +1,35 @@
 import React from "react";
 import { legalContent } from "../../content/legal";
+import { useT } from "../../i18n/useT";
 
 export function Privacy() {
-  const { privacy, lastUpdated } = legalContent;
+  const { t } = useT();
 
   return (
     <section id="privacy" className="landing-section">
-      <span className="section-kicker">DATA PROTECTION</span>
-      <h2 className="landing-section-title">{privacy.heading}</h2>
+      <span className="section-kicker">{t("landing.privacy.kicker")}</span>
+      <h2 className="landing-section-title">{t("landing.privacy.heading")}</h2>
 
-      <p className="landing-text">{privacy.statements[0]}</p>
-      <p className="landing-text">{privacy.statements[1]}</p>
+      <p className="landing-text">{t("landing.privacy.statement1")}</p>
+      <p className="landing-text">{t("landing.privacy.statement2")}</p>
       <p className="landing-text">
-        {privacy.statements[2]}{" "}
+        {t("landing.privacy.statement3Prefix")}{" "}
         <a
-          href={privacy.googleTermsUrl}
+          href={legalContent.privacy.googleTermsUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="landing-link"
         >
-          {privacy.googleTermsText}
+          {t("landing.privacy.statement3Link")}
         </a>
-        . {privacy.statements[3]}
+        . {t("landing.privacy.statement3Suffix")}
       </p>
-      <p className="landing-text">{privacy.statements[4]}</p>
-      <p className="landing-text">{privacy.statements[5]}</p>
-      <p className="landing-text">{privacy.statements[6]}</p>
-      <p className="landing-text">{privacy.statements[7]}</p>
+      <p className="landing-text">{t("landing.privacy.statement4")}</p>
+      <p className="landing-text">{t("landing.privacy.statement5")}</p>
+      <p className="landing-text">{t("landing.privacy.statement6")}</p>
+      <p className="landing-text">{t("landing.privacy.statement7")}</p>
 
-      <div className="landing-legal-date">Last updated: {lastUpdated}</div>
+      <div className="landing-legal-date">{t("landing.privacy.lastUpdated")}</div>
     </section>
   );
 }

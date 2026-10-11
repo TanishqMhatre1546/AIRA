@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false }) {
+  const { language, t } = useT();
   const [selectedOptions, setSelectedOptions] = useState({});
   const [extraText, setExtraText] = useState("");
   const headingRef = useRef(null);
@@ -13,13 +15,39 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
     }
   }, []);
 
+  const getQuestionText = (q) => {
+    if (language !== "en") {
+      if (q.id === "Q_DURATION") return t("intake.durationQuestion");
+      if (q.id === "Q_RISK") return t("intake.riskQuestion");
+    }
+    return q.text;
+  };
+
+  const getOptionLabel = (opt) => {
+    if (language !== "en") {
+      if (opt.id === "dur_1") return t("intake.dur1");
+      if (opt.id === "dur_2") return t("intake.dur2");
+      if (opt.id === "dur_6") return t("intake.dur6");
+      if (opt.id === "dur_14") return t("intake.dur14");
+      if (opt.id === "dur_15") return t("intake.dur15");
+      if (opt.id === "risk_pregnant") return t("intake.riskPregnant");
+      if (opt.id === "risk_diabetes") return t("intake.riskDiabetes");
+      if (opt.id === "risk_immune") return t("intake.riskImmune");
+      if (opt.id === "risk_65") return t("intake.risk65");
+      if (opt.id === "risk_none" || opt.label.toLowerCase().includes("none")) {
+        return t("intake.riskNone");
+      }
+    }
+    return opt.label;
+  };
+
   const handleOptionToggle = (question, option) => {
     const qid = question.id;
     const isSingle = question.type === "single_select";
     const isExclusive = Boolean(
       option.exclusive ||
         option.id.endsWith("_none") ||
-        option.label.toLowerCase().includes("none of these")
+        option.label.toLowerCase().includes("none")
     );
 
     setSelectedOptions((prev) => {
@@ -45,7 +73,7 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
         return !(
           optObj?.exclusive ||
           id.endsWith("_none") ||
-          optObj?.label?.toLowerCase().includes("none of these")
+          optObj?.label?.toLowerCase().includes("none")
         );
       });
 
@@ -90,10 +118,10 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
   return (
     <div className="intake-form-container" role="region" aria-label="Guided questions">
       <h2 ref={headingRef} tabIndex={-1} className="intake-heading">
-        A few quick questions
+        {t("intake.heading")}
       </h2>
       <p className="intake-subheading">
-        Answer these to help us check the right guideline sections, or skip to see your results.
+        {t("intake.subheading")}
       </p>
 
       <form onSubmit={handleSubmit} noValidate>
@@ -104,8 +132,10 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
           return (
             <fieldset key={q.id} className="intake-fieldset">
               <legend className="intake-legend">
-                <span className="question-number">Question {qIndex + 1} of {questions.length}:</span>{" "}
-                {q.text}
+                <span className="question-number">
+                  {t("intake.questionNumber", { current: qIndex + 1, total: questions.length })}
+                </span>{" "}
+                {getQuestionText(q)}
               </legend>
 
               <div className="intake-options-group" role={isSingle ? "radiogroup" : "group"}>
@@ -136,7 +166,7 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
                           className="intake-check-icon"
                         />
                       )}
-                      <span className="intake-option-text">{opt.label}</span>
+                      <span className="intake-option-text">{getOptionLabel(opt)}</span>
                     </label>
                   );
                 })}
@@ -147,14 +177,14 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
 
         <div className="intake-textarea-block">
           <label htmlFor="intake-extra-text" className="form-label">
-            Anything else to add? (optional)
+            {t("intake.extraTextLabel")}
           </label>
           <textarea
             id="intake-extra-text"
             className="intake-textarea"
             value={extraText}
             onChange={handleTextChange}
-            placeholder="Type other symptoms or details here..."
+            placeholder={t("intake.extraTextPlaceholder")}
             maxLength={300}
             rows={3}
             disabled={isLoading}
@@ -166,7 +196,7 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
               } ${remainingChars === 0 ? "limit-reached" : ""}`}
               aria-live="polite"
             >
-              {remainingChars} characters remaining
+              {t("intake.charsRemaining", { count: remainingChars })}
             </span>
           </div>
         </div>
@@ -177,7 +207,7 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
             className="intake-submit-btn"
             disabled={isLoading}
           >
-            {isLoading ? "Checking guidelines..." : "See guidelines"}
+            {isLoading ? t("intake.checkingGuidelines") : t("intake.seeGuidelines")}
           </button>
           <button
             type="button"
@@ -185,7 +215,7 @@ export function IntakeForm({ questions = [], onSubmit, onSkip, isLoading = false
             className="intake-skip-btn"
             disabled={isLoading}
           >
-            Skip and show result
+            {t("intake.skipAndShowResult")}
           </button>
         </div>
       </form>

@@ -1,17 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useT } from "../i18n/useT";
 
 export function NotFound() {
+  const { t } = useT();
+
   return (
     <div className="landing-container">
       <section className="landing-section" style={{ borderTop: "none" }}>
-        <h1 className="landing-section-title">Page not found</h1>
+        <h1 className="landing-section-title">{t("notFound.title")}</h1>
         <p className="landing-text">
-          The requested page does not exist.
+          {t("notFound.message")}
         </p>
         <p className="landing-text">
           <Link to="/" className="landing-link">
-            Return to the home page
+            {t("notFound.homeLink")}
           </Link>
           .
         </p>

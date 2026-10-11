@@ -153,7 +153,9 @@ async def triage_symptoms(
 
     log_event("http.triage", **log_kwargs)
 
-    triage_response = TriageResponse.from_pipeline_response(pipeline_resp, request_id=req_id)
+    triage_response = TriageResponse.from_pipeline_response(
+        pipeline_resp, request_id=req_id, lang=body.lang
+    )
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content=triage_response.model_dump(),

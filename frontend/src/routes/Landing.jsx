@@ -9,13 +9,15 @@ import Limits from "../components/landing/Limits";
 import Privacy from "../components/landing/Privacy";
 import Terms from "../components/landing/Terms";
 import { useHashScroll } from "../hooks/useHashScroll";
+import { useT } from "../i18n/useT";
 
 export function Landing() {
+  const { t } = useT();
   useHashScroll();
 
   useEffect(() => {
-    document.title = "AIRA: Clinical guidelines assistant";
-  }, []);
+    document.title = `${t("header.brandName")}: ${t("header.brandTagline")}`;
+  }, [t]);
 
   return (
     <div className="landing-container">

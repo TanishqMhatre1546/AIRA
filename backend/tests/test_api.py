@@ -331,3 +331,29 @@ async def test_logs_captured_contain_no_user_message_text() -> None:
             assert "unusual_symptom_marker" not in logged_content
     finally:
         root_logger.removeHandler(handler)
+
+
+@pytest.mark.asyncio
+async def test_triage_language_field() -> None:
+    """Triage endpoint accepts optional lang field, defaults to 'en', echoes in response."""
+    async with client_context() as (client, _app):
+        # 1. Default to 'en' when omitted
+        r_default = await client.post("/api/triage", json={"message": "mild headache"})
+        assert r_default.status_code == 200
+        assert r_default.json()["lang"] == "en"
+
+        # 2. Explicit 'hi'
+        r_hi = await client.post("/api/triage", json={"message": "mild headache", "lang": "hi"})
+        assert r_hi.status_code == 200
+        assert r_hi.json()["lang"] == "hi"
+
+        # 3. Explicit 'mr'
+        r_mr = await client.post("/api/triage", json={"message": "mild headache", "lang": "mr"})
+        assert r_mr.status_code == 200
+        assert r_mr.json()["lang"] == "mr"
+
+        # 4. Invalid language code returns 422
+        r_invalid = await client.post(
+            "/api/triage", json={"message": "mild headache", "lang": "de"}
+        )
+        assert r_invalid.status_code == 422

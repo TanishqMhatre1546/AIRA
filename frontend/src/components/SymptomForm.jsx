@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function SymptomForm({
   message,
@@ -8,6 +9,7 @@ export default function SymptomForm({
   onSubmit,
   loading,
 }) {
+  const { t } = useT();
   const trimmed = message.trim();
   const charCount = message.length;
   const isValidLength = trimmed.length >= 2 && trimmed.length <= 500;
@@ -47,7 +49,7 @@ export default function SymptomForm({
   return (
     <form className="symptom-form" onSubmit={handleSubmit} noValidate>
       <label htmlFor="symptom-input" className="form-label">
-        Describe your symptoms or ask about clinical guidelines:
+        {t("symptomForm.label")}
       </label>
       <textarea
         id="symptom-input"
@@ -55,7 +57,7 @@ export default function SymptomForm({
         value={message}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        placeholder="Example: I have had a runny nose and mild headache for 2 days"
+        placeholder={t("symptomForm.placeholder")}
         rows={6}
         maxLength={500}
         disabled={loading}
@@ -64,17 +66,17 @@ export default function SymptomForm({
       <div className="form-footer">
         <div className="form-counter-group">
           <div id="symptom-char-counter" className={counterClass} aria-live="polite">
-            {charCount}/500 characters
+            {t("symptomForm.charCount", { count: charCount })}
           </div>
           {charCount > 0 && !loading && (
             <button
               type="button"
               className="clear-button"
               onClick={() => setMessage("")}
-              aria-label="Clear symptoms text"
+              aria-label={t("symptomForm.clearAria")}
             >
               <FontAwesomeIcon icon={faXmark} aria-hidden="true" />
-              <span>Clear</span>
+              <span>{t("symptomForm.clear")}</span>
             </button>
           )}
         </div>
@@ -84,12 +86,12 @@ export default function SymptomForm({
           disabled={!isValidLength || loading}
           aria-disabled={!isValidLength || loading}
         >
-          <span>Check guidelines</span>
+          <span>{t("symptomForm.submit")}</span>
           <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
         </button>
       </div>
       <span id="symptom-hint" className="sr-only">
-        Press Enter to submit or Shift+Enter for a new line. Maximum 500 characters.
+        {t("symptomForm.submitHint")}
       </span>
     </form>
   );

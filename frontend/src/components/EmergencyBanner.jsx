@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useT } from "../i18n/useT";
 
 export default function EmergencyBanner({ message, helplines = [] }) {
+  const { t } = useT();
   const bannerRef = useRef(null);
 
   useEffect(() => {
@@ -12,8 +14,8 @@ export default function EmergencyBanner({ message, helplines = [] }) {
   }, []);
 
   const defaultHelplines = [
-    { label: "National Emergency Helpline", number: "112" },
-    { label: "Ambulance / Emergency Relief", number: "108" },
+    { label: t("emergencyBanner.nationalHelpline"), number: "112" },
+    { label: t("emergencyBanner.ambulance"), number: "108" },
   ];
 
   const displayHelplines = helplines.length > 0 ? helplines : defaultHelplines;
@@ -28,10 +30,10 @@ export default function EmergencyBanner({ message, helplines = [] }) {
     >
       <h2>
         <FontAwesomeIcon icon={faTriangleExclamation} aria-hidden="true" />
-        <span>Emergency Warning</span>
+        <span>{t("emergencyBanner.heading")}</span>
       </h2>
       <p className="emergency-message">
-        {message || "Immediate emergency care is required. Do not wait."}
+        {message || t("emergencyBanner.defaultMessage")}
       </p>
       <div className="helplines-grid">
         {displayHelplines.map((item, idx) => (
@@ -39,10 +41,10 @@ export default function EmergencyBanner({ message, helplines = [] }) {
             key={idx}
             href={`tel:${item.number}`}
             className="helpline-button"
-            aria-label={`Call ${item.label} at ${item.number}`}
+            aria-label={t("emergencyBanner.callAria", { label: item.label, number: item.number })}
           >
             <span>
-              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> Call {item.number}
+              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> {t("emergencyBanner.call", { number: item.number })}
             </span>
             <span className="helpline-name">{item.label}</span>
           </a>

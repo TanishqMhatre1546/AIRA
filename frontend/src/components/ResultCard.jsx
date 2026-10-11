@@ -14,6 +14,7 @@ import SourceList from "./SourceList";
 import EmergencyBanner from "./EmergencyBanner";
 import CrisisBanner from "./CrisisBanner";
 import RefusalNotice from "./RefusalNotice";
+import { useT } from "../i18n/useT";
 
 export default function ResultCard({
   result,
@@ -23,31 +24,33 @@ export default function ResultCard({
   onRetry,
   isStaticExample = false,
 }) {
+  const { t } = useT();
+
   if (error) {
     return (
       <div className="error-card" role="alert">
-        <h3 className="error-heading">Connection Error</h3>
+        <h3 className="error-heading">{t("resultCard.connectionError")}</h3>
         <p className="error-message">
-          Could not reach AIRA. If this is an emergency call 112.
+          {t("resultCard.connectionErrorMessage")}
         </p>
         <div className="emergency-message">
           <a href="tel:112" className="helpline-button">
             <span>
-              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> Call 112 (Emergency)
+              <FontAwesomeIcon icon={faPhone} aria-hidden="true" /> {t("resultCard.call112Emergency")}
             </span>
-            <span className="helpline-name">National Helpline</span>
+            <span className="helpline-name">{t("resultCard.nationalHelpline")}</span>
           </a>
         </div>
         <div className="error-actions">
           {onRetry && (
             <button type="button" className="retry-button" onClick={onRetry}>
               <FontAwesomeIcon icon={faRotateRight} aria-hidden="true" />
-              <span>Try again</span>
+              <span>{t("resultCard.tryAgain")}</span>
             </button>
           )}
           {onReset && (
             <button type="button" className="reset-button" onClick={onReset}>
-              <span>Clear query</span>
+              <span>{t("resultCard.clearQuery")}</span>
             </button>
           )}
         </div>
@@ -59,7 +62,7 @@ export default function ResultCard({
     return null;
   }
 
-  const { response_type, triage_level, message, helplines, sections, citations, mode, disclaimer } = result;
+  const { response_type, triage_level, message, helplines, sections, citations, mode, disclaimer, correction } = result;
   const todayDate = new Date().toISOString().split("T")[0];
 
   const handlePrint = () => {
@@ -84,26 +87,25 @@ export default function ResultCard({
           <div className="refusal-notice" role="region" aria-label="Pediatric and out of scope notice">
             <div className="refusal-header">
               <FontAwesomeIcon icon={faChild} aria-hidden="true" />
-              <span>Adult Guidelines Only</span>
+              <span>{t("outOfScope.heading")}</span>
             </div>
             <p className="refusal-message">
-              {message ||
-                "AIRA covers adult primary care guidelines only. For infants, children, or specialized conditions, please consult a pediatrician or doctor immediately."}
+              {message || t("outOfScope.defaultMessage")}
             </p>
-            <p className="refusal-action">In an emergency call 112.</p>
+            <p className="refusal-action">{t("outOfScope.emergency")}</p>
           </div>
         );
 
       case "NO_MATCH":
         return (
-          <div className="result-card result-card-unknown" data-testid="triage-result-card" role="region" aria-label="Not enough to decide">
+          <div className="result-card result-card-unknown" data-testid="triage-result-card" role="region" aria-label={t("triage.unknownLabel")}>
             <TriageHeader level="UNKNOWN" />
             <div className="no-match-content" style={{ marginTop: "1rem" }}>
               <p className="no-match-covered">
-                <strong>Covered conditions:</strong> Acute Diarrhea, Acute Respiratory Infections, Acute Rhinosinusitis, Bacterial Skin Infections, Dengue Fever, Dermatophytosis (Ringworm), Type 2 Diabetes, Eczema / Dermatitis, Epistaxis (Nosebleed), Headache, Hypertension, Pharyngitis (Sore Throat), Scabies, Urinary Tract Infection, Urticaria / Angioedema.
+                <strong>{t("resultCard.coveredConditionsPrefix")}</strong> Acute Diarrhea, Acute Respiratory Infections, Acute Rhinosinusitis, Bacterial Skin Infections, Dengue Fever, Dermatophytosis (Ringworm), Type 2 Diabetes, Eczema / Dermatitis, Epistaxis (Nosebleed), Headache, Hypertension, Pharyngitis (Sore Throat), Scabies, Urinary Tract Infection, Urticaria / Angioedema.
               </p>
               <p className="refusal-action">
-                View all <Link to="/sources">15 supported conditions and sources</Link> or consult a doctor.
+                <Link to="/sources">{t("resultCard.viewSupportedSources")}</Link>
               </p>
             </div>
             {disclaimer && (
@@ -121,16 +123,16 @@ export default function ResultCard({
           <div className={`result-card ${levelClass}`} data-testid="triage-result-card">
             {!isStaticExample && (
               <div className="print-only print-header" data-testid="print-header">
-                <h2 className="print-title">AIRA Clinical Guideline Summary</h2>
-                <div className="print-meta" data-testid="print-date">Date: {todayDate}</div>
+                <h2 className="print-title">{t("resultCard.printTitle")}</h2>
+                <div className="print-meta" data-testid="print-date">{t("resultCard.printDate", { date: todayDate })}</div>
                 {userQuery && (
                   <div className="print-user-description" data-testid="print-user-description">
-                    <strong>User description:</strong> {userQuery}
+                    <strong>{t("resultCard.printUserDescription")}</strong> {userQuery}
                   </div>
                 )}
                 {result.answers_summary && result.answers_summary.length > 0 && (
                   <div className="print-answers-summary" data-testid="print-answers-summary">
-                    <strong>Answers given:</strong>
+                    <strong>{t("resultCard.printAnswersGiven")}</strong>
                     <ul>
                       {result.answers_summary.map((item, idx) => (
                         <li key={idx}>{item}</li>
@@ -141,11 +143,17 @@ export default function ResultCard({
               </div>
             )}
 
+            {correction && (
+              <div className="correction-notice" data-testid="correction-notice" style={{ marginBottom: "0.75rem", fontStyle: "italic", color: "var(--color-text-muted)" }}>
+                {t("resultCard.correctionNotice", { phrase: correction })}
+              </div>
+            )}
+
             {triage_level && <TriageHeader level={triage_level} />}
 
             {result.answers_summary && result.answers_summary.length > 0 && (
               <div className="answers-summary-box" data-testid="answers-summary">
-                <h4 className="answers-summary-heading">Based on your answers:</h4>
+                <h4 className="answers-summary-heading">{t("resultCard.basedOnAnswers")}</h4>
                 <ul className="answers-summary-list">
                   {result.answers_summary.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -165,7 +173,7 @@ export default function ResultCard({
 
             {!isStaticExample && (
               <div className="print-only print-disclaimer" data-testid="print-disclaimer">
-                This is a summary of public guidelines, not a diagnosis.
+                {t("resultCard.printDisclaimer")}
               </div>
             )}
           </div>
@@ -183,11 +191,11 @@ export default function ResultCard({
               type="button"
               className="print-button"
               onClick={handlePrint}
-              aria-label="Print clinical summary for doctor or health worker"
+              aria-label={t("resultCard.printSummaryAria")}
               data-testid="print-summary-button"
             >
               <FontAwesomeIcon icon={faPrint} aria-hidden="true" />
-              <span>Print summary</span>
+              <span>{t("resultCard.printSummary")}</span>
             </button>
           )}
           {onReset && (
@@ -195,10 +203,10 @@ export default function ResultCard({
               type="button"
               className="reset-button"
               onClick={onReset}
-              aria-label="Start a new symptom query"
+              aria-label={t("resultCard.newQueryAria")}
             >
               <FontAwesomeIcon icon={faRotateRight} aria-hidden="true" />
-              <span>New query</span>
+              <span>{t("resultCard.newQuery")}</span>
             </button>
           )}
         </div>

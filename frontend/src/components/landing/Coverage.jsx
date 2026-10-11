@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getMeta } from "../../api/client";
-import { landingContent } from "../../content/landing";
+import { useT } from "../../i18n/useT";
 
 export function Coverage() {
-  const { coverage } = landingContent;
+  const { t } = useT();
   const [conditions, setConditions] = useState([]);
   const [status, setStatus] = useState("loading");
 
@@ -45,12 +45,12 @@ export function Coverage() {
 
   return (
     <section id="coverage" className="landing-section">
-      <span className="section-kicker">GUIDELINE COVERAGE</span>
-      <h2 className="landing-section-title">{coverage.heading}</h2>
+      <span className="section-kicker">{t("landing.coverage.kicker")}</span>
+      <h2 className="landing-section-title">{t("landing.coverage.heading")}</h2>
 
       {status === "loading" && (
         <p className="landing-text landing-status-text" data-testid="coverage-loading">
-          {coverage.loadingText}
+          {t("landing.coverage.loadingText")}
         </p>
       )}
 
@@ -70,7 +70,7 @@ export function Coverage() {
         <p className="landing-text" data-testid="coverage-fallback">
           The full list is on the{" "}
           <Link to="/sources" className="landing-link">
-            {coverage.sourcesLinkText}
+            {t("landing.coverage.sourcesLinkText")}
           </Link>
           .
         </p>

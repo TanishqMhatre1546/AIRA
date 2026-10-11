@@ -7,8 +7,10 @@ import StatusLine from "../components/StatusLine";
 import ResultCard from "../components/ResultCard";
 import { IntakeForm } from "../components/IntakeForm";
 import { useTriage } from "../hooks/useTriage";
+import { useT } from "../i18n/useT";
 
 export default function Assistant() {
+  const { t } = useT();
   const [message, setMessage] = useState("");
   const {
     status,
@@ -24,8 +26,8 @@ export default function Assistant() {
   } = useTriage();
 
   useEffect(() => {
-    document.title = "AIRA: Clinical guidelines assistant";
-  }, []);
+    document.title = `${t("header.brandName")}: ${t("header.brandTagline")}`;
+  }, [t]);
 
   const handleSelectPrompt = (promptText) => {
     setMessage(promptText);
@@ -69,7 +71,7 @@ export default function Assistant() {
         <section className="assistant-input-column" aria-label="Symptom input">
           <div className="assistant-input-card">
             <p className="assistant-lead">
-              AIRA shows what Indian health guidelines say. It does not diagnose or give medicine doses.
+              {t("assistant.lead")}
             </p>
 
             <SymptomForm
@@ -94,12 +96,12 @@ export default function Assistant() {
               <div className="empty-result-icon" aria-hidden="true">
                 <FontAwesomeIcon icon={faStethoscope} />
               </div>
-              <h3 className="empty-result-heading">Your result will appear here.</h3>
+              <h3 className="empty-result-heading">{t("assistant.emptyHeading")}</h3>
               <p className="empty-result-hint">
-                Enter your symptoms to check official Indian clinical guidelines.
+                {t("assistant.emptyHint")}
               </p>
               <div className="empty-result-emergency">
-                In an emergency call 112.
+                {t("assistant.emptyEmergency")}
               </div>
             </div>
           )}
