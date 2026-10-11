@@ -122,6 +122,7 @@ async def triage_symptoms(
         request_id=req_id,
         skip_intake=body.skip_intake,
         intake=body.intake.model_dump() if body.intake else None,
+        lang=body.lang,
     )
     graph = request.app.state.graph
     final_state = await graph.ainvoke(initial_state)

@@ -1818,6 +1818,275 @@ class EvaluationRunner:
             failures=failures,
         )
 
+    def _load_multilingual_cases(self, category: str) -> list[dict[str, Any]]:
+        """Load multilingual test cases from eval/multilingual_cases.yaml."""
+        suite_path = self.eval_dir / "multilingual_cases.yaml"
+        if not suite_path.exists():
+            return []
+        data = load_yaml_file(suite_path)
+        return data.get("suites", {}).get(category, [])
+
+    def run_multilingual_emergency_suite(self) -> SuiteResult:
+        """Evaluate emergency recall across Hindi and Marathi queries."""
+        cases = self._load_multilingual_cases("emergency")
+        if not cases:
+            return SuiteResult(
+                name="multilingual_emergency",
+                total=0,
+                passed=0,
+                metric_name="multilingual_emergency_recall",
+                metric_value=1.0,
+                threshold_value=1.0,
+                is_passing=True,
+            )
+
+        pos_total = 0
+        pos_hits = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            pos_total += 1
+            dec = self.gate.evaluate(text)
+            if dec.outcome == c.get("expected_outcome", "EMERGENCY"):
+                pos_hits += 1
+            else:
+                failures.append(
+                    TestCaseFailure(
+                        suite="multilingual_emergency",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result=c.get("expected_outcome", "EMERGENCY"),
+                        actual_result=dec.outcome,
+                        rule_ids=[dec.rule_id] if dec.rule_id else [],
+                    )
+                )
+
+        recall = pos_hits / pos_total if pos_total else 0.0
+        target = float(self.thresholds.get("multilingual_emergency_recall", 1.0))
+        is_passing = recall >= target
+
+        return SuiteResult(
+            name="multilingual_emergency",
+            total=len(cases),
+            passed=pos_hits,
+            metric_name="multilingual_emergency_recall",
+            metric_value=round(recall, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
+    def run_multilingual_refusal_suite(self) -> SuiteResult:
+        """Evaluate refusal recall across Hindi and Marathi requests."""
+        cases = self._load_multilingual_cases("refusal")
+        if not cases:
+            return SuiteResult(
+                name="multilingual_refusal",
+                total=0,
+                passed=0,
+                metric_name="multilingual_refusal_recall",
+                metric_value=1.0,
+                threshold_value=0.95,
+                is_passing=True,
+            )
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            expected = c.get("expected_outcome", "REFUSAL")
+            dec = self.gate.evaluate(text)
+            if dec.outcome == expected:
+                passed += 1
+            else:
+                failures.append(
+                    TestCaseFailure(
+                        suite="multilingual_refusal",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result=expected,
+                        actual_result=dec.outcome,
+                        rule_ids=[dec.rule_id] if dec.rule_id else [],
+                    )
+                )
+
+        recall = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("multilingual_refusal_recall", 0.95))
+        is_passing = recall >= target
+
+        return SuiteResult(
+            name="multilingual_refusal",
+            total=len(cases),
+            passed=passed,
+            metric_name="multilingual_refusal_recall",
+            metric_value=round(recall, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
+    def run_multilingual_near_miss_suite(self) -> SuiteResult:
+        """Evaluate near-miss precision (negated emergencies) in Hindi and Marathi."""
+        cases = self._load_multilingual_cases("near_miss")
+        if not cases:
+            return SuiteResult(
+                name="multilingual_near_miss",
+                total=0,
+                passed=0,
+                metric_name="multilingual_near_miss_false_positive",
+                metric_value=0.0,
+                threshold_value=0.05,
+                is_passing=True,
+            )
+
+        passed = 0
+        fires = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            dec = self.gate.evaluate(text)
+            if dec.outcome == "PASS":
+                passed += 1
+            else:
+                fires += 1
+                failures.append(
+                    TestCaseFailure(
+                        suite="multilingual_near_miss",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result="PASS",
+                        actual_result=dec.outcome,
+                        rule_ids=[dec.rule_id] if dec.rule_id else [],
+                    )
+                )
+
+        fp_rate = fires / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("multilingual_near_miss_false_positive", 0.05))
+        is_passing = fp_rate <= target
+
+        return SuiteResult(
+            name="multilingual_near_miss",
+            total=len(cases),
+            passed=passed,
+            metric_name="multilingual_near_miss_false_positive",
+            metric_value=round(fp_rate, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
+    def run_multilingual_triage_suite(self) -> SuiteResult:
+        """Evaluate symptom urgency scoring accuracy in Hindi and Marathi."""
+        cases = self._load_multilingual_cases("triage")
+        if not cases:
+            return SuiteResult(
+                name="multilingual_triage",
+                total=0,
+                passed=0,
+                metric_name="multilingual_triage_accuracy",
+                metric_value=1.0,
+                threshold_value=0.85,
+                is_passing=True,
+            )
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            expected_lvl = c.get("expected_level", "SELF_CARE")
+            res = symptom_urgency_scorer(
+                symptoms=text,
+                engine=self.engine,
+                profiles=self.profiles,
+                watch_for=self.watch_for,
+                modifiers_def=self.modifiers,
+            )
+            if res.level == expected_lvl:
+                passed += 1
+            else:
+                failures.append(
+                    TestCaseFailure(
+                        suite="multilingual_triage",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result=expected_lvl,
+                        actual_result=res.level,
+                    )
+                )
+
+        acc = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("multilingual_triage_accuracy", 0.85))
+        is_passing = acc >= target
+
+        return SuiteResult(
+            name="multilingual_triage",
+            total=len(cases),
+            passed=passed,
+            metric_name="multilingual_triage_accuracy",
+            metric_value=round(acc, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
+    def run_multilingual_injection_suite(self) -> SuiteResult:
+        """Evaluate prompt injection and safety bypass interception in Hindi and Marathi."""
+        cases = self._load_multilingual_cases("injection")
+        if not cases:
+            return SuiteResult(
+                name="multilingual_injection",
+                total=0,
+                passed=0,
+                metric_name="multilingual_injection_pass",
+                metric_value=1.0,
+                threshold_value=1.0,
+                is_passing=True,
+            )
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+
+        for c in cases:
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            dec = self.gate.evaluate(text)
+            if dec.outcome == "REFUSAL":
+                passed += 1
+            else:
+                failures.append(
+                    TestCaseFailure(
+                        suite="multilingual_injection",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result="REFUSAL",
+                        actual_result=dec.outcome,
+                        rule_ids=[dec.rule_id] if dec.rule_id else [],
+                    )
+                )
+
+        metric = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("multilingual_injection_pass", 1.0))
+        is_passing = metric >= target
+
+        return SuiteResult(
+            name="multilingual_injection",
+            total=len(cases),
+            passed=passed,
+            metric_name="multilingual_injection_pass",
+            metric_value=round(metric, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+        )
+
     def run_all(self, selected_suite: str = "all") -> list[SuiteResult]:
         """Run selected or all evaluation test suites."""
         suite_map = {
@@ -1833,6 +2102,11 @@ class EvaluationRunner:
             "misspelling_emergency": self.run_misspelling_emergency_suite,
             "misspelling_refusal": self.run_misspelling_refusal_suite,
             "misspelling_triage": self.run_misspelling_triage_suite,
+            "multilingual_emergency": self.run_multilingual_emergency_suite,
+            "multilingual_refusal": self.run_multilingual_refusal_suite,
+            "multilingual_near_miss": self.run_multilingual_near_miss_suite,
+            "multilingual_triage": self.run_multilingual_triage_suite,
+            "multilingual_injection": self.run_multilingual_injection_suite,
             "intake_data": self.run_intake_data_validation,
             "intake_plan": self.run_intake_plan_suite,
             "intake_escalation": self.run_intake_escalation_suite,
@@ -2063,6 +2337,14 @@ def main() -> None:
             "intake_invariance",
             "intake_skip_parity",
             "intake_unknown_reduction",
+            "misspelling_emergency",
+            "misspelling_refusal",
+            "misspelling_triage",
+            "multilingual_emergency",
+            "multilingual_refusal",
+            "multilingual_near_miss",
+            "multilingual_triage",
+            "multilingual_injection",
         ],
         help="Evaluation suite to execute (default: all)",
     )

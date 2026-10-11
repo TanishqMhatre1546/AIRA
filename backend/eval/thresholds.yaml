@@ -16,4 +16,8 @@ vague_no_passages: 1.0
 emergency_recall_misspelled: 0.95
 refusal_recall_misspelled: 0.95
 triage_accuracy_misspelled: 0.85
-
+multilingual_emergency_recall: 1.0
+multilingual_refusal_recall: 0.95
+multilingual_near_miss_false_positive: 0.05
+multilingual_triage_accuracy: 0.85
+multilingual_injection_pass: 1.0

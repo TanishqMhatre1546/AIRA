@@ -1,10 +1,13 @@
 """LangGraph StateGraph orchestration pipeline for AIRA clinical query flow."""
 
 import contextlib
+import json
 import time
 import uuid
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass, field
+from functools import lru_cache
+from pathlib import Path
 from typing import Any, Literal, TypedDict
 
 from langgraph.graph import END, START, StateGraph
@@ -29,6 +32,39 @@ from app.core.scorer import ScoreResult, symptom_urgency_scorer
 from app.core.text import normalize, tokens
 from app.core.validators import Citation, GeneratedAnswer, ValidatedClaim
 from app.logging_config import log_event
+
+
+@lru_cache(maxsize=3)
+def load_i18n_messages(lang: str) -> dict[str, Any]:
+    """Load localized headlines, messages, and rule responses for static fallback."""
+    base_dir = Path(__file__).resolve().parent.parent.parent / "data" / "i18n"
+    target_file = base_dir / f"messages.{lang}.json"
+    if not target_file.exists():
+        target_file = base_dir / "messages.en.json"
+
+    if not target_file.exists():
+        return {}
+
+    with open(target_file, encoding="utf-8") as f:
+        loaded = json.load(f)
+        if isinstance(loaded, dict):
+            return loaded
+        return {}
+
+
+def get_localized_text(lang: str, category: str, key: str, default: str) -> str:
+    """Retrieve localized message string by category and key, falling back to English or default."""
+    data = load_i18n_messages(lang)
+    val = data.get(category, {}).get(key)
+    if val:
+        return str(val)
+    if lang != "en":
+        en_data = load_i18n_messages("en")
+        en_val = en_data.get(category, {}).get(key)
+        if en_val:
+            return str(en_val)
+    return default
+
 
 STANDARD_DISCLAIMER = (
     "AIRA provides general health information from standard Indian clinical guidelines "
@@ -110,6 +146,7 @@ class PipelineState(TypedDict):
     selected_option_ids: list[str] | None
     answers_summary: list[str] | None
     intake_questions: list[dict[str, Any]] | None
+    lang: Literal["en", "hi", "mr"]
 
 
 @dataclass
@@ -133,6 +170,7 @@ def create_initial_state(
     request_id: str | None = None,
     skip_intake: bool = False,
     intake: dict[str, Any] | None = None,
+    lang: Literal["en", "hi", "mr"] = "en",
 ) -> PipelineState:
     """Helper to initialize a clean PipelineState dict."""
     return {
@@ -154,6 +192,7 @@ def create_initial_state(
         "selected_option_ids": None,
         "answers_summary": None,
         "intake_questions": None,
+        "lang": lang,
     }
 
 
@@ -256,51 +295,54 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
     def node_respond_static(state: PipelineState) -> dict[str, Any]:
         gate_dec = state.get("gate")
         score_res = state.get("score")
+        req_lang = state.get("lang", "en")
 
         if gate_dec and gate_dec.outcome != "PASS":
             outcome = gate_dec.outcome
-            rule_msg = gate_dec.message or ""
+            rule_id = gate_dec.rule_id or ""
+            
+            # Localized headline and message lookup
+            default_hl = (
+                "Immediate Emergency Medical Attention Required"
+                if outcome == "EMERGENCY"
+                else "Medical Safety Guidance"
+            )
+            headline = get_localized_text(req_lang, "headlines", outcome, default_hl)
+
+            # Localized rule response or default message
+            rule_msg = ""
+            if rule_id:
+                rule_msg = get_localized_text(req_lang, "rules", rule_id, "")
+            if not rule_msg:
+                def_msg = (
+                    gate_dec.message
+                    or (
+                        "Emergency symptoms detected. "
+                        "Please seek emergency medical care immediately."
+                    )
+                )
+                rule_msg = get_localized_text(
+                    req_lang,
+                    "messages",
+                    f"{outcome}_DEFAULT",
+                    def_msg,
+                )
+
             helpline_items = [
                 HelplineItem(label=h.name, number=h.number) for h in gate_dec.helplines
             ]
 
-            if outcome == "EMERGENCY":
-                headline = "Immediate Emergency Medical Attention Required"
-                msg = (
-                    rule_msg
-                    or "Emergency symptoms detected. "
-                    "Please seek emergency medical care immediately."
-                )
-                triage_val: Literal["EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"] | None = (
-                    "EMERGENCY"
-                )
-            elif outcome == "CRISIS":
-                headline = "Mental Health and Crisis Support"
-                msg = (
-                    rule_msg
-                    or "If you are in distress or experiencing thoughts of self-harm, "
-                    "support is available 24/7."
-                )
-                triage_val = None
-            elif outcome == "REFUSAL":
-                headline = "Medical Safety Guidance"
-                msg = (
-                    rule_msg
-                    or "AIRA cannot provide individual dosages, diagnostic confirmations, "
-                    "or advise on combining medications."
-                )
-                triage_val = None
-            else:  # OUT_OF_SCOPE
-                headline = "Topic Beyond AIRA Adult Care Scope"
-                msg = (
-                    rule_msg
-                    or "This query is outside AIRA's current scope for non-emergency "
-                    "adult health guidance."
-                )
-                triage_val = None
+            triage_val: Literal["EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"] | None = (
+                "EMERGENCY" if outcome == "EMERGENCY" else None
+            )
 
+            msg = rule_msg
             if gate_dec.was_corrected and gate_dec.corrected_phrase:
-                msg = f"AIRA read this as: {gate_dec.corrected_phrase}\n\n{msg}"
+                read_as_tpl = get_localized_text(
+                    req_lang, "messages", "READ_AS_PREFIX", "AIRA read this as: {corrected}"
+                )
+                read_as_line = read_as_tpl.format(corrected=gate_dec.corrected_phrase)
+                msg = f"{read_as_line}\n\n{msg}"
 
             resp = PipelineResponse(
                 response_type=outcome,
@@ -320,16 +362,35 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 HelplineItem(label=h.name, number=h.number) for h in get_emergency_helplines()
             ]
             watch_claims = [ValidatedClaim(text=w, citation_ids=[]) for w in score_res.watch_for]
-            msg = (
+            
+            headline = get_localized_text(
+                req_lang,
+                "headlines",
+                "EMERGENCY",
+                "Immediate Emergency Medical Attention Required"
+            )
+            def_em_msg = (
                 score_res.urgency_note
                 or "Emergency symptoms detected. Please seek emergency medical care immediately."
             )
+            msg = get_localized_text(
+                req_lang,
+                "messages",
+                "EMERGENCY_DEFAULT",
+                def_em_msg,
+            )
+            
             if score_res.was_corrected and score_res.corrected_phrase:
-                msg = f"AIRA read this as: {score_res.corrected_phrase}\n\n{msg}"
+                read_as_tpl = get_localized_text(
+                    req_lang, "messages", "READ_AS_PREFIX", "AIRA read this as: {corrected}"
+                )
+                read_as_line = read_as_tpl.format(corrected=score_res.corrected_phrase)
+                msg = f"{read_as_line}\n\n{msg}"
+
             resp = PipelineResponse(
                 response_type="EMERGENCY",
                 triage_level="EMERGENCY",
-                headline="Immediate Emergency Medical Attention Required",
+                headline=headline,
                 message=msg,
                 helplines=emergency_helplines,
                 sections=ResponseSections(watch_for=watch_claims),
@@ -340,11 +401,23 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
             return {"response": resp}
 
         # Fallback safe emergency response
+        headline = get_localized_text(
+            req_lang,
+            "headlines",
+            "EMERGENCY",
+            "Immediate Emergency Medical Attention Required"
+        )
+        msg = get_localized_text(
+            req_lang,
+            "messages",
+            "EMERGENCY_DEFAULT",
+            "Please seek emergency medical care immediately."
+        )
         resp = PipelineResponse(
             response_type="EMERGENCY",
             triage_level="EMERGENCY",
-            headline="Immediate Emergency Medical Attention Required",
-            message="Please seek emergency medical care immediately.",
+            headline=headline,
+            message=msg,
             helplines=[
                 HelplineItem(label=h.name, number=h.number) for h in get_emergency_helplines()
             ],
@@ -492,27 +565,36 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
     def node_respond_answer(state: PipelineState) -> dict[str, Any]:
         score_res = state.get("score")
         draft = state.get("draft")
+        req_lang = state.get("lang", "en")
 
         triage_val = score_res.level if score_res else "UNKNOWN"
         detected_conditions = score_res.conditions if score_res else []
 
-        if triage_val == "SEE_DOCTOR":
-            headline = "Medical Consultation Recommended"
-        elif triage_val == "SELF_CARE":
-            headline = "Guideline Self-Care Advice"
-        elif triage_val == "EMERGENCY":
-            headline = "Immediate Emergency Medical Attention Required"
-        else:
-            headline = "Not enough to decide"
+        default_hl = (
+            "Medical Consultation Recommended"
+            if triage_val == "SEE_DOCTOR"
+            else "Guideline Self-Care Advice"
+        )
+        headline = get_localized_text(
+            req_lang,
+            "headlines",
+            triage_val,
+            default_hl,
+        )
 
-        msg = (score_res.urgency_note if score_res else None) or (
+        default_note = (
             "AIRA could not match this to its guidelines. If you are worried, see a doctor."
             if triage_val == "UNKNOWN"
             else "Guideline recommendations for your reported symptoms."
         )
+        msg = (score_res.urgency_note if score_res else None) or default_note
 
         if score_res and score_res.was_corrected and score_res.corrected_phrase:
-            msg = f"AIRA read this as: {score_res.corrected_phrase}\n\n{msg}"
+            read_as_tpl = get_localized_text(
+                req_lang, "messages", "READ_AS_PREFIX", "AIRA read this as: {corrected}"
+            )
+            read_as_line = read_as_tpl.format(corrected=score_res.corrected_phrase)
+            msg = f"{read_as_line}\n\n{msg}"
 
         draft_cits = draft.citations if draft else []
         citation_map: dict[tuple[str, int | None], Citation] = {

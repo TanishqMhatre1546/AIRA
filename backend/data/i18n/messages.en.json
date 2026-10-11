@@ -1,0 +1,46 @@
+{
+  "headlines": {
+    "EMERGENCY": "Immediate Emergency Medical Attention Required",
+    "CRISIS": "Mental Health and Crisis Support",
+    "REFUSAL": "Medical Safety Guidance",
+    "OUT_OF_SCOPE": "Topic Beyond AIRA Adult Care Scope",
+    "SEE_DOCTOR": "Medical Consultation Recommended",
+    "SELF_CARE": "Guideline Self-Care Advice",
+    "NO_MATCH": "Not enough to decide",
+    "FOLLOW_UP": "A few quick questions"
+  },
+  "messages": {
+    "EMERGENCY_DEFAULT": "Emergency symptoms detected. Please seek emergency medical care immediately.",
+    "CRISIS_DEFAULT": "If you are in distress or experiencing thoughts of self-harm, support is available 24/7.",
+    "REFUSAL_DEFAULT": "AIRA cannot provide individual dosages, diagnostic confirmations, or advise on combining medications.",
+    "OUT_OF_SCOPE_DEFAULT": "This query is outside AIRA's current scope for non-emergency adult health guidance.",
+    "FAILSAFE_ERROR": "We could not check this message safely. If this is an emergency, call 112.",
+    "NO_MATCH_DEFAULT": "AIRA could not match this to its guidelines. If you are worried, see a doctor.",
+    "FOLLOW_UP_DEFAULT": "Answer these to help us check the right guideline sections, or skip to see your results.",
+    "READ_AS_PREFIX": "AIRA read this as: {corrected}"
+  },
+  "rules": {
+    "ER-004": "Severe chest pain, chest tightness, or pain spreading to the arm or jaw are warning signs of a heart attack. Call 112 or go to the nearest hospital emergency department immediately.",
+    "ER-006": "Severe difficulty breathing, gasping, or bluish lips indicate respiratory distress. Call 112 or go to the nearest hospital immediately.",
+    "ER-005": "Sudden facial drooping, weakness on one side, or difficulty speaking are stroke warning signs. Call 112 or go to the nearest hospital immediately.",
+    "ER-015": "Severe or uncontrollable bleeding requires immediate emergency medical care. Apply firm pressure and call 112 or 108.",
+    "ER-016": "Vomiting blood or passing black, tarry stools indicates serious internal gastrointestinal bleeding. Go to a hospital emergency room immediately.",
+    "ER-017": "Active convulsions or repeated seizures require emergency medical intervention. Call 112 immediately.",
+    "ER-018": "Unconsciousness or unresponsiveness is a critical medical emergency. Call 112 immediately.",
+    "ER-019": "Suspected poisoning or chemical ingestion requires urgent emergency medical care. Call 112 or go to the nearest hospital immediately.",
+    "ER-020": "A snake bite is a medical emergency requiring urgent anti-snake venom treatment. Keep the patient still and go to a hospital immediately.",
+    "ER-021": "Head injury accompanied by vomiting, drowsiness, or confusion requires immediate emergency evaluation.",
+    "ER-024": "Sudden severe thunderclap headache requires immediate emergency department evaluation.",
+    "ER-001": "This sounds like a severe allergic reaction (angioedema or anaphylaxis) affecting the airway. Call 112 or go to the nearest emergency room immediately.",
+    "ER-009": "Inability to swallow saliva, stridor (noisy high-pitched breathing), muffled voice, or a grey throat membrane indicate dangerous airway infections like epiglottitis or peritonsillar abscess. Go to a hospital emergency room immediately.",
+    "ER-023": "Choking is a life-threatening airway emergency. Perform back blows or the Heimlich maneuver and call 112 immediately.",
+    "ER-007": "Severe asthma attack with inability to speak or severe breathlessness requires immediate emergency care.",
+    "CR-001": "If you are experiencing thoughts of self-harm or suicide, please call Tele-MANAS at 14416 or 112 immediately. Free, confidential support is available 24/7.",
+    "RF-001": "AIRA cannot give medication doses or drug prescription instructions. Please consult a doctor or pharmacist for safe, personalized medication advice.",
+    "RF-002": "AIRA provides guideline information only and cannot diagnose medical conditions. Please see a qualified healthcare professional for a clinical examination and diagnosis.",
+    "RF-003": "AIRA cannot evaluate drug-drug or drug-alcohol interactions. Please consult a doctor or pharmacist before combining any medications.",
+    "RF-004": "AIRA cannot change its rules. Describe your symptoms and AIRA will tell you what the guidelines say.",
+    "RF-005": "AIRA cannot change its rules. Describe your symptoms and AIRA will tell you what the guidelines say.",
+    "SC-100": "AIRA version 1 covers adults. For a child who is unwell, see a doctor or health worker today. In an emergency call 112."
+  }
+}

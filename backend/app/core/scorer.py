@@ -28,6 +28,32 @@ SEVERITY_WORDS = frozenset(
         "intense",
         "extreme",
         "excruciating",
+        "तेज",
+        "असहनीय",
+        "बहुत तेज",
+        "खूप जास्त",
+        "असह्य",
+        "तीव्र",
+        "भीषण",
+        "प्रचंड",
+        "खूप",
+        "जास्त",
+        "tej",
+        "tez",
+        "asahniya",
+        "bohot tej",
+        "bohot tez",
+        "bahut tej",
+        "bahut tez",
+        "bahut",
+        "behad",
+        "khoop jast",
+        "khup jast",
+        "khup",
+        "jast",
+        "asahya",
+        "tivra",
+        "prachand",
     }
 )
 
@@ -56,9 +82,32 @@ CLINICAL_ESCALATORS: tuple[str, ...] = (
     "all over",
     "covering",
     "sleep disturbance",
+    "तेज बुखार",
+    "बुखार",
+    "ताप",
+    "खूप ताप",
+    "मवाद",
+    "रक्त",
+    "खून",
+    "उलटी",
+    "सतत उलटी",
+    "सीने में दर्द",
+    "छातीत दुखणे",
+    "छातीत दुखत",
+    "सांस लेने में तकलीफ",
+    "श्वास घेण्यास त्रास",
+    "tej bukhar",
+    "bukhar",
+    "taap",
+    "khoon",
+    "rakta",
+    "seene mein dard",
+    "chhatit dukhane",
+    "saans lene mein takleef",
+    "shwas ghenyas tras",
 )
 
-# Word-to-number map for duration parsing
+# Word-to-number map for duration parsing (English, Hindi, Marathi, Roman)
 WORD_NUMBER_MAP: dict[str, int] = {
     "a": 1,
     "an": 1,
@@ -75,15 +124,66 @@ WORD_NUMBER_MAP: dict[str, int] = {
     "few": 3,
     "couple": 2,
     "several": 4,
+    "एक": 1,
+    "दो": 2,
+    "तीन": 3,
+    "चार": 4,
+    "पांच": 5,
+    "पाँच": 5,
+    "छह": 6,
+    "सात": 7,
+    "आठ": 8,
+    "नौ": 9,
+    "दस": 10,
+    "काही": 3,
+    "दोन": 2,
+    "पाच": 5,
+    "सहा": 6,
+    "दहा": 10,
+    "ek": 1,
+    "do": 2,
+    "don": 2,
+    "teen": 3,
+    "tin": 3,
+    "char": 4,
+    "paanch": 5,
+    "panch": 5,
+    "pach": 5,
+    "chhah": 6,
+    "chha": 6,
+    "saha": 6,
+    "saat": 7,
+    "sat": 7,
+    "aath": 8,
+    "ath": 8,
+    "nau": 9,
+    "das": 10,
+    "daha": 10,
 }
 
+DEVANAGARI_DIGITS_MAP = str.maketrans(
+    {
+        "०": "0",
+        "१": "1",
+        "२": "2",
+        "३": "3",
+        "४": "4",
+        "५": "5",
+        "६": "6",
+        "७": "7",
+        "८": "8",
+        "९": "9",
+    }
+)
+
 DURATION_PATTERNS = [
+    # English prepositional
     re.compile(
-        r"(?:for|since|past|lasting)\s+(\d+|one|two|three|four|five|six|seven|eight|nine|ten|few|couple|several)\s+(days?|weeks?|months?)",
+        r"(?:for|since|past|lasting)\s+(\d+|[a-z\u0900-\u097f]+)\s+(days?|weeks?|months?)",
         re.IGNORECASE,
     ),
     re.compile(
-        r"(\d+|one|two|three|four|five|six|seven|eight|nine|ten|few|couple|several)\s+(days?|weeks?|months?)\s+(?:ago|back|now|duration)",
+        r"(\d+|[a-z\u0900-\u097f]+)\s+(days?|weeks?|months?)\s+(?:ago|back|now|duration)",
         re.IGNORECASE,
     ),
     re.compile(
@@ -92,6 +192,16 @@ DURATION_PATTERNS = [
     ),
     re.compile(
         r"(\d+)\s+(days?|weeks?|months?)",
+        re.IGNORECASE,
+    ),
+    # Hindi / Marathi Devanagari and Roman:
+    # "3 दिन से", "तीन दिनों से", "३ दिवसांपासून", "teen din se", "3 divas"
+    re.compile(
+        r"(\d+|[a-z\u0900-\u097f]+)\s+(दिन|दिनों|दिवस|दिवसांपासून|हफ्ते|आठवडे|महीने|महिने)\s*(?:से|पासून)?",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"(\d+|[a-z\u0900-\u097f]+)\s+(din|dino|divas|divasapasun|hafte|aathwade|mahine)\s*(?:se|pasun)?",
         re.IGNORECASE,
     ),
 ]
@@ -136,9 +246,9 @@ class ScoreResult:
 
 def extract_duration_days(text: str) -> int | None:
     """Extract symptom duration converted into total days."""
-    text_lower = text.lower()
+    text_clean = text.translate(DEVANAGARI_DIGITS_MAP).lower()
     for pattern in DURATION_PATTERNS:
-        match = pattern.search(text_lower)
+        match = pattern.search(text_clean)
         if match:
             groups = match.groups()
             num_str = groups[0].lower()
@@ -146,9 +256,9 @@ def extract_duration_days(text: str) -> int | None:
 
             num = int(num_str) if num_str.isdigit() else WORD_NUMBER_MAP.get(num_str, 1)
 
-            if "month" in unit_str:
+            if any(m in unit_str for m in ("month", "महीने", "महिने", "mahine")):
                 return num * 30
-            if "week" in unit_str:
+            if any(w in unit_str for w in ("week", "हफ्ते", "आठवडे", "hafte", "aathwade")):
                 return num * 7
             return num
     return None
@@ -247,7 +357,7 @@ def _score_token_sequence(
             if not alias_toks:
                 continue
             matches = find_phrase(tok_list, alias_toks)
-            if matches and any(not is_negated(tok_list, m) for m in matches):
+            if matches and any(not is_negated(tok_list, m, len(alias_toks)) for m in matches):
                 matched = True
                 break
         if matched:
@@ -346,7 +456,10 @@ def _score_token_sequence(
     if "headache" in detected_conditions:
         has_high_bp_text = any(
             find_phrase(tok_list, p.split())
-            and any(not is_negated(tok_list, m) for m in find_phrase(tok_list, p.split()))
+            and any(
+                not is_negated(tok_list, m, len(p.split()))
+                for m in find_phrase(tok_list, p.split())
+            )
             for p in (
                 "high bp",
                 "elevated bp",
@@ -370,7 +483,7 @@ def _score_token_sequence(
     for word in SEVERITY_WORDS:
         word_toks = word.split()
         matches = find_phrase(tok_list, word_toks)
-        if matches and any(not is_negated(tok_list, m) for m in matches):
+        if matches and any(not is_negated(tok_list, m, len(word_toks)) for m in matches):
             if level == "SELF_CARE":
                 level = "SEE_DOCTOR"
                 reasons_list.append(
@@ -389,7 +502,7 @@ def _score_token_sequence(
                 continue
             esc_toks = esc.split()
             matches = find_phrase(tok_list, esc_toks)
-            if matches and any(not is_negated(tok_list, m) for m in matches):
+            if matches and any(not is_negated(tok_list, m, len(esc_toks)) for m in matches):
                 level = "SEE_DOCTOR"
                 reasons_list.append(
                     {
@@ -437,7 +550,7 @@ def _score_token_sequence(
             if not t_toks:
                 continue
             matches = find_phrase(tok_list, t_toks)
-            if matches and any(not is_negated(tok_list, m) for m in matches):
+            if matches and any(not is_negated(tok_list, m, len(t_toks)) for m in matches):
                 term_matched = True
                 matched_term = term
                 break

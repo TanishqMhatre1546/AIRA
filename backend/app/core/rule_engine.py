@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from typing import Any
 
-from app.core.text import extract_minutes, find_phrase, is_negated
+from app.core.text import extract_minutes, find_phrase, is_negated, normalize, tokens
 
 # Preset placeholder expansions
 DOSE_UNITS = (
@@ -84,35 +84,59 @@ class CompiledRule:
         self.source_id: str = rule_data.get("source_id", "") or ""
 
         match_block = rule_data.get("match", {})
-        raw_phrases = match_block.get("phrases", [])
+        raw_phrases = list(match_block.get("phrases", []))
+        phrases_by_lang = match_block.get("phrases_by_lang", {})
+        if isinstance(phrases_by_lang, dict):
+            for lang_list in phrases_by_lang.values():
+                if isinstance(lang_list, list):
+                    raw_phrases.extend(lang_list)
+
         raw_requires_all = match_block.get("requires_all", [])
 
         # Fallback to v1 trigger_keywords if match block is absent
         if not raw_phrases and "trigger_keywords" in rule_data:
             raw_phrases = rule_data.get("trigger_keywords", [])
 
-        self.phrase_tokens: list[list[str]] = [
-            p.strip().lower().split() for p in raw_phrases if p.strip()
-        ]
+        # Deduplicate while preserving order
+        seen_phrases: set[str] = set()
+        deduped_phrases: list[str] = []
+        for p in raw_phrases:
+            p_clean = p.strip()
+            if p_clean and p_clean.lower() not in seen_phrases:
+                seen_phrases.add(p_clean.lower())
+                deduped_phrases.append(p_clean)
+
+        phrase_token_list: list[list[str]] = []
+        for p in deduped_phrases:
+            toks = tokens(normalize(p))
+            if toks and toks not in phrase_token_list:
+                phrase_token_list.append(toks)
+        self.phrase_tokens: list[list[str]] = phrase_token_list
 
         # Expand requires_all groups with placeholders
         self.requires_all_groups: list[list[list[str]]] = []
         for group in raw_requires_all:
             expanded_group: list[list[str]] = []
             for item in group:
-                item_clean = item.strip().lower()
-                if item_clean == "@drugs" and lexicon:
+                item_clean = item.strip()
+                if item_clean.lower() == "@drugs" and lexicon:
                     for d in lexicon:
-                        expanded_group.append(d.strip().lower().split())
-                elif item_clean == "@dose_units":
+                        d_toks = tokens(normalize(d))
+                        if d_toks and d_toks not in expanded_group:
+                            expanded_group.append(d_toks)
+                elif item_clean.lower() == "@dose_units":
                     for u in DOSE_UNITS:
-                        expanded_group.append(u.split())
-                elif item_clean == "@child_terms":
+                        u_toks = tokens(normalize(u))
+                        if u_toks and u_toks not in expanded_group:
+                            expanded_group.append(u_toks)
+                elif item_clean.lower() == "@child_terms":
                     for c in CHILD_TERMS:
-                        expanded_group.append(c.split())
+                        c_toks = tokens(normalize(c))
+                        if c_toks and c_toks not in expanded_group:
+                            expanded_group.append(c_toks)
                 else:
-                    toks = item_clean.split()
-                    if toks:
+                    toks = tokens(normalize(item_clean))
+                    if toks and toks not in expanded_group:
                         expanded_group.append(toks)
             if expanded_group:
                 self.requires_all_groups.append(expanded_group)
@@ -168,7 +192,9 @@ class RuleEngine:
 
                         phrase_str = " ".join(phrase)
                         # Check if every valid occurrence is negated
-                        all_negated = all(is_negated(norm_tokens, m) for m in valid_matches)
+                        all_negated = all(
+                            is_negated(norm_tokens, m, len(phrase)) for m in valid_matches
+                        )
                         skipped = rule.negatable and all_negated
                         matched_hit = RuleHit(
                             rule_id=rule.id,
@@ -197,7 +223,7 @@ class RuleEngine:
                             group_hit = True
                             matched_phrases.append(" ".join(phrase))
                             all_match_positions.extend(matches)
-                            if any(is_negated(norm_tokens, m) for m in matches):
+                            if any(is_negated(norm_tokens, m, len(phrase)) for m in matches):
                                 any_negated = True
                             break
                     if not group_hit:

@@ -16,6 +16,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
+from app.core.text import apply_synonym_mappings
+
 SEVERITY_WORDS_DEFAULT: frozenset[str] = frozenset(
     {
         "severe",
@@ -177,7 +179,16 @@ class SpellingCorrector:
                 raw_data: dict[str, Any] = json.load(f)
                 for rule in raw_data.get("rules", []):
                     match_blk = rule.get("match", {})
-                    for p in match_blk.get("phrases", []) + rule.get("trigger_keywords", []):
+                    all_rule_phrases = (
+                        list(match_blk.get("phrases", [])) + rule.get("trigger_keywords", [])
+                    )
+                    phrases_by_lang = match_blk.get("phrases_by_lang", {})
+                    if isinstance(phrases_by_lang, dict):
+                        for p_list in phrases_by_lang.values():
+                            if isinstance(p_list, list):
+                                all_rule_phrases.extend(p_list)
+
+                    for p in all_rule_phrases:
                         for tok in p.lower().split():
                             if tok.isalpha():
                                 vocab.add(tok)
@@ -362,22 +373,25 @@ class SpellingCorrector:
 
         if full_corrected != norm_tokens:
             phrase_desc = " ".join(full_corrected)
-            sequences.append((full_corrected, True, phrase_desc))
+            mapped_full = apply_synonym_mappings(full_corrected)
+            sequences.append((mapped_full, True, phrase_desc))
 
         # 2. Individual single-word correction sequences
         for idx, alts in corrections_by_pos.items():
             for alt in alts:
                 single_var = list(norm_tokens)
                 single_var[idx] = alt
-                if (single_var, True, alt) not in sequences and len(sequences) < max_sequences:
-                    sequences.append((single_var, True, alt))
+                mapped_single = apply_synonym_mappings(single_var)
+                if (mapped_single, True, alt) not in sequences and len(sequences) < max_sequences:
+                    sequences.append((mapped_single, True, alt))
 
         # 3. Concatenated token split sequences
         for idx, (w1, w2) in splits_by_pos.items():
             split_seq = norm_tokens[:idx] + [w1, w2] + norm_tokens[idx + 1 :]
             desc = f"{w1} {w2}"
-            if len(sequences) < max_sequences:
-                sequences.append((split_seq, True, desc))
+            mapped_split = apply_synonym_mappings(split_seq)
+            if (mapped_split, True, desc) not in sequences and len(sequences) < max_sequences:
+                sequences.append((mapped_split, True, desc))
 
         return sequences
 
