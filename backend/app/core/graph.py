@@ -299,6 +299,9 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 )
                 triage_val = None
 
+            if gate_dec.was_corrected and gate_dec.corrected_phrase:
+                msg = f"AIRA read this as: {gate_dec.corrected_phrase}\n\n{msg}"
+
             resp = PipelineResponse(
                 response_type=outcome,
                 triage_level=triage_val,
@@ -321,6 +324,8 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 score_res.urgency_note
                 or "Emergency symptoms detected. Please seek emergency medical care immediately."
             )
+            if score_res.was_corrected and score_res.corrected_phrase:
+                msg = f"AIRA read this as: {score_res.corrected_phrase}\n\n{msg}"
             resp = PipelineResponse(
                 response_type="EMERGENCY",
                 triage_level="EMERGENCY",
@@ -500,13 +505,14 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         else:
             headline = "Not enough to decide"
 
-        msg = (
-            score_res.urgency_note if score_res else None
-        ) or (
+        msg = (score_res.urgency_note if score_res else None) or (
             "AIRA could not match this to its guidelines. If you are worried, see a doctor."
             if triage_val == "UNKNOWN"
             else "Guideline recommendations for your reported symptoms."
         )
+
+        if score_res and score_res.was_corrected and score_res.corrected_phrase:
+            msg = f"AIRA read this as: {score_res.corrected_phrase}\n\n{msg}"
 
         draft_cits = draft.citations if draft else []
         citation_map: dict[tuple[str, int | None], Citation] = {

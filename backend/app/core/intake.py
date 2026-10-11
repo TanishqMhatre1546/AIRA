@@ -217,10 +217,7 @@ def select_intake_questions(
 
 def strip_question_for_client(question: dict[str, Any]) -> dict[str, Any]:
     """Strip internal clinical metadata, retaining only id, type, text, and option id/label."""
-    options = [
-        {"id": opt["id"], "label": opt["label"]}
-        for opt in question.get("options", [])
-    ]
+    options = [{"id": opt["id"], "label": opt["label"]} for opt in question.get("options", [])]
     return {
         "id": question["id"],
         "type": question.get("type", "multi_select"),

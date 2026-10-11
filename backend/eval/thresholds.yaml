@@ -13,3 +13,7 @@ intake_monotonicity_violations: 0
 intake_question_invariance_violations: 0
 intake_skip_regressions: 0
 vague_no_passages: 1.0
+emergency_recall_misspelled: 0.95
+refusal_recall_misspelled: 0.95
+triage_accuracy_misspelled: 0.85
+

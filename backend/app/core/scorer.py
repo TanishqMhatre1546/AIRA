@@ -130,6 +130,8 @@ class ScoreResult:
     modifiers_applied: list[dict[str, Any]] = field(default_factory=list)
     watch_for: list[str] = field(default_factory=list)
     urgency_note: str | None = None
+    was_corrected: bool = False
+    corrected_phrase: str | None = None
 
 
 def extract_duration_days(text: str) -> int | None:
@@ -195,41 +197,27 @@ def load_clinical_modifiers(lexicon_dir: Path | None = None) -> list[dict[str, A
     return modifiers
 
 
-def symptom_urgency_scorer(
-    symptoms: str,
+def _score_token_sequence(
+    tok_list: list[str],
+    symptoms_text: str,
     engine: RuleEngine,
-    profiles: dict[str, Any] | None = None,
-    watch_for: Mapping[str, list[str]] | None = None,
-    modifiers_def: list[dict[str, Any]] | None = None,
+    condition_profiles: dict[str, Any],
+    clinical_modifiers: list[dict[str, Any]],
+    watch_map: Mapping[str, list[str]],
     structured_duration: int | None = None,
     structured_modifiers: list[str] | None = None,
     forced_conditions: list[str] | None = None,
     intake_option_ids: list[str] | None = None,
 ) -> ScoreResult:
-    """Score symptom urgency deterministically based only on rule tables and clinical guidelines.
-
-    Never calls an external model or network.
-    """
-    if not symptoms or not symptoms.strip():
-        return ScoreResult(level="UNKNOWN")
-
-    # Load defaults if omitted
-    condition_profiles = profiles if profiles is not None else load_condition_profiles()
-    clinical_modifiers = modifiers_def if modifiers_def is not None else load_clinical_modifiers()
-    watch_map = watch_for or {}
-
+    """Evaluate triage urgency deterministically for a single token sequence."""
     # Extract patient age before demographic noise stripping
-    extracted_age = extract_patient_age(symptoms)
+    extracted_age = extract_patient_age(symptoms_text)
 
     # Extract duration in days (use larger of text duration and structured duration)
-    text_duration = extract_duration_days(symptoms)
+    text_duration = extract_duration_days(symptoms_text)
     extracted_duration = max(text_duration or 0, structured_duration or 0) or None
 
-    # 1. Normalize and tokenize text
-    norm_text = normalize(symptoms)
-    tok_list = tokens(norm_text)
-
-    # 2. Run emergency rules first. If any fires, return EMERGENCY immediately
+    # Run emergency rules first. If any fires, return EMERGENCY immediately
     emergency_hits = engine.match(tok_list, kinds=["emergency"])
     active_emergency_hits = [h for h in emergency_hits if not h.skipped_by_negation]
     if active_emergency_hits:
@@ -338,7 +326,7 @@ def symptom_urgency_scorer(
             )
 
     # 5b. Evaluate numeric blood pressure readings (e.g. 148/94)
-    bp = extract_blood_pressure(symptoms)
+    bp = extract_blood_pressure(symptoms_text)
     if bp:
         systolic, diastolic = bp
         if systolic >= 140 or diastolic >= 90:
@@ -479,10 +467,7 @@ def symptom_urgency_scorer(
         if term_matched or age_matched or struct_matched:
             # Check which detected conditions match the modifier pairs
             pairs_list = mod.get("pairs", [])
-            matching_pairs = [
-                p for p in pairs_list
-                if p.get("condition_id") in detected_conditions
-            ]
+            matching_pairs = [p for p in pairs_list if p.get("condition_id") in detected_conditions]
             if (
                 not matching_pairs
                 and not pairs_list
@@ -550,3 +535,90 @@ def symptom_urgency_scorer(
         watch_for=watch_for_items,
         urgency_note=urgency_note,
     )
+
+
+def symptom_urgency_scorer(
+    symptoms: str,
+    engine: RuleEngine,
+    profiles: dict[str, Any] | None = None,
+    watch_for: Mapping[str, list[str]] | None = None,
+    modifiers_def: list[dict[str, Any]] | None = None,
+    structured_duration: int | None = None,
+    structured_modifiers: list[str] | None = None,
+    forced_conditions: list[str] | None = None,
+    intake_option_ids: list[str] | None = None,
+) -> ScoreResult:
+    """Score symptom urgency deterministically based only on rule tables and clinical guidelines.
+
+    Evaluates original tokens first, then candidate sequences from spelling correction in an
+    escalate-only manner. Never lowers urgency.
+    """
+    if not symptoms or not symptoms.strip():
+        return ScoreResult(level="UNKNOWN")
+
+    condition_profiles = profiles if profiles is not None else load_condition_profiles()
+    clinical_modifiers = modifiers_def if modifiers_def is not None else load_clinical_modifiers()
+    watch_map = watch_for or {}
+
+    norm_text = normalize(symptoms)
+    tok_list = tokens(norm_text)
+
+    # 1. Base evaluation on uncorrected tokens
+    base_res = _score_token_sequence(
+        tok_list=tok_list,
+        symptoms_text=symptoms,
+        engine=engine,
+        condition_profiles=condition_profiles,
+        clinical_modifiers=clinical_modifiers,
+        watch_map=watch_map,
+        structured_duration=structured_duration,
+        structured_modifiers=structured_modifiers,
+        forced_conditions=forced_conditions,
+        intake_option_ids=intake_option_ids,
+    )
+
+    # If already an emergency on base text, no correction needed
+    if base_res.level == "EMERGENCY":
+        return base_res
+
+    # 2. Check candidate sequences for misspelled words (escalate-only)
+    from app.core.spelling import get_spelling_corrector
+
+    spelling = get_spelling_corrector()
+    candidate_seqs = spelling.get_candidate_sequences(tok_list)
+
+    if len(candidate_seqs) > 1:
+        severity_order: dict[str, int] = {
+            "UNKNOWN": 0,
+            "SELF_CARE": 1,
+            "SEE_DOCTOR": 2,
+            "EMERGENCY": 3,
+        }
+        for cand_toks, _was_corr, phrase_desc in candidate_seqs[1:]:
+            cand_text = " ".join(cand_toks)
+            cand_res = _score_token_sequence(
+                tok_list=cand_toks,
+                symptoms_text=cand_text,
+                engine=engine,
+                condition_profiles=condition_profiles,
+                clinical_modifiers=clinical_modifiers,
+                watch_map=watch_map,
+                structured_duration=structured_duration,
+                structured_modifiers=structured_modifiers,
+                forced_conditions=forced_conditions,
+                intake_option_ids=intake_option_ids,
+            )
+            cand_rank = severity_order.get(cand_res.level, 0)
+            base_rank = severity_order.get(base_res.level, 0)
+
+            if (cand_rank > base_rank) or (
+                cand_rank == base_rank and cand_res.conditions and not base_res.conditions
+            ):
+                cand_res.was_corrected = True
+                cand_res.corrected_phrase = phrase_desc or (" ".join(cand_toks))
+                base_res = cand_res
+
+            if base_res.level == "EMERGENCY":
+                break
+
+    return base_res

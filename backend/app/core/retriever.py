@@ -208,10 +208,7 @@ class Retriever:
                 )
 
         # In production, startup must refuse an index built with include_unverified=True
-        if (
-            app_settings.environment == "production"
-            and manifest.get("include_unverified", False)
-        ):
+        if app_settings.environment == "production" and manifest.get("include_unverified", False):
             raise ValueError(
                 "Production environment cannot start with an index built with "
                 "include_unverified=True"
@@ -278,9 +275,9 @@ class Retriever:
         if active_conditions:
             from app.data.corpus_loader import to_corpus_condition_id
 
-            target_cids = {
-                to_corpus_condition_id(c) for c in active_conditions
-            } | set(active_conditions)
+            target_cids = {to_corpus_condition_id(c) for c in active_conditions} | set(
+                active_conditions
+            )
             cond_filtered = [
                 i for i in eligible_indices if self.chunks[i].condition_id in target_cids
             ]

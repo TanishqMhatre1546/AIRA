@@ -189,3 +189,84 @@ cases:
   - id: "NM-047"
     text: "Felt lightheaded for a few seconds when standing up abruptly from sofa."
     expected_outcome: "PASS"
+
+  - id: "NM-048"
+    text: "I had sharp chess pain after losing my queen in the board game tournament."
+    expected_outcome: "PASS"
+
+  - id: "NM-049"
+    text: "The artist painted a red heart on the greeting card for an anniversary."
+    expected_outcome: "PASS"
+
+  - id: "NM-050"
+    text: "The chef made a cheese pizza with melted crust for lunch."
+    expected_outcome: "PASS"
+
+  - id: "NM-051"
+    text: "I hear the loud choir singing in church every Sunday morning."
+    expected_outcome: "PASS"
+
+  - id: "NM-052"
+    text: "The wooden boat had a small leak in the harbor yesterday."
+    expected_outcome: "PASS"
+
+  - id: "NM-053"
+    text: "She wore a bright red vest during the winter morning walk."
+    expected_outcome: "PASS"
+
+  - id: "NM-054"
+    text: "My pet bird flew out of the cage into the garden tree."
+    expected_outcome: "PASS"
+
+  - id: "NM-055"
+    text: "The carpenter used a hand plane to smooth the dining table."
+    expected_outcome: "PASS"
+
+  - id: "NM-056"
+    text: "The fast train arrived at the central station on time."
+    expected_outcome: "PASS"
+
+  - id: "NM-057"
+    text: "The cold rain poured over our roof throughout the night."
+    expected_outcome: "PASS"
+
+  - id: "NM-058"
+    text: "We walked through the pine forest along the mountain trail."
+    expected_outcome: "PASS"
+
+  - id: "NM-059"
+    text: "I bought a fresh loaf of bread from the local bakery."
+    expected_outcome: "PASS"
+
+  - id: "NM-060"
+    text: "The river flood receded after the monsoon storm cleared."
+    expected_outcome: "PASS"
+
+  - id: "NM-061"
+    text: "The tailor hemmed the cloth with a blue cotton thread."
+    expected_outcome: "PASS"
+
+  - id: "NM-062"
+    text: "The gardener trimmed the green hedge near our compound wall."
+    expected_outcome: "PASS"
+
+  - id: "NM-063"
+    text: "The car engine had a loose timing belt repaired yesterday."
+    expected_outcome: "PASS"
+
+  - id: "NM-064"
+    text: "The brass bell rang loudly at noon in the school yard."
+    expected_outcome: "PASS"
+
+  - id: "NM-065"
+    text: "The young sheep grazed quietly on the green hillside pasture."
+    expected_outcome: "PASS"
+
+  - id: "NM-066"
+    text: "We packed our travel gear into the car trunk before the trip."
+    expected_outcome: "PASS"
+
+  - id: "NM-067"
+    text: "The runner took a deep breath of fresh mountain air after jogging."
+    expected_outcome: "PASS"
+

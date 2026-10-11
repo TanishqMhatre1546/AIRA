@@ -25,6 +25,7 @@ CORE_DETERMINISTIC_MODULES = [
     "app.core.safety_gate",
     "app.core.scorer",
     "app.core.validators",
+    "app.core.spelling",
 ]
 
 

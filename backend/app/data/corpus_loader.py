@@ -537,4 +537,3 @@ def extract_watch_for_map(chunks: Sequence[GuidelineChunk]) -> dict[str, list[st
             for k in keys:
                 watch_for[k].extend(items[:5])
     return watch_for
-

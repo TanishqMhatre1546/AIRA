@@ -485,9 +485,7 @@ def test_no_phi_or_intake_in_logs(
 
     with caplog.at_level(logging.INFO):
         # Round 1
-        resp1 = client_intake_enabled.post(
-            "/api/triage", json={"message": private_complaint_query}
-        )
+        resp1 = client_intake_enabled.post("/api/triage", json={"message": private_complaint_query})
         assert resp1.status_code == 200
 
         # Round 2
@@ -515,4 +513,3 @@ def test_no_phi_or_intake_in_logs(
         assert private_complaint_notes not in msg, f"Extra text found in log: {msg}"
         assert "dur_1" not in msg, f"Option ID found in log: {msg}"
         assert "Since today" not in msg, f"Option label found in log: {msg}"
-

@@ -204,7 +204,6 @@ def test_graph_reachability_from_respond_followup(graph_deps: PipelineDeps) -> N
     assert "__end__" in visited
 
 
-
 # ---------------------------------------------------------------------------
 # Test 2: 40 Intercepted Queries Never Call Model
 # ---------------------------------------------------------------------------

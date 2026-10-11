@@ -35,6 +35,7 @@ class Settings(BaseSettings):
                         return [str(item).strip() for item in parsed if item]
             return [origin.strip() for origin in v_trimmed.split(",") if origin.strip()]
         return v
+
     gemini_api_key: SecretStr | None = None
     chat_model: str = "gemini-2.0-flash"
     embedding_model: str = "gemini-embedding-001"

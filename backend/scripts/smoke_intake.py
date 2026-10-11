@@ -91,18 +91,14 @@ def main() -> None:
     }
     status, data = post_json(triage_url, payload_c)
     c_pass = (
-        status == 200
-        and data.get("response_type") == "EMERGENCY"
-        and data.get("mode") == "static"
+        status == 200 and data.get("response_type") == "EMERGENCY" and data.get("mode") == "static"
     )
     checks.append(("Check c: Emergency option escalates to EMERGENCY static", c_pass))
 
     # Check d: 'severe chest pain' returns EMERGENCY immediately with no questions
     status, data = post_json(triage_url, {"message": "severe chest pain"})
     d_pass = (
-        status == 200
-        and data.get("response_type") == "EMERGENCY"
-        and not data.get("questions")
+        status == 200 and data.get("response_type") == "EMERGENCY" and not data.get("questions")
     )
     checks.append(
         ("Check d: Red flag query returns EMERGENCY immediately with no questions", d_pass)
@@ -129,9 +125,7 @@ def main() -> None:
     }
     status, data = post_json(triage_url, payload_f)
     f_pass = (
-        status == 200
-        and data.get("response_type") == "EMERGENCY"
-        and data.get("mode") == "static"
+        status == 200 and data.get("response_type") == "EMERGENCY" and data.get("mode") == "static"
     )
     checks.append(("Check f: Emergency phrase in text area returns EMERGENCY", f_pass))
 

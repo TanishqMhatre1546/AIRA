@@ -563,10 +563,9 @@ class EvaluationRunner:
                                 if (m_name, c_id) in valid_pairs and c_id in var_res.conditions:
                                     has_valid_pair = True
 
-                        is_valid_escalation = (
-                            has_valid_pair
-                            and level_order.get(var_res.level, 0) >= level_order.get(base_level, 0)
-                        )
+                        is_valid_escalation = has_valid_pair and level_order.get(
+                            var_res.level, 0
+                        ) >= level_order.get(base_level, 0)
                         if is_valid_escalation:
                             for m in applied:
                                 mod_display = f"{m.get('name', '')} ({m.get('condition_id', '')})"
@@ -657,6 +656,227 @@ class EvaluationRunner:
             failures=failures,
         )
 
+    def _load_misspelling_cases(self) -> list[dict[str, Any]]:
+        suite_path = self.eval_dir / "misspelling_cases.yaml"
+        if not suite_path.exists():
+            return []
+        data = load_yaml_file(suite_path)
+        return data.get("cases", [])
+
+    def run_misspelling_emergency_suite(self) -> SuiteResult:
+        """Evaluate emergency recall on misspelled queries."""
+        cases = [c for c in self._load_misspelling_cases() if c.get("suite") == "emergency"]
+        if not cases:
+            return SuiteResult(
+                name="misspelling_emergency",
+                total=0,
+                passed=0,
+                metric_name="emergency_recall_misspelled",
+                metric_value=1.0,
+                threshold_value=0.95,
+                is_passing=True,
+            )
+
+        pos_total = 0
+        pos_hits = 0
+        neg_total = 0
+        neg_fires = 0
+        failures: list[TestCaseFailure] = []
+        fails_by_typo_type: dict[str, int] = {}
+        total_by_typo_type: dict[str, int] = {}
+
+        for c in cases:
+            t_type = c.get("typo_type", "unknown")
+            total_by_typo_type[t_type] = total_by_typo_type.get(t_type, 0) + 1
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            should_fire = c.get("should_fire", True)
+
+            dec = self.gate.evaluate(text)
+            matched_rules = [dec.rule_id] if dec.rule_id else []
+
+            if should_fire:
+                pos_total += 1
+                if dec.outcome == "EMERGENCY":
+                    pos_hits += 1
+                else:
+                    fails_by_typo_type[t_type] = fails_by_typo_type.get(t_type, 0) + 1
+                    failures.append(
+                        TestCaseFailure(
+                            suite="misspelling_emergency",
+                            case_id=case_id,
+                            input_text=text,
+                            expected_result="EMERGENCY",
+                            actual_result=dec.outcome,
+                            rule_ids=matched_rules,
+                        )
+                    )
+            else:
+                neg_total += 1
+                if dec.outcome == "EMERGENCY":
+                    neg_fires += 1
+                    fails_by_typo_type[t_type] = fails_by_typo_type.get(t_type, 0) + 1
+                    failures.append(
+                        TestCaseFailure(
+                            suite="misspelling_emergency_negation",
+                            case_id=case_id,
+                            input_text=text,
+                            expected_result="PASS",
+                            actual_result=dec.outcome,
+                            rule_ids=matched_rules,
+                        )
+                    )
+
+        recall = pos_hits / pos_total if pos_total else 0.0
+        target = float(self.thresholds.get("emergency_recall_misspelled", 0.95))
+        is_passing = recall >= target
+
+        return SuiteResult(
+            name="misspelling_emergency",
+            total=len(cases),
+            passed=pos_hits + (neg_total - neg_fires),
+            metric_name="emergency_recall_misspelled",
+            metric_value=round(recall, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+            metadata={
+                "fails_by_typo_type": fails_by_typo_type,
+                "total_by_typo_type": total_by_typo_type,
+            },
+        )
+
+    def run_misspelling_refusal_suite(self) -> SuiteResult:
+        """Evaluate refusal recall on misspelled dosage, diagnostic, and scope queries."""
+        cases = [c for c in self._load_misspelling_cases() if c.get("suite") == "refusal"]
+        if not cases:
+            return SuiteResult(
+                name="misspelling_refusal",
+                total=0,
+                passed=0,
+                metric_name="refusal_recall_misspelled",
+                metric_value=1.0,
+                threshold_value=0.95,
+                is_passing=True,
+            )
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+        fails_by_typo_type: dict[str, int] = {}
+        total_by_typo_type: dict[str, int] = {}
+
+        for c in cases:
+            t_type = c.get("typo_type", "unknown")
+            total_by_typo_type[t_type] = total_by_typo_type.get(t_type, 0) + 1
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+
+            dec = self.gate.evaluate(text)
+            matched_rules = [dec.rule_id] if dec.rule_id else []
+
+            if dec.outcome in ("REFUSAL", "EMERGENCY", "CRISIS", "OUT_OF_SCOPE"):
+                passed += 1
+            else:
+                fails_by_typo_type[t_type] = fails_by_typo_type.get(t_type, 0) + 1
+                failures.append(
+                    TestCaseFailure(
+                        suite="misspelling_refusal",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result="REFUSAL",
+                        actual_result=dec.outcome,
+                        rule_ids=matched_rules,
+                    )
+                )
+
+        pass_rate = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("refusal_recall_misspelled", 0.95))
+        is_passing = pass_rate >= target
+
+        return SuiteResult(
+            name="misspelling_refusal",
+            total=len(cases),
+            passed=passed,
+            metric_name="refusal_recall_misspelled",
+            metric_value=round(pass_rate, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+            metadata={
+                "fails_by_typo_type": fails_by_typo_type,
+                "total_by_typo_type": total_by_typo_type,
+            },
+        )
+
+    def run_misspelling_triage_suite(self) -> SuiteResult:
+        """Evaluate triage classification accuracy on misspelled symptom queries."""
+        cases = [c for c in self._load_misspelling_cases() if c.get("suite") == "triage"]
+        if not cases:
+            return SuiteResult(
+                name="misspelling_triage",
+                total=0,
+                passed=0,
+                metric_name="triage_accuracy_misspelled",
+                metric_value=1.0,
+                threshold_value=0.85,
+                is_passing=True,
+            )
+
+        passed = 0
+        failures: list[TestCaseFailure] = []
+        fails_by_typo_type: dict[str, int] = {}
+        total_by_typo_type: dict[str, int] = {}
+
+        for c in cases:
+            t_type = c.get("typo_type", "unknown")
+            total_by_typo_type[t_type] = total_by_typo_type.get(t_type, 0) + 1
+            case_id = c.get("id", "unknown")
+            text = c.get("text", "")
+            exp_level = c.get("expected_level", "SELF_CARE")
+
+            res = symptom_urgency_scorer(
+                symptoms=text,
+                engine=self.engine,
+                profiles=self.profiles,
+                watch_for=self.watch_for,
+                modifiers_def=self.modifiers,
+            )
+            rule_ids = [r.get("rule_id", "") for r in res.reasons]
+
+            if res.level == exp_level:
+                passed += 1
+            else:
+                fails_by_typo_type[t_type] = fails_by_typo_type.get(t_type, 0) + 1
+                failures.append(
+                    TestCaseFailure(
+                        suite="misspelling_triage",
+                        case_id=case_id,
+                        input_text=text,
+                        expected_result=exp_level,
+                        actual_result=res.level,
+                        rule_ids=rule_ids,
+                    )
+                )
+
+        pass_rate = passed / len(cases) if cases else 0.0
+        target = float(self.thresholds.get("triage_accuracy_misspelled", 0.85))
+        is_passing = pass_rate >= target
+
+        return SuiteResult(
+            name="misspelling_triage",
+            total=len(cases),
+            passed=passed,
+            metric_name="triage_accuracy_misspelled",
+            metric_value=round(pass_rate, 4),
+            threshold_value=target,
+            is_passing=is_passing,
+            failures=failures,
+            metadata={
+                "fails_by_typo_type": fails_by_typo_type,
+                "total_by_typo_type": total_by_typo_type,
+            },
+        )
+
     def run_heldout_suites(self) -> list[SuiteResult]:
         """Run all heldout test suites found in eval/heldout/*.yaml."""
         heldout_dir = self.eval_dir / "heldout"
@@ -669,28 +889,68 @@ class EvaluationRunner:
             cases = data.get("cases", [])
             suite_name = f"heldout_{h_file.stem}"
 
+            is_misspelling = h_file.name.startswith("misspelling_")
             passed = 0
             failures: list[TestCaseFailure] = []
             for c in cases:
                 case_id = c.get("id", "unknown")
-                text = c.get("text", "")
-                exp_res = c.get("expected_level") or c.get("expected_outcome", "PASS")
-
-                # Evaluate using gate or scorer based on expected type
-                if exp_res in ("EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"):
-                    res = symptom_urgency_scorer(
-                        symptoms=text,
-                        engine=self.engine,
-                        profiles=self.profiles,
-                        watch_for=self.watch_for,
-                        modifiers_def=self.modifiers,
-                    )
-                    act_res = res.level
-                    rule_ids = [r.get("rule_id", "") for r in res.reasons]
+                if is_misspelling:
+                    text = c.get("text") or c.get("input", "")
+                    if "should_fire" in c:
+                        exp_res = "EMERGENCY" if c.get("should_fire") else "PASS"
+                    else:
+                        exp_res = (
+                            c.get("expected")
+                            or c.get("expected_level")
+                            or c.get("expected_outcome", "PASS")
+                        )
+                    suite_kind = c.get("suite", "")
+                    if suite_kind == "triage" or exp_res in ("SEE_DOCTOR", "SELF_CARE", "UNKNOWN"):
+                        res = symptom_urgency_scorer(
+                            symptoms=text,
+                            engine=self.engine,
+                            profiles=self.profiles,
+                            watch_for=self.watch_for,
+                            modifiers_def=self.modifiers,
+                        )
+                        act_res = res.level
+                        rule_ids = [r.get("rule_id", "") for r in res.reasons]
+                    elif suite_kind in ("emergency", "refusal", "crisis") or exp_res in (
+                        "EMERGENCY",
+                        "CRISIS",
+                        "REFUSAL",
+                        "OUT_OF_SCOPE",
+                        "PASS",
+                    ):
+                        dec = self.gate.evaluate(text)
+                        act_res = dec.outcome
+                        rule_ids = [dec.rule_id] if dec.rule_id else []
+                    else:
+                        dec = self.gate.evaluate(text)
+                        act_res = dec.outcome
+                        rule_ids = [dec.rule_id] if dec.rule_id else []
                 else:
-                    dec = self.gate.evaluate(text)
-                    act_res = dec.outcome
-                    rule_ids = [dec.rule_id] if dec.rule_id else []
+                    text = c.get("text", "")
+                    if "should_fire" in c:
+                        exp_res = "EMERGENCY" if c.get("should_fire") else "PASS"
+                    else:
+                        exp_res = c.get("expected_level") or c.get("expected_outcome", "PASS")
+
+                    # Evaluate using gate or scorer based on expected type
+                    if exp_res in ("EMERGENCY", "SEE_DOCTOR", "SELF_CARE", "UNKNOWN"):
+                        res = symptom_urgency_scorer(
+                            symptoms=text,
+                            engine=self.engine,
+                            profiles=self.profiles,
+                            watch_for=self.watch_for,
+                            modifiers_def=self.modifiers,
+                        )
+                        act_res = res.level
+                        rule_ids = [r.get("rule_id", "") for r in res.reasons]
+                    else:
+                        dec = self.gate.evaluate(text)
+                        act_res = dec.outcome
+                        rule_ids = [dec.rule_id] if dec.rule_id else []
 
                 if act_res == exp_res:
                     passed += 1
@@ -707,6 +967,7 @@ class EvaluationRunner:
                     )
 
             pass_rate = passed / len(cases) if cases else 0.0
+            target_thresh = float(self.thresholds.get(f"{suite_name}_accuracy", 0.90))
             heldout_results.append(
                 SuiteResult(
                     name=suite_name,
@@ -714,8 +975,8 @@ class EvaluationRunner:
                     passed=passed,
                     metric_name=f"{suite_name}_accuracy",
                     metric_value=round(pass_rate, 4),
-                    threshold_value=0.90,
-                    is_passing=pass_rate >= 0.90,
+                    threshold_value=target_thresh,
+                    is_passing=pass_rate >= target_thresh,
                     failures=failures,
                 )
             )
@@ -1136,10 +1397,12 @@ class EvaluationRunner:
                 if not opts:
                     continue
                 chosen_opt = rng.choice(opts)
-                answers.append({
-                    "question_id": qid,
-                    "selected_option_ids": [chosen_opt["id"]],
-                })
+                answers.append(
+                    {
+                        "question_id": qid,
+                        "selected_option_ids": [chosen_opt["id"]],
+                    }
+                )
 
             parsed = parse_intake_answers({"answers": answers}, self.intake_data)
             aug_text = f"{base_query}. {'. '.join(parsed.get('canonical_phrases', []))}".strip()
@@ -1518,12 +1781,9 @@ class EvaluationRunner:
             if resp and resp.sections:
                 total_passages = len(resp.sections.guidelines_say) + len(resp.sections.do_now)
 
-            is_no_match_or_unknown = (
-                resp
-                and (
-                    resp.response_type in ("NO_MATCH", "REFUSAL", "OUT_OF_SCOPE")
-                    or resp.triage_level == "UNKNOWN"
-                )
+            is_no_match_or_unknown = resp and (
+                resp.response_type in ("NO_MATCH", "REFUSAL", "OUT_OF_SCOPE")
+                or resp.triage_level == "UNKNOWN"
             )
             if is_no_match_or_unknown and total_passages == 0:
                 passed += 1
@@ -1570,6 +1830,9 @@ class EvaluationRunner:
             "bias": self.run_bias_suite,
             "injection": self.run_injection_suite,
             "vague": self.run_vague_suite,
+            "misspelling_emergency": self.run_misspelling_emergency_suite,
+            "misspelling_refusal": self.run_misspelling_refusal_suite,
+            "misspelling_triage": self.run_misspelling_triage_suite,
             "intake_data": self.run_intake_data_validation,
             "intake_plan": self.run_intake_plan_suite,
             "intake_escalation": self.run_intake_escalation_suite,
@@ -1685,6 +1948,38 @@ def generate_markdown_report(results: list[SuiteResult], is_all_passing: bool) -
                     f"- **Simulation Parameters:** {meta.get('note', '')}",
                 ]
             )
+
+    # Add Misspelling Typo Breakdown if available
+    agg_fails_by_type: dict[str, int] = {}
+    agg_total_by_type: dict[str, int] = {}
+    for r in results:
+        if r.name.startswith("misspelling_") and "fails_by_typo_type" in r.metadata:
+            for k, v in r.metadata["fails_by_typo_type"].items():
+                agg_fails_by_type[k] = agg_fails_by_type.get(k, 0) + v
+            for k, v in r.metadata["total_by_typo_type"].items():
+                agg_total_by_type[k] = agg_total_by_type.get(k, 0) + v
+
+    if agg_total_by_type:
+        lines.extend(
+            [
+                "",
+                "## Misspelling Robustness Typo Breakdown",
+                "",
+                "| Typo Type | Total Evaluated | Failures | Failure Rate (%) | Success Rate (%) |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        sorted_types = sorted(
+            agg_total_by_type.keys(),
+            key=lambda t: agg_fails_by_type.get(t, 0) / agg_total_by_type[t],
+            reverse=True,
+        )
+        for t in sorted_types:
+            tot = agg_total_by_type[t]
+            fail = agg_fails_by_type.get(t, 0)
+            fail_pct = round((fail / tot) * 100, 1)
+            succ_pct = round(100.0 - fail_pct, 1)
+            lines.append(f"| `{t}` | {tot} | {fail} | {fail_pct}% | {succ_pct}% |")
 
     # Add Failing Cases details if any
     all_failures: list[TestCaseFailure] = []
