@@ -1,0 +1,416 @@
+{
+  "condition_id": "icmr-stw-urinary-tract-infection",
+  "language": "hi",
+  "translations": {
+    "4497bf9a1903": {
+      "item_id": "4497bf9a1903",
+      "source_hash": "4ed1aa9d2b1f",
+      "text": "पेशाब के लक्षणों के साथ 100 degrees Fahrenheit से अधिक बुखार होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b81696593fa0": {
+      "item_id": "b81696593fa0",
+      "source_hash": "fe2350baf4f0",
+      "text": "कंपकंपी और तेज ठंड लगना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "05d2873f51bb": {
+      "item_id": "05d2873f51bb",
+      "source_hash": "f9b29925536a",
+      "text": "दिल की धड़कन तेज होना (टैचीकार्डिया)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ad7c30db46e9": {
+      "item_id": "ad7c30db46e9",
+      "source_hash": "2ce9d2a1d9e1",
+      "text": "तेज गति से सांस चलना (टैकिप्निया)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "62bbba914a92": {
+      "item_id": "62bbba914a92",
+      "source_hash": "16d765b8a5fc",
+      "text": "कम रक्तचाप (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fa317fd691a8": {
+      "item_id": "fa317fd691a8",
+      "source_hash": "1e784819371e",
+      "text": "कमर के एक तरफ (पसलियों के ठीक नीचे पीठ की तरफ) दर्द, यह गुर्दे के संक्रमण का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e146b5c7a138": {
+      "item_id": "e146b5c7a138",
+      "source_hash": "d54b3058a7ce",
+      "text": "भ्रम या मानसिक स्थिति में बदलाव (अचेतनता)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3892256d600b": {
+      "item_id": "3892256d600b",
+      "source_hash": "ccf77323a1e9",
+      "text": "सेप्सिस के संकेत: तेज बुखार, तेज दिल की धड़कन, अत्यधिक अस्वस्थता, भ्रम",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cac241081edc": {
+      "item_id": "cac241081edc",
+      "source_hash": "da7b6e09fdd1",
+      "text": "मूत्र मार्ग को साफ रखने के लिए प्रचुर मात्रा में पानी और तरल पदार्थ पिएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da01964c2066": {
+      "item_id": "da01964c2066",
+      "source_hash": "7bfd6f7ac981",
+      "text": "डॉक्टर से मिलने में देरी न करें। यूटीआई के लिए डॉक्टर द्वारा निर्धारित एंटीबायोटिक उपचार आवश्यक है, इसे केवल घरेलू नुस्खों से ठीक न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f63e5fd6adb1": {
+      "item_id": "f63e5fd6adb1",
+      "source_hash": "67d87352f086",
+      "text": "डॉक्टर को दिखाने तक दर्द से राहत के लिए पैरासिटामोल लिया जा सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ca1c0ee82931": {
+      "item_id": "ca1c0ee82931",
+      "source_hash": "5a8bc2687862",
+      "text": "लंबे समय तक पेशाब रोकने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fb83980957f0": {
+      "item_id": "fb83980957f0",
+      "source_hash": "bb8562cb4b0c",
+      "text": "पेशाब करते समय हर बार मूत्राशय को पूरी तरह खाली करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bdc547424da6": {
+      "item_id": "bdc547424da6",
+      "source_hash": "b1f3985aa934",
+      "text": "शौचालय के बाद (महिलाओं के लिए) आगे से पीछे की ओर पोंछें ताकि बैक्टीरिया न फैलें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "62a1e320909c": {
+      "item_id": "62a1e320909c",
+      "source_hash": "0e687ffc3289",
+      "text": "यूटीआई से बचाव के लिए संभोग के तुरंत बाद पेशाब करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21e74c1e6ff3": {
+      "item_id": "21e74c1e6ff3",
+      "source_hash": "7d4606234879",
+      "text": "पेशाब करते समय जलन या दर्द होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "47d557ed467f": {
+      "item_id": "47d557ed467f",
+      "source_hash": "2766be093383",
+      "text": "बहुत कम पेशाब आने पर भी बार-बार पेशाब की इच्छा होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b73ab96490e0": {
+      "item_id": "b73ab96490e0",
+      "source_hash": "e6655e570780",
+      "text": "अचानक तेज पेशाब महसूस होना और शौचालय की ओर भागना पड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "808a0232b177": {
+      "item_id": "808a0232b177",
+      "source_hash": "98a4a2e0b02a",
+      "text": "पेट के निचले हिस्से या पेडू में दर्द या दबाव",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b66545dbf054": {
+      "item_id": "b66545dbf054",
+      "source_hash": "0d61ddcdc8d6",
+      "text": "धुंधला, गहरा या दुर्गंधयुक्त पेशाब आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a74217a5d570": {
+      "item_id": "a74217a5d570",
+      "source_hash": "d30947038930",
+      "text": "पेशाब में खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "30aa40accabd": {
+      "item_id": "30aa40accabd",
+      "source_hash": "a2b10e8804bb",
+      "text": "गर्भवती महिला में मूत्र लक्षण। गर्भावस्था में यूटीआई का तुरंत इलाज आवश्यक है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "19223e40718a": {
+      "item_id": "19223e40718a",
+      "source_hash": "fe82808c93cd",
+      "text": "मधुमेह, गुर्दे की बीमारी, या मूत्र मार्ग की विकृति वाले व्यक्ति में पेशाब के लक्षण, ये उच्च जोखिम वाले समूह हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea9e12effe77": {
+      "item_id": "ea9e12effe77",
+      "source_hash": "13829a0fe6a3",
+      "text": "बार-बार यूटीआई होना (6 महीने में 2 से अधिक या 1 वर्ष में 3 से अधिक)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8597b2fe294e": {
+      "item_id": "8597b2fe294e",
+      "source_hash": "11e4b2630b46",
+      "text": "निर्धारित एंटीबायोटिक्स का पूरा कोर्स करने के बाद भी लक्षणों में सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "123a6ae9a226": {
+      "item_id": "123a6ae9a226",
+      "source_hash": "dbbcb46dc8e4",
+      "text": "कोई भी गंभीर लक्षण मौजूद होना, बुखार, ठंड लगना, कमर दर्द, तेज दिल की धड़कन, कम रक्तचाप",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "af37db7561dd": {
+      "item_id": "af37db7561dd",
+      "source_hash": "de20908d4a11",
+      "text": "गुर्दे के संक्रमण (पायलोनेफ्राइटिस) के संकेत: बुखार, कमर के पार्श्व भाग में दर्द, अत्यधिक अस्वस्थता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7ef69e16e2b8": {
+      "item_id": "7ef69e16e2b8",
+      "source_hash": "06b2a73fd87e",
+      "text": "गर्भावस्था में जटिल यूटीआई या जो शुरुआती उपचार से ठीक न हो रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a036a567b92d": {
+      "item_id": "a036a567b92d",
+      "source_hash": "b7736eef57dc",
+      "text": "हालिया यूरोलॉजिकल प्रक्रिया या सर्जरी के बाद नए मूत्र लक्षण दिखाई देना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c1fdf9727cfc": {
+      "item_id": "c1fdf9727cfc",
+      "source_hash": "a606703aed48",
+      "text": "बार-बार होने वाला यूटीआई जिसके लिए विशेष जांच की आवश्यकता हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9a3fa7c33516": {
+      "item_id": "9a3fa7c33516",
+      "source_hash": "ab56b2808d18",
+      "text": "गुर्दे की पथरी या मूत्र मार्ग में रुकावट वाले व्यक्ति में यूटीआई",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6326de5077c4": {
+      "item_id": "6326de5077c4",
+      "source_hash": "cb80d6146fe0",
+      "text": "प्रोस्टेटाइटिस: पुरुषों में पेल्विक दर्द या संवेदनशील प्रोस्टेट के साथ यूटीआई के लक्षण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "31ea555fefc1": {
+      "item_id": "31ea555fefc1",
+      "source_hash": "4e6321e567fa",
+      "text": "गर्भवती महिलाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "93a66a55c83f": {
+      "item_id": "93a66a55c83f",
+      "source_hash": "eb8373d9c6a6",
+      "text": "गुर्दे की पथरी वाले लोग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "85672d0b9307": {
+      "item_id": "85672d0b9307",
+      "source_hash": "a2bd9537d129",
+      "text": "मूत्र मार्ग में रुकावट या संरचनात्मक असामान्यता वाले लोग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66adeef1474c": {
+      "item_id": "66adeef1474c",
+      "source_hash": "deeccba34624",
+      "text": "कमजोर प्रतिरक्षा प्रणाली वाले व्यक्ति",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac6af3683949": {
+      "item_id": "ac6af3683949",
+      "source_hash": "b6bdcfe14ca2",
+      "text": "क्रोनिक किडनी रोग (गुर्दे की पुरानी बीमारी) वाले लोग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c44f32647db": {
+      "item_id": "1c44f32647db",
+      "source_hash": "a0d4909e6475",
+      "text": "वे लोग जिनकी हाल ही में कोई यूरोलॉजिकल प्रक्रिया हुई हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "15ca0f3b3812": {
+      "item_id": "15ca0f3b3812",
+      "source_hash": "a5dc53ea62ce",
+      "text": "साधारण यूटीआई (मूत्राशय का संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66d7d51ffeb5": {
+      "item_id": "66d7d51ffeb5",
+      "source_hash": "3fcdf40c8fc9",
+      "text": "जटिल यूटीआई / पायलोनेफ्राइटिस (गुर्दे का संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "44dbe1cab7fe": {
+      "item_id": "44dbe1cab7fe",
+      "source_hash": "0fabf7a3f550",
+      "text": "बार-बार होने वाला यूटीआई",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

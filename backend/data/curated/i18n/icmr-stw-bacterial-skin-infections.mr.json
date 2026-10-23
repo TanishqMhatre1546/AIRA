@@ -1,0 +1,446 @@
+{
+  "condition_id": "icmr-stw-bacterial-skin-infections",
+  "language": "mr",
+  "translations": {
+    "6155a2cccc89": {
+      "item_id": "6155a2cccc89",
+      "source_hash": "927687cd18cb",
+      "text": "100.4 degrees Fahrenheit पेक्षा जास्त ताप असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "31cc7a04acf0": {
+      "item_id": "31cc7a04acf0",
+      "source_hash": "f3dab9b0a048",
+      "text": "दर मिनिटास 90 पेक्षा जास्त हृदयाचे ठोके असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d9ac20bbf80a": {
+      "item_id": "d9ac20bbf80a",
+      "source_hash": "70c35676a82b",
+      "text": "दर मिनिटास 24 पेक्षा जास्त वेळा श्वास घेणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c450f8d3d823": {
+      "item_id": "c450f8d3d823",
+      "source_hash": "b7d9be7fa696",
+      "text": "पांढऱ्या रक्तपेशींचे (WBC) प्रमाण खूप जास्त असणे (सेप्सिसचे लक्षण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "72fd0cbabe24": {
+      "item_id": "72fd0cbabe24",
+      "source_hash": "d538801e68ca",
+      "text": "त्वचेत प्रचंड वेदना झाल्यानंतर अचानक वेदना पूर्ण थांबणे, हे नेक्रोटायझिंग फॅसिटिसचे लक्षण असू शकते, जो जीवघेणा संसर्ग आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "24e8c1c5747e": {
+      "item_id": "24e8c1c5747e",
+      "source_hash": "b71042275f54",
+      "text": "वरच्या त्वचेचा रंग काळा पडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1b0cde4c5e8d": {
+      "item_id": "1b0cde4c5e8d",
+      "source_hash": "aacbb6b343d3",
+      "text": "त्वचेवर फोड येणे, त्वचा निघून पडणे (सोलवटणे) किंवा ऊती खराब होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e93db17f425": {
+      "item_id": "3e93db17f425",
+      "source_hash": "430bdb18f2ac",
+      "text": "कमी रक्तदाब (लो BP) किंवा शॉकची लक्षणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2ef4e9aa5ace": {
+      "item_id": "2ef4e9aa5ace",
+      "source_hash": "067fde211be0",
+      "text": "संपूर्ण शरीरावरील त्वचा मोठ्या प्रमाणावर सोलवटणे किंवा पापुद्रे निघणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "79365b7271b8": {
+      "item_id": "79365b7271b8",
+      "source_hash": "bb3aec50aa49",
+      "text": "त्वचा सोलवटण्यापूर्वी दुखरी आणि गरम जाणवणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ee1625e23a3": {
+      "item_id": "0ee1625e23a3",
+      "source_hash": "b5e893ef6b22",
+      "text": "खूप आजारी वाटण्याच्या भावनेसोबत ताप असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c4913a7dedd4": {
+      "item_id": "c4913a7dedd4",
+      "source_hash": "ca1f91f05c81",
+      "text": "डिहायड्रेशन (शरीरातील पाणी कमी होणे) ची लक्षणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a8b8a9914b29": {
+      "item_id": "a8b8a9914b29",
+      "source_hash": "ddab08484464",
+      "text": "त्वचेची चांगली स्वच्छता राखा आणि नियमितपणे हात धुवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08590f7176e7": {
+      "item_id": "08590f7176e7",
+      "source_hash": "29224e0458fe",
+      "text": "संसर्ग झालेल्या त्वचेवर तेल लावणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "690ce42b4c28": {
+      "item_id": "690ce42b4c28",
+      "source_hash": "b459d193fefc",
+      "text": "त्वचा बरी होण्यास मदत होण्यासाठी पुरेसा पौष्टिक आहार घ्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f3adecc3d079": {
+      "item_id": "f3adecc3d079",
+      "source_hash": "d9e9dbf555bd",
+      "text": "लहान जखमा किंवा किरकोळ फोडांसाठी तो भाग स्वच्छ आणि कोरडा ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e68e35883630": {
+      "item_id": "e68e35883630",
+      "source_hash": "30f9624a71e4",
+      "text": "कोणताही फोड किंवा गळू दाबू नका किंवा फोडू नका, यामुळे संसर्ग पसरू शकतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1e31d4a4a319": {
+      "item_id": "1e31d4a4a319",
+      "source_hash": "6e53cf9514ff",
+      "text": "कपडे आणि टॉवेल गरम पाण्यात वेगळे धुवा आणि उन्हात वाळवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fd419fd829e5": {
+      "item_id": "fd419fd829e5",
+      "source_hash": "5a1fb0433991",
+      "text": "इतरांसोबत टॉवेल, कपडे किंवा वैयक्तिक वस्तू वापरणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2bca16b0604c": {
+      "item_id": "2bca16b0604c",
+      "source_hash": "fa2a705d492c",
+      "text": "फोड, गळू किंवा सूज जी आकाराने वाढत आहे, अधिक दुखत आहे किंवा बरी होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2c8a417cc5c": {
+      "item_id": "c2c8a417cc5c",
+      "source_hash": "c087b14b725f",
+      "text": "जखमेपासून किंवा संसर्गाच्या भागापासून लालसरपणा बाहेर पसरणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "141c915ec796": {
+      "item_id": "141c915ec796",
+      "source_hash": "44504b77aa4b",
+      "text": "हलक्या तापासह त्वचेचा कोणताही संसर्ग असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "007d2aaf52ef": {
+      "item_id": "007d2aaf52ef",
+      "source_hash": "6f88a2007691",
+      "text": "मधुमेह असलेल्या व्यक्तीमध्ये त्वचेचा संसर्ग, मधुमेही रुग्णांमध्ये त्वचेचे संसर्ग अधिक गंभीर होतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f34d1d58f179": {
+      "item_id": "f34d1d58f179",
+      "source_hash": "39bf7a9050ba",
+      "text": "कुटुंबातील अनेक व्यक्तींमध्ये वारंवार फोड किंवा गळू येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ac592c73984": {
+      "item_id": "0ac592c73984",
+      "source_hash": "2362530bddbd",
+      "text": "पायांना होणारा संसर्ग ज्यामध्ये लालसरपणा, वेदना आणि सूज असते (सेल्युलायटिस)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ffe2326815c6": {
+      "item_id": "ffe2326815c6",
+      "source_hash": "70812ba66d8d",
+      "text": "खाली जखम असणारी जाड काळी खपली (एक्थिमा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cf0fecc79f4f": {
+      "item_id": "cf0fecc79f4f",
+      "source_hash": "14dab3604bb5",
+      "text": "इम्पेटिगो (सुजलेल्या त्वचेवर पिवळसर-तपकिरी खपल्या) जो खूप पसरला आहे किंवा बरा होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "23be8247259f": {
+      "item_id": "23be8247259f",
+      "source_hash": "cd4e39d95a72",
+      "text": "वर नमूद केलेले कोणतेही धोक्याचे लक्षण, ताप, जलद हृदयाचे ठोके, जलद श्वास, कमी रक्तदाब",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "875126a32117": {
+      "item_id": "875126a32117",
+      "source_hash": "4b08030250c9",
+      "text": "प्रचंड वेदनेनंतर अचानक आराम वाटणे, संशयित नेक्रोटायझिंग फॅसिटिस असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e944b0b31c74": {
+      "item_id": "e944b0b31c74",
+      "source_hash": "a1ffb3d014a9",
+      "text": "संसर्ग झालेल्या भागावरील त्वचा काळी पडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e263a99e4fbb": {
+      "item_id": "e263a99e4fbb",
+      "source_hash": "9da6066ec620",
+      "text": "मोठ्या प्रमाणावर त्वचा सोलवटणे किंवा फोड येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a4ec2d1dd84a": {
+      "item_id": "a4ec2d1dd84a",
+      "source_hash": "841f7e2803e7",
+      "text": "कमी प्रतिकारशक्ती असलेल्या व्यक्तीमध्ये (स्टेरॉईड्स, केमोथेरपी किंवा एचआयव्ही) त्वचेचा संसर्ग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4d25698d7fe7": {
+      "item_id": "4d25698d7fe7",
+      "source_hash": "a37a2baa69d7",
+      "text": "मोठे गळू किंवा कार्बंकल ज्यातून शस्त्रक्रियेने पू काढण्याची गरज असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e9e69183f91d": {
+      "item_id": "e9e69183f91d",
+      "source_hash": "291444676a5f",
+      "text": "2 ते 3 दिवसांच्या उपचारानंतरही काही सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "364e94fc429a": {
+      "item_id": "364e94fc429a",
+      "source_hash": "e564d0d77bc7",
+      "text": "रक्तातील संसर्गाची (सेप्टिसेमिया) लक्षणे: तीव्र ताप, गोंधळलेली मानसिक अवस्था, प्रकृतीत जलद बिघाड",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d06b1a10db80": {
+      "item_id": "d06b1a10db80",
+      "source_hash": "9f6bd1934618",
+      "text": "इम्पेटिगो (खपल्या धरणारा त्वचारोग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5682dfba2487": {
+      "item_id": "5682dfba2487",
+      "source_hash": "78cab19d609b",
+      "text": "एक्थिमा (खोलवर जखम आणि काळी खपली)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e3eca5ff2b4": {
+      "item_id": "3e3eca5ff2b4",
+      "source_hash": "75509d3a67e9",
+      "text": "फॉलिक्युलायटिस (केसांच्या मुळांचा संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ae0166c6b6b": {
+      "item_id": "6ae0166c6b6b",
+      "source_hash": "8094eae76eda",
+      "text": "फुरुनकल (बाळतोड / गळू)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "37e29152ef43": {
+      "item_id": "37e29152ef43",
+      "source_hash": "6fc719fab965",
+      "text": "कार्बंकल (मोठे पूचे गळू)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bd5001f801c": {
+      "item_id": "7bd5001f801c",
+      "source_hash": "7b66db4a0ae2",
+      "text": "त्वचेतील गळू (अ‍ॅब्सेस)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c5e97a89a6b0": {
+      "item_id": "c5e97a89a6b0",
+      "source_hash": "2efb3fa204ad",
+      "text": "सेल्युलायटिस (त्वचेच्या खोल थरांचा संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "17bd89e157b3": {
+      "item_id": "17bd89e157b3",
+      "source_hash": "a99953a189bd",
+      "text": "इरिसिपेलस (त्वचेचा तीव्र लालसर संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90e5c5b71970": {
+      "item_id": "90e5c5b71970",
+      "source_hash": "2c52f3f30a15",
+      "text": "स्टॅफिलोकोकल स्केल्डेड स्किन सिंड्रोम",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

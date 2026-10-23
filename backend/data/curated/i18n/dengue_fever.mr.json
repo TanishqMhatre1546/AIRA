@@ -1,0 +1,296 @@
+{
+  "condition_id": "icmr-stw-dengue-fever",
+  "language": "mr",
+  "translations": {
+    "03211e5f54c5": {
+      "item_id": "03211e5f54c5",
+      "source_hash": "71d03c367212",
+      "text": "पोटात तीव्र वेदना किंवा दाब दिल्यास असह्य दुखणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4b5e78115c89": {
+      "item_id": "4b5e78115c89",
+      "source_hash": "833ce1262a79",
+      "text": "सतत उलट्या होणे ज्या थांबत नाहीत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9df5558a1d05": {
+      "item_id": "9df5558a1d05",
+      "source_hash": "f360bffeb1f1",
+      "text": "कोणत्याही भागातून रक्तस्त्राव: काळी विष्ठा, हिरड्यांमधून रक्त, नाकातून रक्त, लघवीतून रक्त, किंवा त्वचेवर असामान्य काळे-निळे डाग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "240f966588fe": {
+      "item_id": "240f966588fe",
+      "source_hash": "c861ef0456eb",
+      "text": "शरीरात पाणी साठणे जे पोटावर सूज किंवा फुफ्फुसाभोवती पाणी झाल्यामुळे श्वासाच्या त्रासाच्या स्वरूपात दिसते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "edba204a81e6": {
+      "item_id": "edba204a81e6",
+      "source_hash": "e6d403d4585e",
+      "text": "यकृत (लिव्हर) वाढणे (पोटाच्या उजव्या बाजूला सूज किंवा दुखणे)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f509cf4a9469": {
+      "item_id": "f509cf4a9469",
+      "source_hash": "a2d06455d3e3",
+      "text": "शॉकची (धक्क्याची) लक्षणे: अतिशय कमकुवत व जलद नाडी, थंड आणि चिकट त्वचा, प्रचंड अस्वस्थता किंवा अचानक थकवा, कमी रक्तदाब",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "89f2605e95f0": {
+      "item_id": "89f2605e95f0",
+      "source_hash": "e18f6af55af2",
+      "text": "अनेक तास लघवीचे प्रमाण खूप कमी होणे किंवा अजिबात लघवी न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "99468220f73d": {
+      "item_id": "99468220f73d",
+      "source_hash": "e717cf070526",
+      "text": "ताप अचानक उतरणे आणि त्याच वेळी रुग्णाची प्रकृती अधिक खालावणे, हा डेंग्यूमधील अत्यंत धोक्याचा टप्पा आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cd5e66112d45": {
+      "item_id": "cd5e66112d45",
+      "source_hash": "cb700e2739a1",
+      "text": "गोंधळ, वर्तनातील अचानक बदल, किंवा बेशुद्धी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "61d229cf1977": {
+      "item_id": "61d229cf1977",
+      "source_hash": "22af7b58ac04",
+      "text": "पूर्ण विश्रांती घ्या, कामावर किंवा शाळेत जाण्याचा प्रयत्न करू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff497c291e65": {
+      "item_id": "ff497c291e65",
+      "source_hash": "1e2524dbe71f",
+      "text": "भरपूर प्रमाणात द्रवपदार्थ प्या: पाणी, ORS, नारळ पाणी, फळांचे रस, सूप, डेंग्यूमुळे शरीरातील पाण्याचे मोठे नुकसान होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e87be6c7d3f0": {
+      "item_id": "e87be6c7d3f0",
+      "source_hash": "e981af9d2660",
+      "text": "तापासाठी फक्त पॅरासिटामॉल घ्या, अ‍ॅस्पिरिन, आयबुप्रोफेन किंवा इतर वेदनाशामक औषधे घेऊ नका कारण यामुळे डेंग्यूमध्ये रक्तस्त्रावाचा धोका वाढतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "59dd9f60f6cf": {
+      "item_id": "59dd9f60f6cf",
+      "source_hash": "7de28c906e4c",
+      "text": "तीव्र तापासाठी कोमट पाण्याच्या पट्ट्या कपाळावर ठेवा किंवा अंग पुसून घ्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2484d66a6f07": {
+      "item_id": "2484d66a6f07",
+      "source_hash": "1b4f5cc1459b",
+      "text": "वर दिलेल्या कोणत्याही धोक्याच्या लक्षणावर बारीक लक्ष ठेवा, असे काही आढळल्यास तातडीने रुग्णालयात जा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b7a47219b7b4": {
+      "item_id": "b7a47219b7b4",
+      "source_hash": "614689f99d9c",
+      "text": "घरीसुद्धा दररोज लक्ष ठेवणे अत्यावश्यक आहे: रुग्ण पाणी पिऊ शकतो का, लघवी होते का आणि कुठूनही रक्तस्त्राव होत नाही ना हे तपासा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "073624268e80": {
+      "item_id": "073624268e80",
+      "source_hash": "a8da990572fb",
+      "text": "इतरांना डेंग्यूचा संसर्ग पसरू नये म्हणून रुग्णाला डास चावण्यापासून वाचवा, मच्छरदाणी आणि डास प्रतिबंधक वापरा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2d9caecb4c14": {
+      "item_id": "2d9caecb4c14",
+      "source_hash": "7f9d73d81bff",
+      "text": "कोणतीही सूज कमी करणारी किंवा रक्त पातळ करणारी औषधे स्वतःहून घेऊ नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9186a7c2c669": {
+      "item_id": "9186a7c2c669",
+      "source_hash": "ca353e906377",
+      "text": "तीव्र डोकेदुखी, डोळ्यांच्या मागे वेदना आणि अंगदुखीसह ताप, विशेषतः डेंग्यूची साथ असलेल्या भागात किंवा प्रवासानंतर",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea4a8d513200": {
+      "item_id": "ea4a8d513200",
+      "source_hash": "4953a584701f",
+      "text": "त्वचेवर लाल पुरळ येण्यासह ताप असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e1b7cdfcb037": {
+      "item_id": "e1b7cdfcb037",
+      "source_hash": "ecfbb4e784e2",
+      "text": "कोणत्याही सुधाराशिवाय 2 ते 3 दिवसांपेक्षा जास्त काळ टिकणारा ताप",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f2fc859bfa30": {
+      "item_id": "f2fc859bfa30",
+      "source_hash": "10df0b779c8a",
+      "text": "ताप अचानक कमी होणे पण रुग्णाला अधिक अशक्त किंवा आजारी वाटणे, ही देखरेखीची गरज असणारी धोक्याची वेळ आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "675094fe4999": {
+      "item_id": "675094fe4999",
+      "source_hash": "673a02beaebf",
+      "text": "लहान मुले, वृद्ध, गरोदर महिला, किंवा मधुमेह, हृदयरोग किंवा मूत्रपिंडाचा आजार असलेल्या व्यक्तीमधील डेंग्यू ताप, यांना गंभीर डेंग्यूचा मोठा धोका असतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7e95276585ce": {
+      "item_id": "7e95276585ce",
+      "source_hash": "2a6949b83b2c",
+      "text": "वर नमूद केलेले कोणतेही धोक्याचे लक्षण, पोटात तीव्र वेदना, सतत उलट्या, रक्तस्त्राव, शॉकची लक्षणे, गोंधळ, लघवी न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ba9cee1d7b0": {
+      "item_id": "6ba9cee1d7b0",
+      "source_hash": "4a3739ddf420",
+      "text": "संशयित शॉकसह डेंग्यू: हातपाय थंड पडणे, अस्वस्थता, अत्यंत कमकुवत नाडी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f15355983fc2": {
+      "item_id": "f15355983fc2",
+      "source_hash": "97dae90b2780",
+      "text": "कोणत्याही भागातून सक्रिय रक्तस्त्राव होणारा डेंग्यू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8b87ecfaf689": {
+      "item_id": "8b87ecfaf689",
+      "source_hash": "9e3fe44eb7f4",
+      "text": "श्वास घेण्यास प्रचंड त्रास होणारा डेंग्यू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64761d754140": {
+      "item_id": "64761d754140",
+      "source_hash": "d21a3d287c58",
+      "text": "शुद्ध हरपलेला किंवा बेशुद्धावस्थेतील डेंग्यू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5901a9f55b2a": {
+      "item_id": "5901a9f55b2a",
+      "source_hash": "0463ba115d62",
+      "text": "डेंग्यू हा डासांमुळे होणारा विषाणूजन्य ताप आहे. जर एखाद्या व्यक्तीला ताप असेल आणि खालीलपैकी 2 किंवा अधिक लक्षणे असतील तर डेंग्यूचा संशय घ्यावा: मळमळ, उलट्या, पुरळ, स्नायूदुखी, डोकेदुखी, डोळ्यांमागे दुखणे, सांधेदुखी किंवा असामान्य रक्तस्त्राव.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2502b2408159": {
+      "item_id": "2502b2408159",
+      "source_hash": "204645b007fc",
+      "text": "डेंग्यूचे व्यवस्थापन रक्ताच्या तपासण्या आणि प्रकृतीवर दैनंदिन लक्ष ठेवून डॉक्टरांच्या देखरेखीखालीच केले पाहिजे. मूलभूत काळजीव्यतिरिक्त घरी डेंग्यूवर स्वतः उपचार करू नका. हलक्या डेंग्यूचे गंभीर डेंग्यूमध्ये रूपांतर वेगाने होऊ शकते.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

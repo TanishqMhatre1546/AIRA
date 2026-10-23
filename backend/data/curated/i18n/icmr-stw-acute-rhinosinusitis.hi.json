@@ -1,0 +1,296 @@
+{
+  "condition_id": "icmr-stw-acute-rhinosinusitis",
+  "language": "hi",
+  "translations": {
+    "26e7ee4d20f8": {
+      "item_id": "26e7ee4d20f8",
+      "source_hash": "b62178d8a39e",
+      "text": "आंख के चारों ओर सूजन या लालिमा, या आंख का आगे की ओर उभरना (प्रॉप्टोसिस), जो संक्रमण के आंख के गड्ढे में फैलने का संकेत है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1a90f8555570": {
+      "item_id": "1a90f8555570",
+      "source_hash": "e3ed196db8ac",
+      "text": "दोहरी दृष्टि (एक का दो दिखना) या दृष्टि में गंभीर गड़बड़ी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d3dc3235afa5": {
+      "item_id": "d3dc3235afa5",
+      "source_hash": "3cfcb950a410",
+      "text": "मानसिक स्थिति में बदलाव या भ्रम, जो संक्रमण के मस्तिष्क में फैलने का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21736f3b0be6": {
+      "item_id": "21736f3b0be6",
+      "source_hash": "e76294c6aeed",
+      "text": "गर्दन में अकड़न के साथ तेज सिरदर्द, जो मेनिन्जाइटिस (दिमागी बुखार) का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ef93e41ecbf8": {
+      "item_id": "ef93e41ecbf8",
+      "source_hash": "c96e157e054e",
+      "text": "माथे पर लगातार बढ़ती सूजन या भारीपन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "71498a2a63f7": {
+      "item_id": "71498a2a63f7",
+      "source_hash": "1657e3c29687",
+      "text": "चेहरे की त्वचा, तालू या नाक के अंदर के ऊतकों का काला या रंगहीन पड़ना, जो इनवेसिव फंगल साइनसाइटिस का संकेत है, विशेषकर मधुमेह रोगियों में यह एक मेडिकल इमरजेंसी है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6c5198b0a8f7": {
+      "item_id": "6c5198b0a8f7",
+      "source_hash": "cf48dec4d69e",
+      "text": "चेहरे का सुन्न होना या चेहरे पर संवेदना कम होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac391f098a8f": {
+      "item_id": "ac391f098a8f",
+      "source_hash": "55bd730420e4",
+      "text": "मधुमेह या इम्यूनोसप्रेसिव उपचार ले रहे व्यक्ति में साइनसाइटिस के लक्षण, इनमें संक्रमण के तेजी से बिगड़ने का उच्च जोखिम होता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2860173748e2": {
+      "item_id": "2860173748e2",
+      "source_hash": "a10fdbde84ec",
+      "text": "सामान्य सलाइन नेजल वॉश से नाक साफ करें, एक कप साफ पानी में एक चुटकी नमक घोलें और धीरे से प्रत्येक नथुने को धोएं। इससे बलगम साफ होता है और सांस लेना आसान होता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d10a526f654c": {
+      "item_id": "d10a526f654c",
+      "source_hash": "62cd31b8efbe",
+      "text": "दिन में 2 या 3 बार, 10 से 15 मिनट के लिए भाप लेने से नाक की जकड़न दूर हो सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfd56f202ba7": {
+      "item_id": "cfd56f202ba7",
+      "source_hash": "8417d2d813d3",
+      "text": "बलगम को पतला रखने और आसानी से बाहर निकालने के लिए पर्याप्त तरल पदार्थ पिएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d809401381ca": {
+      "item_id": "d809401381ca",
+      "source_hash": "e64ddab98380",
+      "text": "बलगम के निकास में मदद के लिए सिर को थोड़ा ऊंचा रखकर सोएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a742cd07f9a6": {
+      "item_id": "a742cd07f9a6",
+      "source_hash": "ccdd8f250d3b",
+      "text": "धूम्रपान से बचें और तंबाकू के धुएं, धूल और तेज रासायनिक गंध के संपर्क से दूर रहें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "18546c2b2caa": {
+      "item_id": "18546c2b2caa",
+      "source_hash": "2b0634b64b6e",
+      "text": "सर्दी के बाद 7 दिन से कम समय तक रहने वाले लक्षण आमतौर पर वायरल होते हैं और अपने आप ठीक हो जाते हैं, आराम, तरल पदार्थ और सलाइन नेजल वॉश उपयुक्त हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c1d981f952e": {
+      "item_id": "7c1d981f952e",
+      "source_hash": "b5f59217a5de",
+      "text": "नाक खोलने वाले स्प्रे (नेजल डिकंजेस्टेंट) का उपयोग 3 से 5 दिन से अधिक न करें, लंबे समय तक उपयोग से नाक की जकड़न और बिगड़ सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0af4e77dea1b": {
+      "item_id": "0af4e77dea1b",
+      "source_hash": "9548945f272d",
+      "text": "दांतों की स्वच्छता पर ध्यान दें, ऊपरी दांत की अनुपचारित सड़न उस तरफ साइनस संक्रमण का कारण बन सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe4275f2757e": {
+      "item_id": "fe4275f2757e",
+      "source_hash": "97d781371c9e",
+      "text": "सर्दी के बाद 7 दिन से अधिक समय तक नाक बंद रहना, नाक बहना, या चेहरे पर दबाव या दर्द रहना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4625514253aa": {
+      "item_id": "4625514253aa",
+      "source_hash": "41ba09a51411",
+      "text": "बुखार के साथ गाढ़ा पीला या हरा नाक का स्राव होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d32034cfbc1b": {
+      "item_id": "d32034cfbc1b",
+      "source_hash": "d9e1318a4900",
+      "text": "गालों, माथे या आँखों के बीच में दर्द या दबाव महसूस होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "981644619e43": {
+      "item_id": "981644619e43",
+      "source_hash": "fe8c90aad548",
+      "text": "सूंघने की क्षमता कम होना या पूरी तरह समाप्त होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b4bc85ea51c1": {
+      "item_id": "b4bc85ea51c1",
+      "source_hash": "11e4b2630b46",
+      "text": "निर्धारित एंटीबायोटिक्स का पूरा कोर्स करने के बाद भी लक्षणों में सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0b5e0cd55ec1": {
+      "item_id": "0b5e0cd55ec1",
+      "source_hash": "608541fdfdc0",
+      "text": "बार-बार साइनसाइटिस होना (कुछ महीनों में 1 से अधिक बार)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ae9f71d27eca": {
+      "item_id": "ae9f71d27eca",
+      "source_hash": "86d61a1f44be",
+      "text": "मधुमेह से पीड़ित व्यक्ति में साइनसाइटिस, गंभीर संक्रमण के उच्च जोखिम को देखते हुए उन्हें तुरंत डॉक्टर से मिलना चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "926b9cb4cea4": {
+      "item_id": "926b9cb4cea4",
+      "source_hash": "44cb1d588100",
+      "text": "दांतों से जुड़ा संदिग्ध साइनसाइटिस, चेहरे के एक तरफ ऊपरी दांतों के पास दर्द होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c4ae9700bd3": {
+      "item_id": "5c4ae9700bd3",
+      "source_hash": "026aca0d70f6",
+      "text": "ऊपर सूचीबद्ध कोई भी गंभीर लक्षण, आंख में सूजन, दोहरी दृष्टि, भ्रम, गर्दन में अकड़न, माथे पर भारीपन, चेहरे के काले पड़ते ऊतक",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2552723fdb2": {
+      "item_id": "c2552723fdb2",
+      "source_hash": "65294fc0f155",
+      "text": "मधुमेह या कमजोर प्रतिरक्षा वाले व्यक्ति में संदिग्ध इनवेसिव फंगल साइनसाइटिस",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "efc07ecefb21": {
+      "item_id": "efc07ecefb21",
+      "source_hash": "dccd33f78ab7",
+      "text": "उचित रूप से निर्धारित एंटीबायोटिक उपचार के 10 दिन बाद भी कोई सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "53bee32a0e84": {
+      "item_id": "53bee32a0e84",
+      "source_hash": "ad79f1beb261",
+      "text": "एंटीबायोटिक उपचार पर होने के बावजूद लक्षणों का और बिगड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88718913d28f": {
+      "item_id": "88718913d28f",
+      "source_hash": "ecadc94bb339",
+      "text": "सर्दी के बाद 7 दिन से अधिक समय तक नाक बंद रहना, नाक बहना या चेहरे पर दर्द रहना साइनसाइटिस का संकेत है। 7 दिन से कम समय तक रहने वाले लक्षण सामान्यतः वायरल सर्दी होते हैं और इनमें एंटीबायोटिक्स की आवश्यकता नहीं होती।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

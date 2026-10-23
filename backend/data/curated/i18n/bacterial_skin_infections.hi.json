@@ -1,0 +1,446 @@
+{
+  "condition_id": "icmr-stw-bacterial-skin-infections",
+  "language": "hi",
+  "translations": {
+    "6155a2cccc89": {
+      "item_id": "6155a2cccc89",
+      "source_hash": "927687cd18cb",
+      "text": "100.4 degrees Fahrenheit से अधिक बुखार होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "31cc7a04acf0": {
+      "item_id": "31cc7a04acf0",
+      "source_hash": "f3dab9b0a048",
+      "text": "प्रति मिनट 90 धड़कनों से अधिक हृदय गति होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d9ac20bbf80a": {
+      "item_id": "d9ac20bbf80a",
+      "source_hash": "70c35676a82b",
+      "text": "प्रति मिनट 24 से अधिक बार सांस लेना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c450f8d3d823": {
+      "item_id": "c450f8d3d823",
+      "source_hash": "b7d9be7fa696",
+      "text": "श्वेत रक्त कोशिकाओं (WBC) की अत्यधिक संख्या (सेप्सिस का संकेत)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "72fd0cbabe24": {
+      "item_id": "72fd0cbabe24",
+      "source_hash": "d538801e68ca",
+      "text": "त्वचा में असहनीय दर्द के बाद अचानक दर्द का समाप्त हो जाना, यह नेक्रोटाइजिंग फासिसाइटिस का संकेत हो सकता है, जो जानलेवा संक्रमण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "24e8c1c5747e": {
+      "item_id": "24e8c1c5747e",
+      "source_hash": "b71042275f54",
+      "text": "प्रभावित क्षेत्र के ऊपर की त्वचा का काला पड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1b0cde4c5e8d": {
+      "item_id": "1b0cde4c5e8d",
+      "source_hash": "aacbb6b343d3",
+      "text": "त्वचा पर फफोले पड़ना, त्वचा का छिलना या ऊतकों का क्षय होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e93db17f425": {
+      "item_id": "3e93db17f425",
+      "source_hash": "430bdb18f2ac",
+      "text": "कम रक्तचाप (लो BP) या शॉक के लक्षण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2ef4e9aa5ace": {
+      "item_id": "2ef4e9aa5ace",
+      "source_hash": "067fde211be0",
+      "text": "पूरे शरीर की त्वचा का व्यापक रूप से छिलना या पपड़ी बनना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "79365b7271b8": {
+      "item_id": "79365b7271b8",
+      "source_hash": "bb3aec50aa49",
+      "text": "त्वचा जो छिलने से पहले संवेदनशील, दर्दनाक और गर्म महसूस होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ee1625e23a3": {
+      "item_id": "0ee1625e23a3",
+      "source_hash": "b5e893ef6b22",
+      "text": "तेज अस्वस्थता की सामान्य भावना के साथ बुखार होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c4913a7dedd4": {
+      "item_id": "c4913a7dedd4",
+      "source_hash": "ca1f91f05c81",
+      "text": "निर्जलीकरण (शरीर में पानी की कमी) के लक्षण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a8b8a9914b29": {
+      "item_id": "a8b8a9914b29",
+      "source_hash": "ddab08484464",
+      "text": "त्वचा की अच्छी स्वच्छता बनाए रखें और नियमित रूप से हाथ धोएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08590f7176e7": {
+      "item_id": "08590f7176e7",
+      "source_hash": "29224e0458fe",
+      "text": "प्रभावित त्वचा पर तेल लगाने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "690ce42b4c28": {
+      "item_id": "690ce42b4c28",
+      "source_hash": "b459d193fefc",
+      "text": "घाव भरने में सहायता के लिए पर्याप्त पौष्टिक भोजन करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f3adecc3d079": {
+      "item_id": "f3adecc3d079",
+      "source_hash": "d9e9dbf555bd",
+      "text": "छोटे घावों या हल्के फॉलिकुलिटिस के लिए प्रभावित क्षेत्र को साफ और सूखा रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e68e35883630": {
+      "item_id": "e68e35883630",
+      "source_hash": "30f9624a71e4",
+      "text": "किसी फोड़े या फुंसी को दबाएं, फोड़ें या खरोंचें नहीं, इससे संक्रमण फैल सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1e31d4a4a319": {
+      "item_id": "1e31d4a4a319",
+      "source_hash": "6e53cf9514ff",
+      "text": "कपड़े और तौलिये गर्म पानी में अलग से धोएं और उन्हें धूप में सुखाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fd419fd829e5": {
+      "item_id": "fd419fd829e5",
+      "source_hash": "5a1fb0433991",
+      "text": "दूसरों के साथ तौलिया, कपड़े या व्यक्तिगत वस्तुएं साझा करने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2bca16b0604c": {
+      "item_id": "2bca16b0604c",
+      "source_hash": "fa2a705d492c",
+      "text": "एक फोड़ा, फुंसी या त्वचा की सूजन जो बड़ी हो रही हो, अधिक दर्दनाक हो, या सुधर न रही हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2c8a417cc5c": {
+      "item_id": "c2c8a417cc5c",
+      "source_hash": "c087b14b725f",
+      "text": "घाव या संक्रमण स्थल से बाहर की ओर लालिमा का फैलना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "141c915ec796": {
+      "item_id": "141c915ec796",
+      "source_hash": "44504b77aa4b",
+      "text": "हल्के बुखार के साथ त्वचा का कोई भी संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "007d2aaf52ef": {
+      "item_id": "007d2aaf52ef",
+      "source_hash": "6f88a2007691",
+      "text": "मधुमेह से पीड़ित व्यक्ति में त्वचा का संक्रमण, ऐसे मरीजों में त्वचा संक्रमण अधिक गंभीर हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f34d1d58f179": {
+      "item_id": "f34d1d58f179",
+      "source_hash": "39bf7a9050ba",
+      "text": "परिवार के कई सदस्यों में बार-बार फोड़े या फॉलिकुलिटिस होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ac592c73984": {
+      "item_id": "0ac592c73984",
+      "source_hash": "2362530bddbd",
+      "text": "पैरों को प्रभावित करने वाला संक्रमण जिसमें लालिमा, दर्द और सूजन हो (सेल्युलाइटिस)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ffe2326815c6": {
+      "item_id": "ffe2326815c6",
+      "source_hash": "70812ba66d8d",
+      "text": "नीचे घाव के साथ एक मोटी काली पपड़ी (एक्थिमा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cf0fecc79f4f": {
+      "item_id": "cf0fecc79f4f",
+      "source_hash": "14dab3604bb5",
+      "text": "इम्पेटिगो (सूजी हुई त्वचा पर गीली पीली-भूरी पपड़ी) जो व्यापक हो या ठीक न हो रही हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "23be8247259f": {
+      "item_id": "23be8247259f",
+      "source_hash": "cd4e39d95a72",
+      "text": "ऊपर सूचीबद्ध कोई भी गंभीर संकेत, बुखार, तेज दिल की धड़कन, तेज सांस, कम रक्तचाप",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "875126a32117": {
+      "item_id": "875126a32117",
+      "source_hash": "4b08030250c9",
+      "text": "असहनीय दर्द के बाद अचानक राहत मिलना, यह संभावित नेक्रोटाइजिंग फासिसाइटिस है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e944b0b31c74": {
+      "item_id": "e944b0b31c74",
+      "source_hash": "a1ffb3d014a9",
+      "text": "संक्रमित क्षेत्र के ऊपर त्वचा का काला पड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e263a99e4fbb": {
+      "item_id": "e263a99e4fbb",
+      "source_hash": "9da6066ec620",
+      "text": "त्वचा का व्यापक रूप से छिलना या फफोले पड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a4ec2d1dd84a": {
+      "item_id": "a4ec2d1dd84a",
+      "source_hash": "841f7e2803e7",
+      "text": "कमजोर प्रतिरक्षा वाले व्यक्ति (स्टेरॉयड, कीमोथेरेपी या एचआईवी) में त्वचा संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4d25698d7fe7": {
+      "item_id": "4d25698d7fe7",
+      "source_hash": "a37a2baa69d7",
+      "text": "एक बड़ा फोड़ा या कार्बंकल जिसे मवाद निकालने (ड्रेनेज) की आवश्यकता हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e9e69183f91d": {
+      "item_id": "e9e69183f91d",
+      "source_hash": "291444676a5f",
+      "text": "2 से 3 दिन के उपचार के बाद भी कोई सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "364e94fc429a": {
+      "item_id": "364e94fc429a",
+      "source_hash": "e564d0d77bc7",
+      "text": "रक्त विषाक्तता (सेप्टिसीमिया) के संकेत: तेज बुखार, भ्रम, तेजी से स्थिति बिगड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d06b1a10db80": {
+      "item_id": "d06b1a10db80",
+      "source_hash": "9f6bd1934618",
+      "text": "इम्पेटिगो (त्वचा पर पपड़ीदार संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5682dfba2487": {
+      "item_id": "5682dfba2487",
+      "source_hash": "78cab19d609b",
+      "text": "एक्थिमा (गहरा घाव और पपड़ी)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e3eca5ff2b4": {
+      "item_id": "3e3eca5ff2b4",
+      "source_hash": "75509d3a67e9",
+      "text": "फॉलिकुलिटिस (बालों की जड़ों का संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ae0166c6b6b": {
+      "item_id": "6ae0166c6b6b",
+      "source_hash": "8094eae76eda",
+      "text": "फुरुनकल (फोड़ा / बालतोड़)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "37e29152ef43": {
+      "item_id": "37e29152ef43",
+      "source_hash": "6fc719fab965",
+      "text": "कार्बंकल (बड़ा फोड़ा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bd5001f801c": {
+      "item_id": "7bd5001f801c",
+      "source_hash": "7b66db4a0ae2",
+      "text": "त्वचा का फोड़ा (एब्सेस)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c5e97a89a6b0": {
+      "item_id": "c5e97a89a6b0",
+      "source_hash": "2efb3fa204ad",
+      "text": "सेल्युलाइटिस (त्वचा की भीतरी परतों का संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "17bd89e157b3": {
+      "item_id": "17bd89e157b3",
+      "source_hash": "a99953a189bd",
+      "text": "एरसिपेलस (त्वचा की तीव्र लाल सूजन)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90e5c5b71970": {
+      "item_id": "90e5c5b71970",
+      "source_hash": "2c52f3f30a15",
+      "text": "स्टैफिलोकोकल स्कैल्डेड स्किन सिंड्रोम",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

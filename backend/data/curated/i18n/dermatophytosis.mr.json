@@ -1,0 +1,336 @@
+{
+  "condition_id": "icmr-stw-dermatophytosis",
+  "language": "mr",
+  "translations": {
+    "196755ce0e9f": {
+      "item_id": "196755ce0e9f",
+      "source_hash": "ed2df87f1ce7",
+      "text": "शरीराच्या मोठ्या भागावर पसरलेला अत्यंत तीव्र संसर्ग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f63167d4a1c0": {
+      "item_id": "f63167d4a1c0",
+      "source_hash": "e9c71e4a935f",
+      "text": "4 आठवड्यांच्या नियमित उपचारानंतरही काहीही सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f0d33fed971e": {
+      "item_id": "f0d33fed971e",
+      "source_hash": "de970a040537",
+      "text": "पूर्ण उपचार घेऊनही संसर्ग वारंवार परत येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8b3ee2fdd4e2": {
+      "item_id": "8b3ee2fdd4e2",
+      "source_hash": "5bf23c12d84d",
+      "text": "गरोदरपणात किंवा यकृत, मूत्रपिंड अथवा हृदयविकार असलेल्या व्यक्तीमध्ये संसर्ग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cf262dec8dcc": {
+      "item_id": "cf262dec8dcc",
+      "source_hash": "0da6e3c040c2",
+      "text": "स्टेरॉईडयुक्त क्रीम दीर्घकाळ वापरल्याचा संशय किंवा इतिहास, यामुळे बुरशीजन्य संसर्ग खूप वाढू शकतो आणि त्यावर उपचार करणे अत्यंत कठीण होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3b2b161b3fb9": {
+      "item_id": "3b2b161b3fb9",
+      "source_hash": "edbbbe4a89f9",
+      "text": "साध्या साबणाने आणि सामान्य तापमानाच्या पाण्याने रोज आंघोळ करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4bc2d77ea6cb": {
+      "item_id": "4bc2d77ea6cb",
+      "source_hash": "b16a1bf931a4",
+      "text": "आंघोळीनंतर त्वचा व्यवस्थित कोरडी करा, विशेषतः पायांच्या बोटांमधील जागा आणि त्वचेच्या घड्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e94c6acd35ad": {
+      "item_id": "e94c6acd35ad",
+      "source_hash": "dc6fcfa812f3",
+      "text": "कपडे गरम पाण्यात वेगळे धुवा आणि ते उन्हात उलटे करून वाळवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0218004e3037": {
+      "item_id": "0218004e3037",
+      "source_hash": "3f709b6f202f",
+      "text": "टॉवेल, कपडे किंवा अंतर्वस्त्रे इतरांसोबत शेअर करू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bf6f2ed734b": {
+      "item_id": "7bf6f2ed734b",
+      "source_hash": "a1b91d648328",
+      "text": "कपडे न धुता पुन्हा वापरू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4a2a8c391d04": {
+      "item_id": "4a2a8c391d04",
+      "source_hash": "01dc8560a477",
+      "text": "नखे लहान आणि कापलेली ठेवा, संसर्ग झालेली नखे ठिसूळ असतात आणि बुरशी पसरवू शकतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c6fd7c0a293": {
+      "item_id": "5c6fd7c0a293",
+      "source_hash": "9aada7b365ba",
+      "text": "पोहण्याचे तलाव किंवा सार्वजनिक स्नानगृहे यांसारख्या ठिकाणी अनवाणी चालणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3969f09df6e7": {
+      "item_id": "3969f09df6e7",
+      "source_hash": "95141dfd317a",
+      "text": "सुती मोजे घाला आणि ते दररोज बदला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eb3132513315": {
+      "item_id": "eb3132513315",
+      "source_hash": "a78c48fe677d",
+      "text": "कोणतीही स्टेरॉईडयुक्त क्रीम वापरू नका (जी अनेकदा औषधांच्या दुकानात कॉम्बिनेशन क्रीम म्हणून विकली जाते), यामुळे बुरशीचा संसर्ग खूप जास्त बिघडतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "299b4a25c75e": {
+      "item_id": "299b4a25c75e",
+      "source_hash": "b31022a853a4",
+      "text": "खाज कमी होताच उपचार थांबवू नका, नेहमी पूर्ण कोर्स पूर्ण करा कारण संसर्ग शरीरात अजूनही शिल्लक असतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5666421f42c5": {
+      "item_id": "5666421f42c5",
+      "source_hash": "454b5dc3da75",
+      "text": "स्वतःच्या मनाने औषधोपचार करू नका, यामुळे नंतर संसर्गावर उपचार करणे अधिक कठीण होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5b0cd6b5a99a": {
+      "item_id": "5b0cd6b5a99a",
+      "source_hash": "3759e16760e7",
+      "text": "त्वचेवर, जांघेत, पायांवर किंवा हातांवर कोणताही खाज सुटणारा, गोल आकाराचा, खपली असलेला पुरळ",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97ddb34d205b": {
+      "item_id": "97ddb34d205b",
+      "source_hash": "6ca9696de353",
+      "text": "नखांचा रंग बदलणे, जाड होणे किंवा नखे ठिसूळ होऊन तुटणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b785717bea58": {
+      "item_id": "b785717bea58",
+      "source_hash": "7baf8f7c39ab",
+      "text": "4 आठवड्यांनंतरही संसर्ग उपचाराला प्रतिसाद न देणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1ab99939cf04": {
+      "item_id": "1ab99939cf04",
+      "source_hash": "744c0dade0f5",
+      "text": "संसर्ग कुटुंबातील इतर सदस्यांमध्ये पसरणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aa9e6226a211": {
+      "item_id": "aa9e6226a211",
+      "source_hash": "e2b4af5dcf90",
+      "text": "जांघेत, तळहातांवर किंवा तळपायांवर संसर्ग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5ee0a5ff25cf": {
+      "item_id": "5ee0a5ff25cf",
+      "source_hash": "ae0bc459c5f7",
+      "text": "तळहात किंवा तळपायांच्या घड्यांमध्ये खपल्या धरणे, किंवा पायांवर कोरडे फोड येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "04a4c20985ae": {
+      "item_id": "04a4c20985ae",
+      "source_hash": "bca40a9d5101",
+      "text": "जर गरोदर असाल किंवा जुनाट आजार असेल, तर कोणताही उपचार सुरू करण्यापूर्वी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7777918652d6": {
+      "item_id": "7777918652d6",
+      "source_hash": "9efd339ef584",
+      "text": "संपूर्ण शरीरावर अत्यंत मोठ्या प्रमाणावर पसरलेला आजार",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c0f255d0c5f": {
+      "item_id": "7c0f255d0c5f",
+      "source_hash": "e09dce346706",
+      "text": "योग्य अँटीफंगल औषधांसह 4 आठवड्यांच्या नियमित उपचारानंतरही काहीही सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88f597daae80": {
+      "item_id": "88f597daae80",
+      "source_hash": "609ad804a948",
+      "text": "दीर्घकाळ उपचार आणि औषधे व्यवस्थित घेऊनही संसर्ग दूर न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f7de2551e3d3": {
+      "item_id": "f7de2551e3d3",
+      "source_hash": "a76f5d05fabc",
+      "text": "वारंवार होणारा संसर्ग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "61b5f4e23897": {
+      "item_id": "61b5f4e23897",
+      "source_hash": "39daab34370e",
+      "text": "उपचारांच्या निवडीवर परिणाम करणाऱ्या परिस्थितींची उपस्थिती: गरोदरपण, यकृताचा आजार, मूत्रपिंडाचा आजार किंवा हृदयविकार",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "13015451623f": {
+      "item_id": "13015451623f",
+      "source_hash": "4b3ec7f8f25b",
+      "text": "टिनिया कॉर्पोरिस (शरीरावरील गजकर्ण / दाद)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfe6590c7aed": {
+      "item_id": "cfe6590c7aed",
+      "source_hash": "37a435330f53",
+      "text": "टिनिया क्रूरिस (जांघेतील संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2f20bd0f7d85": {
+      "item_id": "2f20bd0f7d85",
+      "source_hash": "d8a3335a7def",
+      "text": "टिनिया पेडिस (पायांचा ऍथलीट्स फूट संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b97355c7c9c9": {
+      "item_id": "b97355c7c9c9",
+      "source_hash": "28904da7f052",
+      "text": "टिनिया मॅन्युम (हातांचा बुरशीजन्य संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ba6f30d3f6e": {
+      "item_id": "0ba6f30d3f6e",
+      "source_hash": "416aee4984a2",
+      "text": "ऑन्कोमायकोसिस (नखांचा बुरशीजन्य संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

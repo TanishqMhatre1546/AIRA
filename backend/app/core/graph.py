@@ -122,6 +122,8 @@ class PipelineResponse(BaseModel):
     text_max: int = 300
     skip_allowed: bool = False
     answers_summary: list[str] = Field(default_factory=list)
+    content_language: Literal["en", "hi", "mr"] = "en"
+    translation_status: Literal["reviewed", "unreviewed", "none"] = "none"
 
 
 class PipelineState(TypedDict):
@@ -361,7 +363,29 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
             emergency_helplines = [
                 HelplineItem(label=h.name, number=h.number) for h in get_emergency_helplines()
             ]
-            watch_claims = [ValidatedClaim(text=w, citation_ids=[]) for w in score_res.watch_for]
+            watch_claims: list[ValidatedClaim] = []
+            for w in score_res.watch_for:
+                final_w = w
+                if req_lang in ("hi", "mr") and score_res.conditions:
+                    from app.core.text import normalize
+                    from app.data.corpus_loader import compute_item_id, to_corpus_condition_id
+                    from app.data.translations import translation_registry
+
+                    for cid in score_res.conditions:
+                        corpus_cid = to_corpus_condition_id(cid)
+                        for pg in (1, 2, None):
+                            t_w, _st = translation_registry.get_translation(
+                                corpus_cid,
+                                req_lang,
+                                compute_item_id(corpus_cid, "danger_signs", pg, normalize(w)),
+                                allow_unreviewed=deps.settings.allow_unreviewed_translations,
+                            )
+                            if t_w:
+                                final_w = t_w
+                                break
+                        if final_w != w:
+                            break
+                watch_claims.append(ValidatedClaim(text=final_w, citation_ids=[]))
             
             headline = get_localized_text(
                 req_lang,
@@ -513,6 +537,28 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         score_state = state.get("score")
         detected_conditions = score_state.conditions if score_state is not None else []
         query_text = state.get("augmented_text") or state["raw_text"]
+        req_lang = state.get("lang", "en")
+
+        if req_lang in ("hi", "mr") and detected_conditions:
+            from app.core.retriever import RetrievalResult, ScoredChunk
+            from app.data.corpus_loader import to_corpus_condition_id, to_profile_condition_id
+
+            target_cids = set()
+            for cid in detected_conditions:
+                target_cids.add(cid)
+                target_cids.add(to_corpus_condition_id(cid))
+                target_cids.add(to_profile_condition_id(cid))
+
+            matched_chunks = [ch for ch in deps.retriever.chunks if ch.condition_id in target_cids]
+            scored = [ScoredChunk(chunk=ch, fused_score=1.0) for ch in matched_chunks]
+            retrieval_res = RetrievalResult(
+                chunks=scored,
+                mode="bm25_only",
+                best_cosine=1.0,
+                total_candidates=len(scored),
+            )
+            return {"retrieval": retrieval_res}
+
         retrieval_res = deps.retriever.search(
             query=query_text,
             conditions=detected_conditions,
@@ -545,6 +591,22 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
         triage_level = score_state.level if score_state else "UNKNOWN"
         detected_conditions = score_state.conditions if score_state else []
         query_text = state.get("augmented_text") or state["raw_text"]
+        req_lang = state.get("lang", "en")
+
+        if req_lang in ("hi", "mr"):
+            from app.core.validators import build_extractive_fallback
+
+            draft = build_extractive_fallback(
+                chunks=chunks,
+                dropped_count=0,
+                triage_level=triage_level,
+                detected_conditions=detected_conditions,
+                all_chunks=deps.retriever.chunks,
+                lang=req_lang,
+                allow_unreviewed=deps.settings.allow_unreviewed_translations,
+            )
+            return {"draft": draft}
+
         model_chunks = chunks
         if triage_level != "EMERGENCY":
             non_danger = [
@@ -604,8 +666,9 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
 
         watch_claims: list[ValidatedClaim] = []
         if detected_conditions and triage_val != "UNKNOWN":
-            from app.core.validators import extract_items_from_chunk
+            from app.core.validators import extract_items_from_chunk_with_ids
             from app.data.corpus_loader import to_corpus_condition_id, to_profile_condition_id
+            from app.data.translations import translation_registry
 
             target_cids = set()
             for cid in detected_conditions:
@@ -620,19 +683,19 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                 and ch.section_type in ("danger_signs", "refer_urgently")
             ]
 
-            collected_watch_items: list[tuple[str, Any]] = []
+            collected_watch_items: list[tuple[str, str, Any]] = []
             for ch in danger_chunks:
-                items = extract_items_from_chunk(ch)
-                for itm in items:
+                items_with_ids = extract_items_from_chunk_with_ids(ch)
+                for itm, itm_id in items_with_ids:
                     if len(itm) > 220:
                         itm = itm[:217] + "..."
-                    collected_watch_items.append((itm, ch))
+                    collected_watch_items.append((itm, itm_id, ch))
                     if len(collected_watch_items) >= 5:
                         break
                 if len(collected_watch_items) >= 5:
                     break
 
-            for text_str, ch in collected_watch_items:
+            for text_str, itm_id, ch in collected_watch_items:
                 key = (ch.source_title, ch.page)
                 if key not in citation_map:
                     cit = Citation(
@@ -648,7 +711,20 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
                     next_cit_id += 1
                 else:
                     cit_id = citation_map[key].id
-                watch_claims.append(ValidatedClaim(text=text_str, citation_ids=[cit_id]))
+
+                final_text = text_str
+                if req_lang in ("hi", "mr") and itm_id:
+                    trans_text, _st = translation_registry.get_translation(
+                        ch.condition_id,
+                        req_lang,
+                        itm_id,
+                        allow_unreviewed=deps.settings.allow_unreviewed_translations,
+                        current_source_text=text_str,
+                    )
+                    if trans_text:
+                        final_text = trans_text
+
+                watch_claims.append(ValidatedClaim(text=final_text, citation_ids=[cit_id]))
 
         all_citations = sorted(citation_map.values(), key=lambda c: c.id)
 
@@ -678,6 +754,8 @@ def build_graph(deps: PipelineDeps) -> CompiledStateGraph[Any, Any, Any, Any]:
             mode=ans_mode,
             disclaimer=STANDARD_DISCLAIMER,
             answers_summary=summary_items,
+            content_language=draft.content_language if draft else "en",
+            translation_status=draft.translation_status if draft else "none",
         )
         return {"response": resp}
 

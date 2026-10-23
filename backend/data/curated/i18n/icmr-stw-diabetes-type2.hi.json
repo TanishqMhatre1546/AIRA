@@ -1,0 +1,356 @@
+{
+  "condition_id": "icmr-stw-diabetes-type2",
+  "language": "hi",
+  "translations": {
+    "91f5895315d1": {
+      "item_id": "91f5895315d1",
+      "source_hash": "c83c46d2bd42",
+      "text": "हाइपोग्लाइसीमिया (कम ब्लड शुगर), लक्षण: हाथ-पैर कांपना, अचानक पसीना आना, बेचैनी या चिड़चिड़ापन, भ्रम, तेज धड़कन, चक्कर आना, धुंधला दिखना, कमजोरी, दौरे या बेहोशी। ये लक्षण तब हो सकते हैं जब डायबिटीज से पीड़ित व्यक्ति खाना छोड़ दे या बहुत अधिक डायबिटीज की दवा ले ले। तत्काल कार्रवाई: यदि व्यक्ति होश में है और निगलने में सक्षम है, तो तुरंत चीनी दें, जैसे सादी चीनी, मीठा बिस्कुट, मिश्री, या कोई मीठा पेय। यदि बेहोश है, तो मुंह से कुछ भी न दें, तुरंत अस्पताल ले जाएं।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a2c3aa5c46ae": {
+      "item_id": "a2c3aa5c46ae",
+      "source_hash": "6cd6c7380d69",
+      "text": "भ्रम, तेज सांस और अत्यधिक प्यास के साथ बहुत अधिक ब्लड शुगर, यह डायबिटिक कीटोएसिडोसिस (DKA) का संकेत हो सकता है, जो एक आपात स्थिति है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "11e03a22cd27": {
+      "item_id": "11e03a22cd27",
+      "source_hash": "ea0db2ee29aa",
+      "text": "डायबिटीज से पीड़ित व्यक्ति में सीने में दर्द या सांस लेने में भारी तकलीफ, डायबिटीज दिल के दौरे के जोखिम को काफी बढ़ा देती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "01cbfbaab73b": {
+      "item_id": "01cbfbaab73b",
+      "source_hash": "84358a44d78a",
+      "text": "डायबिटीज से पीड़ित व्यक्ति में स्ट्रोक (लकवा) के चेतावनी संकेत: शरीर के एक तरफ अचानक कमजोरी, बोलने में कठिनाई, तेज सिरदर्द, देखने में असमर्थता, तुरंत अस्पताल जाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e62b0101b6c0": {
+      "item_id": "e62b0101b6c0",
+      "source_hash": "8e8e39b099e6",
+      "text": "ना भरने वाला घाव या पैर का अल्सर जिसमें लालिमा फैल रही हो, सूजन, मवाद या दुर्गंध हो, डायबिटिक फुट इन्फेक्शन तेजी से जानलेवा हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2364df035737": {
+      "item_id": "2364df035737",
+      "source_hash": "14313e384f39",
+      "text": "डायबिटीज से पीड़ित व्यक्ति में तेज बुखार के साथ गंभीर संक्रमण के लक्षण, डायबिटीज संक्रमण की गंभीरता को काफी बढ़ा देती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "147b56175c51": {
+      "item_id": "147b56175c51",
+      "source_hash": "5aa2466306cb",
+      "text": "अपनी डायबिटीज की दवाएं डॉक्टर के निर्देशानुसार ही लें, अपने आप दवा बंद न करें या उसमें बदलाव न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c39cd43afdd7": {
+      "item_id": "c39cd43afdd7",
+      "source_hash": "2acf35fcc8d2",
+      "text": "नियमित समय पर भोजन करें, भोजन छोड़ने से कुछ डायबिटीज दवाओं के साथ ब्लड शुगर में खतरनाक गिरावट आ सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "93f112a887fe": {
+      "item_id": "93f112a887fe",
+      "source_hash": "e9473eb696e7",
+      "text": "ब्लड शुगर कम होने के लक्षणों के लिए हमेशा अपने पास कुछ मीठा (चीनी, मिश्री, बिस्कुट) रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "68e35e774fd6": {
+      "item_id": "68e35e774fd6",
+      "source_hash": "225ca7d88463",
+      "text": "रिफाइंड चीनी, सफेद चावल, मैदा और मीठे पेय पदार्थों से परहेज करें। अधिक सब्जियां, साबुत अनाज, दालें और मध्यम मात्रा में फल खाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90e70c3089e9": {
+      "item_id": "90e70c3089e9",
+      "source_hash": "fb90681cb874",
+      "text": "शारीरिक रूप से सक्रिय रहें, रोजाना कम से कम 30 मिनट टहलना या हल्का व्यायाम ब्लड शुगर को नियंत्रित रखने में मदद करता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e85a2f4c163f": {
+      "item_id": "e85a2f4c163f",
+      "source_hash": "b0cf261817e6",
+      "text": "धूम्रपान न करें, धूम्रपान डायबिटीज के मरीजों में दिल के दौरे और किडनी खराब होने के खतरे को अत्यधिक बढ़ा देता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da0b50e89c01": {
+      "item_id": "da0b50e89c01",
+      "source_hash": "a8f77ad2f80b",
+      "text": "शराब से बचें या इसका बहुत ही सीमित उपयोग करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5a67f9aa6be1": {
+      "item_id": "5a67f9aa6be1",
+      "source_hash": "1c407f95ea85",
+      "text": "कटने, छाले, लालिमा, सूजन या घावों के लिए हर दिन अपने पैरों की जांच करें, डायबिटीज में छोटी सी चोट भी गंभीर हो सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cb09ce71e3e4": {
+      "item_id": "cb09ce71e3e4",
+      "source_hash": "c88da0c5809e",
+      "text": "हमेशा सही जूते-चप्पल पहनें, नंगे पैर चलने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ac2e38e71a4": {
+      "item_id": "9ac2e38e71a4",
+      "source_hash": "a074e91c7cf7",
+      "text": "अपने डॉक्टर की सलाह के अनुसार नियमित रूप से ब्लड शुगर की जांच करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "51528386742e": {
+      "item_id": "51528386742e",
+      "source_hash": "4a4c23ac7d72",
+      "text": "सभी फॉलो-अप नियुक्तियों में जाएं, डायबिटीज में ब्लड शुगर, ब्लड प्रेशर (BP), किडनी की कार्यप्रणाली और आंखों की नियमित निगरानी की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e25fad39c6a": {
+      "item_id": "3e25fad39c6a",
+      "source_hash": "ae9d449196bd",
+      "text": "लक्षण जो अनिदानित डायबिटीज का संकेत दे सकते हैं: बार-बार पेशाब आना, अत्यधिक प्यास लगना, अधिक भूख लगना, बिना कारण वजन घटना, अत्यधिक थकान, धुंधला दिखना, घाव का देर से भरना, या बार-बार संक्रमण होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "76065cc50c88": {
+      "item_id": "76065cc50c88",
+      "source_hash": "cc3fe68bf2d9",
+      "text": "घर के ग्लूकोमीटर पर ब्लड शुगर की रीडिंग का लगातार अधिक आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "24053c6a48bb": {
+      "item_id": "24053c6a48bb",
+      "source_hash": "a80228ce52d8",
+      "text": "30 वर्ष से अधिक आयु का कोई भी व्यक्ति जिसका वजन अधिक हो, परिवार में डायबिटीज का इतिहास हो, या हाई ब्लड प्रेशर (BP) हो, उसकी सालाना जांच होनी चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b112619c8466": {
+      "item_id": "b112619c8466",
+      "source_hash": "2fa1637ccc97",
+      "text": "डायबिटीज से पीड़ित व्यक्ति के पैर में कोई भी घाव या कट जो कुछ दिनों के भीतर ठीक नहीं हो रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "377ded4d0f81": {
+      "item_id": "377ded4d0f81",
+      "source_hash": "584536a56e80",
+      "text": "बार-बार होने वाले संक्रमण: त्वचा संक्रमण, फंगल संक्रमण, यूरिनरी इन्फेक्शन, या मुंह में छाले, ऐसे व्यक्ति में जिसे डायबिटीज न ज्ञात हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2c12642f3c6f": {
+      "item_id": "2c12642f3c6f",
+      "source_hash": "6ef844744cfa",
+      "text": "डायबिटीज से पीड़ित व्यक्ति जिसकी ब्लड शुगर सलाह मानने के बावजूद नियंत्रित नहीं हो रही है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a64e768b2da8": {
+      "item_id": "a64e768b2da8",
+      "source_hash": "2eba02ea931d",
+      "text": "डायबिटीज से पीड़ित व्यक्ति को कोई नई बीमारी शुरू होना, यहां तक कि सामान्य सर्दी या बुखार में भी कड़ी निगरानी की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "076fb4f7891f": {
+      "item_id": "076fb4f7891f",
+      "source_hash": "03f445d6861a",
+      "text": "ऊपर सूचीबद्ध कोई भी आपातकालीन खतरे का संकेत, बेहोशी के साथ हाइपोग्लाइसीमिया, सीने में दर्द, स्ट्रोक के लक्षण, गंभीर संक्रमण, फैलता हुआ पैर का घाव",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2eaf35ce5e7": {
+      "item_id": "c2eaf35ce5e7",
+      "source_hash": "a883d083a232",
+      "text": "डायबिटीज से पीड़ित व्यक्ति जो बहुत अस्वस्थ हो, भ्रमित हो, या खाने-पीने में असमर्थ हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1ccd618f8b9d": {
+      "item_id": "1ccd618f8b9d",
+      "source_hash": "dbf8029dbb99",
+      "text": "डायबिटिक फुट अल्सर जिसमें लालिमा फैल रही हो या दुर्गंध आ रही हो, अंग काटने से बचाने के लिए तत्काल विशेषज्ञ देखभाल की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2771571216bc": {
+      "item_id": "2771571216bc",
+      "source_hash": "7a4abe051ec4",
+      "text": "लक्षणों के साथ बहुत अधिक या बहुत कम ब्लड शुगर रीडिंग वाला डायबिटीज मरीज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e2bea9a14de8": {
+      "item_id": "e2bea9a14de8",
+      "source_hash": "890ea338f1fd",
+      "text": "30 वर्ष से अधिक आयु के सभी वयस्क, वर्ष में कम से कम 1 बार",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c89cf28faf28": {
+      "item_id": "c89cf28faf28",
+      "source_hash": "8651ff82679f",
+      "text": "कोई भी व्यक्ति जिसका वजन अधिक या मोटापा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0f56c946fda9": {
+      "item_id": "0f56c946fda9",
+      "source_hash": "403af2b07f50",
+      "text": "कोई भी व्यक्ति जिसके परिवार के करीबी सदस्य (माता-पिता या भाई-बहन) को डायबिटीज हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9501aebb9ce8": {
+      "item_id": "9501aebb9ce8",
+      "source_hash": "d88a4a174601",
+      "text": "हाई ब्लड प्रेशर (BP) या हाई कोलेस्ट्रॉल वाला कोई भी व्यक्ति",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "651dc851a207": {
+      "item_id": "651dc851a207",
+      "source_hash": "f1b5fd016c4f",
+      "text": "गर्भावस्था के दौरान डायबिटीज (जेस्टेशनल डायबिटीज) के इतिहास वाली महिलाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "951c148b0e85": {
+      "item_id": "951c148b0e85",
+      "source_hash": "36d0cf3664f0",
+      "text": "लक्षणों वाला कोई भी व्यक्ति: बार-बार पेशाब आना, अत्यधिक प्यास लगना, बिना कारण वजन कम होना, बार-बार संक्रमण होना, या घाव का देर से भरना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "76ea84d752f4": {
+      "item_id": "76ea84d752f4",
+      "source_hash": "3efaabf9fdb6",
+      "text": "AIRA केवल डायबिटीज जागरूकता, लक्षणों की पहचान और तात्कालिक मार्गदर्शन (ट्रायज) प्रदान करता है। डायबिटीज प्रबंधन, दवाइयों और खुराक की सलाह डॉक्टर से ही मिलनी चाहिए।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

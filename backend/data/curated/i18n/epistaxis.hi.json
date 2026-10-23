@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-epistaxis",
+  "language": "hi",
+  "translations": {
+    "bd6b635816d4": {
+      "item_id": "bd6b635816d4",
+      "source_hash": "4474d315aea9",
+      "text": "सही प्राथमिक उपचार के 20 मिनट बाद भी नाक से खून बहना बंद न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bf8abefafd55": {
+      "item_id": "bf8abefafd55",
+      "source_hash": "5cde5266226f",
+      "text": "नाक से बहुत अधिक या तेजी से खून बहना जिससे चक्कर आना, कमजोरी या बेहोशी जैसा महसूस हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "06d675b137fd": {
+      "item_id": "06d675b137fd",
+      "source_hash": "ec464accedca",
+      "text": "चोट जैसे स्पष्ट कारण के बिना लगातार नाक के केवल एक तरफ से खून बहना, इसकी जांच की आवश्यकता हो सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "81210b9bb7b4": {
+      "item_id": "81210b9bb7b4",
+      "source_hash": "40d67ad6a15a",
+      "text": "नाक बंद होना, कोई गांठ दिखना, या दृष्टि अथवा आंख में बदलाव के साथ नाक से खून आना, यह नाक या साइनस की गंभीर बीमारी का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08311787a6ca": {
+      "item_id": "08311787a6ca",
+      "source_hash": "241b1ce9491c",
+      "text": "खून पतला करने की दवाएं लेने वाले या रक्तस्राव विकार वाले व्यक्ति की नाक से खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a63a5bc0ce00": {
+      "item_id": "a63a5bc0ce00",
+      "source_hash": "b638368b87d4",
+      "text": "अनियंत्रित हाई ब्लड प्रेशर (BP) वाले व्यक्ति की नाक से खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c781172d767": {
+      "item_id": "7c781172d767",
+      "source_hash": "4d62b9af8d53",
+      "text": "सिर में चोट लगने के बाद नाक से खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e11116b1bac7": {
+      "item_id": "e11116b1bac7",
+      "source_hash": "d37d380e46f1",
+      "text": "नाक के साथ-साथ अन्य जगहों से भी खून आना, जैसे मसूड़ों से, त्वचा पर नीले निशान, पेशाब या मल में खून, यह रक्त विकार का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5fecb801132a": {
+      "item_id": "5fecb801132a",
+      "source_hash": "733316cdaf0d",
+      "text": "किशोर लड़के में बार-बार और अत्यधिक नाक से खून बहना, इसके लिए विशेषज्ञ मूल्यांकन की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "806a885e5710": {
+      "item_id": "806a885e5710",
+      "source_hash": "b5dba8a85e2f",
+      "text": "सीधे बैठें और थोड़ा आगे झुकें, सिर को पीछे न झुकाएं, क्योंकि इससे खून गले में जा सकता है और उल्टी या घुटन हो सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90918906c777": {
+      "item_id": "90918906c777",
+      "source_hash": "74fed614487d",
+      "text": "मुंह से सांस लें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4f9efc998491": {
+      "item_id": "4f9efc998491",
+      "source_hash": "6cf684d9aae0",
+      "text": "अपने अंगूठे और तर्जनी से नाक के नरम हिस्से (हड्डी वाले पुल के ठीक नीचे) को मजबूती से दबाएं, इसे ट्रॉटर्स पोजिशन कहा जाता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "78a64d3142c5": {
+      "item_id": "78a64d3142c5",
+      "source_hash": "5ff4b91613c5",
+      "text": "बिना छोड़े लगातार 10 मिनट तक नाक को दबाए रखें, समय देखने के लिए घड़ी का उपयोग करें, क्योंकि अधिकांश लोग समय का कम अनुमान लगाते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4cf22e980c96": {
+      "item_id": "4cf22e980c96",
+      "source_hash": "b10f902cfa04",
+      "text": "नाक और गालों पर ठंडी पट्टी या कपड़े में लपेटी हुई बर्फ लगाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4eee6cf1370f": {
+      "item_id": "4eee6cf1370f",
+      "source_hash": "4fd46433110f",
+      "text": "10 मिनट के बाद, धीरे से दबाव छोड़ें और जांचें कि क्या खून बहना बंद हो गया है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ebd8042eff0": {
+      "item_id": "0ebd8042eff0",
+      "source_hash": "e1dbc34c4ed0",
+      "text": "यदि खून बहना जारी रहता है, तो अगले 10 मिनट के लिए फिर से नाक दबाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "621fa489649a": {
+      "item_id": "621fa489649a",
+      "source_hash": "07ba7194aa66",
+      "text": "खून बहना बंद होने के तुरंत बाद जोर से नाक साफ करने या छींकने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e7efb5a426d5": {
+      "item_id": "e7efb5a426d5",
+      "source_hash": "94964868448e",
+      "text": "नाक से खून बहने के बाद कई घंटों तक गर्म पेय पदार्थों, भारी शारीरिक मेहनत और आगे झुकने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f1b9bbbc4b74": {
+      "item_id": "f1b9bbbc4b74",
+      "source_hash": "7b86c34a2a40",
+      "text": "यदि शुष्क हवा के कारण बार-बार नाक से खून आता है, तो रोजाना नथुने के अंदर थोड़ी पेट्रोलियम जेली या लिक्विड पैराफिन लगाएं, इससे नमी बनी रहती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c5b1b765fc7": {
+      "item_id": "5c5b1b765fc7",
+      "source_hash": "439e96434993",
+      "text": "बच्चों में नाक से खून बहने के अधिकांश मामले शुष्क हवा या नाक में उंगली डालने के कारण नाक के अगले हिस्से (लिटल्स एरिया) से होते हैं और सामान्य दबाव से जल्दी बंद हो जाते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f7944bb3ce90": {
+      "item_id": "f7944bb3ce90",
+      "source_hash": "59b9275a1ed5",
+      "text": "नाक से खून बहना जो बंद हो गया था लेकिन बार-बार होता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97100cd288dc": {
+      "item_id": "97100cd288dc",
+      "source_hash": "c69e10728997",
+      "text": "बार-बार नाक से खून बहने के साथ ज्ञात हाई ब्लड प्रेशर (BP), ब्लड प्रेशर की जांच और नियंत्रण आवश्यक है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da10004b7803": {
+      "item_id": "da10004b7803",
+      "source_hash": "ffe159ff2f26",
+      "text": "डायबिटीज से पीड़ित व्यक्ति की नाक से खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4f2ea722a239": {
+      "item_id": "4f2ea722a239",
+      "source_hash": "99b5ac886afb",
+      "text": "बच्चे में बिना किसी स्पष्ट कारण के बार-बार नाक से खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c92ef90c9d2f": {
+      "item_id": "c92ef90c9d2f",
+      "source_hash": "ff5c297b7f39",
+      "text": "लगातार दबाव बनाए रखने के 20 मिनट बाद भी नाक से खून बहना बंद न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eb4a40931726": {
+      "item_id": "eb4a40931726",
+      "source_hash": "eaa2ee262f99",
+      "text": "चक्कर आना, कमजोरी या तेज नब्ज के साथ भारी रक्त हानि",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "accddb7e26dd": {
+      "item_id": "accddb7e26dd",
+      "source_hash": "77fa8ef88b3f",
+      "text": "सिर की चोट के बाद नाक से खून बहना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bfd0e186f18": {
+      "item_id": "7bfd0e186f18",
+      "source_hash": "8f136682b29d",
+      "text": "नाक के साथ-साथ अन्य जगहों से भी रक्तस्राव होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "832d7d8fa9df": {
+      "item_id": "832d7d8fa9df",
+      "source_hash": "7decb271cfeb",
+      "text": "एक तरफ की नाक बंद होना, दृष्टि में बदलाव, या नाक अथवा चेहरे पर स्पष्ट सूजन के साथ नाक से खून बहना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5a3543d4bb02": {
+      "item_id": "5a3543d4bb02",
+      "source_hash": "1c89808fbc54",
+      "text": "एपिस्टैक्सिस का अर्थ है नाक से खून बहना। वयस्कों में अधिकांश नकसीर मामूली होती है और शुष्क हवा, नाक कुरेदने, चोट या अनियंत्रित ब्लड प्रेशर (BP) से संबंधित होती है। अधिकांश को साधारण प्राथमिक उपचार से घर पर ही संभाला जा सकता है।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

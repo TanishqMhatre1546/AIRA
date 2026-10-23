@@ -1,0 +1,376 @@
+{
+  "condition_id": "asha-ncd-hypertension",
+  "language": "mr",
+  "translations": {
+    "11647faecfd9": {
+      "item_id": "11647faecfd9",
+      "source_hash": "34916c784e73",
+      "text": "छातीच्या मध्यभागी 30 मिनिटांपेक्षा जास्त काळ टिकणाऱ्या वेदना, दाब किंवा आवळल्यासारखे वाटणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "592378af5858": {
+      "item_id": "592378af5858",
+      "source_hash": "69a29ee63838",
+      "text": "वेदना ज्या जबडा, मान, हात, खांदे किंवा पाठीमध्ये पसरत आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "77ab6342bd9c": {
+      "item_id": "77ab6342bd9c",
+      "source_hash": "a14a005ee63c",
+      "text": "छातीत अस्वस्थतेसह श्वास लागणे किंवा दम भरणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7d3f19212af0": {
+      "item_id": "7d3f19212af0",
+      "source_hash": "86b79c953fd6",
+      "text": "छातीत दुखण्यासह मळमळ होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4c0c53e2b30b": {
+      "item_id": "4c0c53e2b30b",
+      "source_hash": "eb79adc7673d",
+      "text": "बेशुद्ध पडणे किंवा चेतना नाहीशी होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c3dbc3a265d": {
+      "item_id": "1c3dbc3a265d",
+      "source_hash": "cf814299caf0",
+      "text": "चेहरा, हात किंवा पायाच्या एका बाजूला अचानक अशक्तपणा, लुळेपणा किंवा बधिरता येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e210f54ada01": {
+      "item_id": "e210f54ada01",
+      "source_hash": "9e8c5e277bb0",
+      "text": "बोलणे बंद होणे किंवा बोलताना अथवा समजून घेताना अचानक अडचण येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "792f321cb467": {
+      "item_id": "792f321cb467",
+      "source_hash": "f69a14b6a606",
+      "text": "अंधुक दिसणे किंवा दृष्टी जाणे, विशेषतः एका डोळ्याची",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66e5615df1e9": {
+      "item_id": "66e5615df1e9",
+      "source_hash": "07cf69bcafbd",
+      "text": "अनाकलनीय चक्कर येणे, तोल जाणे किंवा अचानक खाली पडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ba504e980e0b": {
+      "item_id": "ba504e980e0b",
+      "source_hash": "2417c4e30f3f",
+      "text": "अचानक तीव्र डोकेदुखी किंवा बेशुद्धी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ecbd6c246e6": {
+      "item_id": "9ecbd6c246e6",
+      "source_hash": "c5582b45aabf",
+      "text": "उच्च रक्तदाब (BP) असलेल्या व्यक्तीमध्ये यापैकी कोणतेही लक्षण आढळल्यास ती वैद्यकीय आणीबाणी मानली पाहिजे, त्वरित सामुदायिक आरोग्य केंद्र किंवा रुग्णालयात घेऊन जावे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6926b8523b68": {
+      "item_id": "6926b8523b68",
+      "source_hash": "e846f9138a5c",
+      "text": "तंबाखूचा सर्व प्रकारचा वापर थांबवा, धूम्रपान किंवा तंबाखू चघळल्याने रक्तदाब (BP) आणि हृदयविकाराचा धोका लक्षणीयरीत्या वाढतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ae23bcdd27e": {
+      "item_id": "6ae23bcdd27e",
+      "source_hash": "bb2f66e18d0b",
+      "text": "मद्यपान कमी करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "58bcc72b2e7d": {
+      "item_id": "58bcc72b2e7d",
+      "source_hash": "b800ed2cece3",
+      "text": "मिठाचे प्रमाण कमी करा, संपूर्ण कुटुंबासाठी दररोज जास्तीत जास्त 1 लहान चमचा (5 ग्रॅम) मीठ मर्यादित ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "23c74a2ea580": {
+      "item_id": "23c74a2ea580",
+      "source_hash": "f838b218a84d",
+      "text": "तेलकट, तळलेले आणि स्निग्ध पदार्थांचे सेवन कमी करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "793ac1e536a0": {
+      "item_id": "793ac1e536a0",
+      "source_hash": "118a9bba4a4b",
+      "text": "मैदा, साखर आणि गोड पेयांचे प्रमाण कमी करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e6cd5ec51486": {
+      "item_id": "e6cd5ec51486",
+      "source_hash": "3fbf1e2fc87b",
+      "text": "अधिक ताजी फळे, भाज्या, अखंड धान्ये आणि कडधान्ये खा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "48310da3b2b9": {
+      "item_id": "48310da3b2b9",
+      "source_hash": "e306410926a4",
+      "text": "निरोगी वजन राखा, वजन जास्त असल्यास ते कमी केल्याने रक्तदाब (BP) लक्षणीयरीत्या कमी होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "800f4a2d3f3d": {
+      "item_id": "800f4a2d3f3d",
+      "source_hash": "acd675f2472c",
+      "text": "शारीरिकदृष्ट्या सक्रिय राहा, दररोज किमान 30 मिनिटे वेगाने चालणे किंवा मध्यम स्वरूपाचा व्यायाम करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "042afb6137af": {
+      "item_id": "042afb6137af",
+      "source_hash": "fe9919c726d4",
+      "text": "मानसिक ताण नियंत्रित करा, विश्रांती तंत्रांचा सराव करा, कामात विश्रांती घ्या, सामाजिक संवाद ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b9b19b5004cd": {
+      "item_id": "b9b19b5004cd",
+      "source_hash": "85d25710ebd9",
+      "text": "रक्तदाबाची औषधे डॉक्टरांच्या सल्ल्यानुसार दररोज नियमित घ्या, बरे वाटत असले तरीही स्वतःहून औषध बंद करू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21be8c9e43d4": {
+      "item_id": "21be8c9e43d4",
+      "source_hash": "ed4ccb2e0f91",
+      "text": "उपचार सुरू असल्यास महिन्यातून किमान 1 वेळा रक्तदाब (BP) तपासून घ्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2aef0ee8f49b": {
+      "item_id": "2aef0ee8f49b",
+      "source_hash": "965e26e34845",
+      "text": "सल्ल्यानुसार प्राथमिक आरोग्य केंद्र किंवा उपकेंद्रात नियमित तपासणीसाठी उपस्थित राहा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "991ae8633066": {
+      "item_id": "991ae8633066",
+      "source_hash": "80ee617e5336",
+      "text": "उच्च रक्तदाबाला सायलेंट किलर (छुपा मारेकरी) म्हटले जाते कारण त्याची कोणतीही लक्षणे नसतात, ते ओळखण्याचा एकमेव मार्ग म्हणजे रक्तदाब (BP) मोजणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1827d29670ca": {
+      "item_id": "1827d29670ca",
+      "source_hash": "cd39cec5a05f",
+      "text": "30 वर्षे आणि त्याहून अधिक वयाच्या सर्व प्रौढांनी दरवर्षी किमान 1 वेळा त्यांचा रक्तदाब (BP) तपासावा, जरी त्यांना बरे वाटत असले तरीही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dbad1cd1c895": {
+      "item_id": "dbad1cd1c895",
+      "source_hash": "4cdb0d425655",
+      "text": "एका तपासणीत 140 mm Hg सिस्टॉलिक (वरचा आकडा) किंवा 90 mm Hg डायस्टॉलिक (खालचा आकडा) किंवा त्याहून अधिक रक्तदाब (BP) आढळल्यास पुष्टी आणि पुढील उपचारांसाठी वैद्यकीय अधिकाऱ्यांकडे जावे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "60dd1601422e": {
+      "item_id": "60dd1601422e",
+      "source_hash": "be3377eae3a5",
+      "text": "वारंवार डोकेदुखी, विशेषतः सकाळी डोक्याच्या मागील बाजूस दुखणे, हे कधीकधी अत्यंत उच्च रक्तदाबाचे (BP) लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2185e8f5d68b": {
+      "item_id": "2185e8f5d68b",
+      "source_hash": "55c1102f493b",
+      "text": "उच्च रक्तदाब (BP) असलेल्या कोणत्याही व्यक्तीमध्ये नवीन लक्षण किंवा आजार निर्माण झाल्यास, त्यांना गुंतागुंतीचा धोका जास्त असतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08239c316c9a": {
+      "item_id": "08239c316c9a",
+      "source_hash": "f2cc72824ab9",
+      "text": "हृदयविकाराचा झटका किंवा पक्षाघाताचा कौटुंबिक इतिहास असल्यास, तपासणी आणि प्रतिबंध अत्यंत महत्त्वाचे आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "233f9296092f": {
+      "item_id": "233f9296092f",
+      "source_hash": "1b172da4bab9",
+      "text": "वर नमूद केलेले कोणतेही हृदयविकाराचा झटका किंवा स्ट्रोकचे चेतावणीचे लक्षण, या वैद्यकीय आणीबाणीच्या परिस्थिती आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b020592599db": {
+      "item_id": "b020592599db",
+      "source_hash": "f17d99d1afd4",
+      "text": "उच्च रक्तदाबासह (BP) अत्यंत तीव्र डोकेदुखी आणि दृष्टीदोष किंवा गोंधळ, हे उच्च रक्तदाबाच्या गंभीर आणीबाणीचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3aee6813651a": {
+      "item_id": "3aee6813651a",
+      "source_hash": "86ac09d4b986",
+      "text": "उच्च रक्तदाबाचा (BP) रुग्ण ज्याने औषधे घेणे थांबवले आहे आणि आता अस्वस्थ वाटत आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "be67add647a0": {
+      "item_id": "be67add647a0",
+      "source_hash": "b0eea27ce2d7",
+      "text": "छातीत दुखणे, धाप लागणे किंवा पायांवर सूज असलेला उच्च रक्तदाबाचा (BP) रुग्ण, हे हृदय निकामी होण्याचे (हार्ट फेल्युअर) लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "465669b05ef0": {
+      "item_id": "465669b05ef0",
+      "source_hash": "7b9f635a3298",
+      "text": "30 वर्षांपेक्षा जास्त वयाच्या सर्व प्रौढांची दरवर्षी उच्च रक्तदाब (BP) आणि मधुमेह या दोन्हीसाठी तपासणी झाली पाहिजे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d9df07a78a8d": {
+      "item_id": "d9df07a78a8d",
+      "source_hash": "c18e47776e33",
+      "text": "हृदयविकाराचा झटका किंवा स्ट्रोकचा कौटुंबिक इतिहास असलेल्या उच्च-जोखीम व्यक्तींमध्ये रक्तदाब (BP) आणि रक्तातील साखरेची नियमित तपासणी केली पाहिजे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f0ef7db6b911": {
+      "item_id": "f0ef7db6b911",
+      "source_hash": "69187b702fc2",
+      "text": "हृदयविकाराचा झटका किंवा स्ट्रोकची चेतावणी देणारी लक्षणे अनुभवणाऱ्या कोणालाही त्वरित वैद्यकीय मदत मिळाली पाहिजे, प्रत्येक मिनिट मोलाचा आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0002a71de42b": {
+      "item_id": "0002a71de42b",
+      "source_hash": "9334cd32b373",
+      "text": "AIRA केवळ उच्च रक्तदाब जागरूकता, धोक्याची लक्षणे, जीवनशैलीतील बदल आणि ट्रायज मार्गदर्शन प्रदान करते. निदान आणि उपचार केवळ पात्र डॉक्टर किंवा वैद्यकीय अधिकाऱ्यांनीच केले पाहिजेत.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

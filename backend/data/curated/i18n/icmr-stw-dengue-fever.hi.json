@@ -1,0 +1,296 @@
+{
+  "condition_id": "icmr-stw-dengue-fever",
+  "language": "hi",
+  "translations": {
+    "03211e5f54c5": {
+      "item_id": "03211e5f54c5",
+      "source_hash": "71d03c367212",
+      "text": "पेट में बहुत तेज दर्द या छूने पर अत्यधिक संवेदनशीलता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4b5e78115c89": {
+      "item_id": "4b5e78115c89",
+      "source_hash": "833ce1262a79",
+      "text": "लगातार उल्टी होना जो रुक न रही हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9df5558a1d05": {
+      "item_id": "9df5558a1d05",
+      "source_hash": "f360bffeb1f1",
+      "text": "किसी भी अंग से रक्तस्राव: काला मल, मसूड़ों से खून, नाक से खून, पेशाब में खून, या त्वचा पर असामान्य नीले निशान",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "240f966588fe": {
+      "item_id": "240f966588fe",
+      "source_hash": "c861ef0456eb",
+      "text": "द्रव जमा होना जो पेट की सूजन या फेफड़ों के चारों ओर तरल पदार्थ के कारण सांस लेने में कठिनाई के रूप में दिखे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "edba204a81e6": {
+      "item_id": "edba204a81e6",
+      "source_hash": "e6d403d4585e",
+      "text": "लिवर का बढ़ना (पेट के दाहिने हिस्से में सूजन या दर्द)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f509cf4a9469": {
+      "item_id": "f509cf4a9469",
+      "source_hash": "a2d06455d3e3",
+      "text": "शॉक (सदमे) के लक्षण: कमजोर और तेज नब्ज, ठंडी और चिपचिपी त्वचा, अत्यधिक बेचैनी या अचानक थकान, कम रक्तचाप",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "89f2605e95f0": {
+      "item_id": "89f2605e95f0",
+      "source_hash": "e18f6af55af2",
+      "text": "कई घंटों तक बहुत कम या बिल्कुल पेशाब न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "99468220f73d": {
+      "item_id": "99468220f73d",
+      "source_hash": "e717cf070526",
+      "text": "बुखार का अचानक उतरना और साथ ही सामान्य स्थिति का और बिगड़ जाना, यह डेंगू में एक खतरनाक चरण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cd5e66112d45": {
+      "item_id": "cd5e66112d45",
+      "source_hash": "cb700e2739a1",
+      "text": "भ्रम, व्यवहार में असामान्य बदलाव, या बेहोशी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "61d229cf1977": {
+      "item_id": "61d229cf1977",
+      "source_hash": "22af7b58ac04",
+      "text": "पूरी तरह आराम करें, काम या स्कूल जाने का प्रयास न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff497c291e65": {
+      "item_id": "ff497c291e65",
+      "source_hash": "1e2524dbe71f",
+      "text": "प्रचुर मात्रा में तरल पदार्थ पिएं: पानी, ORS, नारियल पानी, फलों का रस, सूप, डेंगू से शरीर में पानी की भारी कमी होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e87be6c7d3f0": {
+      "item_id": "e87be6c7d3f0",
+      "source_hash": "e981af9d2660",
+      "text": "बुखार के लिए केवल पैरासिटामोल लें, एस्पिरिन, इबुप्रोफेन या अन्य दर्द निवारक (NSAIDs) न लें क्योंकि ये डेंगू में रक्तस्राव का जोखिम बढ़ाते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "59dd9f60f6cf": {
+      "item_id": "59dd9f60f6cf",
+      "source_hash": "7de28c906e4c",
+      "text": "तेज बुखार के लिए गुनगुने पानी की पट्टी या स्पंज का प्रयोग करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2484d66a6f07": {
+      "item_id": "2484d66a6f07",
+      "source_hash": "1b4f5cc1459b",
+      "text": "ऊपर दिए गए किसी भी चेतावनी संकेत पर कड़ी निगरानी रखें, यदि कोई भी संकेत दिखे, तो तुरंत अस्पताल जाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b7a47219b7b4": {
+      "item_id": "b7a47219b7b4",
+      "source_hash": "614689f99d9c",
+      "text": "घर पर भी दैनिक निगरानी आवश्यक है: जांचें कि क्या व्यक्ति तरल पदार्थ पी पा रहा है, पेशाब कर रहा है, और कहीं से नया रक्तस्राव तो नहीं है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "073624268e80": {
+      "item_id": "073624268e80",
+      "source_hash": "a8da990572fb",
+      "text": "दूसरों में डेंगू फैलने से रोकने के लिए मरीज को मच्छरों के काटने से बचाएं, मच्छरदानी और विकर्षक (रेपेलेंट) का उपयोग करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2d9caecb4c14": {
+      "item_id": "2d9caecb4c14",
+      "source_hash": "7f9d73d81bff",
+      "text": "किसी भी सूजन-रोधी या खून पतला करने वाली दवाओं से खुद का इलाज न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9186a7c2c669": {
+      "item_id": "9186a7c2c669",
+      "source_hash": "ca353e906377",
+      "text": "तेज सिरदर्द, आँखों के पीछे दर्द और बदन दर्द के साथ बुखार, विशेषकर डेंगू प्रभावित क्षेत्र में या हालिया यात्रा के बाद",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea4a8d513200": {
+      "item_id": "ea4a8d513200",
+      "source_hash": "4953a584701f",
+      "text": "त्वचा पर चकत्तों के साथ बुखार होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e1b7cdfcb037": {
+      "item_id": "e1b7cdfcb037",
+      "source_hash": "ecfbb4e784e2",
+      "text": "बुखार जो 2 से 3 दिन से अधिक समय तक बिना किसी सुधार के बना रहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f2fc859bfa30": {
+      "item_id": "f2fc859bfa30",
+      "source_hash": "10df0b779c8a",
+      "text": "बुखार अचानक कम होना लेकिन व्यक्ति का अधिक अस्वस्थ महसूस करना, यह निगरानी की आवश्यकता वाला एक गंभीर चरण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "675094fe4999": {
+      "item_id": "675094fe4999",
+      "source_hash": "673a02beaebf",
+      "text": "बच्चे, बुजुर्ग, गर्भवती महिला, या मधुमेह, हृदय रोग या गुर्दे की बीमारी वाले किसी व्यक्ति में डेंगू बुखार, ये गंभीर डेंगू के उच्च जोखिम में हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7e95276585ce": {
+      "item_id": "7e95276585ce",
+      "source_hash": "2a6949b83b2c",
+      "text": "ऊपर सूचीबद्ध कोई भी चेतावनी संकेत, पेट में तेज दर्द, लगातार उल्टी, रक्तस्राव, शॉक के लक्षण, भ्रम, पेशाब न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ba9cee1d7b0": {
+      "item_id": "6ba9cee1d7b0",
+      "source_hash": "4a3739ddf420",
+      "text": "संदिग्ध शॉक के साथ डेंगू: हाथ-पैर ठंडे पड़ना, बेचैनी, कमजोर नब्ज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f15355983fc2": {
+      "item_id": "f15355983fc2",
+      "source_hash": "97dae90b2780",
+      "text": "किसी भी अंग से सक्रिय रक्तस्राव के साथ डेंगू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8b87ecfaf689": {
+      "item_id": "8b87ecfaf689",
+      "source_hash": "9e3fe44eb7f4",
+      "text": "सांस लेने में गंभीर कठिनाई के साथ डेंगू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64761d754140": {
+      "item_id": "64761d754140",
+      "source_hash": "d21a3d287c58",
+      "text": "चेतना या होश में कमी के साथ डेंगू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5901a9f55b2a": {
+      "item_id": "5901a9f55b2a",
+      "source_hash": "0463ba115d62",
+      "text": "डेंगू मच्छरों से फैलने वाला वायरल बुखार है। डेंगू का संदेह करें यदि किसी व्यक्ति को बुखार हो और निम्नलिखित में से 2 या अधिक लक्षण हों: मतली, उल्टी, चकत्ते, मांसपेशियों में दर्द, सिरदर्द, आँखों के पीछे दर्द, जोड़ों का दर्द, या असामान्य रक्तस्राव।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2502b2408159": {
+      "item_id": "2502b2408159",
+      "source_hash": "204645b007fc",
+      "text": "डेंगू का प्रबंधन रक्त गणना और नैदानिक स्थिति की दैनिक निगरानी के साथ चिकित्सकीय देखरेख में किया जाना चाहिए। बुनियादी सहायक देखभाल के अलावा घर पर डेंगू का इलाज न करें। हल्के से गंभीर डेंगू में परिवर्तन तेजी से हो सकता है।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

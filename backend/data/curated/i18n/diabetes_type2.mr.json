@@ -1,0 +1,356 @@
+{
+  "condition_id": "icmr-stw-diabetes-type2",
+  "language": "mr",
+  "translations": {
+    "91f5895315d1": {
+      "item_id": "91f5895315d1",
+      "source_hash": "c83c46d2bd42",
+      "text": "हायपोग्लायसेमिया (कमी रक्त शर्करा / लो ब्लड शुगर), लक्षणे: थरथरणे किंवा अंग कापणे, अचानक घाम येणे, अस्वस्थता किंवा चिडचिड, गोंधळ, जलद हृदयाचे ठोके, चक्कर येणे, अंधुक दृष्टी, अशक्तपणा, झटके येणे किंवा बेशुद्ध पडणे. जेव्हा मधुमेहाची व्यक्ती जेवण चुकवते किंवा मधुमेहाचे जास्त औषध घेते तेव्हा हे होऊ शकते. त्वरित कृती: जर व्यक्ती शुद्धीवर असेल आणि गिळू शकत असेल, तर लगेच साखर द्या, उदा. साधी साखर, गोड बिस्कीट, खडीसाखर किंवा कोणतेही गोड पेय. जर बेशुद्ध असेल, तर तोंडातून काहीही देऊ नका, त्वरित रुग्णालयात जा.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a2c3aa5c46ae": {
+      "item_id": "a2c3aa5c46ae",
+      "source_hash": "6cd6c7380d69",
+      "text": "गोंधळ, जलद श्वासोच्छ्वास आणि अतिशय तहान यांसह रक्तातील साखर अत्यंत जास्त असणे, हे डायबेटिक केटोॲसिडोसिस (DKA) चे लक्षण असू शकते, जी एक वैद्यकीय आणीबाणी आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "11e03a22cd27": {
+      "item_id": "11e03a22cd27",
+      "source_hash": "ea0db2ee29aa",
+      "text": "मधुमेह असलेल्या व्यक्तीमध्ये छातीत दुखणे किंवा श्वास घेण्यास तीव्र त्रास होणे, कारण मधुमेहामुळे हृदयविकाराच्या झटक्याचा धोका लक्षणीयरीत्या वाढतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "01cbfbaab73b": {
+      "item_id": "01cbfbaab73b",
+      "source_hash": "84358a44d78a",
+      "text": "मधुमेह असलेल्या व्यक्तीमध्ये पक्षाघाताची (स्ट्रोक) चेतावणी देणारी लक्षणे: एका बाजूला अचानक अशक्तपणा किंवा लुळेपणा येणे, बोलण्यात अडचण, तीव्र डोकेदुखी, दृष्टी जाणे, त्वरित रुग्णालयात जा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e62b0101b6c0": {
+      "item_id": "e62b0101b6c0",
+      "source_hash": "8e8e39b099e6",
+      "text": "न भरणारी जखम किंवा पायाचा अल्सर ज्यामध्ये लाली पसरणे, सूज, पू किंवा दुर्गंधी येणे, मधुमेहातील पायाचा संसर्ग वेगाने जीवघेणा ठरू शकतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2364df035737": {
+      "item_id": "2364df035737",
+      "source_hash": "14313e384f39",
+      "text": "मधुमेहाच्या व्यक्तीमध्ये तीव्र ताप आणि गंभीर संसर्गाची लक्षणे, कारण मधुमेहामुळे संसर्गाची तीव्रता खूप वाढते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "147b56175c51": {
+      "item_id": "147b56175c51",
+      "source_hash": "5aa2466306cb",
+      "text": "तुमची मधुमेहाची औषधे डॉक्टरांच्या सल्ल्यानुसारच नियमितपणे घ्या, स्वतःहून औषध थांबवू नका किंवा त्यात बदल करू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c39cd43afdd7": {
+      "item_id": "c39cd43afdd7",
+      "source_hash": "2acf35fcc8d2",
+      "text": "ठराविक वेळी नियमित जेवण घ्या, जेवण चुकवल्यास मधुमेहाची औषधे घेणाऱ्या लोकांमध्ये रक्तातील साखर धोकादायक पातळीवर कमी होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "93f112a887fe": {
+      "item_id": "93f112a887fe",
+      "source_hash": "e9473eb696e7",
+      "text": "कमी रक्तातील साखरेच्या लक्षणांसाठी नेहमी काहीतरी गोड (साखर, खडीसाखर, बिस्कीट) जवळ ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "68e35e774fd6": {
+      "item_id": "68e35e774fd6",
+      "source_hash": "225ca7d88463",
+      "text": "रिफाइंड साखर, पांढरा भात, मैदा आणि गोड पेये आहारातून टाळा. अधिक भाज्या, अखंड धान्ये, डाळी आणि माफक प्रमाणात फळे खा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90e70c3089e9": {
+      "item_id": "90e70c3089e9",
+      "source_hash": "fb90681cb874",
+      "text": "शारीरिकदृष्ट्या सक्रिय राहा, दररोज किमान 30 मिनिटे चालणे किंवा हलका व्यायाम रक्तातील साखर नियंत्रित ठेवण्यास मदत करतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e85a2f4c163f": {
+      "item_id": "e85a2f4c163f",
+      "source_hash": "b0cf261817e6",
+      "text": "धूम्रपान करू नका, धूम्रपानामुळे मधुमेही रुग्णांमध्ये हृदयविकाराचा झटका आणि मूत्रपिंडाचे नुकसान होण्याचा धोका मोठ्या प्रमाणात वाढतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da0b50e89c01": {
+      "item_id": "da0b50e89c01",
+      "source_hash": "a8f77ad2f80b",
+      "text": "मद्यपान टाळा किंवा अत्यंत मर्यादित ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5a67f9aa6be1": {
+      "item_id": "5a67f9aa6be1",
+      "source_hash": "1c407f95ea85",
+      "text": "पायांना पडलेले काप, फोड, लाली, सूज किंवा जखमांसाठी दररोज पाय तपासा, मधुमेहामध्ये लहानशी दुखापतही गंभीर होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cb09ce71e3e4": {
+      "item_id": "cb09ce71e3e4",
+      "source_hash": "c88da0c5809e",
+      "text": "नेहमी योग्य पादत्राणे वापरा, अनवाणी चालणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ac2e38e71a4": {
+      "item_id": "9ac2e38e71a4",
+      "source_hash": "a074e91c7cf7",
+      "text": "तुमच्या डॉक्टरांच्या सल्ल्यानुसार रक्तातील साखरेची नियमित तपासणी करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "51528386742e": {
+      "item_id": "51528386742e",
+      "source_hash": "4a4c23ac7d72",
+      "text": "डॉक्टरांच्या सर्व तपासणी भेटी वेळेवर घ्या, मधुमेहामध्ये रक्तातील साखर, रक्तदाब (BP), मूत्रपिंडाचे कार्य आणि डोळ्यांची नियमित तपासणी आवश्यक असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3e25fad39c6a": {
+      "item_id": "3e25fad39c6a",
+      "source_hash": "ae9d449196bd",
+      "text": "लक्षणे जी मधुमेहाची शक्यता दर्शवू शकतात: वारंवार लघवी होणे, अतिशय तहान लागणे, जास्त भूक लागणे, अनाकलनीय वजन कमी होणे, प्रचंड थकवा, अंधुक दृष्टी, जखमा उशिरा भरणे किंवा वारंवार संसर्ग होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "76065cc50c88": {
+      "item_id": "76065cc50c88",
+      "source_hash": "cc3fe68bf2d9",
+      "text": "घरातील ग्लुकोमीटरवर रक्तातील साखरेचे प्रमाण सातत्याने जास्त दिसणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "24053c6a48bb": {
+      "item_id": "24053c6a48bb",
+      "source_hash": "a80228ce52d8",
+      "text": "30 वर्षांपेक्षा जास्त वयाची कोणतीही व्यक्ती ज्यांचे वजन जास्त आहे, कुटुंबात मधुमेहाचा इतिहास आहे किंवा उच्च रक्तदाब (BP) आहे, त्यांनी दरवर्षी तपासणी केली पाहिजे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b112619c8466": {
+      "item_id": "b112619c8466",
+      "source_hash": "2fa1637ccc97",
+      "text": "मधुमेह असलेल्या व्यक्तीच्या पायावर झालेली कोणतीही जखम जी काही दिवसांत बरी होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "377ded4d0f81": {
+      "item_id": "377ded4d0f81",
+      "source_hash": "584536a56e80",
+      "text": "वारंवार होणारे संसर्ग: त्वचेचा संसर्ग, बुरशीजन्य संसर्ग, लघवीचा संसर्ग, किंवा तोंड येणे, अशा व्यक्तीमध्ये जिला मधुमेह असल्याचे माहिती नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2c12642f3c6f": {
+      "item_id": "2c12642f3c6f",
+      "source_hash": "6ef844744cfa",
+      "text": "मधुमेह असलेली व्यक्ती जिची रक्तातील साखर सर्व सल्ला पाळूनही नियंत्रणात नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a64e768b2da8": {
+      "item_id": "a64e768b2da8",
+      "source_hash": "2eba02ea931d",
+      "text": "मधुमेहाच्या रुग्णाला कोणताही नवीन आजार सुरू झाल्यास, अगदी साधा सर्दी किंवा ताप असला तरीही बारकाईने लक्ष ठेवणे आवश्यक आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "076fb4f7891f": {
+      "item_id": "076fb4f7891f",
+      "source_hash": "03f445d6861a",
+      "text": "वर नमूद केलेले कोणतेही आणीबाणीचे धोक्याचे लक्षण, बेशुद्धीसह हायपोग्लायसेमिया, छातीत दुखणे, पक्षाघाताची लक्षणे, गंभीर संसर्ग, पसरत जाणारी पायाची जखम",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2eaf35ce5e7": {
+      "item_id": "c2eaf35ce5e7",
+      "source_hash": "a883d083a232",
+      "text": "मधुमेहाचा रुग्ण जो अत्यंत आजारी आहे, गोंधळलेला आहे किंवा खाण्यापिण्यास असमर्थ आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1ccd618f8b9d": {
+      "item_id": "1ccd618f8b9d",
+      "source_hash": "dbf8029dbb99",
+      "text": "डायबेटिक फूट अल्सर ज्यामध्ये लाली पसरत आहे किंवा दुर्गंधी येत आहे, अवयव कापण्याची वेळ टाळण्यासाठी तातडीच्या तज्ज्ञ उपचारांची आवश्यकता असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2771571216bc": {
+      "item_id": "2771571216bc",
+      "source_hash": "7a4abe051ec4",
+      "text": "लक्षणे आणि रक्तातील साखरेचे प्रमाण अत्यंत जास्त किंवा अत्यंत कमी असलेला मधुमेहाचा रुग्ण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e2bea9a14de8": {
+      "item_id": "e2bea9a14de8",
+      "source_hash": "890ea338f1fd",
+      "text": "30 वर्षांपेक्षा जास्त वयाच्या सर्व प्रौढ व्यक्ती, वर्षातून किमान 1 वेळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c89cf28faf28": {
+      "item_id": "c89cf28faf28",
+      "source_hash": "8651ff82679f",
+      "text": "कोणतीही व्यक्ती जिचे वजन जास्त आहे किंवा लठ्ठपणा आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0f56c946fda9": {
+      "item_id": "0f56c946fda9",
+      "source_hash": "403af2b07f50",
+      "text": "कुटुंबातील जवळच्या नातेवाईकाला (आई-वडील किंवा भावंडे) मधुमेह असलेली कोणतीही व्यक्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9501aebb9ce8": {
+      "item_id": "9501aebb9ce8",
+      "source_hash": "d88a4a174601",
+      "text": "उच्च रक्तदाब (BP) किंवा जास्त कोलेस्ट्रॉल असलेली कोणतीही व्यक्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "651dc851a207": {
+      "item_id": "651dc851a207",
+      "source_hash": "f1b5fd016c4f",
+      "text": "गरोदरपणात मधुमेह (जेस्टेशनल डायबिटीस) झालेल्या महिला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "951c148b0e85": {
+      "item_id": "951c148b0e85",
+      "source_hash": "36d0cf3664f0",
+      "text": "लक्षणे असलेली कोणतीही व्यक्ती: वारंवार लघवी होणे, अतिशय तहान लागणे, विनाकारण वजन कमी होणे, वारंवार संसर्ग होणे किंवा जखमा उशिरा भरणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "76ea84d752f4": {
+      "item_id": "76ea84d752f4",
+      "source_hash": "3efaabf9fdb6",
+      "text": "AIRA केवळ मधुमेहाविषयी जागरूकता, लक्षणांची ओळख आणि ट्रायज मार्गदर्शन प्रदान करते. मधुमेहाचे व्यवस्थापन, औषधोपचार आणि डोसचा सल्ला केवळ डॉक्टरांकडूनच घेतला पाहिजे.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

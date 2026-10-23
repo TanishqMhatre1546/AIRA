@@ -102,6 +102,8 @@ class TriageResponse(BaseModel):
     skip_allowed: bool = False
     answers_summary: list[str] = Field(default_factory=list)
     lang: Literal["en", "hi", "mr"] = "en"
+    content_language: Literal["en", "hi", "mr"] = "en"
+    translation_status: Literal["reviewed", "unreviewed", "none"] = "none"
 
     @classmethod
     def from_pipeline_response(
@@ -131,6 +133,8 @@ class TriageResponse(BaseModel):
             skip_allowed=resp.skip_allowed,
             answers_summary=resp.answers_summary,
             lang=lang,
+            content_language=getattr(resp, "content_language", "en"),
+            translation_status=getattr(resp, "translation_status", "none"),
         )
 
 

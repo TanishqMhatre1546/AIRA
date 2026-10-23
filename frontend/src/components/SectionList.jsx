@@ -7,13 +7,21 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useT } from "../i18n/useT";
 
-export default function SectionList({ sections, mode }) {
-  const { t } = useT();
+export default function SectionList({
+  sections,
+  mode,
+  contentLanguage,
+  translationStatus,
+}) {
+  const { t, lang } = useT();
 
   if (!sections) return null;
 
   const { guidelines_say = [], do_now = [], watch_for = [] } = sections;
   const isExtractive = mode === "extractive";
+  const isTranslated = contentLanguage && contentLanguage !== "en";
+  const isDraft = translationStatus === "unreviewed" || translationStatus === "draft";
+  const isUntranslated = lang !== "en" && contentLanguage === "en";
 
   const renderClaims = (claims, isWatchFor = false) => {
     if (!claims || claims.length === 0) return null;
@@ -56,6 +64,26 @@ export default function SectionList({ sections, mode }) {
 
   return (
     <div className="guideline-sections">
+      {isDraft && (
+        <div className="draft-translation-banner" data-testid="draft-translation-badge" style={{ marginBottom: "0.5rem" }}>
+          <span className="draft-badge" style={{ display: "inline-block", padding: "0.2rem 0.5rem", borderRadius: "4px", backgroundColor: "#fff3cd", color: "#856404", fontSize: "0.85rem", fontWeight: "600", border: "1px solid #ffeeba" }}>
+            {t("sectionList.draftTranslation")}
+          </span>
+        </div>
+      )}
+
+      {isTranslated && (
+        <p className="source-language-notice" data-testid="source-language-notice" style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", fontStyle: "italic", marginBottom: "0.5rem" }}>
+          {t("sectionList.sourceTextInEnglish")}
+        </p>
+      )}
+
+      {isUntranslated && (
+        <p className="untranslated-notice" data-testid="untranslated-notice" style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", fontStyle: "italic", marginBottom: "0.5rem" }}>
+          {t("sectionList.textNotTranslatedYet")}
+        </p>
+      )}
+
       {isExtractive && (
         <p className="mode-notice">{t("sectionList.extractiveNotice")}</p>
       )}

@@ -198,7 +198,10 @@
     "doNow": "अब क्या करें",
     "watchFor": "इन लक्षणों पर ध्यान दें",
     "extractiveNotice": "ये दिशानिर्देश से सीधे लिए गए अंश हैं।",
-    "sourceCitationAria": "स्रोत संदर्भ {id}"
+    "sourceCitationAria": "स्रोत संदर्भ {id}",
+    "sourceTextInEnglish": "मूल स्रोत पाठ अंग्रेजी में है।",
+    "textNotTranslatedYet": "इस पाठ का अभी तक अनुवाद नहीं किया गया है।",
+    "draftTranslation": "प्रारूप अनुवाद"
   },
   "sourceList": {
     "heading": "स्रोत",

@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-urticaria-angioedema",
+  "language": "mr",
+  "translations": {
+    "2ebee71b399a": {
+      "item_id": "2ebee71b399a",
+      "source_hash": "95fa29d05bd4",
+      "text": "ओठ, जीभ किंवा घशावर सूज येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e69d07be904b": {
+      "item_id": "e69d07be904b",
+      "source_hash": "3ab5bdb7c586",
+      "text": "श्वास घेण्यास त्रास, गुदमरणे किंवा श्वास कमी पडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1f40d8d17404": {
+      "item_id": "1f40d8d17404",
+      "source_hash": "4206ee0d12b8",
+      "text": "सूज आल्यानंतर आवाज घोगरा होणे किंवा बोलताना त्रास होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "25b918b08363": {
+      "item_id": "25b918b08363",
+      "source_hash": "fb7595665ece",
+      "text": "श्वासनलिकेवर सूज (लॅरिंजिअल अँजिओएडेमा), ही जीवाला धोका निर्माण करणारी आणीबाणी आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bb4d08ed9e5d": {
+      "item_id": "bb4d08ed9e5d",
+      "source_hash": "02c02d0afc33",
+      "text": "अंगावर गांधी उठण्यासोबत श्वास घेण्यास तीव्र त्रास, हे अ‍ॅनाफिलेक्सिसचे (तीव्र ऍलर्जीचे) लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aa7e394581ed": {
+      "item_id": "aa7e394581ed",
+      "source_hash": "068d82d7f83b",
+      "text": "शॉक (धक्का): एखाद्या ऍलर्जी घटकाच्या संपर्कात आल्यानंतर चक्कर येणे, बेशुद्धी, अत्यंत कमी रक्तदाब (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "043a6decec2f": {
+      "item_id": "043a6decec2f",
+      "source_hash": "003a3508d08a",
+      "text": "अंगावर सौम्य गांधी उठणे ज्यात खाज सुटते पण श्वासाचा त्रास होत नाही, अशा वेळी डॉक्टरांनी दिलेल्या अँटीहिस्टामाईन औषधाने उपचार करता येतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "df76fd3eea38": {
+      "item_id": "df76fd3eea38",
+      "source_hash": "d60c2e840f3c",
+      "text": "कारणे (ट्रिगर्स) ओळखा आणि टाळा: सामान्य कारणांमध्ये विशिष्ट अन्न, औषधे (विशेषतः वेदनाशामक औषधे NSAIDs), कीटक चावणे, लेटेक्स आणि मानसिक ताणाचा समावेश होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c83d81e9d3b": {
+      "item_id": "5c83d81e9d3b",
+      "source_hash": "d806a5e712dc",
+      "text": "जर तुम्हाला अंगावर गांधी उठण्याचा इतिहास असेल तर सामान्य औषधी ट्रिगर्स टाळा: आयबुप्रोफेन किंवा अ‍ॅस्पिरिन सारखी वेदनाशामक औषधे काही लोकांमध्ये पित्त वाढवू शकतात, नेहमी डॉक्टरांना याबद्दल सांगा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a49307bf690b": {
+      "item_id": "a49307bf690b",
+      "source_hash": "d7846660c95e",
+      "text": "तात्पुरता आराम मिळण्यासाठी खाज सुटणाऱ्या भागावर थंड पाण्याच्या पट्ट्या लावा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9b703ea2a132": {
+      "item_id": "9b703ea2a132",
+      "source_hash": "2345b63903df",
+      "text": "त्वचेची जळजळ कमी करण्यासाठी सैल, आरामदायक सुती कपडे घाला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c6023bd29e7": {
+      "item_id": "1c6023bd29e7",
+      "source_hash": "88b36247c370",
+      "text": "जर व्यायाम केल्याने अंगावर गांधी उठत असतील तर जास्त कष्टाचे व्यायाम टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7cbd6bc0bdbb": {
+      "item_id": "7cbd6bc0bdbb",
+      "source_hash": "779eb61b260d",
+      "text": "अंगावर उठलेल्या गांधी ज्या 24 तासांच्या आत बऱ्या होतात आणि पुन्हा येत नाहीत, त्यांना पुढील उपचारांची गरज नसते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "789220070761": {
+      "item_id": "789220070761",
+      "source_hash": "0c24f16a6f32",
+      "text": "दीर्घकालीन पित्ताची (क्रॉनिक अर्टिकेरिया) निम्म्याहून अधिक प्रकरणे 12 ते 24 महिन्यांच्या आत आपोआप बरी होतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8143c76b2a0b": {
+      "item_id": "8143c76b2a0b",
+      "source_hash": "ee379d911d48",
+      "text": "जर डॉक्टरांनी दीर्घकाळासाठी अँटीहिस्टामाईन लिहून दिली असेल, तर ती अचानक थांबवू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9af989d2c3e7": {
+      "item_id": "9af989d2c3e7",
+      "source_hash": "4f666a0795ff",
+      "text": "अंगावर गांधी ज्या कित्येक दिवस वारंवार येत आहेत किंवा कमी होत नाहीत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9a40e529301f": {
+      "item_id": "9a40e529301f",
+      "source_hash": "025fd6a90d4b",
+      "text": "चेहऱ्यावर, ओठांवर किंवा डोळ्यांवर आलेली सूज, जरी श्वासाचा कोणताही त्रास नसला तरीही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff601bb6fe9d": {
+      "item_id": "ff601bb6fe9d",
+      "source_hash": "92399b2c0f88",
+      "text": "6 आठवड्यांपेक्षा जास्त काळ टिकणारे पित्त, हे क्रॉनिक अर्टिकेरिया असून त्याची वैद्यकीय तपासणी आवश्यक आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e7b335a2d85e": {
+      "item_id": "e7b335a2d85e",
+      "source_hash": "5e258a14f0b0",
+      "text": "अंगावर उठलेल्या गांधी ज्या एकाच जागी 24 ते 48 तासांपेक्षा जास्त काळ राहतात, दुखतात आणि निळे डाग सोडतात, हे अर्टिकेरियल व्हॅस्क्युलायटिस असू शकते जे सामान्य पित्तापेक्षा वेगळे असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5794b9b66989": {
+      "item_id": "5794b9b66989",
+      "source_hash": "37ef21a52c4e",
+      "text": "विशिष्ट अन्न, औषध किंवा परिस्थितीशी संबंधित वाटणारे पित्त, यासाठी ऍलर्जी चाचणीची गरज असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1f63fea28771": {
+      "item_id": "1f63fea28771",
+      "source_hash": "693278a53988",
+      "text": "अँटीहिस्टामाईन औषधांनीही न सुधारणारे पित्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "67dc689ffd3c": {
+      "item_id": "67dc689ffd3c",
+      "source_hash": "fc18f48df515",
+      "text": "सांधेदुखी, ताप किंवा अस्वस्थतेसह अंगावर उठणारे पित्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97da85b14d7e": {
+      "item_id": "97da85b14d7e",
+      "source_hash": "2b7527b01585",
+      "text": "श्वास घेण्यास कोणताही त्रास, घशाला सूज किंवा अ‍ॅनाफिलेक्सिसची लक्षणे दिसल्यास तातडीच्या उपचारांनंतर त्वरित हलवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac9ad2532da4": {
+      "item_id": "ac9ad2532da4",
+      "source_hash": "e8e8a51ee990",
+      "text": "घसा किंवा श्वासनलिकेवर परिणाम करणारा अँजिओएडेमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "55b2af7a71cf": {
+      "item_id": "55b2af7a71cf",
+      "source_hash": "ef8f0a9dfe4f",
+      "text": "जास्त डोस देऊनही नेहमीच्या अँटीहिस्टामाईन औषधांनी नियंत्रणात न येणारे पित्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff4a0fa71620": {
+      "item_id": "ff4a0fa71620",
+      "source_hash": "814eb71c34c7",
+      "text": "असामान्य पित्त: 24 ते 48 तासांपेक्षा जास्त काळ राहणाऱ्या गांधी आणि त्वचेवर काळे-निळे डाग पडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dd33034be9a8": {
+      "item_id": "dd33034be9a8",
+      "source_hash": "41ed3c555891",
+      "text": "अंगावर गांधी न उठता आलेली सूज (अँजिओएडेमा), हे एका दुर्मिळ आनुवंशिक आजाराचे (C1 इनहिबिटरची कमतरता) लक्षण असू शकते ज्यासाठी तज्ज्ञांची तपासणी आवश्यक आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "995facd18264": {
+      "item_id": "995facd18264",
+      "source_hash": "d4689c708e19",
+      "text": "इतर शारीरिक लक्षणांसह (ताप, सांधेदुखी, वजन कमी होणे) अंगावर उठणारे पित्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6b24e0b04222": {
+      "item_id": "6b24e0b04222",
+      "source_hash": "a36155d4fff2",
+      "text": "अर्टिकेरिया (पित्त): त्वचेवर अचानक वेगवेगळ्या आकाराचे खाज सुटणारे उंचवटे (गांधी) येणे, ज्यांच्याभोवती लाली असते. सामान्यतः हे उंचवटे 1 ते 24 तासांच्या आत नाहीसे होतात परंतु नवीन येत राहू शकतात. क्रॉनिक अर्टिकेरिया म्हणजे हे पित्त 6 आठवड्यांपेक्षा जास्त काळ टिकून राहणे.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "671004a3cc15": {
+      "item_id": "671004a3cc15",
+      "source_hash": "907c5d71ae1e",
+      "text": "अँजिओएडेमा: त्वचेच्या आतील भागात अचानक येणारी तीव्र सूज, जी सामान्यतः चेहरा, ओठ, जीभ, घसा किंवा जननेंद्रियांवर येते. ही सूज पूर्ण बरी होण्यास 72 तास लागू शकतात. जेव्हा ही सूज घशावर किंवा श्वासनलिकेवर येते, तेव्हा ही गंभीर वैद्यकीय आणीबाणी असते.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

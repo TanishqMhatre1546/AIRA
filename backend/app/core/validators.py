@@ -156,6 +156,8 @@ class GeneratedAnswer(BaseModel):
     mode: Literal["model", "extractive"]
     dropped_claims: int
     llm_error: str | None = None
+    content_language: Literal["en", "hi", "mr"] = "en"
+    translation_status: Literal["reviewed", "unreviewed", "none"] = "none"
 
 
 def get_content_tokens(text: str) -> list[str]:
@@ -280,8 +282,8 @@ def build_citations_and_claims(
     return validated_claims, all_citations
 
 
-def extract_items_from_chunk(chunk: GuidelineChunk) -> list[str]:
-    """Extract individual clinical guidance items or sentences from a chunk."""
+def extract_items_from_chunk_with_ids(chunk: GuidelineChunk) -> list[tuple[str, str]]:
+    """Extract individual clinical guidance items from a chunk along with item_ids."""
     text = chunk.text
     if "Section:" in text:
         parts = text.split("Section:", 1)[1]
@@ -290,7 +292,16 @@ def extract_items_from_chunk(chunk: GuidelineChunk) -> list[str]:
         body = text.strip()
 
     sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
-    return sentences
+    paired: list[tuple[str, str]] = []
+    for idx, s in enumerate(sentences):
+        i_id = chunk.item_ids[idx] if idx < len(chunk.item_ids) else ""
+        paired.append((s, i_id))
+    return paired
+
+
+def extract_items_from_chunk(chunk: GuidelineChunk) -> list[str]:
+    """Extract individual clinical guidance items or sentences from a chunk."""
+    return [itm for itm, _ in extract_items_from_chunk_with_ids(chunk)]
 
 
 def build_extractive_fallback(
@@ -300,6 +311,8 @@ def build_extractive_fallback(
     detected_conditions: Sequence[str] | None = None,
     all_chunks: Sequence[GuidelineChunk] | None = None,
     llm_error: str | None = None,
+    lang: str = "en",
+    allow_unreviewed: bool = False,
 ) -> GeneratedAnswer:
     """Construct level-appropriate verbatim guideline items without model generation.
 
@@ -324,6 +337,8 @@ def build_extractive_fallback(
             mode="extractive",
             dropped_claims=dropped_count,
             llm_error=llm_error,
+            content_language="en",
+            translation_status="none",
         )
 
     # Chunk pool: prefer all_chunks if supplied, else fallback to chunks
@@ -336,6 +351,8 @@ def build_extractive_fallback(
             mode="extractive",
             dropped_claims=dropped_count,
             llm_error=llm_error,
+            content_language="en",
+            translation_status="none",
         )
 
     # Match chunks belonging to detected conditions
@@ -360,20 +377,20 @@ def build_extractive_fallback(
 
     def collect_items(
         source_chunks: list[GuidelineChunk], limit: int
-    ) -> list[tuple[str, GuidelineChunk]]:
-        items: list[tuple[str, GuidelineChunk]] = []
+    ) -> list[tuple[str, str, GuidelineChunk]]:
+        items: list[tuple[str, str, GuidelineChunk]] = []
         for ch in source_chunks:
-            extracted = extract_items_from_chunk(ch)
-            for itm in extracted:
+            extracted = extract_items_from_chunk_with_ids(ch)
+            for itm, itm_id in extracted:
                 if len(itm) > 220:
                     itm = itm[:217] + "..."
-                items.append((itm, ch))
+                items.append((itm, itm_id, ch))
                 if len(items) >= limit:
                     return items
         return items
 
-    guidelines_pairs: list[tuple[str, GuidelineChunk]] = []
-    do_now_pairs: list[tuple[str, GuidelineChunk]] = []
+    guidelines_pairs: list[tuple[str, str, GuidelineChunk]] = []
+    do_now_pairs: list[tuple[str, str, GuidelineChunk]] = []
 
     if triage_level == "SELF_CARE":
         # Up to 4 items in total from self_care section
@@ -408,11 +425,16 @@ def build_extractive_fallback(
     # Build citations and claims for guidelines_say and do_now
     citation_map: dict[tuple[str, int | None], Citation] = {}
     citation_counter = 1
+    has_reviewed_items = False
+    has_unreviewed_items = False
+    has_untranslated_items = False
 
-    def make_claims(pairs: list[tuple[str, GuidelineChunk]]) -> list[ValidatedClaim]:
-        nonlocal citation_counter
+    def make_claims(
+        pairs: list[tuple[str, str, GuidelineChunk]],
+    ) -> list[ValidatedClaim]:
+        nonlocal citation_counter, has_reviewed_items, has_unreviewed_items, has_untranslated_items
         claims_out: list[ValidatedClaim] = []
-        for text_str, ch in pairs:
+        for text_str, item_id, ch in pairs:
             key = (ch.source_title, ch.page)
             if key not in citation_map:
                 cit = Citation(
@@ -428,12 +450,50 @@ def build_extractive_fallback(
                 citation_counter += 1
             else:
                 cit_id = citation_map[key].id
-            claims_out.append(ValidatedClaim(text=text_str, citation_ids=[cit_id]))
+
+            final_text = text_str
+            if lang in ("hi", "mr") and item_id:
+                from app.data.translations import translation_registry
+
+                trans_text, item_status = translation_registry.get_translation(
+                    ch.condition_id,
+                    lang,
+                    item_id,
+                    allow_unreviewed=allow_unreviewed,
+                    current_source_text=text_str,
+                )
+                if trans_text and item_status == "reviewed":
+                    final_text = trans_text
+                    has_reviewed_items = True
+                elif trans_text and item_status == "draft":
+                    final_text = trans_text
+                    has_unreviewed_items = True
+                else:
+                    has_untranslated_items = True
+            elif lang in ("hi", "mr"):
+                has_untranslated_items = True
+
+            claims_out.append(ValidatedClaim(text=final_text, citation_ids=[cit_id]))
         return claims_out
 
     g_claims = make_claims(guidelines_pairs)
     d_claims = make_claims(do_now_pairs)
     citations_list = sorted(citation_map.values(), key=lambda c: c.id)
+
+    total_pairs = len(guidelines_pairs) + len(do_now_pairs)
+    if lang in ("hi", "mr") and total_pairs > 0:
+        if has_untranslated_items or (not has_reviewed_items and not has_unreviewed_items):
+            content_lang: Literal["en", "hi", "mr"] = "en"
+            trans_status: Literal["reviewed", "unreviewed", "none"] = "none"
+        elif has_unreviewed_items:
+            content_lang = lang  # type: ignore[assignment]
+            trans_status = "unreviewed"
+        else:
+            content_lang = lang  # type: ignore[assignment]
+            trans_status = "reviewed"
+    else:
+        content_lang = "en"
+        trans_status = "none"
 
     return GeneratedAnswer(
         guidelines_say=g_claims,
@@ -442,6 +502,8 @@ def build_extractive_fallback(
         mode="extractive",
         dropped_claims=dropped_count,
         llm_error=llm_error,
+        content_language=content_lang,
+        translation_status=trans_status,
     )
 
 

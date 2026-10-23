@@ -1,0 +1,296 @@
+{
+  "condition_id": "icmr-stw-acute-rhinosinusitis",
+  "language": "mr",
+  "translations": {
+    "26e7ee4d20f8": {
+      "item_id": "26e7ee4d20f8",
+      "source_hash": "b62178d8a39e",
+      "text": "डोळ्याभोवती सूज किंवा लालसरपणा, किंवा डोळा पुढे ढकलला जाणे, जे संसर्ग डोळ्याच्या खोबणीत पसरल्याचे दर्शवते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1a90f8555570": {
+      "item_id": "1a90f8555570",
+      "source_hash": "e3ed196db8ac",
+      "text": "दुहेरी दृष्टी (एकाचे दोन दिसणे) किंवा दृष्टीमध्ये लक्षणीय बिघाड",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d3dc3235afa5": {
+      "item_id": "d3dc3235afa5",
+      "source_hash": "3cfcb950a410",
+      "text": "बदललेली मानसिक स्थिती किंवा गोंधळ, जे संसर्ग मेंदूपर्यंत पसरल्याचे दर्शवू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21736f3b0be6": {
+      "item_id": "21736f3b0be6",
+      "source_hash": "e76294c6aeed",
+      "text": "मानेच्या ताठरतेसह तीव्र डोकेदुखी, जे मेंदूज्वराचे (मेनिंजायटिस) लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ef93e41ecbf8": {
+      "item_id": "ef93e41ecbf8",
+      "source_hash": "c96e157e054e",
+      "text": "कपाळावर वाढणारी सूज किंवा कपाळ भरून आल्यासारखे वाटणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "71498a2a63f7": {
+      "item_id": "71498a2a63f7",
+      "source_hash": "1657e3c29687",
+      "text": "चेहऱ्याची त्वचा, टाळू किंवा नाकातील आतील ऊती काळ्या पडणे, जे बुरशीजन्य संसर्गाचे (फंगल सायनुसायटिस) लक्षण आहे, विशेषतः मधुमेही रुग्णांमध्ये ही वैद्यकीय आणीबाणी आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6c5198b0a8f7": {
+      "item_id": "6c5198b0a8f7",
+      "source_hash": "cf48dec4d69e",
+      "text": "चेहरा बधीर होणे किंवा चेहऱ्यावरील संवेदना कमी होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac391f098a8f": {
+      "item_id": "ac391f098a8f",
+      "source_hash": "55bd730420e4",
+      "text": "मधुमेह किंवा प्रतिकारशक्ती कमी करणाऱ्या उपचारांवर असलेल्या व्यक्तीमध्ये सायनुसायटिसची लक्षणे, संसर्ग वेगाने बळावण्याचा मोठा धोका असतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2860173748e2": {
+      "item_id": "2860173748e2",
+      "source_hash": "a10fdbde84ec",
+      "text": "सलाईनच्या पाण्याने नाक स्वच्छ धुवा, एका कप स्वच्छ पाण्यात चिमूटभर मीठ विरघळवा आणि दोन्ही नाकपुड्या हळुवार धुवा. यामुळे कफ मोकळा होतो आणि श्वास घेणे सुलभ होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d10a526f654c": {
+      "item_id": "d10a526f654c",
+      "source_hash": "62cd31b8efbe",
+      "text": "दिवसातून 2 किंवा 3 वेळा, 10 ते 15 मिनिटे वाफ घेतल्याने नाकातील चोंदणे कमी होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfd56f202ba7": {
+      "item_id": "cfd56f202ba7",
+      "source_hash": "8417d2d813d3",
+      "text": "कफ पातळ ठेवण्यासाठी आणि सहज बाहेर पडण्यासाठी पुरेसे द्रवपदार्थ प्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d809401381ca": {
+      "item_id": "d809401381ca",
+      "source_hash": "e64ddab98380",
+      "text": "कफ सहजरीत्या बाहेर पडावा यासाठी डोके थोडे उंचावर ठेवून झोपा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a742cd07f9a6": {
+      "item_id": "a742cd07f9a6",
+      "source_hash": "ccdd8f250d3b",
+      "text": "धूम्रपान टाळा आणि तंबाखूचा धूर, धूळ आणि तीव्र रासायनिक वासापासून दूर राहा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "18546c2b2caa": {
+      "item_id": "18546c2b2caa",
+      "source_hash": "2b0634b64b6e",
+      "text": "सर्दीनंतर 7 दिवसांपेक्षा कमी काळ टिकणारी लक्षणे सहसा व्हायरल असतात आणि आपोआप बरी होतात, विश्रांती, पुरेसे पाणी आणि सलाईनचा वापर योग्य आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c1d981f952e": {
+      "item_id": "7c1d981f952e",
+      "source_hash": "b5f59217a5de",
+      "text": "नाक मोकळे करणारे स्प्रे 3 ते 5 दिवसांपेक्षा जास्त वापरू नका, दीर्घकाळ वापरामुळे नाकातील चोंदणे अधिक वाढू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0af4e77dea1b": {
+      "item_id": "0af4e77dea1b",
+      "source_hash": "9548945f272d",
+      "text": "दातांच्या आरोग्याची काळजी घ्या, वरच्या दातातील कीड त्या बाजूला सायनस संसर्गास कारणीभूत ठरू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe4275f2757e": {
+      "item_id": "fe4275f2757e",
+      "source_hash": "97d781371c9e",
+      "text": "सर्दीनंतर 7 दिवसांपेक्षा जास्त काळ नाक बंद राहणे, नाकातून पाणी वाहणे, किंवा चेहऱ्यावर दाब किंवा वेदना होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4625514253aa": {
+      "item_id": "4625514253aa",
+      "source_hash": "41ba09a51411",
+      "text": "तापासह नाकातून घट्ट पिवळा किंवा हिरवट स्राव येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d32034cfbc1b": {
+      "item_id": "d32034cfbc1b",
+      "source_hash": "d9e1318a4900",
+      "text": "गाल, कपाळ किंवा डोळ्यांच्या मध्ये वेदना किंवा दाब जाणवणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "981644619e43": {
+      "item_id": "981644619e43",
+      "source_hash": "fe8c90aad548",
+      "text": "वास घेण्याची क्षमता कमी होणे किंवा नष्ट होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b4bc85ea51c1": {
+      "item_id": "b4bc85ea51c1",
+      "source_hash": "11e4b2630b46",
+      "text": "दिलेल्या अँटीबायोटिक्सचा पूर्ण कोर्स संपल्यानंतरही लक्षणांमध्ये सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0b5e0cd55ec1": {
+      "item_id": "0b5e0cd55ec1",
+      "source_hash": "608541fdfdc0",
+      "text": "वारंवार सायनुसायटिसचा त्रास होणे (काही महिन्यांत 1 पेक्षा जास्त वेळा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ae9f71d27eca": {
+      "item_id": "ae9f71d27eca",
+      "source_hash": "86d61a1f44be",
+      "text": "मधुमेह असलेल्या व्यक्तीमध्ये सायनुसायटिस, गंभीर संसर्गाचा धोका जास्त असल्याने त्वरित डॉक्टरांचा सल्ला घेतला पाहिजे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "926b9cb4cea4": {
+      "item_id": "926b9cb4cea4",
+      "source_hash": "44cb1d588100",
+      "text": "दातांशी संबंधित संशयित सायनुसायटिस, वरच्या दातानजीक चेहऱ्याच्या एका बाजूला वेदना होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c4ae9700bd3": {
+      "item_id": "5c4ae9700bd3",
+      "source_hash": "026aca0d70f6",
+      "text": "वर नमूद केलेले कोणतेही धोक्याचे लक्षण, डोळ्याला सूज, दुहेरी दृष्टी, गोंधळ, मान ताठरणे, कपाळावर सूज, चेहऱ्यावरील काळी पडलेली त्वचा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c2552723fdb2": {
+      "item_id": "c2552723fdb2",
+      "source_hash": "65294fc0f155",
+      "text": "मधुमेही किंवा कमी प्रतिकारशक्ती असलेल्या व्यक्तीमध्ये संशयित इनवेसिव्ह फंगल सायनुसायटिस",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "efc07ecefb21": {
+      "item_id": "efc07ecefb21",
+      "source_hash": "dccd33f78ab7",
+      "text": "योग्य प्रकारे दिलेल्या अँटीबायोटिक उपचारानंतर 10 दिवसांनीही कोणतीही सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "53bee32a0e84": {
+      "item_id": "53bee32a0e84",
+      "source_hash": "ad79f1beb261",
+      "text": "अँटीबायोटिक उपचार सुरू असतानाही लक्षणे अधिक बिघडणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88718913d28f": {
+      "item_id": "88718913d28f",
+      "source_hash": "ecadc94bb339",
+      "text": "सर्दीनंतर 7 दिवसांपेक्षा जास्त काळ नाक बंद राहणे, स्राव वाहणे किंवा चेहऱ्यात दुखणे म्हणजे सायनुसायटिसचा संशय असतो. 7 दिवसांपेक्षा कमी काळ टिकणारी लक्षणे सामान्यतः सर्दी असतात आणि त्यासाठी अँटीबायोटिक्सची गरज नसते.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

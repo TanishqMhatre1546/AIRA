@@ -1,0 +1,326 @@
+{
+  "condition_id": "icmr-stw-eczema-dermatitis",
+  "language": "hi",
+  "translations": {
+    "27c159090b62": {
+      "item_id": "27c159090b62",
+      "source_hash": "045ce2b5fade",
+      "text": "एक्जिमा में मवाद आना, पीली पपड़ी जमना, या गर्माहट बढ़ना, यह द्वितीयक बैक्टीरियल संक्रमण का संकेत है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "34cd6dc77436": {
+      "item_id": "34cd6dc77436",
+      "source_hash": "34d8043de2e6",
+      "text": "त्वचा का व्यापक रूप से प्रभावित होना जिसमें छाले पड़ना या त्वचा का फटना शामिल हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e4b574dd231f": {
+      "item_id": "e4b574dd231f",
+      "source_hash": "2fd7f9ca5cda",
+      "text": "बुखार के साथ एक्जिमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "72f26e816f76": {
+      "item_id": "72f26e816f76",
+      "source_hash": "d8b026647a22",
+      "text": "शरीर के बड़े हिस्सों को ढकने वाला गंभीर एक्जिमा जो किसी भी उपचार से ठीक नहीं हो रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f497748b44fa": {
+      "item_id": "f497748b44fa",
+      "source_hash": "8349b53b8655",
+      "text": "नहाने के तुरंत बाद जब त्वचा थोड़ी नम हो मॉइस्चराइज़र लगाएं, यह एक्जिमा के प्रबंधन का सबसे महत्वपूर्ण कदम है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "07e289aab8ec": {
+      "item_id": "07e289aab8ec",
+      "source_hash": "50363d97149a",
+      "text": "दिन में सिर्फ एक बार नहीं बल्कि कई बार मॉइस्चराइज़र लगाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "31c8d461a179": {
+      "item_id": "31c8d461a179",
+      "source_hash": "d5db629cdb43",
+      "text": "हल्के साबुन और सामान्य तापमान के पानी से रोजाना स्नान करें; गर्म पानी से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "94c1d931f64c": {
+      "item_id": "94c1d931f64c",
+      "source_hash": "e2a07195aff3",
+      "text": "खुजलाने से होने वाले नुकसान को कम करने के लिए नाखूनों को छोटा रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d7b45d3352b3": {
+      "item_id": "d7b45d3352b3",
+      "source_hash": "01d8cbb8c645",
+      "text": "खुजलाने से बचें, खुजलाने से एक्जिमा बढ़ता है और संक्रमण का खतरा रहता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "53f6d6f71a9b": {
+      "item_id": "53f6d6f71a9b",
+      "source_hash": "892e5bb52749",
+      "text": "ट्रिगर्स को पहचानें और उनसे बचें: विशेष साबुन, डिटर्जेंट, कपड़े, पौधे या खाद्य पदार्थ जो त्वचा की स्थिति खराब करते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "434e7f480330": {
+      "item_id": "434e7f480330",
+      "source_hash": "49f9f121089c",
+      "text": "त्वचा की जलन को कम करने के लिए ढीले, सूती कपड़े पहनें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c70ed99e4f9": {
+      "item_id": "7c70ed99e4f9",
+      "source_hash": "fb214fab4c96",
+      "text": "यदि संभव हो तो उच्च जोखिम वाले व्यावसायिक संपर्कों से बचें: कृषि कार्य, निर्माण कार्य, हेयरड्रेसिंग में त्वचा बार-बार परेशान करने वाले तत्वों के संपर्क में आती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b021588544ca": {
+      "item_id": "b021588544ca",
+      "source_hash": "77eb3b341df1",
+      "text": "कांटेक्ट डर्मेटाइटिस के लिए, कारण की पहचान करें और उसे हटाएं (जैसे कोई विशेष साबुन, धातु, या पौधा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b53d3a0c8693": {
+      "item_id": "b53d3a0c8693",
+      "source_hash": "7616f8985e93",
+      "text": "एटॉपिक डर्मेटाइटिस अक्सर सर्दियों में बढ़ जाता है, ठंड के मौसम में अतिरिक्त मॉइस्चराइजिंग महत्वपूर्ण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b2d6a57a939e": {
+      "item_id": "b2d6a57a939e",
+      "source_hash": "e3b085def8b4",
+      "text": "डॉक्टर की सलाह के बिना खुद से किसी भी स्टेरॉयड क्रीम का उपयोग न करें, विशेष रूप से चेहरे या त्वचा की सिलवटों पर",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3afed764fcf3": {
+      "item_id": "3afed764fcf3",
+      "source_hash": "f575ec8c3d99",
+      "text": "लालिमा, पपड़ी या खुजली के साथ कोई भी नया दाद जो बुनियादी देखभाल के 1 सप्ताह के भीतर ठीक नहीं हो रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "80383d6bdd03": {
+      "item_id": "80383d6bdd03",
+      "source_hash": "b3a10af6f12f",
+      "text": "चेहरे, पलकों या गुप्तांगों पर एक्जिमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fa10053a842f": {
+      "item_id": "fa10053a842f",
+      "source_hash": "75731ad5517b",
+      "text": "कामकाज की जगह पर किसी एलर्जेन या जलन पैदा करने वाले तत्व के कारण दाने होने का संदेह",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c751275f0c88": {
+      "item_id": "c751275f0c88",
+      "source_hash": "091d20eb8296",
+      "text": "एक्जिमा जो बार-बार उन्हीं जगहों पर होता रहता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "afdaf5a357f6": {
+      "item_id": "afdaf5a357f6",
+      "source_hash": "fbb8f2d447cb",
+      "text": "लंबे समय से एक्जिमा के कारण त्वचा का कुछ हिस्सों में मोटा या चमड़े जैसा सख्त हो जाना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d93bf33debe8": {
+      "item_id": "d93bf33debe8",
+      "source_hash": "01eb72f28943",
+      "text": "संक्रमण के लक्षणों के साथ एक्जिमा: मवाद, पीली पपड़ी या बढ़ती लालिमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b11435640f07": {
+      "item_id": "b11435640f07",
+      "source_hash": "f363e60a3af8",
+      "text": "बच्चे में एक्जिमा, विशेषकर यदि यह चेहरे, त्वचा की सिलवटों पर हो या खुजली के कारण नींद खराब कर रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e1f716c7bc0f": {
+      "item_id": "e1f716c7bc0f",
+      "source_hash": "5428b88e43c1",
+      "text": "गंभीर एक्जिमा जो प्राथमिक उपचार स्तर पर ठीक नहीं हो रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dccbb755c5ec": {
+      "item_id": "dccbb755c5ec",
+      "source_hash": "d1757d40852f",
+      "text": "व्यापक रूप से फैला रोग जिसके लिए फोटोथेरेपी या प्रणालीगत उपचार की आवश्यकता हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ca26aa7e16c9": {
+      "item_id": "ca26aa7e16c9",
+      "source_hash": "7ecd4389f947",
+      "text": "संदिग्ध एलर्जिक कांटेक्ट डर्मेटाइटिस जहां एलर्जेन की पहचान के लिए पैच टेस्टिंग की आवश्यकता हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4e0aab388f4b": {
+      "item_id": "4e0aab388f4b",
+      "source_hash": "e49aa14cdd37",
+      "text": "असामान्य लक्षणे जिन्हें एक्जिमा समझा जा सकता है: सोरायसिस, फंगल संक्रमण या क्यूटेनियस लिंफोमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a15445723a48": {
+      "item_id": "a15445723a48",
+      "source_hash": "2d00fdea9ceb",
+      "text": "एटॉपिक डर्मेटाइटिस",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "17657ded1207": {
+      "item_id": "17657ded1207",
+      "source_hash": "8c438e0dbaff",
+      "text": "कांटेक्ट डर्मेटाइटिस (एलर्जिक और इरिटेंट)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "504165f943c3": {
+      "item_id": "504165f943c3",
+      "source_hash": "54ed5a034c58",
+      "text": "सेबोरीइक डर्मेटाइटिस",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2ae3ea203166": {
+      "item_id": "2ae3ea203166",
+      "source_hash": "ddb095a46cd5",
+      "text": "न्यूमुलर एक्जिमा (सिक्के के आकार का एक्जिमा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "96c64ef426fa": {
+      "item_id": "96c64ef426fa",
+      "source_hash": "07327cabb4ac",
+      "text": "वेनस एक्जिमा (नसों से संबंधित एक्जिमा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6334876a705c": {
+      "item_id": "6334876a705c",
+      "source_hash": "477dbba36db0",
+      "text": "हाथों का एक्जिमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

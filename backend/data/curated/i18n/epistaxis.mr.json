@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-epistaxis",
+  "language": "mr",
+  "translations": {
+    "bd6b635816d4": {
+      "item_id": "bd6b635816d4",
+      "source_hash": "4474d315aea9",
+      "text": "योग्य प्रथमोपचार करूनही 20 मिनिटांनंतर नाकातून रक्त येणे न थांबणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bf8abefafd55": {
+      "item_id": "bf8abefafd55",
+      "source_hash": "5cde5266226f",
+      "text": "नाकातून प्रचंड किंवा वेगाने रक्तस्त्राव होणे ज्यामुळे चक्कर येणे, अशक्तपणा किंवा भोवळ येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "06d675b137fd": {
+      "item_id": "06d675b137fd",
+      "source_hash": "ec464accedca",
+      "text": "दुखापतीसारख्या स्पष्ट कारणाशिवाय नाकाच्या केवळ एकाच बाजूने सतत रक्त येणे, यासाठी तपासणीची आवश्यकता असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "81210b9bb7b4": {
+      "item_id": "81210b9bb7b4",
+      "source_hash": "40d67ad6a15a",
+      "text": "नाक बंद होणे, गाठ दिसणे, किंवा दृष्टी अथवा डोळ्यातील बदलांसह नाकातून रक्त येणे, हे नाक किंवा सायनसच्या गंभीर आजाराचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08311787a6ca": {
+      "item_id": "08311787a6ca",
+      "source_hash": "241b1ce9491c",
+      "text": "रक्त पातळ करणारी औषधे घेणाऱ्या किंवा रक्तस्त्रावाचा विकार असलेल्या व्यक्तीच्या नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a63a5bc0ce00": {
+      "item_id": "a63a5bc0ce00",
+      "source_hash": "b638368b87d4",
+      "text": "अनियंत्रित उच्च रक्तदाब (BP) असलेल्या व्यक्तीच्या नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c781172d767": {
+      "item_id": "7c781172d767",
+      "source_hash": "4d62b9af8d53",
+      "text": "डोक्याला दुखापत झाल्यानंतर नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e11116b1bac7": {
+      "item_id": "e11116b1bac7",
+      "source_hash": "d37d380e46f1",
+      "text": "नाकासोबतच इतर ठिकाणांहूनही रक्तस्त्राव होणे, जसे हिरड्या, त्वचेवर निळे डाग, लघवी किंवा विष्ठेत रक्त, हे रक्तविकाराचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5fecb801132a": {
+      "item_id": "5fecb801132a",
+      "source_hash": "733316cdaf0d",
+      "text": "पौगंडावस्थेतील मुलामध्ये वारंवार आणि खूप जास्त नाकातून रक्त येणे, यासाठी तज्ज्ञांच्या तपासणीची गरज असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "806a885e5710": {
+      "item_id": "806a885e5710",
+      "source_hash": "b5dba8a85e2f",
+      "text": "ताठ बसा आणि थोडे पुढे वाका, डोके मागे झुकवू नका, कारण यामुळे रक्त घशात जाऊ शकते आणि उलट्या किंवा गुदमरण्याचा त्रास होऊ शकतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "90918906c777": {
+      "item_id": "90918906c777",
+      "source_hash": "74fed614487d",
+      "text": "तोंडाने श्वास घ्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4f9efc998491": {
+      "item_id": "4f9efc998491",
+      "source_hash": "6cf684d9aae0",
+      "text": "अंगठा आणि तर्जनीने नाकाचा मऊ भाग (हाडाच्या पुलाच्या अगदी खाली) घट्ट दाबा, याला ट्रॉटर्स पोझिशन म्हणतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "78a64d3142c5": {
+      "item_id": "78a64d3142c5",
+      "source_hash": "5ff4b91613c5",
+      "text": "नाक न सोडता सलग 10 मिनिटे दाबून ठेवा, वेळ मोजण्यासाठी घड्याळ वापरा, कारण बहुतांश लोक वेळेचा चुकीचा अंदाज घेतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4cf22e980c96": {
+      "item_id": "4cf22e980c96",
+      "source_hash": "b10f902cfa04",
+      "text": "नाक आणि गालावर थंड पाण्याच्या पट्ट्या किंवा कपड्यात गुंडाळलेला बर्फ लावा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4eee6cf1370f": {
+      "item_id": "4eee6cf1370f",
+      "source_hash": "4fd46433110f",
+      "text": "10 मिनिटांनंतर, हळूच दाब सोडा आणि रक्तस्त्राव थांबला आहे का ते तपासा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ebd8042eff0": {
+      "item_id": "0ebd8042eff0",
+      "source_hash": "e1dbc34c4ed0",
+      "text": "जर रक्तस्त्राव चालूच राहिला, तर आणखी 10 मिनिटांसाठी पुन्हा नाक दाबून धरा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "621fa489649a": {
+      "item_id": "621fa489649a",
+      "source_hash": "07ba7194aa66",
+      "text": "रक्तस्त्राव थांबल्यानंतर लगेचच जोराने नाक शिंकरणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e7efb5a426d5": {
+      "item_id": "e7efb5a426d5",
+      "source_hash": "94964868448e",
+      "text": "नाकातून रक्त आल्यानंतर अनेक तास गरम पेये घेणे, शारीरिक श्रम करणे आणि पुढे वाकणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f1b9bbbc4b74": {
+      "item_id": "f1b9bbbc4b74",
+      "source_hash": "7b86c34a2a40",
+      "text": "कोरड्या हवेमुळे वारंवार नाकातून रक्त येत असल्यास, दररोज नाकपुडीच्या आत थोडे पेट्रोलियम जेली किंवा लिक्विड पॅराफिन लावा, यामुळे आतील ओलसरपणा टिकून राहतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c5b1b765fc7": {
+      "item_id": "5c5b1b765fc7",
+      "source_hash": "439e96434993",
+      "text": "मुलांमध्ये नाकातून रक्त येण्याची बहुतांश प्रकरणे कोरडी हवा किंवा नाकात बोट घालण्यामुळे नाकाच्या पुढच्या भागातून (लिटल्स एरिया) होतात आणि साध्या दाबाने लगेच थांबतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f7944bb3ce90": {
+      "item_id": "f7944bb3ce90",
+      "source_hash": "59b9275a1ed5",
+      "text": "नाकातून रक्त येणे जे थांबले होते पण वारंवार पुन्हा होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97100cd288dc": {
+      "item_id": "97100cd288dc",
+      "source_hash": "c69e10728997",
+      "text": "वारंवार नाकातून रक्त येण्यासह ज्ञात उच्च रक्तदाब (BP), अशा वेळी रक्तदाबाची तपासणी आणि नियंत्रण आवश्यक असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da10004b7803": {
+      "item_id": "da10004b7803",
+      "source_hash": "ffe159ff2f26",
+      "text": "मधुमेह असलेल्या व्यक्तीच्या नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4f2ea722a239": {
+      "item_id": "4f2ea722a239",
+      "source_hash": "99b5ac886afb",
+      "text": "लहान मुलामध्ये कोणत्याही स्पष्ट कारणाशिवाय वारंवार नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c92ef90c9d2f": {
+      "item_id": "c92ef90c9d2f",
+      "source_hash": "ff5c297b7f39",
+      "text": "सलग दाब दिल्यानंतरही 20 मिनिटांनी नाकातून रक्त येणे न थांबणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eb4a40931726": {
+      "item_id": "eb4a40931726",
+      "source_hash": "eaa2ee262f99",
+      "text": "चक्कर येणे, अशक्तपणा किंवा जलद नाडीसह प्रचंड रक्तस्त्राव होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "accddb7e26dd": {
+      "item_id": "accddb7e26dd",
+      "source_hash": "77fa8ef88b3f",
+      "text": "डोक्याच्या दुखापतीनंतर नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bfd0e186f18": {
+      "item_id": "7bfd0e186f18",
+      "source_hash": "8f136682b29d",
+      "text": "नाकासोबतच इतर ठिकाणांहूनही रक्तस्त्राव होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "832d7d8fa9df": {
+      "item_id": "832d7d8fa9df",
+      "source_hash": "7decb271cfeb",
+      "text": "एका बाजूने नाक बंद होणे, दृष्टी बदलणे किंवा नाक अथवा चेहऱ्यावर दृश्यमान सूज येण्यासह नाकातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5a3543d4bb02": {
+      "item_id": "5a3543d4bb02",
+      "source_hash": "1c89808fbc54",
+      "text": "एपिस्टॅक्सिस म्हणजे नाकातून रक्त येणे (घोळणा फुटणे). प्रौढांमधील नाकातून रक्त येण्याची बहुतांश प्रकरणे किरकोळ असतात आणि ती कोरडी हवा, नाकात बोट घालणे, दुखापत किंवा अनियंत्रित रक्तदाबाशी (BP) संबंधित असतात. बहुतांश वेळा साध्या प्रथमोपचाराने घरच्या घरी उपाय करता येतात.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

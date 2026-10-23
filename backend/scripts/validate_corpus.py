@@ -16,7 +16,7 @@ if str(backend_root) not in sys.path:
 
 from pydantic import BaseModel, ConfigDict, Field  # noqa: E402
 
-from app.data.corpus_loader import normalize_text  # noqa: E402
+from app.data.corpus_loader import extract_provenance_items_from_doc, normalize_text  # noqa: E402
 from app.data.models import ConditionDocument, UrgencyRulesFile  # noqa: E402
 
 
@@ -254,7 +254,7 @@ class CorpusValidator:
         for rule in all_rules:
             rule_loc = f"{rel_loc}.rules[{rule.id}]"
             if rule.source_id is None:
-                if rule.review_status != "pending_clinical_review":
+                if not (rule.review_status and rule.review_status.startswith("pending_")):
                     self.add_error(
                         5,
                         rule_loc,
@@ -296,6 +296,80 @@ class CorpusValidator:
             pct = (ver / tot * 100) if tot else 0.0
             print(f"  - {cid}: {ver}/{tot} verified ({pct:.1f}%)")
         print("-------------------------------------------\n")
+
+    def generate_translation_coverage_report(self, i18n_dir: Path) -> None:
+        """Report translation coverage per condition and language (reviewed, draft, rejected, missing)."""
+        print("\n--- Translation Coverage Report ---")
+        languages = ["hi", "mr"]
+        lang_names = {"hi": "Hindi (hi)", "mr": "Marathi (mr)"}
+
+        for lang in languages:
+            print(f"Language: {lang_names.get(lang, lang)}")
+            tot_all = 0
+            rev_all = 0
+            draft_all = 0
+            rej_all = 0
+            miss_all = 0
+
+            for p in sorted(self.curated_dir.glob("*.json")):
+                if p.name in ("urgency_rules.json", "manifest.json"):
+                    continue
+                try:
+                    with open(p, encoding="utf-8") as f:
+                        doc = ConditionDocument.model_validate(json.load(f))
+                except Exception:
+                    continue
+
+                items = extract_provenance_items_from_doc(doc)
+                tot = len(items)
+                tot_all += tot
+
+                cond_stem = doc.id.replace("icmr-stw-", "").replace("-", "_")
+                sidecar_path = i18n_dir / f"{cond_stem}.{lang}.json"
+
+                translations: dict[str, Any] = {}
+                if sidecar_path.exists():
+                    try:
+                        with open(sidecar_path, encoding="utf-8") as sf:
+                            sdata = json.load(sf)
+                            translations = sdata.get("translations", {})
+                    except Exception:
+                        pass
+
+                rev = sum(
+                    1
+                    for itm in items
+                    if translations.get(itm.item_id, {}).get("status") == "reviewed"
+                )
+                drf = sum(
+                    1
+                    for itm in items
+                    if translations.get(itm.item_id, {}).get("status") == "draft"
+                )
+                rej = sum(
+                    1
+                    for itm in items
+                    if translations.get(itm.item_id, {}).get("status") == "rejected"
+                )
+                mis = sum(1 for itm in items if itm.item_id not in translations)
+
+                rev_all += rev
+                draft_all += drf
+                rej_all += rej
+                miss_all += mis
+
+                pct = (rev / tot * 100) if tot else 0.0
+                print(
+                    f"  - {doc.id}: {rev}/{tot} reviewed ({pct:.1f}%), "
+                    f"{drf} draft, {rej} rejected, {mis} missing"
+                )
+
+            pct_all = (rev_all / tot_all * 100) if tot_all else 0.0
+            print(
+                f"  TOTAL {lang.upper()}: {rev_all}/{tot_all} reviewed ({pct_all:.1f}%), "
+                f"{draft_all} draft, {rej_all} rejected, {miss_all} missing\n"
+            )
+        print("-----------------------------------\n")
 
     def validate_intake_questions(
         self,
@@ -480,6 +554,8 @@ def main() -> None:
 
     validator.validate_intake_questions(intake_path, provenance_path, urgency_rules_path)
     validator.generate_provenance_report(provenance_path)
+    i18n_path = curated_dir / "i18n"
+    validator.generate_translation_coverage_report(i18n_path)
 
     if validator.errors:
         print(f"FAILED: {len(validator.errors)} corpus validation errors detected:")

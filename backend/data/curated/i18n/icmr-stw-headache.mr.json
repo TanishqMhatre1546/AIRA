@@ -1,0 +1,396 @@
+{
+  "condition_id": "icmr-stw-headache",
+  "language": "mr",
+  "translations": {
+    "e715978d4f1f": {
+      "item_id": "e715978d4f1f",
+      "source_hash": "acb7152a6fcc",
+      "text": "आयुष्यातील सर्वात भयंकर डोकेदुखी, अचानक अत्यंत तीव्र डोकेदुखी जी काही सेकंदांत किंवा मिनिटांत अत्युच्च पातळीवर पोहोचते (थंडरक्लॅप डोकेदुखी). हे मेंदूतील अंतर्गत रक्तस्त्रावाचे लक्षण असू शकते.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfe70d823b90": {
+      "item_id": "cfe70d823b90",
+      "source_hash": "7a536edef614",
+      "text": "पहिल्यांदाच झालेली अत्यंत तीव्र डोकेदुखी, विशेषतः ज्या व्यक्तीला सहसा डोकेदुखीचा त्रास होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3bd016f04d20": {
+      "item_id": "3bd016f04d20",
+      "source_hash": "17db203bdba4",
+      "text": "ताप आणि मानेच्या ताठरतेसह डोकेदुखी, हे मेंदुज्वराचे (मेनिनजायटिस) लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1e7f7694e0a0": {
+      "item_id": "1e7f7694e0a0",
+      "source_hash": "02600aa75f11",
+      "text": "ताप आणि वागणूक, व्यक्तिमत्त्व किंवा शुद्धीच्या पातळीत बदल होण्यासह डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4a56321636a5": {
+      "item_id": "4a56321636a5",
+      "source_hash": "00a922888bf0",
+      "text": "गोंधळ किंवा आजूबाजूचे भान नसण्यासह डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1839789171ac": {
+      "item_id": "1839789171ac",
+      "source_hash": "351f5b31f01a",
+      "text": "चेहरा किंवा शरीराच्या एका बाजूला अशक्तपणा, बधिरता किंवा लुळेपणा येण्यासह डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a7c4abb3ad21": {
+      "item_id": "a7c4abb3ad21",
+      "source_hash": "4731366307bb",
+      "text": "अचानक दृष्टी बदलणे किंवा दृष्टी जाण्यासह डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "27d23161b2d2": {
+      "item_id": "27d23161b2d2",
+      "source_hash": "3f70993f2c8b",
+      "text": "तीव्र डोकेदुखी ज्यामुळे झोपेतून जाग येते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b8339d13bb51": {
+      "item_id": "b8339d13bb51",
+      "source_hash": "ddfc849302ae",
+      "text": "गरोदर महिला किंवा नुकतीच प्रसूती झालेल्या महिलेमध्ये डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54d33e6c5aa9": {
+      "item_id": "54d33e6c5aa9",
+      "source_hash": "012f956d3ec5",
+      "text": "कर्करोग किंवा कमकुवत प्रतिकारशक्ती असलेल्या व्यक्तीमध्ये नवीन प्रकारची डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54ade22e7c94": {
+      "item_id": "54ade22e7c94",
+      "source_hash": "35447c800ade",
+      "text": "हळूहळू वाढणारी डोकेदुखी जी दिवसेंदिवस किंवा आठवड्यांमध्ये अधिक तीव्र होत चालली आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "461ae53cb76c": {
+      "item_id": "461ae53cb76c",
+      "source_hash": "8f4ce44e6fb1",
+      "text": "नुकत्याच झालेल्या डोक्याच्या दुखापतीशी संबंधित डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "850e18297bf8": {
+      "item_id": "850e18297bf8",
+      "source_hash": "6c1a5222695d",
+      "text": "शांत, अंधाऱ्या आणि थंड खोलीत विश्रांती घ्या, हे विशेषतः मायग्रेनसाठी अत्यंत फायदेशीर आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0d80e435a8db": {
+      "item_id": "0d80e435a8db",
+      "source_hash": "7a1e41b5d9ea",
+      "text": "पॅकवरील सूचनेनुसार वेदना कमी करण्यासाठी पॅरासिटामॉल घेतली जाऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff8a85387dbc": {
+      "item_id": "ff8a85387dbc",
+      "source_hash": "a2f1f52fae92",
+      "text": "भरपूर पाणी प्या, शरीरात पाणी कमी होणे (डिहायड्रेशन) हे डोकेदुखीचे एक सामान्य कारण आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1eecf1c8c12e": {
+      "item_id": "1eecf1c8c12e",
+      "source_hash": "db84c7444479",
+      "text": "कपाळावर किंवा मानेच्या मागील भागावर थंड किंवा कोमट पाण्याच्या पट्ट्या लावा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "684e733da8cb": {
+      "item_id": "684e733da8cb",
+      "source_hash": "6ddbb60477df",
+      "text": "वैयक्तिक ट्रिगर्स टाळा: अनियमित झोप, जेवण चुकवणे, जास्त स्क्रीन पाहणे, प्रखर प्रकाश, तीव्र वास, मानसिक ताण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9024429b583f": {
+      "item_id": "9024429b583f",
+      "source_hash": "3f49936e47c8",
+      "text": "दररोज किमान 6 तासांची नियमित झोप घ्या, झोप अपुरी असणे हे टेन्शन डोकेदुखी आणि मायग्रेन या दोन्हींचे प्रमुख कारण आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d460ca152f90": {
+      "item_id": "d460ca152f90",
+      "source_hash": "d3f7a1cb4f0e",
+      "text": "जर तुम्ही जास्त कॅफिन घेत असाल तर ते हळूहळू कमी करा, अचानक बंद केल्यानेही डोकेदुखी उद्भवू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bc539ab03002": {
+      "item_id": "bc539ab03002",
+      "source_hash": "928357e53c42",
+      "text": "तणाव व्यवस्थापन: छोटे ब्रेक घ्या, दीर्घ श्वसनाचा सराव करा आणि जास्त ताण घेऊन काम करणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0a23310933c6": {
+      "item_id": "0a23310933c6",
+      "source_hash": "3798213d8a76",
+      "text": "मायग्रेनसाठी, अंधाऱ्या खोलीत झोपा आणि शक्य असल्यास झोप घ्या, झोपेमुळे अनेकदा मायग्रेनपासून आराम मिळतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5d8540543119": {
+      "item_id": "5d8540543119",
+      "source_hash": "a33a3c4d5aa0",
+      "text": "डोकेदुखीसाठी आठवड्यातून 3 दिवसांपेक्षा जास्त वेदनाशामक औषधे घेऊ नका, औषधांच्या अतिवापरामुळे उलट डोकेदुखी वाढू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "91bef3f0a54f": {
+      "item_id": "91bef3f0a54f",
+      "source_hash": "a926683bf979",
+      "text": "महिन्यातून 2 पेक्षा जास्त वेळा होणारी डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "becc0752c702": {
+      "item_id": "becc0752c702",
+      "source_hash": "a1c7764aa4f6",
+      "text": "डोकेदुखी ज्यामुळे दैनंदिन कामात किंवा झोपेत अडथळा येतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e8f2f367e940": {
+      "item_id": "e8f2f367e940",
+      "source_hash": "809365a28551",
+      "text": "डोकेदुखी जी कालांतराने अधिक वारंवार किंवा अधिक तीव्र होत चालली आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9de70119f625": {
+      "item_id": "9de70119f625",
+      "source_hash": "cfafd8f2867a",
+      "text": "पॅरासिटामॉलने न थांबणारा मायग्रेन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ace7a72fb857": {
+      "item_id": "ace7a72fb857",
+      "source_hash": "2c90fc66d361",
+      "text": "डोकेदुखी जी नेहमी डोक्याच्या एकाच बाजूला होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3f3f699fbd29": {
+      "item_id": "3f3f699fbd29",
+      "source_hash": "ced5a4ec917a",
+      "text": "नेहमी मळमळ आणि उलट्यांसह होणारी डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e085252de2ef": {
+      "item_id": "e085252de2ef",
+      "source_hash": "f7ff1c3d2c02",
+      "text": "टेन्शन डोकेदुखी जी झोपेच्या मोठ्या त्रासासह अनेक वर्षांपासून टिकून आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9fb44bc7d99f": {
+      "item_id": "9fb44bc7d99f",
+      "source_hash": "79fd6b6c4d78",
+      "text": "डोकेदुखीचा कोणताही नवीन किंवा असामान्य पॅटर्न जो आधी कधीही झाला नव्हता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "15d4cfe88dc9": {
+      "item_id": "15d4cfe88dc9",
+      "source_hash": "d479d79d171f",
+      "text": "वर नमूद केलेले कोणतेही धोक्याचे लक्षण, थंडरक्लॅप डोकेदुखी, मानेच्या ताठरतेसह ताप, गोंधळ, एका बाजूला अशक्तपणा, दृष्टी जाणे, आयुष्यातील सर्वात वाईट डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88c70fa9af22": {
+      "item_id": "88c70fa9af22",
+      "source_hash": "ba7e7fd3ba0d",
+      "text": "डोकेदुखी जी दिवसेंदिवस वाढत चालली आहे आणि कोणत्याही उपचाराने बरी होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b43dce70a461": {
+      "item_id": "b43dce70a461",
+      "source_hash": "3aa3ea693057",
+      "text": "झटके येणे किंवा बेशुद्धीसह डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d184cbbf8c98": {
+      "item_id": "d184cbbf8c98",
+      "source_hash": "5d806818bf52",
+      "text": "कर्करोग असलेल्या किंवा प्रतिकारशक्ती कमी करणाऱ्या औषधांवर असलेल्या व्यक्तीमध्ये डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c20e34cce4df": {
+      "item_id": "c20e34cce4df",
+      "source_hash": "2139536e8ec7",
+      "text": "हेमिप्लेजिया (एका बाजूचा हात किंवा पाय कमजोर होणे), चक्कर येणे किंवा दृष्टी कमी होण्यासह तीव्र मायग्रेन, हे असामान्य प्रकार असून पक्षाघात नाकारण्यासाठी तातडीच्या तपासणीची गरज असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f84d0587a4e7": {
+      "item_id": "f84d0587a4e7",
+      "source_hash": "a605b52b8e78",
+      "text": "टेन्शन डोकेदुखी (तणावामुळे होणारी डोकेदुखी)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "28ddbda22a62": {
+      "item_id": "28ddbda22a62",
+      "source_hash": "e106cf93fdc1",
+      "text": "मायग्रेन (अर्धशिशी)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bc204b4e9c3b": {
+      "item_id": "bc204b4e9c3b",
+      "source_hash": "294847a73a82",
+      "text": "क्लस्टर डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54b92294fc7b": {
+      "item_id": "54b92294fc7b",
+      "source_hash": "3b3dcb423cf4",
+      "text": "गंभीर अंतर्गत आजारांमुळे होणारी दुय्यम डोकेदुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

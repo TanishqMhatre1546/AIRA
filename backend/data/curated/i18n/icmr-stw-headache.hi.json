@@ -1,0 +1,396 @@
+{
+  "condition_id": "icmr-stw-headache",
+  "language": "hi",
+  "translations": {
+    "e715978d4f1f": {
+      "item_id": "e715978d4f1f",
+      "source_hash": "acb7152a6fcc",
+      "text": "जीवन का सबसे भयंकर सिरदर्द, अचानक अत्यधिक तेज सिरदर्द जो सेकंडों से मिनटों में अपनी चरम तीव्रता पर पहुंच जाए (थंडरक्लैप सिरदर्द)। यह मस्तिष्क में रक्तस्राव का संकेत हो सकता है।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfe70d823b90": {
+      "item_id": "cfe70d823b90",
+      "source_hash": "7a536edef614",
+      "text": "पहली बार हुआ अत्यधिक तेज सिरदर्द, विशेष रूप से उस व्यक्ति में जिसे आमतौर पर सिरदर्द नहीं होता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3bd016f04d20": {
+      "item_id": "3bd016f04d20",
+      "source_hash": "17db203bdba4",
+      "text": "बुखार और गर्दन की अकड़न के साथ सिरदर्द, यह मेनिनजाइटिस (दिमागी बुखार) का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1e7f7694e0a0": {
+      "item_id": "1e7f7694e0a0",
+      "source_hash": "02600aa75f11",
+      "text": "बुखार और व्यवहार, व्यक्तित्व या चेतना के स्तर में बदलाव के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4a56321636a5": {
+      "item_id": "4a56321636a5",
+      "source_hash": "00a922888bf0",
+      "text": "भ्रम या उलझन के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1839789171ac": {
+      "item_id": "1839789171ac",
+      "source_hash": "351f5b31f01a",
+      "text": "चेहरे या शरीर के एक तरफ कमजोरी, सुन्नपन या लकवे के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a7c4abb3ad21": {
+      "item_id": "a7c4abb3ad21",
+      "source_hash": "4731366307bb",
+      "text": "अचानक दृष्टि में बदलाव या दृष्टि चले जाने के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "27d23161b2d2": {
+      "item_id": "27d23161b2d2",
+      "source_hash": "3f70993f2c8b",
+      "text": "तेज सिरदर्द जो नींद से जगा दे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b8339d13bb51": {
+      "item_id": "b8339d13bb51",
+      "source_hash": "ddfc849302ae",
+      "text": "गर्भवती महिला या हाल ही में बच्चे को जन्म देने वाली महिला में सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54d33e6c5aa9": {
+      "item_id": "54d33e6c5aa9",
+      "source_hash": "012f956d3ec5",
+      "text": "कैंसर या कमजोर प्रतिरक्षा प्रणाली वाले व्यक्ति में नए प्रकार का सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54ade22e7c94": {
+      "item_id": "54ade22e7c94",
+      "source_hash": "35447c800ade",
+      "text": "बढ़ता हुआ सिरदर्द जो दिनों या हफ्तों में लगातार बदतर होता जा रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "461ae53cb76c": {
+      "item_id": "461ae53cb76c",
+      "source_hash": "8f4ce44e6fb1",
+      "text": "हाल ही में सिर पर लगी चोट से संबंधित सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "850e18297bf8": {
+      "item_id": "850e18297bf8",
+      "source_hash": "6c1a5222695d",
+      "text": "शांत, अंधेरे और ठंडे कमरे में आराम करें, यह विशेष रूप से माइग्रेन के लिए मददगार है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0d80e435a8db": {
+      "item_id": "0d80e435a8db",
+      "source_hash": "7a1e41b5d9ea",
+      "text": "दर्द से राहत के लिए पैक पर लिखे निर्देश के अनुसार पैरासिटामोल ली जा सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff8a85387dbc": {
+      "item_id": "ff8a85387dbc",
+      "source_hash": "a2f1f52fae92",
+      "text": "पर्याप्त पानी पिएं, निर्जलीकरण (डिहाइड्रेशन) सिरदर्द का एक सामान्य कारण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1eecf1c8c12e": {
+      "item_id": "1eecf1c8c12e",
+      "source_hash": "db84c7444479",
+      "text": "माथे या गर्दन के पिछले हिस्से पर ठंडी या गर्म पट्टी लगाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "684e733da8cb": {
+      "item_id": "684e733da8cb",
+      "source_hash": "6ddbb60477df",
+      "text": "ज्ञात व्यक्तिगत ट्रिगर्स से बचें: अनियमित नींद, भोजन छोड़ना, स्क्रीन का अत्यधिक उपयोग, तेज रोशनी, तेज गंध, तनाव",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9024429b583f": {
+      "item_id": "9024429b583f",
+      "source_hash": "3f49936e47c8",
+      "text": "नियमित रूप से कम से कम 6 घंटे की नींद सुनिश्चित करें, नींद की कमी तनाव सिरदर्द और माइग्रेन दोनों के लिए एक प्रमुख कारण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d460ca152f90": {
+      "item_id": "d460ca152f90",
+      "source_hash": "d3f7a1cb4f0e",
+      "text": "यदि आप अधिक मात्रा में कैफीन लेते हैं तो इसका सेवन धीरे-धीरे कम करें, अचानक बंद करने से भी सिरदर्द हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bc539ab03002": {
+      "item_id": "bc539ab03002",
+      "source_hash": "928357e53c42",
+      "text": "तनाव प्रबंधन: छोटे ब्रेक लें, गहरी सांस लेने का अभ्यास करें और अत्यधिक काम से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0a23310933c6": {
+      "item_id": "0a23310933c6",
+      "source_hash": "3798213d8a76",
+      "text": "माइग्रेन के लिए, अंधेरे कमरे में लेट जाएं और यदि संभव हो तो सोएं, नींद से अक्सर माइग्रेन में राहत मिलती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5d8540543119": {
+      "item_id": "5d8540543119",
+      "source_hash": "a33a3c4d5aa0",
+      "text": "सिरदर्द के लिए सप्ताह में 3 दिनों से अधिक दर्द निवारक दवाएं न लें, दर्द निवारक दवाओं का अत्यधिक उपयोग अपने आप रिबाउंड सिरदर्द का कारण बनता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "91bef3f0a54f": {
+      "item_id": "91bef3f0a54f",
+      "source_hash": "a926683bf979",
+      "text": "महीने में 2 बार से अधिक होने वाला सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "becc0752c702": {
+      "item_id": "becc0752c702",
+      "source_hash": "a1c7764aa4f6",
+      "text": "सिरदर्द जो दैनिक कार्य या नींद में बाधा डाल रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e8f2f367e940": {
+      "item_id": "e8f2f367e940",
+      "source_hash": "809365a28551",
+      "text": "सिरदर्द जो समय के साथ बार-बार या अधिक तेज होता जा रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9de70119f625": {
+      "item_id": "9de70119f625",
+      "source_hash": "cfafd8f2867a",
+      "text": "पैरासिटामोल से ठीक न होने वाला माइग्रेन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ace7a72fb857": {
+      "item_id": "ace7a72fb857",
+      "source_hash": "2c90fc66d361",
+      "text": "सिरदर्द जो हमेशा सिर के एक ही तरफ होता हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3f3f699fbd29": {
+      "item_id": "3f3f699fbd29",
+      "source_hash": "ced5a4ec917a",
+      "text": "नियमित रूप से जी मिचलाने और उल्टी के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e085252de2ef": {
+      "item_id": "e085252de2ef",
+      "source_hash": "f7ff1c3d2c02",
+      "text": "तनाव सिरदर्द जो नींद में भारी खलल के साथ कई वर्षों से बना हुआ हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9fb44bc7d99f": {
+      "item_id": "9fb44bc7d99f",
+      "source_hash": "79fd6b6c4d78",
+      "text": "सिरदर्द का कोई भी नया या असामान्य तरीका जो पहले कभी न हुआ हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "15d4cfe88dc9": {
+      "item_id": "15d4cfe88dc9",
+      "source_hash": "d479d79d171f",
+      "text": "ऊपर सूचीबद्ध कोई भी लाल झंडी (खतरे का संकेत), थंडरक्लैप सिरदर्द, गर्दन में अकड़न के साथ बुखार, भ्रम, एक तरफ कमजोरी, दृष्टि हानि, जीवन का सबसे भयंकर सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88c70fa9af22": {
+      "item_id": "88c70fa9af22",
+      "source_hash": "ba7e7fd3ba0d",
+      "text": "सिरदर्द जो दिनों-दिन बढ़ता जा रहा है और किसी भी उपचार से ठीक नहीं हो रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b43dce70a461": {
+      "item_id": "b43dce70a461",
+      "source_hash": "3aa3ea693057",
+      "text": "दौरे या बेहोशी के साथ सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d184cbbf8c98": {
+      "item_id": "d184cbbf8c98",
+      "source_hash": "5d806818bf52",
+      "text": "कैंसर पीड़ित या प्रतिरक्षा-दबाने वाली दवाएं लेने वाले व्यक्ति में सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c20e34cce4df": {
+      "item_id": "c20e34cce4df",
+      "source_hash": "2139536e8ec7",
+      "text": "हेमिप्लेजिया (एक तरफ हाथ या पैर की कमजोरी), चक्कर आना, या दृष्टि में महत्वपूर्ण कमी के साथ गंभीर माइग्रेन, ये असामान्य हैं और स्ट्रोक से बचने के लिए तत्काल जांच की आवश्यकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f84d0587a4e7": {
+      "item_id": "f84d0587a4e7",
+      "source_hash": "a605b52b8e78",
+      "text": "तनाव सिरदर्द (टेंशन हेडेक)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "28ddbda22a62": {
+      "item_id": "28ddbda22a62",
+      "source_hash": "e106cf93fdc1",
+      "text": "माइग्रेन (आधे सिर का दर्द)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bc204b4e9c3b": {
+      "item_id": "bc204b4e9c3b",
+      "source_hash": "294847a73a82",
+      "text": "क्लस्टर सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54b92294fc7b": {
+      "item_id": "54b92294fc7b",
+      "source_hash": "3b3dcb423cf4",
+      "text": "गंभीर अंतर्निहित बीमारियों के कारण होने वाला द्वितीयक सिरदर्द",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

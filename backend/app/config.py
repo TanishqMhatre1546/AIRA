@@ -56,6 +56,7 @@ class Settings(BaseSettings):
     clinical_review_by: str | None = None
     clinical_review_date: str | None = None
     intake_enabled: bool = False
+    allow_unreviewed_translations: bool = False
 
     @model_validator(mode="after")
     def validate_production_invariants(self) -> "Settings":
@@ -63,6 +64,8 @@ class Settings(BaseSettings):
         if self.environment == "production":
             if self.allow_unverified_content:
                 raise ValueError("allow_unverified_content must be False in production")
+            if self.allow_unreviewed_translations:
+                raise ValueError("allow_unreviewed_translations must be False in production")
             if self.llm_enabled and (
                 self.gemini_api_key is None or not self.gemini_api_key.get_secret_value().strip()
             ):

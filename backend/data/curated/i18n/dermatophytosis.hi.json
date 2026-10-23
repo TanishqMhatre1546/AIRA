@@ -1,0 +1,336 @@
+{
+  "condition_id": "icmr-stw-dermatophytosis",
+  "language": "hi",
+  "translations": {
+    "196755ce0e9f": {
+      "item_id": "196755ce0e9f",
+      "source_hash": "ed2df87f1ce7",
+      "text": "शरीर के बड़े हिस्सों में फैला हुआ बहुत व्यापक संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f63167d4a1c0": {
+      "item_id": "f63167d4a1c0",
+      "source_hash": "e9c71e4a935f",
+      "text": "4 सप्ताह के नियमित उपचार के बाद भी बिल्कुल सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f0d33fed971e": {
+      "item_id": "f0d33fed971e",
+      "source_hash": "de970a040537",
+      "text": "पूरा उपचार लेने के बावजूद संक्रमण का बार-बार वापस आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8b3ee2fdd4e2": {
+      "item_id": "8b3ee2fdd4e2",
+      "source_hash": "5bf23c12d84d",
+      "text": "गर्भावस्था के दौरान या लिवर, किडनी अथवा हृदय रोग से पीड़ित व्यक्ति में संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cf262dec8dcc": {
+      "item_id": "cf262dec8dcc",
+      "source_hash": "0da6e3c040c2",
+      "text": "स्टेरॉयड युक्त क्रीम के लंबे समय तक उपयोग का संदिग्ध या ज्ञात इतिहास, ये फंगल संक्रमण को काफी बिगाड़ सकते हैं और इलाज को बहुत कठिन बना सकते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3b2b161b3fb9": {
+      "item_id": "3b2b161b3fb9",
+      "source_hash": "edbbbe4a89f9",
+      "text": "साधारण साबुन और सामान्य तापमान के पानी से रोजाना स्नान करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4bc2d77ea6cb": {
+      "item_id": "4bc2d77ea6cb",
+      "source_hash": "b16a1bf931a4",
+      "text": "नहाने के बाद त्वचा को अच्छी तरह सुखाएं, विशेषकर पैर की उंगलियों के बीच और त्वचा की परतों को",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e94c6acd35ad": {
+      "item_id": "e94c6acd35ad",
+      "source_hash": "dc6fcfa812f3",
+      "text": "कपड़ों को गर्म पानी में अलग से धोएं और उन्हें धूप में उल्टा करके सुखाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0218004e3037": {
+      "item_id": "0218004e3037",
+      "source_hash": "3f709b6f202f",
+      "text": "तौलिए, कपड़े या अंडरगारमेंट्स दूसरों के साथ साझा न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7bf6f2ed734b": {
+      "item_id": "7bf6f2ed734b",
+      "source_hash": "a1b91d648328",
+      "text": "कपड़ों को बिना धोए दोबारा न पहनें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4a2a8c391d04": {
+      "item_id": "4a2a8c391d04",
+      "source_hash": "01dc8560a477",
+      "text": "नाखून छोटे और कटे हुए रखें, संक्रमित नाखून कमजोर होते हैं और फंगस फैला सकते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c6fd7c0a293": {
+      "item_id": "5c6fd7c0a293",
+      "source_hash": "9aada7b365ba",
+      "text": "स्वीमिंग पूल या सामुदायिक स्नान गृह जैसी सार्वजनिक जगहों पर नंगे पैर चलने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3969f09df6e7": {
+      "item_id": "3969f09df6e7",
+      "source_hash": "95141dfd317a",
+      "text": "सूती मोजे पहनें और उन्हें रोजाना बदलें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eb3132513315": {
+      "item_id": "eb3132513315",
+      "source_hash": "a78c48fe677d",
+      "text": "किसी भी स्टेरॉयड युक्त क्रीम का उपयोग न करें (जो अक्सर मेडिकल स्टोर पर कॉम्बिनेशन क्रीम के रूप में मिलती हैं), ये फंगल संक्रमण को और खराब कर देती हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "299b4a25c75e": {
+      "item_id": "299b4a25c75e",
+      "source_hash": "b31022a853a4",
+      "text": "खुजली कम होते ही इलाज बंद न करें, हमेशा पूरा कोर्स पूरा करें क्योंकि संक्रमण अभी भी मौजूद रहता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5666421f42c5": {
+      "item_id": "5666421f42c5",
+      "source_hash": "454b5dc3da75",
+      "text": "बिना डॉक्टर की सलाह के खुद से दवा न लें, इससे बाद में संक्रमण का इलाज करना अधिक कठिन हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5b0cd6b5a99a": {
+      "item_id": "5b0cd6b5a99a",
+      "source_hash": "3759e16760e7",
+      "text": "त्वचा, जांघ, पैर या हाथों पर कोई भी खुजलीदार, गोल आकार का, पपड़ीदार दाद या चकत्ता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97ddb34d205b": {
+      "item_id": "97ddb34d205b",
+      "source_hash": "6ca9696de353",
+      "text": "नाखूनों का रंग बदलना, मोटा होना या टूटना/झड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b785717bea58": {
+      "item_id": "b785717bea58",
+      "source_hash": "7baf8f7c39ab",
+      "text": "4 सप्ताह के बाद भी संक्रमण का इलाज से ठीक न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1ab99939cf04": {
+      "item_id": "1ab99939cf04",
+      "source_hash": "744c0dade0f5",
+      "text": "संक्रमण का परिवार के अन्य सदस्यों में फैलना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aa9e6226a211": {
+      "item_id": "aa9e6226a211",
+      "source_hash": "e2b4af5dcf90",
+      "text": "जांघों, हथेलियों या तलवों में संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5ee0a5ff25cf": {
+      "item_id": "5ee0a5ff25cf",
+      "source_hash": "ae0bc459c5f7",
+      "text": "हथेलियों या तलवों की सिलवटों में पपड़ी बनना, या पैरों पर सूखे छाले",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "04a4c20985ae": {
+      "item_id": "04a4c20985ae",
+      "source_hash": "bca40a9d5101",
+      "text": "यदि गर्भवती हैं या कोई पुरानी बीमारी है, तो कोई भी उपचार शुरू करने से पहले",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7777918652d6": {
+      "item_id": "7777918652d6",
+      "source_hash": "9efd339ef584",
+      "text": "पूरे शरीर में बहुत व्यापक रूप से फैला रोग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7c0f255d0c5f": {
+      "item_id": "7c0f255d0c5f",
+      "source_hash": "e09dce346706",
+      "text": "सही एंटीफंगल दवाओं से 4 सप्ताह के नियमित उपचार के बाद भी कोई सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "88f597daae80": {
+      "item_id": "88f597daae80",
+      "source_hash": "609ad804a948",
+      "text": "लंबे समय तक उपचार और सही तरीके से दवा लेने के बावजूद संक्रमण का ठीक न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f7de2551e3d3": {
+      "item_id": "f7de2551e3d3",
+      "source_hash": "a76f5d05fabc",
+      "text": "बार-बार होने वाला संक्रमण",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "61b5f4e23897": {
+      "item_id": "61b5f4e23897",
+      "source_hash": "39daab34370e",
+      "text": "ऐसी स्थितियां जो उपचार के चयन को प्रभावित करती हैं: गर्भावस्था, लिवर की बीमारी, किडनी की बीमारी या हृदय रोग",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "13015451623f": {
+      "item_id": "13015451623f",
+      "source_hash": "4b3ec7f8f25b",
+      "text": "टिनिया कॉर्पोरिस (शरीर पर दाद)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfe6590c7aed": {
+      "item_id": "cfe6590c7aed",
+      "source_hash": "37a435330f53",
+      "text": "टिनिया क्रूरिस (जांघ का फंगल संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2f20bd0f7d85": {
+      "item_id": "2f20bd0f7d85",
+      "source_hash": "d8a3335a7def",
+      "text": "टिनिया पेडिस (पैरों का एथलीट फुट संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b97355c7c9c9": {
+      "item_id": "b97355c7c9c9",
+      "source_hash": "28904da7f052",
+      "text": "टिनिया मैन्युम (हाथों का फंगल संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0ba6f30d3f6e": {
+      "item_id": "0ba6f30d3f6e",
+      "source_hash": "416aee4984a2",
+      "text": "ओनिकोमाइकोसिस (नाखूनों का फंगल संक्रमण)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

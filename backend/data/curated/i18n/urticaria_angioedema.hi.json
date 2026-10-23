@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-urticaria-angioedema",
+  "language": "hi",
+  "translations": {
+    "2ebee71b399a": {
+      "item_id": "2ebee71b399a",
+      "source_hash": "95fa29d05bd4",
+      "text": "होंठ, जीभ या गले में सूजन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e69d07be904b": {
+      "item_id": "e69d07be904b",
+      "source_hash": "3ab5bdb7c586",
+      "text": "सांस लेने में कठिनाई, घुटन या सांस फूलना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1f40d8d17404": {
+      "item_id": "1f40d8d17404",
+      "source_hash": "4206ee0d12b8",
+      "text": "सूजन के बाद आवाज बैठना या बोलने में कठिनाई",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "25b918b08363": {
+      "item_id": "25b918b08363",
+      "source_hash": "fb7595665ece",
+      "text": "सांस की नली में सूजन (लैरिंजियल एंजियोएडेमा), यह जानलेवा आपात स्थिति है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bb4d08ed9e5d": {
+      "item_id": "bb4d08ed9e5d",
+      "source_hash": "02c02d0afc33",
+      "text": "पित्ती (चकत्ते) के साथ सांस लेने में तकलीफ, यह एनाफिलेक्सिस का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aa7e394581ed": {
+      "item_id": "aa7e394581ed",
+      "source_hash": "068d82d7f83b",
+      "text": "शॉक: किसी एलर्जेन के संपर्क में आने के बाद चक्कर आना, बेहोशी, बहुत कम रक्तचाप (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "043a6decec2f": {
+      "item_id": "043a6decec2f",
+      "source_hash": "003a3508d08a",
+      "text": "हल्की पित्ती जिसमें खुजली हो लेकिन सांस लेने में कोई तकलीफ न हो, उसे अक्सर डॉक्टर द्वारा बताई गई एंटीहिस्टामाइन से नियंत्रित किया जा सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "df76fd3eea38": {
+      "item_id": "df76fd3eea38",
+      "source_hash": "d60c2e840f3c",
+      "text": "ट्रिगर्स को पहचानें और उनसे बचें: सामान्य ट्रिगर्स में कुछ खाद्य पदार्थ, दवाएं (विशेषकर दर्द निवारक NSAIDs), कीड़े के काटने, लेटेक्स और तनाव शामिल हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5c83d81e9d3b": {
+      "item_id": "5c83d81e9d3b",
+      "source_hash": "d806a5e712dc",
+      "text": "यदि पित्ती का पुराना इतिहास रहा हो तो आम दवा ट्रिगर्स से बचें: इबुप्रोफेन या एस्पिरिन जैसी दर्द निवारक दवाएं कुछ लोगों में पित्ती को भड़का सकती हैं या बढ़ा सकती हैं, हमेशा अपने डॉक्टर को अपने इतिहास के बारे में बताएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a49307bf690b": {
+      "item_id": "a49307bf690b",
+      "source_hash": "d7846660c95e",
+      "text": "अस्थायी राहत के लिए खुजली वाली जगह पर ठंडी पट्टी लगाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9b703ea2a132": {
+      "item_id": "9b703ea2a132",
+      "source_hash": "2345b63903df",
+      "text": "त्वचा की जलन को कम करने के लिए ढीले, आरामदायक कपड़े पहनें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c6023bd29e7": {
+      "item_id": "1c6023bd29e7",
+      "source_hash": "88b36247c370",
+      "text": "यदि व्यायाम आपकी पित्ती के लिए एक ज्ञात ट्रिगर है तो भारी व्यायाम से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7cbd6bc0bdbb": {
+      "item_id": "7cbd6bc0bdbb",
+      "source_hash": "779eb61b260d",
+      "text": "पित्ती जो 24 घंटे के भीतर ठीक हो जाती है और दोबारा नहीं होती, उसके लिए आगे के इलाज की आवश्यकता नहीं हो सकती है, तसल्ली देना पर्याप्त है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "789220070761": {
+      "item_id": "789220070761",
+      "source_hash": "0c24f16a6f32",
+      "text": "क्रॉनिक पित्ती के लगभग आधे मामले 12 से 24 महीनों के भीतर अपने आप ठीक हो जाते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8143c76b2a0b": {
+      "item_id": "8143c76b2a0b",
+      "source_hash": "ee379d911d48",
+      "text": "यदि डॉक्टर ने लंबे समय तक एंटीहिस्टामाइन लेने की सलाह दी है तो उन्हें अचानक बंद न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9af989d2c3e7": {
+      "item_id": "9af989d2c3e7",
+      "source_hash": "4f666a0795ff",
+      "text": "पित्ती जो कई दिनों तक बार-बार दिखाई दे या ठीक न हो रही हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9a40e529301f": {
+      "item_id": "9a40e529301f",
+      "source_hash": "025fd6a90d4b",
+      "text": "चेहरे, होंठ या आंखों में कोई भी सूजन, भले ही सांस लेने में कोई कठिनाई न हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff601bb6fe9d": {
+      "item_id": "ff601bb6fe9d",
+      "source_hash": "92399b2c0f88",
+      "text": "6 सप्ताह से अधिक समय तक रहने वाली पित्ती, यह क्रॉनिक अर्टिकेरिया है और इसकी जांच की आवश्यकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e7b335a2d85e": {
+      "item_id": "e7b335a2d85e",
+      "source_hash": "5e258a14f0b0",
+      "text": "पित्ती जो एक ही जगह पर 24 से 48 घंटे से अधिक समय तक बनी रहे, दर्दनाक हो और नीले निशान छोड़ दे, यह अर्टिकेरियल वास्कुलिटिस हो सकता है जो साधारण पित्ती से अलग है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5794b9b66989": {
+      "item_id": "5794b9b66989",
+      "source_hash": "37ef21a52c4e",
+      "text": "पित्ती जो किसी विशिष्ट भोजन, दवा या स्थिति से संबंधित लगती हो, एलर्जी परीक्षण की आवश्यकता हो सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1f63fea28771": {
+      "item_id": "1f63fea28771",
+      "source_hash": "693278a53988",
+      "text": "एंटीहिस्टामाइन से ठीक न होने वाली पित्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "67dc689ffd3c": {
+      "item_id": "67dc689ffd3c",
+      "source_hash": "fc18f48df515",
+      "text": "जोड़ों के दर्द, बुखार या सामान्य अस्वस्थता के साथ पित्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "97da85b14d7e": {
+      "item_id": "97da85b14d7e",
+      "source_hash": "2b7527b01585",
+      "text": "सांस लेने में कोई भी कठिनाई, गले में सूजन, या एनाफिलेक्सिस के लक्षण, आपातकालीन स्थिति स्थिर करने के बाद रेफर करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac9ad2532da4": {
+      "item_id": "ac9ad2532da4",
+      "source_hash": "e8e8a51ee990",
+      "text": "गले या सांस की नली को प्रभावित करने वाला एंजियोएडेमा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "55b2af7a71cf": {
+      "item_id": "55b2af7a71cf",
+      "source_hash": "ef8f0a9dfe4f",
+      "text": "अधिक खुराक पर भी मानक एंटीहिस्टामाइन दवाओं से नियंत्रित न होने वाली पित्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ff4a0fa71620": {
+      "item_id": "ff4a0fa71620",
+      "source_hash": "814eb71c34c7",
+      "text": "असामान्य पित्ती: 24 से 48 घंटे से अधिक समय तक रहने वाले चकत्ते और त्वचा पर नीले निशान",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dd33034be9a8": {
+      "item_id": "dd33034be9a8",
+      "source_hash": "41ed3c555891",
+      "text": "पित्ती के बिना एंजियोएडेमा, यह एक दुर्लभ वंशानुगत स्थिति (C1 अवरोधक की कमी) का संकेत हो सकता है जिसके लिए विशेषज्ञ जांच की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "995facd18264": {
+      "item_id": "995facd18264",
+      "source_hash": "d4689c708e19",
+      "text": "संबंधित प्रणालीगत लक्षणों (बुखार, जोड़ों का दर्द, वजन कम होना) के साथ पित्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6b24e0b04222": {
+      "item_id": "6b24e0b04222",
+      "source_hash": "a36155d4fff2",
+      "text": "अर्टिकेरिया (पित्ती): त्वचा पर अचानक विभिन्न आकार और आकृति के उभरे हुए, खुजलीदार चकत्ते (व्हील्स) का उभरना, जिसके चारों ओर लालिमा होती है। व्यक्तिगत चकत्ते आमतौर पर 1 से 24 घंटे के भीतर ठीक हो जाते हैं लेकिन नए दिखाई दे सकते हैं। क्रॉनिक अर्टिकेरिया का अर्थ है कि यह 6 सप्ताह से अधिक समय तक रहा है।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "671004a3cc15": {
+      "item_id": "671004a3cc15",
+      "source_hash": "907c5d71ae1e",
+      "text": "एंजियोएडेमा: त्वचा की अचानक गहरी सूजन, जो अक्सर चेहरे, होंठ, जीभ, गले या जननांगों को प्रभावित करती है। इसे ठीक होने में 72 घंटे तक का समय लग सकता है। जब यह गले या सांस की नली को प्रभावित करता है, तो यह एक चिकित्सा आपात स्थिति होती है।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

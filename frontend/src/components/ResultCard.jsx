@@ -162,7 +162,12 @@ export default function ResultCard({
               </div>
             )}
 
-            <SectionList sections={sections} mode={mode} />
+            <SectionList
+              sections={sections}
+              mode={mode}
+              contentLanguage={result.content_language}
+              translationStatus={result.translation_status}
+            />
             <SourceList citations={citations} />
 
             {disclaimer && (

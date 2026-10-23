@@ -1,0 +1,226 @@
+{
+  "condition_id": "icmr-stw-scabies",
+  "language": "hi",
+  "translations": {
+    "2753d207dc68": {
+      "item_id": "2753d207dc68",
+      "source_hash": "c48c5f04a5fa",
+      "text": "क्रस्टेड (नॉर्वेजियन) स्केबीज: त्वचा पर मोटी, पीली-भूरी पपड़ी, विशेषकर हाथों और पैरों पर, यह कमजोर प्रतिरक्षा वाले लोगों में देखा जाने वाला एक गंभीर रूप है और अत्यधिक संक्रामक है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0deca57dfb5a": {
+      "item_id": "0deca57dfb5a",
+      "source_hash": "290284ec4f72",
+      "text": "द्वितीयक बैक्टीरियल संक्रमण के लक्षण: त्वचा जो लाल, सूजी हुई, गर्म हो और उसमें मवाद या दुर्गंध हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1aafeb37a8e9": {
+      "item_id": "1aafeb37a8e9",
+      "source_hash": "7da3373cd889",
+      "text": "कमजोर प्रतिरक्षा वाले व्यक्ति (स्टेरॉयड पर, एचआईवी पीड़ित, या कीमोथेरेपी पर) में स्केबीज, यह बहुत जल्दी गंभीर हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1a5b7ce81dd2": {
+      "item_id": "1a5b7ce81dd2",
+      "source_hash": "da152a8ddc1a",
+      "text": "स्कूल, अनाथालय, या साझा-आवास में स्केबीज का व्यापक प्रकोप",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e6e980304590": {
+      "item_id": "e6e980304590",
+      "source_hash": "5214fdac9ed4",
+      "text": "परिवार के सभी सदस्यों और करीबी संपर्कों का एक ही समय में इलाज किया जाना चाहिए, भले ही उनमें कोई लक्षण न हों, केवल प्रभावित व्यक्ति का इलाज करने से दोबारा संक्रमण हो जाएगा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0513c43bf6ec": {
+      "item_id": "0513c43bf6ec",
+      "source_hash": "907636ec016e",
+      "text": "पिछले 3 दिनों में उपयोग किए गए सभी कपड़े, तौलिए और चादरें गर्म पानी में धोएं और उन्हें धूप में सुखाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "974275be8d1d": {
+      "item_id": "974275be8d1d",
+      "source_hash": "5a844a596590",
+      "text": "जो चीजें धोई नहीं जा सकतीं (जूते, बैग) उन्हें कम से कम 3 दिनों के लिए प्लास्टिक बैग में सील किया जा सकता है, घुन मानव संपर्क के बिना जीवित नहीं रह सकता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "79f17273b755": {
+      "item_id": "79f17273b755",
+      "source_hash": "644d4ad5139a",
+      "text": "संक्रमण के दौरान दूसरों के साथ कपड़े, तौलिए या बिस्तर साझा न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70f976a7f026": {
+      "item_id": "70f976a7f026",
+      "source_hash": "2de6a44e1724",
+      "text": "उपचार के दौरान सामान्य स्वच्छता बनाए रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8cc394649e72": {
+      "item_id": "8cc394649e72",
+      "source_hash": "1bdefc38c640",
+      "text": "महत्वपूर्ण: सफल उपचार के बाद भी कई हफ्तों तक खुजली जारी रह सकती है, यह सामान्य है और इसका मतलब यह नहीं है कि इलाज विफल हो गया है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e28d70f4adb8": {
+      "item_id": "e28d70f4adb8",
+      "source_hash": "bb3a62f75ac7",
+      "text": "सिर्फ इसलिए दोबारा दवा न लगाएं क्योंकि खुजली जारी है, इसके बजाय राहत के लिए एंटीहिस्टामाइन जारी रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e7ce7c2c5fd": {
+      "item_id": "8e7ce7c2c5fd",
+      "source_hash": "60c99b8e8aab",
+      "text": "यदि उपचार के 3 से 4 सप्ताह से अधिक समय बाद नए घाव दिखाई देते हैं या खुजली जारी रहती है, तो दोबारा संक्रमण की संभावना है, इसका आमतौर पर मतलब है कि किसी करीबी संपर्क का इलाज नहीं हुआ था",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c583f66e1cde": {
+      "item_id": "c583f66e1cde",
+      "source_hash": "654ff55eb945",
+      "text": "तीव्र खुजली जो रात में बदतर हो जाती है, विशेष रूप से उंगलियों, कलाई, नाभि क्षेत्र, स्तनों, नितंबों या गुप्तांगों में",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e25f21c28d2c": {
+      "item_id": "e25f21c28d2c",
+      "source_hash": "e0cc51394e19",
+      "text": "परिवार के अन्य सदस्यों में भी वही लक्षण दिखना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54a8dc4e375c": {
+      "item_id": "54a8dc4e375c",
+      "source_hash": "9200bd489952",
+      "text": "उंगलियों के बीच या कलाई पर छोटे, लाल, खुजलीदार दाने या सुरंग जैसे निशान",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dab1c23e39fa": {
+      "item_id": "dab1c23e39fa",
+      "source_hash": "fa9e38bcd957",
+      "text": "बच्चे में बिना किसी स्पष्ट कारण के खुजली और दाने",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aba5fa7f1319": {
+      "item_id": "aba5fa7f1319",
+      "source_hash": "e00e9da71161",
+      "text": "इलाज का कोर्स पूरा करने के बाद भी लगातार खुजली और नए घाव होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1dce2e9dfd51": {
+      "item_id": "1dce2e9dfd51",
+      "source_hash": "d1f332473222",
+      "text": "द्वितीयक त्वचा संक्रमण का कोई भी संकेत (मवाद, पपड़ी, बुखार)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "df3121abff99": {
+      "item_id": "df3121abff99",
+      "source_hash": "839a103c46a1",
+      "text": "क्रस्टेड (नॉर्वेजियन) स्केबीज, जिसके लिए विशेष उपचार और अलग रहने की सावधानियों की आवश्यकता होती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c147dd25f8bf": {
+      "item_id": "c147dd25f8bf",
+      "source_hash": "7a2e925c0660",
+      "text": "कमजोर प्रतिरक्षा वाले व्यक्ति में स्केबीज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1d1d2b268d98": {
+      "item_id": "1d1d2b268d98",
+      "source_hash": "d191b9bd3eb0",
+      "text": "द्वितीयक बैक्टीरियल संक्रमण जो फैल रहा है या उपचार से ठीक नहीं हो रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3f173bff1417": {
+      "item_id": "3f173bff1417",
+      "source_hash": "34b1c1cf6463",
+      "text": "गुप्तांगों पर लगातार बने रहने वाले गांठदार घाव जो इलाज से ठीक न हो रहे हों",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

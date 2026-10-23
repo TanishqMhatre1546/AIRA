@@ -1,0 +1,416 @@
+{
+  "condition_id": "icmr-stw-urinary-tract-infection",
+  "language": "mr",
+  "translations": {
+    "4497bf9a1903": {
+      "item_id": "4497bf9a1903",
+      "source_hash": "4ed1aa9d2b1f",
+      "text": "लघवीच्या त्रासासोबत 100 degrees Fahrenheit पेक्षा जास्त ताप असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b81696593fa0": {
+      "item_id": "b81696593fa0",
+      "source_hash": "fe2350baf4f0",
+      "text": "थंडी वाजून येणे आणि हुडहुडी भरणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "05d2873f51bb": {
+      "item_id": "05d2873f51bb",
+      "source_hash": "f9b29925536a",
+      "text": "हृदयाचे ठोके जलद पडणे (टॅकीकार्डिया)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ad7c30db46e9": {
+      "item_id": "ad7c30db46e9",
+      "source_hash": "2ce9d2a1d9e1",
+      "text": "श्वासोच्छ्वास जलद होणे (टॅकिप्निया)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "62bbba914a92": {
+      "item_id": "62bbba914a92",
+      "source_hash": "16d765b8a5fc",
+      "text": "कमी रक्तदाब (हायपोटेन्शन / लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fa317fd691a8": {
+      "item_id": "fa317fd691a8",
+      "source_hash": "1e784819371e",
+      "text": "कुशीत किंवा बरगड्यांच्या खाली पाठीच्या बाजूला वेदना, हे मूत्रपिंडाच्या संसर्गाचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e146b5c7a138": {
+      "item_id": "e146b5c7a138",
+      "source_hash": "d54b3058a7ce",
+      "text": "गोंधळलेली अवस्था किंवा मानसिक स्थितीत बदल",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3892256d600b": {
+      "item_id": "3892256d600b",
+      "source_hash": "ccf77323a1e9",
+      "text": "सेप्सिसची लक्षणे: तीव्र ताप, जलद नाडी, अत्यंत आजारी वाटणे, गोंधळ",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cac241081edc": {
+      "item_id": "cac241081edc",
+      "source_hash": "da7b6e09fdd1",
+      "text": "मूत्रमार्ग स्वच्छ राहण्यासाठी भरपूर पाणी आणि द्रवपदार्थ प्या",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da01964c2066": {
+      "item_id": "da01964c2066",
+      "source_hash": "7bfd6f7ac981",
+      "text": "डॉक्टरांचा सल्ला घेण्यास उशीर करू नका. युटीआयसाठी डॉक्टरांनी दिलेले अँटीबायोटिक्स आवश्यक असतात, केवळ घरगुती उपायांवर अवलंबून राहू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f63e5fd6adb1": {
+      "item_id": "f63e5fd6adb1",
+      "source_hash": "67d87352f086",
+      "text": "डॉक्टरांकडे जाईपर्यंत वेदना कमी करण्यासाठी पॅरासिटामॉल घेता येऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ca1c0ee82931": {
+      "item_id": "ca1c0ee82931",
+      "source_hash": "5a8bc2687862",
+      "text": "दीर्घकाळ लघवी रोखून ठेवणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fb83980957f0": {
+      "item_id": "fb83980957f0",
+      "source_hash": "bb8562cb4b0c",
+      "text": "लघवी करताना प्रत्येक वेळी मूत्राशय पूर्णपणे रिकामे करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bdc547424da6": {
+      "item_id": "bdc547424da6",
+      "source_hash": "b1f3985aa934",
+      "text": "शौचालयानंतर (महिलांसाठी) पुढून मागे पुसावे जेणेकरून जंतूंचा संसर्ग होणार नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "62a1e320909c": {
+      "item_id": "62a1e320909c",
+      "source_hash": "0e687ffc3289",
+      "text": "संसर्ग टाळण्यासाठी समागमानंतर लगेच लघवी करा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21e74c1e6ff3": {
+      "item_id": "21e74c1e6ff3",
+      "source_hash": "7d4606234879",
+      "text": "लघवी करताना जळजळ किंवा वेदना होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "47d557ed467f": {
+      "item_id": "47d557ed467f",
+      "source_hash": "2766be093383",
+      "text": "थोड्याशा लघवीसाठीही वारंवार लघवीची तीव्र भावना होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b73ab96490e0": {
+      "item_id": "b73ab96490e0",
+      "source_hash": "e6655e570780",
+      "text": "लघवीची घाई होणे आणि तात्काळ शौचालयात जावे लागणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "808a0232b177": {
+      "item_id": "808a0232b177",
+      "source_hash": "98a4a2e0b02a",
+      "text": "ओटीपोटात किंवा कमरेच्या खालच्या भागात वेदना किंवा दाब जाणवणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b66545dbf054": {
+      "item_id": "b66545dbf054",
+      "source_hash": "0d61ddcdc8d6",
+      "text": "ढगाळ, गडद रंगाची किंवा दुर्गंधीयुक्त लघवी येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a74217a5d570": {
+      "item_id": "a74217a5d570",
+      "source_hash": "d30947038930",
+      "text": "लघवीतून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "30aa40accabd": {
+      "item_id": "30aa40accabd",
+      "source_hash": "a2b10e8804bb",
+      "text": "गरोदर महिलांमध्ये लघवीची लक्षणे. गर्भधारणेतील युटीआयवर तातडीने उपचार आवश्यक आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "19223e40718a": {
+      "item_id": "19223e40718a",
+      "source_hash": "fe82808c93cd",
+      "text": "मधुमेह, मूत्रपिंडाचा आजार किंवा मूत्रमार्गाची विकृती असलेल्या व्यक्तीमध्ये लघवीची लक्षणे, हे उच्च जोखीम गट आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea9e12effe77": {
+      "item_id": "ea9e12effe77",
+      "source_hash": "13829a0fe6a3",
+      "text": "वारंवार युटीआय होणे (6 महिन्यांत 2 पेक्षा जास्त किंवा 1 वर्षात 3 पेक्षा जास्त)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8597b2fe294e": {
+      "item_id": "8597b2fe294e",
+      "source_hash": "11e4b2630b46",
+      "text": "दिलेल्या अँटीबायोटिक्सचा पूर्ण कोर्स संपल्यानंतरही लक्षणांमध्ये सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "123a6ae9a226": {
+      "item_id": "123a6ae9a226",
+      "source_hash": "dbbcb46dc8e4",
+      "text": "कोणतेही धोक्याचे लक्षण असणे, ताप, थंडी वाजणे, कुशीत दुखणे, जलद नाडी, कमी रक्तदाब",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "af37db7561dd": {
+      "item_id": "af37db7561dd",
+      "source_hash": "de20908d4a11",
+      "text": "मूत्रपिंडाच्या संसर्गाची (पायलोनेफ्रायटिस) लक्षणे: ताप, कुशीत तीव्र वेदना, अत्यंत आजारी वाटणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7ef69e16e2b8": {
+      "item_id": "7ef69e16e2b8",
+      "source_hash": "06b2a73fd87e",
+      "text": "गर्भधारणेतील गुंतागुंतीचा युटीआय किंवा पहिल्या उपचाराने बरा न होणारा युटीआय",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a036a567b92d": {
+      "item_id": "a036a567b92d",
+      "source_hash": "b7736eef57dc",
+      "text": "अलीकडेच झालेल्या युरॉलॉजिकल तपासणी किंवा शस्त्रक्रियेनंतर लघवीची नवीन लक्षणे दिसणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c1fdf9727cfc": {
+      "item_id": "c1fdf9727cfc",
+      "source_hash": "a606703aed48",
+      "text": "वारंवार होणारा युटीआय ज्यासाठी सखोल तपासणीची गरज असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9a3fa7c33516": {
+      "item_id": "9a3fa7c33516",
+      "source_hash": "ab56b2808d18",
+      "text": "मूत्रपिंडातील खडा (मुतखडा) किंवा मूत्रमार्गात अडथळा असलेल्या व्यक्तीमध्ये युटीआय",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6326de5077c4": {
+      "item_id": "6326de5077c4",
+      "source_hash": "cb80d6146fe0",
+      "text": "प्रोस्टेटायटिस: पुरुषांमध्ये ओटीपोटात दुखणे किंवा प्रोस्टेट ग्रंथीतील त्रासासह युटीआयची लक्षणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "31ea555fefc1": {
+      "item_id": "31ea555fefc1",
+      "source_hash": "4e6321e567fa",
+      "text": "गरोदर महिला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "93a66a55c83f": {
+      "item_id": "93a66a55c83f",
+      "source_hash": "eb8373d9c6a6",
+      "text": "मुतखडा असलेले लोक",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "85672d0b9307": {
+      "item_id": "85672d0b9307",
+      "source_hash": "a2bd9537d129",
+      "text": "मूत्रमार्गात अडथळा किंवा शारीरिक विकृती असलेले लोक",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66adeef1474c": {
+      "item_id": "66adeef1474c",
+      "source_hash": "deeccba34624",
+      "text": "कमी प्रतिकारशक्ती असलेल्या व्यक्ती",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ac6af3683949": {
+      "item_id": "ac6af3683949",
+      "source_hash": "b6bdcfe14ca2",
+      "text": "मूत्रपिंडाचा जुनाट आजार असलेले लोक",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c44f32647db": {
+      "item_id": "1c44f32647db",
+      "source_hash": "a0d4909e6475",
+      "text": "ज्यांच्यावर अलीकडेच मूत्रमार्गाची तपासणी किंवा शस्त्रक्रिया झाली आहे असे लोक",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "15ca0f3b3812": {
+      "item_id": "15ca0f3b3812",
+      "source_hash": "a5dc53ea62ce",
+      "text": "अगुंतागुंतीचा युटीआय (मूत्राशयाचा संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66d7d51ffeb5": {
+      "item_id": "66d7d51ffeb5",
+      "source_hash": "3fcdf40c8fc9",
+      "text": "गुंतागुंतीचा युटीआय / पायलोनेफ्रायटिस (मूत्रपिंडाचा संसर्ग)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "44dbe1cab7fe": {
+      "item_id": "44dbe1cab7fe",
+      "source_hash": "0fabf7a3f550",
+      "text": "वारंवार होणारा युटीआय",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

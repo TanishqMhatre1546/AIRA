@@ -1,0 +1,226 @@
+{
+  "condition_id": "icmr-stw-scabies",
+  "language": "mr",
+  "translations": {
+    "2753d207dc68": {
+      "item_id": "2753d207dc68",
+      "source_hash": "c48c5f04a5fa",
+      "text": "क्रस्टेड (नॉर्वेजियन) खरूज: त्वचेवर जाड, पिवळसर-किरमिजी खपल्या, विशेषतः हातांवर आणि पायांवर, हे कमकुवत प्रतिकारशक्ती असलेल्या लोकांमध्ये आढळणारे गंभीर रूप असून अत्यंत संसर्गजन्य आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0deca57dfb5a": {
+      "item_id": "0deca57dfb5a",
+      "source_hash": "290284ec4f72",
+      "text": "दुय्यम जिवाणू संसर्गाची लक्षणे: त्वचा लाल, सुजलेली, गरम आणि पू किंवा दुर्गंधी असलेली असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1aafeb37a8e9": {
+      "item_id": "1aafeb37a8e9",
+      "source_hash": "7da3373cd889",
+      "text": "कमी प्रतिकारशक्ती असलेल्या व्यक्तीमध्ये (स्टेरॉईड्सवर, एचआयव्हीसह, किंवा केमोथेरपीवर) खरूज, हे अत्यंत वेगाने गंभीर रूप धारण करू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1a5b7ce81dd2": {
+      "item_id": "1a5b7ce81dd2",
+      "source_hash": "da152a8ddc1a",
+      "text": "शाळा, अनाथालय किंवा वसतिगृहात खरजेचा मोठ्या प्रमाणावर झालेला प्रादुर्भाव",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e6e980304590": {
+      "item_id": "e6e980304590",
+      "source_hash": "5214fdac9ed4",
+      "text": "कुटुंबातील सर्व सदस्यांवर आणि जवळच्या संपर्कांवर एकाच वेळी उपचार केले पाहिजेत, जरी त्यांच्यात कोणतीही लक्षणे नसली तरीही, केवळ बाधित व्यक्तीवर उपचार केल्यास पुन्हा संसर्ग होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0513c43bf6ec": {
+      "item_id": "0513c43bf6ec",
+      "source_hash": "907636ec016e",
+      "text": "गेल्या 3 दिवसांत वापरलेले सर्व कपडे, टॉवेल्स आणि चादरी गरम पाण्यात धुवा आणि उन्हात वाळवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "974275be8d1d": {
+      "item_id": "974275be8d1d",
+      "source_hash": "5a844a596590",
+      "text": "ज्या वस्तू धुता येत नाहीत (पादत्राणे, बॅग) त्या किमान 3 दिवस प्लास्टिक पिशवीत बंद करून ठेवाव्यात, हा कीटक मानवी संपर्काशिवाय जिवंत राहू शकत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "79f17273b755": {
+      "item_id": "79f17273b755",
+      "source_hash": "644d4ad5139a",
+      "text": "प्रादुर्भावाच्या काळात इतरांसोबत कपडे, टॉवेल्स किंवा अंथरूण शेअर करू नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70f976a7f026": {
+      "item_id": "70f976a7f026",
+      "source_hash": "2de6a44e1724",
+      "text": "उपचारादरम्यान संपूर्ण शारीरिक स्वच्छता राखा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8cc394649e72": {
+      "item_id": "8cc394649e72",
+      "source_hash": "1bdefc38c640",
+      "text": "महत्त्वाचे: यशस्वी उपचारानंतरही कित्येक आठवडे खाज सुरू राहू शकते, हे सामान्य आहे आणि याचा अर्थ उपचार अयशस्वी झाले असा होत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e28d70f4adb8": {
+      "item_id": "e28d70f4adb8",
+      "source_hash": "bb3a62f75ac7",
+      "text": "केवळ खाज चालू आहे म्हणून पुन्हा औषधाचा लेप लावू नका, त्याऐवजी आराम मिळण्यासाठी अँटीहिस्टामाईन सुरू ठेवा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e7ce7c2c5fd": {
+      "item_id": "8e7ce7c2c5fd",
+      "source_hash": "60c99b8e8aab",
+      "text": "जर उपचारांनंतर 3 ते 4 आठवड्यांपेक्षा जास्त काळ नवीन फोड आले किंवा खाज चालू राहिली, तर पुन्हा संसर्ग होण्याची शक्यता असते, याचा सामान्यतः अर्थ असा होतो की जवळच्या संपर्कावर उपचार झाले नव्हते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c583f66e1cde": {
+      "item_id": "c583f66e1cde",
+      "source_hash": "654ff55eb945",
+      "text": "तीव्र खाज जी रात्रीच्या वेळी अधिक वाढते, विशेषतः बोटांच्या मध्ये, मनगटावर, बेंबीभोवती, स्तनांवर, नितंबांवर किंवा गुप्तांगांवर",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e25f21c28d2c": {
+      "item_id": "e25f21c28d2c",
+      "source_hash": "e0cc51394e19",
+      "text": "कुटुंबातील इतर सदस्यांमध्येही तशीच लक्षणे दिसणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "54a8dc4e375c": {
+      "item_id": "54a8dc4e375c",
+      "source_hash": "9200bd489952",
+      "text": "बोटांच्या मध्ये किंवा मनगटावर लहान, लाल, खाज सुटणारे पुरळ किंवा बारीक रेषांसारख्या खुणा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dab1c23e39fa": {
+      "item_id": "dab1c23e39fa",
+      "source_hash": "fa9e38bcd957",
+      "text": "लहान मुलामध्ये कोणत्याही स्पष्ट कारणाशिवाय खाज आणि पुरळ",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "aba5fa7f1319": {
+      "item_id": "aba5fa7f1319",
+      "source_hash": "e00e9da71161",
+      "text": "उपचारांचा पूर्ण कोर्स संपल्यानंतरही सतत खाज आणि नवीन पुरळ येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1dce2e9dfd51": {
+      "item_id": "1dce2e9dfd51",
+      "source_hash": "d1f332473222",
+      "text": "दुय्यम त्वचा संसर्गाचे कोणतेही लक्षण (पू, खपली, ताप)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "df3121abff99": {
+      "item_id": "df3121abff99",
+      "source_hash": "839a103c46a1",
+      "text": "क्रस्टेड (नॉर्वेजियन) खरूज, ज्यासाठी विशेष उपचार आणि रुग्णाला वेगळे ठेवण्याच्या खबरदारीची आवश्यकता असते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c147dd25f8bf": {
+      "item_id": "c147dd25f8bf",
+      "source_hash": "7a2e925c0660",
+      "text": "कमी प्रतिकारशक्ती असलेल्या व्यक्तीमध्ये खरूज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1d1d2b268d98": {
+      "item_id": "1d1d2b268d98",
+      "source_hash": "d191b9bd3eb0",
+      "text": "दुय्यम जिवाणू संसर्ग जो पसरत आहे किंवा उपचाराला प्रतिसाद देत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3f173bff1417": {
+      "item_id": "3f173bff1417",
+      "source_hash": "34b1c1cf6463",
+      "text": "गुप्तांगांवर सतत राहणारे, उपचारांना दाद न देणारे गाठींसारखे पुरळ",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

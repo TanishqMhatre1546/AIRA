@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-pharyngitis-sore-throat",
+  "language": "hi",
+  "translations": {
+    "02586f7af598": {
+      "item_id": "02586f7af598",
+      "source_hash": "004ac4093467",
+      "text": "तेज बुखार के साथ गले में खराश, लार टपकना, और निगलने में कठिनाई या असमर्थता, यह एपिग्लोटाइटिस या गर्दन के गहरे संक्रमण का संकेत हो सकता है, जो सांस नली को बंद कर सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "10caf44513cf": {
+      "item_id": "10caf44513cf",
+      "source_hash": "053be7bb1ac9",
+      "text": "गले में खराश के साथ सांस लेने में कठिनाई या सांस लेते समय आवाज आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5db67eb83059": {
+      "item_id": "5db67eb83059",
+      "source_hash": "54cbc5223755",
+      "text": "गले में खराश के साथ भारी या दबी हुई आवाज (गर्म आलू जैसी आवाज)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "804d270c7d40": {
+      "item_id": "804d270c7d40",
+      "source_hash": "0f19d1497d73",
+      "text": "गर्दन के बाहर से दिखाई देने वाली गले की सूजन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "36fda50b5d7b": {
+      "item_id": "36fda50b5d7b",
+      "source_hash": "d1eb86a16c14",
+      "text": "एक टॉन्सिल का दूसरे की तुलना में काफी बड़ा होना, विशेषकर तेज गले के दर्द और बुखार के साथ, यह पेरिटॉन्सिलर फोड़ा हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe8a4275d390": {
+      "item_id": "fe8a4275d390",
+      "source_hash": "e259325105c3",
+      "text": "गले में सफेद या भूरी झिल्ली जो टॉन्सिल से आगे फैली हो और मरीज बहुत अस्वस्थ दिखे, यह डिप्थीरिया (गलघोंटू) हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4e7a044d710f": {
+      "item_id": "4e7a044d710f",
+      "source_hash": "14835214c633",
+      "text": "पूरे शरीर (गर्दन, कांख, कमर) में सूजी हुई ग्रंथियों और अत्यधिक अस्वस्थता के साथ गले में खराश",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bb394855b727": {
+      "item_id": "bb394855b727",
+      "source_hash": "73dff6cbe82b",
+      "text": "ठीक होने के बाद दिल के नए लक्षण या जोड़ों में सूजन के साथ गले की खराश, जो रुमेटिक बुखार का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64a180743687": {
+      "item_id": "64a180743687",
+      "source_hash": "06b2dc6af0c0",
+      "text": "दिन में कई बार गुनगुने नमक के पानी से गरारे करें, एक गिलास गर्म पानी में आधा चम्मच नमक घोलें और 30 सेकंड तक गरारे करें। यह सूजन कम करता है और सतह के बैक्टीरिया को मारता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70b98a44d8bb": {
+      "item_id": "70b98a44d8bb",
+      "source_hash": "a7b5679951bb",
+      "text": "गर्म तरल पदार्थ पिएं: गुनगुना पानी, शहद और अदरक के साथ गर्म पानी, गर्म सूप, गर्म हर्बल चाय",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b842f3891752": {
+      "item_id": "b842f3891752",
+      "source_hash": "bf00511cc31f",
+      "text": "अपनी आवाज को आराम दें और चिल्लाने या अत्यधिक बात करने से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a73c07a17280": {
+      "item_id": "a73c07a17280",
+      "source_hash": "13b48b2c8229",
+      "text": "दर्द से राहत के लिए पैकेज पर दिए गए निर्देशानुसार पैरासिटामोल या इबुप्रोफेन लिया जा सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "770c2a1e9015": {
+      "item_id": "770c2a1e9015",
+      "source_hash": "2774f43253fa",
+      "text": "यदि बहुत ठंडे पेय और आइसक्रीम से दर्द बढ़ता है तो इनसे बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64d7e49ddbef": {
+      "item_id": "64d7e49ddbef",
+      "source_hash": "f5436f7f1caa",
+      "text": "धूम्रपान और तंबाकू के धुएं से बचें, धुआं गले में जलन पैदा करता है और ठीक होने की प्रक्रिया धीमी करता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "004d4b350e2d": {
+      "item_id": "004d4b350e2d",
+      "source_hash": "a7fc17c9049a",
+      "text": "यदि एसिड रिफ्लक्स (जीईआरडी) की समस्या है तो उसका ध्यान रखें, पेट का एसिड ऊपर आना गले में जलन का एक सामान्य कारण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a001e90e79fe": {
+      "item_id": "a001e90e79fe",
+      "source_hash": "33638774db9c",
+      "text": "अधिकांश वायरल गले की खराश घर पर देखभाल से 7 से 10 दिन के भीतर अपने आप ठीक हो जाती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "048ec5db1001": {
+      "item_id": "048ec5db1001",
+      "source_hash": "818ccf573ac5",
+      "text": "गले की खराश के लिए एंटीबायोटिक्स की मांग न करें या खुद न खरीदें, अधिकांश गले की खराश वायरल होती है और एंटीबायोटिक्स से फायदा नहीं होगा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8ffdec6616e9": {
+      "item_id": "8ffdec6616e9",
+      "source_hash": "4fca81dc4ca5",
+      "text": "तेज बुखार (38.5 degrees Celsius से अधिक) और गर्दन में सूजी हुई दर्दनाक ग्रंथियों के साथ गले में खराश",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "92f834229165": {
+      "item_id": "92f834229165",
+      "source_hash": "15156c5ebbc3",
+      "text": "टॉन्सिल पर मवाद या सफेद धब्बे दिखाई देना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "22c2a374a5b9": {
+      "item_id": "22c2a374a5b9",
+      "source_hash": "5aa7688e2cf4",
+      "text": "घर पर देखभाल के 5 से 7 दिन बाद भी गले की खराश में सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e919e401dc7": {
+      "item_id": "8e919e401dc7",
+      "source_hash": "89b8d9ce6a64",
+      "text": "गले में इतना तेज दर्द होना जिससे कुछ भी निगलना बहुत कठिन हो जाए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70a59611f8fd": {
+      "item_id": "70a59611f8fd",
+      "source_hash": "96a4dc9a0db8",
+      "text": "गले में खराश के साथ कान में दर्द होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "82f5c0ea03d3": {
+      "item_id": "82f5c0ea03d3",
+      "source_hash": "eb260f5d38fe",
+      "text": "बार-बार गले की खराश या टॉन्सिलाइटिस होना (वर्ष में 5 से अधिक बार)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "92005cf570f0": {
+      "item_id": "92005cf570f0",
+      "source_hash": "755c863e21c1",
+      "text": "रुमेटिक फीवर या रुमेटिक हृदय रोग के इतिहास वाले व्यक्ति में गले में खराश, स्ट्रेप्टोकोकल संक्रमण इसे दोबारा भड़का सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "44651ed9b8a0": {
+      "item_id": "44651ed9b8a0",
+      "source_hash": "cd72a8f933ee",
+      "text": "बहती नाक, खांसी और लाल आँखों के साथ गले में खराश, यह संभवतः वायरल संक्रमण है लेकिन गंभीर होने पर जांच करानी चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "99c17f82d128": {
+      "item_id": "99c17f82d128",
+      "source_hash": "86f647d520a3",
+      "text": "ऊपर सूचीबद्ध कोई भी गंभीर लक्षण, लार टपकना, सांस लेने में कठिनाई, दबी आवाज, एक टॉन्सिल में अत्यधिक सूजन, गले में झिल्ली, मुंह खोलने में असमर्थता",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da4e9be5b1fd": {
+      "item_id": "da4e9be5b1fd",
+      "source_hash": "52f655c1450c",
+      "text": "संदिग्ध एपिग्लोटाइटिस या गर्दन के गहरे स्थान का संक्रमण, ये सांस की नली को तेजी से बंद कर सकते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "02c234b7df92": {
+      "item_id": "02c234b7df92",
+      "source_hash": "f03819caeab4",
+      "text": "अप्रतिरक्षित या आंशिक रूप से प्रतिरक्षित बच्चे में संदिग्ध डिप्थीरिया",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2ba73520204d": {
+      "item_id": "2ba73520204d",
+      "source_hash": "4ed7818cc65f",
+      "text": "गले की खराश के बाद जटिलताएं: गर्दन में नई सूजन, मुंह खोलने में असमर्थता, शुरुआती सुधार के बाद फिर से तेज बुखार आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfa503e337a1": {
+      "item_id": "cfa503e337a1",
+      "source_hash": "4a0f988bc5bb",
+      "text": "गले की खराश निगलने पर गले में होने वाला दर्द है। यह वायरस (सबसे आम) या बैक्टीरिया के कारण हो सकता है। वायरल गले की खराश में एंटीबायोटिक्स की आवश्यकता नहीं होती। बैक्टीरियल खराश के विशिष्ट लक्षण होते हैं और उपचार का निर्णय डॉक्टर को करना चाहिए।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

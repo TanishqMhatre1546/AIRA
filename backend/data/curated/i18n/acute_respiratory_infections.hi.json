@@ -1,0 +1,376 @@
+{
+  "condition_id": "icmr-stw-acute-respiratory-infections",
+  "language": "hi",
+  "translations": {
+    "d9ede560c2b9": {
+      "item_id": "d9ede560c2b9",
+      "source_hash": "5936c0bcf8a1",
+      "text": "प्रति मिनट 30 से अधिक बार सांस लेना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c83ae21d672a": {
+      "item_id": "c83ae21d672a",
+      "source_hash": "0a85c66f5e93",
+      "text": "पेट का सीने के विपरीत चलना (एब्डोमिनल-थोरैसिक पैराडॉक्स), जो सांस लेने में गंभीर कठिनाई का संकेत है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "53b762e07069": {
+      "item_id": "53b762e07069",
+      "source_hash": "545d47ed5e62",
+      "text": "होंठ, उंगलियों के पोर या चेहरे का नीला या बैंगनी पड़ना (सायनोसिस), जो ऑक्सीजन के अत्यंत कम स्तर का संकेत है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0c5ddfd9c26b": {
+      "item_id": "0c5ddfd9c26b",
+      "source_hash": "9875474355fd",
+      "text": "सांस फूलने के कारण एक बार में केवल कुछ ही शब्द बोल पाना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "521df0007e03": {
+      "item_id": "521df0007e03",
+      "source_hash": "3f92aa32fb87",
+      "text": "50 वर्ष या उससे कम उम्र के व्यक्ति में ऑक्सीजन का स्तर 92% या उससे कम, या 50 वर्ष से अधिक उम्र में 90% से कम होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "09d31c60077f": {
+      "item_id": "09d31c60077f",
+      "source_hash": "024ce74b67a7",
+      "text": "सांस की समस्या के साथ भ्रम या अचेतनता होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3324d144d6c4": {
+      "item_id": "3324d144d6c4",
+      "source_hash": "f55a86b2939d",
+      "text": "खांसी में खून आना (हेमोप्टाइसिस), जो टीबी या किसी अन्य गंभीर बीमारी का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fa79295ad5d0": {
+      "item_id": "fa79295ad5d0",
+      "source_hash": "5bd25eb78440",
+      "text": "सांस लेने में कठिनाई के साथ बहुत कम रक्तचाप (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eccdd10f3b51": {
+      "item_id": "eccdd10f3b51",
+      "source_hash": "f44fd2feeb30",
+      "text": "सांस की कठिनाई के साथ शरीर का तापमान बहुत अधिक या बहुत कम होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea7ed1d47448": {
+      "item_id": "ea7ed1d47448",
+      "source_hash": "82d14b15392b",
+      "text": "सांस लेने में कठिनाई के साथ संदिग्ध फ्लू, विशेषकर यदि हाल की यात्रा का इतिहास हो या फ्लू फैला हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "924ff0474dd3": {
+      "item_id": "924ff0474dd3",
+      "source_hash": "a1bbb7a7aaf3",
+      "text": "संक्रमण फैलने से रोकने के लिए आराम करें और दूसरों से दूर घर पर रहें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "217ed4072412": {
+      "item_id": "217ed4072412",
+      "source_hash": "f48645da5534",
+      "text": "प्रचुर मात्रा में तरल पदार्थ पिएं, जैसे पानी, गर्म सूप, शहद और अदरक के साथ गुनगुना पानी, नारियल पानी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "855ec7233869": {
+      "item_id": "855ec7233869",
+      "source_hash": "efd74dac5d87",
+      "text": "बुखार या बदन दर्द के लिए पैकेज पर दिए गए निर्देशानुसार पैरासिटामोल लिया जा सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e57ba4f5a30": {
+      "item_id": "8e57ba4f5a30",
+      "source_hash": "dc4f6c4a9089",
+      "text": "भाप लेने से नाक और सीने की जकड़न से राहत मिल सकती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b6190b4154fe": {
+      "item_id": "b6190b4154fe",
+      "source_hash": "7fcf73b2f0fb",
+      "text": "गुनगुने नमक के पानी से गरारे करने से गले की तकलीफ में आराम मिलता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7b8abbd5222d": {
+      "item_id": "7b8abbd5222d",
+      "source_hash": "d892c73e1537",
+      "text": "धूम्रपान से बचें और धुएं या धूल के संपर्क में न आएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0e8ee08cf1df": {
+      "item_id": "0e8ee08cf1df",
+      "source_hash": "0d2c78597553",
+      "text": "ठंडे पेय पदार्थों और ठंडे वातावरण से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f8f76e6aae3e": {
+      "item_id": "f8f76e6aae3e",
+      "source_hash": "c695a8725755",
+      "text": "वायरल ऊपरी श्वसन संक्रमण (सामान्य सर्दी) में एंटीबायोटिक्स से कोई लाभ नहीं होता, खुद से एंटीबायोटिक्स न लें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d155894ed7c7": {
+      "item_id": "d155894ed7c7",
+      "source_hash": "e95b65592c92",
+      "text": "स्वस्थ वयस्क में अधिकांश हल्की सर्दी और खांसी बिना दवा के 7 से 10 दिन के भीतर ठीक हो जाती है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7fb4d1e84565": {
+      "item_id": "7fb4d1e84565",
+      "source_hash": "34990f745296",
+      "text": "बिना किसी सुधार के 10 से 14 दिन से अधिक समय तक चलने वाली खांसी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe0d05aace0d": {
+      "item_id": "fe0d05aace0d",
+      "source_hash": "a93223fad868",
+      "text": "बुखार जो लगातार बना रहे, तेज हो, या ठंड (कंपकंपी) के साथ आए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6d718cb3e81d": {
+      "item_id": "6d718cb3e81d",
+      "source_hash": "0416d21b437e",
+      "text": "पीला, हरा या खून के अंश वाला बलगम आने वाली खांसी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ed87612c215": {
+      "item_id": "9ed87612c215",
+      "source_hash": "6dbc46a53049",
+      "text": "सीने में दर्द जो सांस लेने या खांसने पर बढ़ जाता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "daeaeef9dec3": {
+      "item_id": "daeaeef9dec3",
+      "source_hash": "2076385aa9de",
+      "text": "हल्की गतिविधि के दौरान या आराम करते समय भी सांस फूलना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8f0cc7b441b1": {
+      "item_id": "8f0cc7b441b1",
+      "source_hash": "1ddd204d2b5b",
+      "text": "खांसी या जुकाम के साथ सीने से सीटी जैसी आवाज (घरघराहट) आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b5d22ea7ef9f": {
+      "item_id": "b5d22ea7ef9f",
+      "source_hash": "003ac08e9c26",
+      "text": "तेज बुखार और गर्दन की सूजी हुई ग्रंथियों के साथ गले में खराश",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "395c3f6079e8": {
+      "item_id": "395c3f6079e8",
+      "source_hash": "2002d59663d8",
+      "text": "मधुमेह, हृदय रोग, फेफड़ों की पुरानी बीमारी या गुर्दे के रोग से पीड़ित व्यक्ति में कोई भी श्वसन रोग, ये उच्च जोखिम वाले समूह हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3960d4c40670": {
+      "item_id": "3960d4c40670",
+      "source_hash": "e06054390447",
+      "text": "रात में पसीना आना, बिना कारण वजन कम होना, या लंबे समय तक थकान के साथ खांसी, ये टीबी के संकेत हो सकते हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e242d7d49e7d": {
+      "item_id": "e242d7d49e7d",
+      "source_hash": "7decf17f229e",
+      "text": "लक्षण जो पहले सुधरने लगे थे लेकिन फिर अचानक काफी बिगड़ गए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b01ffd448356": {
+      "item_id": "b01ffd448356",
+      "source_hash": "d2e8bfac8299",
+      "text": "ऊपर सूचीबद्ध कोई भी खतरे का संकेत, सांस की दर 30 से ऊपर, नीले होंठ, बोलने में असमर्थता, भ्रम, खांसी में खून आना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e2d6bf08bd32": {
+      "item_id": "e2d6bf08bd32",
+      "source_hash": "919d90314aa4",
+      "text": "ऑक्सीजन का स्तर 92% या उससे कम होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a6a27d098243": {
+      "item_id": "a6a27d098243",
+      "source_hash": "f8562313e787",
+      "text": "65 वर्ष या उससे अधिक उम्र के व्यक्ति में, या भ्रम, कम रक्तचाप, या तेज सांस के साथ संदिग्ध निमोनिया",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "04bb2ab18966": {
+      "item_id": "04bb2ab18966",
+      "source_hash": "36705261b99c",
+      "text": "सांस की कठिनाई के साथ संदिग्ध महामारी फ्लू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "792cd582806c": {
+      "item_id": "792cd582806c",
+      "source_hash": "b73b9497cb5d",
+      "text": "ब्रोंकाइटिस के 2 से 3 दिन के उपचार या निर्धारित एंटीबायोटिक कोर्स के बाद भी सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9136093d6dde": {
+      "item_id": "9136093d6dde",
+      "source_hash": "fc389fd186eb",
+      "text": "एक्यूट अपर रेस्पिरेटरी इन्फेक्शन (सामान्य सर्दी, जुकाम)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "55bc5d4afd22": {
+      "item_id": "55bc5d4afd22",
+      "source_hash": "e1dfc2e4ff46",
+      "text": "एक्यूट ब्रोंकाइटिस (श्वसन नली की सूजन)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "22df4c49735a": {
+      "item_id": "22df4c49735a",
+      "source_hash": "b11a77037f26",
+      "text": "कम्युनिटी एक्वायर्ड निमोनिया (सीएपी)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

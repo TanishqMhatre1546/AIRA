@@ -1,0 +1,376 @@
+{
+  "condition_id": "icmr-stw-acute-respiratory-infections",
+  "language": "mr",
+  "translations": {
+    "d9ede560c2b9": {
+      "item_id": "d9ede560c2b9",
+      "source_hash": "5936c0bcf8a1",
+      "text": "दर मिनिटास 30 पेक्षा जास्त वेळा श्वास घेणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "c83ae21d672a": {
+      "item_id": "c83ae21d672a",
+      "source_hash": "0a85c66f5e93",
+      "text": "श्वास घेताना पोट छातीच्या विरुद्ध दिशेने हलणे (पॅराडॉक्सिकल श्वासोच्छ्वास), जे श्वासाच्या तीव्र त्रासाचे लक्षण आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "53b762e07069": {
+      "item_id": "53b762e07069",
+      "source_hash": "545d47ed5e62",
+      "text": "ओठ, बोटांची टोके किंवा चेहऱ्यावर निळसर किंवा जांभळा रंग येणे (सायनोसिस), जे अत्यंत कमी ऑक्सिजनचे लक्षण आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0c5ddfd9c26b": {
+      "item_id": "0c5ddfd9c26b",
+      "source_hash": "9875474355fd",
+      "text": "धाप लागल्यामुळे एका वेळी फक्त काहीच शब्द बोलता येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "521df0007e03": {
+      "item_id": "521df0007e03",
+      "source_hash": "3f92aa32fb87",
+      "text": "50 किंवा त्यापेक्षा कमी वयाच्या व्यक्तीमध्ये ऑक्सिजनचे प्रमाण 92% किंवा त्याहून कमी, किंवा 50 वर्षांपेक्षा जास्त वयाच्या व्यक्तीमध्ये 90% पेक्षा कमी असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "09d31c60077f": {
+      "item_id": "09d31c60077f",
+      "source_hash": "024ce74b67a7",
+      "text": "श्वासाच्या त्रासासोबत गोंधळलेली मानसिक अवस्था किंवा असंबद्धता असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3324d144d6c4": {
+      "item_id": "3324d144d6c4",
+      "source_hash": "f55a86b2939d",
+      "text": "खोकल्यातून रक्त पडणे, जे टीबी किंवा इतर गंभीर आजाराचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fa79295ad5d0": {
+      "item_id": "fa79295ad5d0",
+      "source_hash": "5bd25eb78440",
+      "text": "श्वास घेण्यास त्रास आणि सोबत अतिशय कमी रक्तदाब (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eccdd10f3b51": {
+      "item_id": "eccdd10f3b51",
+      "source_hash": "f44fd2feeb30",
+      "text": "श्वासाच्या त्रासासोबत शरीराचे तापमान अतिशय जास्त किंवा खूप कमी असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ea7ed1d47448": {
+      "item_id": "ea7ed1d47448",
+      "source_hash": "82d14b15392b",
+      "text": "श्वासाच्या त्रासासह संशयित फ्लू, विशेषतः अलीकडील प्रवासाचा इतिहास असल्यास किंवा फ्लूची साथ असल्यास",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "924ff0474dd3": {
+      "item_id": "924ff0474dd3",
+      "source_hash": "a1bbb7a7aaf3",
+      "text": "संसर्ग पसरू नये म्हणून विश्रांती घ्या आणि इतरांपासून सुरक्षित अंतर ठेवून घरी राहा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "217ed4072412": {
+      "item_id": "217ed4072412",
+      "source_hash": "f48645da5534",
+      "text": "पुरेसे द्रवपदार्थ प्या, जसे पाणी, गरम सूप, मध आणि आल्यासह कोमट पाणी, नारळ पाणी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "855ec7233869": {
+      "item_id": "855ec7233869",
+      "source_hash": "efd74dac5d87",
+      "text": "ताप किंवा अंगदुखीसाठी पॅकवरील सूचनेनुसार पॅरासिटामॉल घेता येऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e57ba4f5a30": {
+      "item_id": "8e57ba4f5a30",
+      "source_hash": "dc4f6c4a9089",
+      "text": "वाफ घेतल्याने नाक आणि छातीतील कफ किंवा दाटणे मोकळे होण्यास मदत होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b6190b4154fe": {
+      "item_id": "b6190b4154fe",
+      "source_hash": "7fcf73b2f0fb",
+      "text": "कोमट मिठाच्या पाण्याच्या गुळण्या केल्याने घशातील खवखव आणि त्रास कमी होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7b8abbd5222d": {
+      "item_id": "7b8abbd5222d",
+      "source_hash": "d892c73e1537",
+      "text": "धूम्रपान टाळा आणि धूर किंवा धुळीच्या संपर्कात येणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0e8ee08cf1df": {
+      "item_id": "0e8ee08cf1df",
+      "source_hash": "0d2c78597553",
+      "text": "थंड पेये आणि थंड वातावरण टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f8f76e6aae3e": {
+      "item_id": "f8f76e6aae3e",
+      "source_hash": "c695a8725755",
+      "text": "व्हायरल वरच्या श्वसनमार्गाच्या संसर्गात (सामान्य सर्दी) अँटीबायोटिक्सचा फायदा होत नाही, स्वतःहून अँटीबायोटिक्स घेऊ नका",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d155894ed7c7": {
+      "item_id": "d155894ed7c7",
+      "source_hash": "e95b65592c92",
+      "text": "निरोगी प्रौढ व्यक्तीमध्ये बहुतांश हलकी सर्दी आणि खोकला औषधांशिवाय 7 ते 10 दिवसांत बरा होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7fb4d1e84565": {
+      "item_id": "7fb4d1e84565",
+      "source_hash": "34990f745296",
+      "text": "कोणत्याही सुधाराशिवाय 10 ते 14 दिवसांपेक्षा जास्त काळ टिकणारा खोकला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe0d05aace0d": {
+      "item_id": "fe0d05aace0d",
+      "source_hash": "a93223fad868",
+      "text": "ताप जो सतत राहतो, तीव्र आहे, किंवा थंडी वाजून येतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6d718cb3e81d": {
+      "item_id": "6d718cb3e81d",
+      "source_hash": "0416d21b437e",
+      "text": "पिवळा, हिरवा किंवा रक्ताची छटा असणारा कफ पडणारा खोकला",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ed87612c215": {
+      "item_id": "9ed87612c215",
+      "source_hash": "6dbc46a53049",
+      "text": "छातीत दुखणे जे श्वास घेताना किंवा खोकताना अधिक वाढते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "daeaeef9dec3": {
+      "item_id": "daeaeef9dec3",
+      "source_hash": "2076385aa9de",
+      "text": "किरकोळ हालचाली करताना किंवा विश्रांती घेत असतानाही धाप लागणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8f0cc7b441b1": {
+      "item_id": "8f0cc7b441b1",
+      "source_hash": "1ddd204d2b5b",
+      "text": "खोकला किंवा सर्दीसोबत छातीतून शिट्टीसारखा आवाज (घरघर) येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b5d22ea7ef9f": {
+      "item_id": "b5d22ea7ef9f",
+      "source_hash": "003ac08e9c26",
+      "text": "तीव्र ताप आणि मानेतील सुजलेल्या ग्रंथींसह घसादुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "395c3f6079e8": {
+      "item_id": "395c3f6079e8",
+      "source_hash": "2002d59663d8",
+      "text": "मधुमेह, हृदयरोग, फुफ्फुसाचा जुनाट आजार किंवा मूत्रपिंडाचा आजार असलेल्या व्यक्तीमध्ये श्वसनाचा आजार, हे उच्च जोखीम गट आहेत",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3960d4c40670": {
+      "item_id": "3960d4c40670",
+      "source_hash": "e06054390447",
+      "text": "रात्री घाम येणे, अकारण वजन कमी होणे, किंवा दीर्घकाळ थकवा असण्यासह खोकला, ही टीबीची (क्षयरोगाची) लक्षणे असू शकतात",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e242d7d49e7d": {
+      "item_id": "e242d7d49e7d",
+      "source_hash": "7decf17f229e",
+      "text": "लक्षणे जी आधी सुधारत होती पण नंतर अचानक खूपच बिघडली",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b01ffd448356": {
+      "item_id": "b01ffd448356",
+      "source_hash": "d2e8bfac8299",
+      "text": "वर नमूद केलेले धोक्याचे कोणतेही लक्षण, श्वासाचा वेग 30 पेक्षा जास्त, निळे ओठ, बोलता न येणे, गोंधळ, खोकल्यातून रक्त येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e2d6bf08bd32": {
+      "item_id": "e2d6bf08bd32",
+      "source_hash": "919d90314aa4",
+      "text": "ऑक्सिजन पातळी 92% किंवा त्याहून कमी असणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a6a27d098243": {
+      "item_id": "a6a27d098243",
+      "source_hash": "f8562313e787",
+      "text": "65 वर्षे किंवा त्याहून अधिक वयाच्या व्यक्तीमध्ये, किंवा गोंधळ, कमी रक्तदाब किंवा जलद श्वासोच्छ्वासासह संशयित न्यूमोनिया",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "04bb2ab18966": {
+      "item_id": "04bb2ab18966",
+      "source_hash": "36705261b99c",
+      "text": "श्वासाच्या त्रासासह संशयित साथीचा फ्लू",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "792cd582806c": {
+      "item_id": "792cd582806c",
+      "source_hash": "b73b9497cb5d",
+      "text": "ब्राँकायटिसच्या 2 ते 3 दिवसांच्या उपचारानंतर किंवा दिलेल्या अँटीबायोटिक कोर्सनंतरही सुधारणा न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9136093d6dde": {
+      "item_id": "9136093d6dde",
+      "source_hash": "fc389fd186eb",
+      "text": "तीव्र वरच्या श्वसनमार्गाचा संसर्ग (सामान्य सर्दी, पडसे)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "55bc5d4afd22": {
+      "item_id": "55bc5d4afd22",
+      "source_hash": "e1dfc2e4ff46",
+      "text": "तीव्र ब्राँकायटिस (श्वासनलिका दाह)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "22df4c49735a": {
+      "item_id": "22df4c49735a",
+      "source_hash": "b11a77037f26",
+      "text": "कम्युनिटी अक्वायर्ड न्यूमोनिया (सीएपी)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

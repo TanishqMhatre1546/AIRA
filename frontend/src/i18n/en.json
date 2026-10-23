@@ -198,7 +198,10 @@
     "doNow": "What to do now",
     "watchFor": "Watch for these signs",
     "extractiveNotice": "These are passages copied from the guideline.",
-    "sourceCitationAria": "Source citation {id}"
+    "sourceCitationAria": "Source citation {id}",
+    "sourceTextInEnglish": "Source text is in English.",
+    "textNotTranslatedYet": "This text has not been translated yet.",
+    "draftTranslation": "Draft translation"
   },
   "sourceList": {
     "heading": "Sources",

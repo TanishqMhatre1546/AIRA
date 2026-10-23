@@ -1,0 +1,306 @@
+{
+  "condition_id": "icmr-stw-pharyngitis-sore-throat",
+  "language": "mr",
+  "translations": {
+    "02586f7af598": {
+      "item_id": "02586f7af598",
+      "source_hash": "004ac4093467",
+      "text": "तीव्र तापासह घशात खवखव, तोंडून लाळ गळणे आणि गिळताना प्रचंड त्रास किंवा गिळता न येणे, हे एपिग्लोटायटिस किंवा मानेतील गंभीर संसर्गाचे लक्षण असू शकते, ज्यामुळे श्वासनलिका बंद होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "10caf44513cf": {
+      "item_id": "10caf44513cf",
+      "source_hash": "053be7bb1ac9",
+      "text": "घशात खवखव असताना श्वास घेण्यास त्रास होणे किंवा घरघर असा आवाज येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5db67eb83059": {
+      "item_id": "5db67eb83059",
+      "source_hash": "54cbc5223755",
+      "text": "घसा दुखण्यासोबत तोंडात गरम बटाटा धरल्यासारखा अस्पष्ट आणि जड आवाज येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "804d270c7d40": {
+      "item_id": "804d270c7d40",
+      "source_hash": "0f19d1497d73",
+      "text": "मानेच्या बाहेरून स्पष्ट दिसणारी घशाची सूज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "36fda50b5d7b": {
+      "item_id": "36fda50b5d7b",
+      "source_hash": "d1eb86a16c14",
+      "text": "एक टॉन्सिल दुसऱ्यापेक्षा लक्षणीयरीत्या मोठा असणे, विशेषतः तीव्र घसादुखी आणि तापासह, हे टॉन्सिलमधील पूचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "fe8a4275d390": {
+      "item_id": "fe8a4275d390",
+      "source_hash": "e259325105c3",
+      "text": "घशात टॉन्सिलच्या पुढे पसरलेली पांढरी किंवा राखाडी पडदा (झिल्ली) आणि अत्यंत अस्वस्थ वाटणे, हा घटसर्प (डिप्थीरिया) असू शकतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4e7a044d710f": {
+      "item_id": "4e7a044d710f",
+      "source_hash": "14835214c633",
+      "text": "संपूर्ण शरीरात (मान, काखा, जांघ) ग्रंथींना सूज येणे आणि अत्यंत आजारी वाटण्यासह घसादुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bb394855b727": {
+      "item_id": "bb394855b727",
+      "source_hash": "73dff6cbe82b",
+      "text": "बरे झाल्यानंतर हृदयाची नवीन लक्षणे किंवा सांध्यांना सूज येणे, जे रुमॅटिक तापाचे लक्षण असू शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64a180743687": {
+      "item_id": "64a180743687",
+      "source_hash": "06b2dc6af0c0",
+      "text": "दिवसातून अनेक वेळा कोमट मिठाच्या पाण्याच्या गुळण्या करा, एका ग्लास कोमट पाण्यात अर्धा चमचा मीठ विरघळवा आणि 30 सेकंद गुळण्या करा. यामुळे सूज कमी होते आणि जंतूंचा नाश होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70b98a44d8bb": {
+      "item_id": "70b98a44d8bb",
+      "source_hash": "a7b5679951bb",
+      "text": "गरम पातळ पदार्थ प्या: कोमट पाणी, मध आणि आल्यासह गरम पाणी, गरम सूप, काढा किंवा हर्बल चहा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b842f3891752": {
+      "item_id": "b842f3891752",
+      "source_hash": "bf00511cc31f",
+      "text": "आवाजाला विश्रांती द्या, ओरडणे किंवा जास्त बोलणे टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a73c07a17280": {
+      "item_id": "a73c07a17280",
+      "source_hash": "13b48b2c8229",
+      "text": "वेदना कमी करण्यासाठी पॅकवरील सूचनेनुसार पॅरासिटामॉल किंवा आयबुप्रोफेन घेता येऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "770c2a1e9015": {
+      "item_id": "770c2a1e9015",
+      "source_hash": "2774f43253fa",
+      "text": "अतिशय थंड पेये आणि आईस्क्रीममुळे वेदना वाढत असल्यास ते टाळा",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "64d7e49ddbef": {
+      "item_id": "64d7e49ddbef",
+      "source_hash": "f5436f7f1caa",
+      "text": "धूम्रपान आणि तंबाखूचा धूर टाळा, धुरामुळे घशात जळजळ होते आणि बरे होण्यास विलंब होतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "004d4b350e2d": {
+      "item_id": "004d4b350e2d",
+      "source_hash": "a7fc17c9049a",
+      "text": "अ‍ॅसिडिटी किंवा छातीत जळजळ (जीईआरडी) असल्यास काळजी घ्या, वर येणारे अ‍ॅसिड घशातील खवखवीचे सामान्य कारण आहे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "a001e90e79fe": {
+      "item_id": "a001e90e79fe",
+      "source_hash": "33638774db9c",
+      "text": "बहुतांश व्हायरल घसादुखी घरगुती काळजीने 7 ते 10 दिवसांत आपोआप बरी होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "048ec5db1001": {
+      "item_id": "048ec5db1001",
+      "source_hash": "818ccf573ac5",
+      "text": "घसादुखीसाठी अँटीबायोटिक्सचा हट्ट करू नका किंवा स्वतः विकत घेऊ नका, बहुतांश घसादुखी व्हायरल असते आणि अँटीबायोटिक्सने फरक पडत नाही",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8ffdec6616e9": {
+      "item_id": "8ffdec6616e9",
+      "source_hash": "4fca81dc4ca5",
+      "text": "तीव्र ताप (38.5 degrees Celsius पेक्षा जास्त) आणि मानेमध्ये सुजलेल्या, दुखऱ्या ग्रंथींसह घसादुखी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "92f834229165": {
+      "item_id": "92f834229165",
+      "source_hash": "15156c5ebbc3",
+      "text": "टॉन्सिल्सवर पू किंवा पांढरे डाग दिसणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "22c2a374a5b9": {
+      "item_id": "22c2a374a5b9",
+      "source_hash": "5aa7688e2cf4",
+      "text": "घरी काळजी घेऊनही 5 ते 7 दिवसांनंतर घशातील खवखव किंवा वेदना कमी न होणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8e919e401dc7": {
+      "item_id": "8e919e401dc7",
+      "source_hash": "89b8d9ce6a64",
+      "text": "घशात इतक्या तीव्र वेदना होणे ज्यामुळे गिळणे अत्यंत कठीण होते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "70a59611f8fd": {
+      "item_id": "70a59611f8fd",
+      "source_hash": "96a4dc9a0db8",
+      "text": "घसा दुखण्यासोबत कान दुखणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "82f5c0ea03d3": {
+      "item_id": "82f5c0ea03d3",
+      "source_hash": "eb260f5d38fe",
+      "text": "वारंवार घसा दुखणे किंवा टॉन्सिल्सचा त्रास होणे (वर्षातून 5 पेक्षा जास्त वेळा)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "92005cf570f0": {
+      "item_id": "92005cf570f0",
+      "source_hash": "755c863e21c1",
+      "text": "रुमॅटिक ताप किंवा रुमॅटिक हृदयरोग झालेल्या व्यक्तीमध्ये घसादुखी, अशा संसर्गामुळे आजार पुन्हा उद्भवू शकतो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "44651ed9b8a0": {
+      "item_id": "44651ed9b8a0",
+      "source_hash": "cd72a8f933ee",
+      "text": "नाक वाहणे, खोकला आणि डोळे लाल होण्यासह घसादुखी, हा बहुधा व्हायरल संसर्ग असू शकतो पण त्रास जास्त असल्यास तपासणी करावी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "99c17f82d128": {
+      "item_id": "99c17f82d128",
+      "source_hash": "86f647d520a3",
+      "text": "वर नमूद केलेले कोणतेही धोक्याचे लक्षण, लाळ गळणे, श्वास घेण्यास त्रास, जड आवाज, एक टॉन्सिल खूप सुजणे, घशात पडदा, तोंड न उघडता येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "da4e9be5b1fd": {
+      "item_id": "da4e9be5b1fd",
+      "source_hash": "52f655c1450c",
+      "text": "संशयित एपिग्लोटायटिस किंवा मानेतील खोल संसर्ग, यामुळे श्वासनलिका वेगाने बंद होऊ शकते",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "02c234b7df92": {
+      "item_id": "02c234b7df92",
+      "source_hash": "f03819caeab4",
+      "text": "लसीकरण न झालेल्या किंवा अपूर्ण लसीकरण झालेल्या बालकामध्ये संशयित घटसर्प (डिप्थीरिया)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2ba73520204d": {
+      "item_id": "2ba73520204d",
+      "source_hash": "4ed7818cc65f",
+      "text": "घसादुखीनंतरची गुंतागुंत: मानेवर नवीन सूज, तोंड उघडता न येणे, सुरुवातीच्या सुधारणेनंतर पुन्हा तीव्र ताप येणे",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cfa503e337a1": {
+      "item_id": "cfa503e337a1",
+      "source_hash": "4a0f988bc5bb",
+      "text": "घसा दुखणे म्हणजे अन्न किंवा पाणी गिळताना घशात वेदना होणे. हा त्रास विषाणू (सर्वात सामान्य) किंवा जीवाणूंमुळे होऊ शकतो. व्हायरल घसादुखीसाठी अँटीबायोटिक्सची गरज नसते. जिवाणू संसर्गाची लक्षणे वेगळी असतात आणि डॉक्टर त्याचा योग्य उपचार ठरवतात.",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

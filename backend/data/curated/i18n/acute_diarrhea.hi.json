@@ -1,0 +1,386 @@
+{
+  "condition_id": "icmr-stw-acute-diarrhea",
+  "language": "hi",
+  "translations": {
+    "a81240b543bf": {
+      "item_id": "a81240b543bf",
+      "source_hash": "4cf7b2698851",
+      "text": "सुस्ती, अत्यधिक कमजोरी या बेहोशी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4c486ee5948d": {
+      "item_id": "4c486ee5948d",
+      "source_hash": "b6d25f18d5a6",
+      "text": "धँसी हुई आँखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "df9c50007437": {
+      "item_id": "df9c50007437",
+      "source_hash": "81b8460ebf4b",
+      "text": "बिल्कुल पानी पीने में असमर्थ होना या बहुत कठिनाई से पीना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dac5212923b0": {
+      "item_id": "dac5212923b0",
+      "source_hash": "4f39ff32076f",
+      "text": "त्वचा चुटकी परीक्षण: पेट की त्वचा को चुटकी में लें, यदि त्वचा बहुत धीरे-धीरे वापस जाती है (समतल होने में 2 सेकंड से अधिक समय लगता है), तो यह गंभीर निर्जलीकरण का संकेत है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "5a374e1a5b5b": {
+      "item_id": "5a374e1a5b5b",
+      "source_hash": "7d36a9d43c50",
+      "text": "बहुत तेज या कमजोर नब्ज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3b514c9dc742": {
+      "item_id": "3b514c9dc742",
+      "source_hash": "8cb5e77e0833",
+      "text": "बहुत कम रक्तचाप (लो BP)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "793bf92f3127": {
+      "item_id": "793bf92f3127",
+      "source_hash": "a60d0b5708e7",
+      "text": "तेज सांस चलना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2d68abef7474": {
+      "item_id": "2d68abef7474",
+      "source_hash": "69de529a3bb5",
+      "text": "बिना किसी सुधार के बार-बार पतला दस्त होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ca8a4bafb6d": {
+      "item_id": "6ca8a4bafb6d",
+      "source_hash": "9b3f4be764df",
+      "text": "बार-बार उल्टी होना जिससे कोई तरल पदार्थ पेट में न रुके",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "489fc1c8c5c6": {
+      "item_id": "489fc1c8c5c6",
+      "source_hash": "55830207234b",
+      "text": "उपचार के 2 दिन बाद भी मल में खून आना और सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "30a7a3e77882": {
+      "item_id": "30a7a3e77882",
+      "source_hash": "009afe538a45",
+      "text": "तेज बुखार के साथ दस्त और सामान्य स्थिति का बिगड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ba8c203969d": {
+      "item_id": "9ba8c203969d",
+      "source_hash": "db9626342130",
+      "text": "गंभीर कुपोषण या ज्ञात एचआईवी वाले व्यक्ति में दस्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1beb4c230d79": {
+      "item_id": "1beb4c230d79",
+      "source_hash": "b3b59f84fb5e",
+      "text": "निर्जलीकरण या गंभीर बीमारी के लक्षणों के साथ 14 दिन से अधिक समय तक चलने वाला लगातार दस्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bf465c932433": {
+      "item_id": "bf465c932433",
+      "source_hash": "72e433d95a3f",
+      "text": "तुरंत ओरल रिहाइड्रेशन शुरू करें, घर पर दस्त का सबसे महत्वपूर्ण उपचार खोए हुए तरल पदार्थों और लवणों की भरपाई करना है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "819791f33421": {
+      "item_id": "819791f33421",
+      "source_hash": "a74811566e67",
+      "text": "किसी भी फार्मेसी या सरकारी स्वास्थ्य केंद्र पर उपलब्ध ORS (ओआरएस) पैकेट का उपयोग करें: पैकेट पर दर्शाई गई साफ पानी की मात्रा (आमतौर पर 200 ml या 1 litre) में एक पैकेट घोलें और बार-बार घूंट-घूंट पिएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "43fa1f21dd53": {
+      "item_id": "43fa1f21dd53",
+      "source_hash": "225e536d4f1a",
+      "text": "यदि ORS के पैकेट उपलब्ध नहीं हैं, तो अस्थायी रूप से एक घरेलू विकल्प का उपयोग किया जा सकता है: एक गिलास साफ पानी में एक चुटकी नमक और थोड़ी चीनी मिलाएं, अच्छी तरह हिलाएं और बार-बार पिएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "eedb1c657e4d": {
+      "item_id": "eedb1c657e4d",
+      "source_hash": "0d67332fe9ae",
+      "text": "अन्य उपयुक्त घरेलू तरल पदार्थ: नमकीन चावल का पानी, नमकीन छाछ (लस्सी), नमक युक्त सब्जियों का सूप, बिना चीनी का ताजा फलों का रस, नारियल पानी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "8d2b36608a02": {
+      "item_id": "8d2b36608a02",
+      "source_hash": "86003a371c19",
+      "text": "प्रत्येक पतले दस्त के बाद अतिरिक्त तरल पदार्थ लें, वयस्कों को प्रत्येक बार कम से कम 200 ml तरल पदार्थ पीना चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "283e1a3455f6": {
+      "item_id": "283e1a3455f6",
+      "source_hash": "124be0dba254",
+      "text": "अनुपयुक्त तरल पदार्थ जो दस्त को बढ़ाते हैं: कार्बोनेटेड पेय (कोल्ड ड्रिंक/सोडा), बाजार के मीठे फलों के रस, मीठी चाय या कॉफी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "26f73d38b93b": {
+      "item_id": "26f73d38b93b",
+      "source_hash": "1f87c79e6ad5",
+      "text": "खाना जारी रखें, उपवास न करें। हल्का, आसानी से पचने वाला भोजन करें। बीमारी के दौरान तैलीय या मसालेदार भोजन से बचें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b34188382c50": {
+      "item_id": "b34188382c50",
+      "source_hash": "b045df6c8381",
+      "text": "खाने से पहले, शौचालय का उपयोग करने के बाद और मल को छूने के बाद साबुन और पानी से अच्छी तरह हाथ धोएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2e08e8e1c851": {
+      "item_id": "2e08e8e1c851",
+      "source_hash": "8658c0848700",
+      "text": "केवल स्वच्छ, सुरक्षित पीने के पानी का उपयोग करें, यदि सुरक्षा संदिग्ध हो तो पानी उबालें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "361bc25e01e9": {
+      "item_id": "361bc25e01e9",
+      "source_hash": "a49b5bfaeca8",
+      "text": "तुरंत चिकित्सीय सहायता लें यदि: बहुत अधिक पतला दस्त हो रहा हो, बार-बार उल्टी हो रही हो, पानी पीने में असमर्थ हों, बुखार हो, मल में खून दिखे, या 5 दिन में स्थिति में सुधार न हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e941b3753f9e": {
+      "item_id": "e941b3753f9e",
+      "source_hash": "4990059ffe36",
+      "text": "घर पर देखभाल के 5 दिन बाद भी दस्त में सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cc6e7a645012": {
+      "item_id": "cc6e7a645012",
+      "source_hash": "9fdc5a367df6",
+      "text": "मल में किसी भी प्रकार का खून आना (पेचिश)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "79335f1d7eb6": {
+      "item_id": "79335f1d7eb6",
+      "source_hash": "7833cac6194e",
+      "text": "दस्त के साथ अत्यधिक उल्टी होना जिससे तरल पदार्थ पेट में रुकना कठिन हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f6d3a507c693": {
+      "item_id": "f6d3a507c693",
+      "source_hash": "a40ea1b5a73d",
+      "text": "मध्यम निर्जलीकरण के लक्षण: बेचैनी, धँसी हुई आँखें, अत्यधिक प्यास लगना, त्वचा चुटकी धीरे-धीरे वापस जाना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "80f1649cf640": {
+      "item_id": "80f1649cf640",
+      "source_hash": "8d4112ae0af8",
+      "text": "दस्त के साथ बुखार होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "cd10ce4eec65": {
+      "item_id": "cd10ce4eec65",
+      "source_hash": "9f2b1a969d5a",
+      "text": "मधुमेह, हृदय रोग या गुर्दे की बीमारी वाले व्यक्ति में दस्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3f8677feb612": {
+      "item_id": "3f8677feb612",
+      "source_hash": "b9fda6de4e34",
+      "text": "14 दिन से अधिक समय तक चलने वाला दस्त (दीर्घकालिक दस्त)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7eff33604db4": {
+      "item_id": "7eff33604db4",
+      "source_hash": "05e23aedf9a1",
+      "text": "किसी नए स्थान की यात्रा के बाद या दूषित होने के संदेह वाले बाहर के भोजन के बाद दस्त",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "deb49f9b48c8": {
+      "item_id": "deb49f9b48c8",
+      "source_hash": "fff043f89307",
+      "text": "ऊपर सूचीबद्ध गंभीर निर्जलीकरण का कोई भी लक्षण, बेहोशी, पानी पीने में असमर्थता, त्वचा चुटकी बहुत धीमी, बहुत कमजोर नब्ज",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "db00ac98249e": {
+      "item_id": "db00ac98249e",
+      "source_hash": "55830207234b",
+      "text": "उपचार के 2 दिन बाद भी मल में खून आना और सुधार न होना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ae4e74dcedc9": {
+      "item_id": "ae4e74dcedc9",
+      "source_hash": "e0d175d4a071",
+      "text": "निर्जलीकरण या गंभीर संक्रमण के संकेतों के साथ लगातार दस्त (14 दिन से अधिक)",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7e64a1478e94": {
+      "item_id": "7e64a1478e94",
+      "source_hash": "055693a39c73",
+      "text": "गंभीर उल्टी के साथ दस्त और तरल पदार्थ बिल्कुल न रुक पाना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "bc043dc471f7": {
+      "item_id": "bc043dc471f7",
+      "source_hash": "208a4b0978a4",
+      "text": "संदिग्ध हैजा: अचानक बहुत अधिक पतला पानी जैसा दस्त (चावल के पानी जैसा मल) शुरू होना, विशेषकर ज्ञात हैजा वाले क्षेत्र में",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4139ba17e4d0": {
+      "item_id": "4139ba17e4d0",
+      "source_hash": "0541d75c867c",
+      "text": "दस्त का अर्थ है प्रति दिन 3 या अधिक पतले या पानी जैसे मल। तीव्र दस्त 14 दिन से कम समय तक रहता है। 14 दिन से अधिक समय तक रहने वाला दस्त दीर्घकालिक दस्त है। पेचिश का अर्थ है मल में खून उपस्थित होना।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e74c91e62130": {
+      "item_id": "e74c91e62130",
+      "source_hash": "40962c9f0c3b",
+      "text": "दो उंगलियों के बीच पेट की त्वचा को चुटकी में लें, 1 सेकंड के लिए रोकें, फिर छोड़ दें। देखें कि यह कितनी जल्दी सामान्य होती है: यदि तुरंत वापस चली जाती है, तो कोई विशेष निर्जलीकरण नहीं है; यदि थोड़ी देर उठी रहती है, तो कुछ निर्जलीकरण है, तुरंत ORS की आवश्यकता है; यदि बहुत धीरे-धीरे वापस जाती है और 2 सेकंड से अधिक समय लेती है, तो गंभीर निर्जलीकरण है, तुरंत अस्पताल जाएं।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}

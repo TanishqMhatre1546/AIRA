@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { describe, it, expect, vi } from "vitest";
 import ResultCard from "../components/ResultCard";
+import { LanguageProvider, STORAGE_KEY } from "../i18n/LanguageContext";
 
 describe("ResultCard", () => {
   it("renders ANSWER variant with triage header, claims, sources, and print summary elements", () => {
@@ -272,5 +273,92 @@ describe("ResultCard", () => {
       "href",
       "tel:112"
     );
+  });
+
+  it("shows 'Source text is in English' notice when content_language is 'hi' or 'mr'", () => {
+    const mockAnswer = {
+      response_type: "ANSWER",
+      triage_level: "SELF_CARE",
+      content_language: "hi",
+      translation_status: "reviewed",
+      sections: {
+        guidelines_say: [{ text: "साधारण साबुन से स्नान करें।", citation_ids: [1] }],
+        do_now: [],
+        watch_for: [],
+      },
+      citations: [
+        {
+          id: 1,
+          title: "Guideline Title",
+          publisher: "MOHFW",
+          year: "2024",
+          page: 1,
+        },
+      ],
+      mode: "extractive",
+    };
+
+    render(
+      <MemoryRouter>
+        <ResultCard result={mockAnswer} onReset={vi.fn()} />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("source-language-notice")).toBeInTheDocument();
+    expect(screen.getByTestId("source-language-notice")).toHaveTextContent("Source text is in English.");
+  });
+
+  it("shows 'Draft translation' tag when translation_status is 'unreviewed'", () => {
+    const mockAnswer = {
+      response_type: "ANSWER",
+      triage_level: "SELF_CARE",
+      content_language: "hi",
+      translation_status: "unreviewed",
+      sections: {
+        guidelines_say: [{ text: "साधारण साबुन से स्नान करें।", citation_ids: [1] }],
+        do_now: [],
+        watch_for: [],
+      },
+      citations: [],
+      mode: "extractive",
+    };
+
+    render(
+      <MemoryRouter>
+        <ResultCard result={mockAnswer} onReset={vi.fn()} />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("draft-translation-badge")).toBeInTheDocument();
+    expect(screen.getByTestId("draft-translation-badge")).toHaveTextContent("Draft translation");
+  });
+
+  it("shows 'This text has not been translated yet' when user language is Hindi and content_language is English", () => {
+    localStorage.setItem(STORAGE_KEY, "hi");
+    const mockAnswer = {
+      response_type: "ANSWER",
+      triage_level: "SELF_CARE",
+      content_language: "en",
+      translation_status: "none",
+      sections: {
+        guidelines_say: [{ text: "Take a daily bath with regular soap.", citation_ids: [1] }],
+        do_now: [],
+        watch_for: [],
+      },
+      citations: [],
+      mode: "extractive",
+    };
+
+    render(
+      <LanguageProvider>
+        <MemoryRouter>
+          <ResultCard result={mockAnswer} onReset={vi.fn()} />
+        </MemoryRouter>
+      </LanguageProvider>
+    );
+
+    expect(screen.getByTestId("untranslated-notice")).toBeInTheDocument();
+    expect(screen.getByTestId("untranslated-notice")).toHaveTextContent("इस पाठ का अभी तक अनुवाद नहीं किया गया है।");
+    localStorage.clear();
   });
 });

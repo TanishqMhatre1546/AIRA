@@ -1,0 +1,376 @@
+{
+  "condition_id": "asha-ncd-hypertension",
+  "language": "hi",
+  "translations": {
+    "11647faecfd9": {
+      "item_id": "11647faecfd9",
+      "source_hash": "34916c784e73",
+      "text": "सीने के बीच में 30 मिनट से अधिक समय तक रहने वाला दर्द, दबाव या भारीपन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "592378af5858": {
+      "item_id": "592378af5858",
+      "source_hash": "69a29ee63838",
+      "text": "दर्द जो जबड़े, गर्दन, बाहों, कंधों या पीठ तक फैल रहा हो",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "77ab6342bd9c": {
+      "item_id": "77ab6342bd9c",
+      "source_hash": "a14a005ee63c",
+      "text": "सीने में बेचैनी के साथ सांस फूलना या सांस लेने में तकलीफ",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "7d3f19212af0": {
+      "item_id": "7d3f19212af0",
+      "source_hash": "86b79c953fd6",
+      "text": "सीने में दर्द के साथ जी मिचलाना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "4c0c53e2b30b": {
+      "item_id": "4c0c53e2b30b",
+      "source_hash": "eb79adc7673d",
+      "text": "बेहोशी या चेतना खोना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1c3dbc3a265d": {
+      "item_id": "1c3dbc3a265d",
+      "source_hash": "cf814299caf0",
+      "text": "चेहरे, बांह या पैर के एक तरफ अचानक कमजोरी, लकवा या सुन्नपन",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e210f54ada01": {
+      "item_id": "e210f54ada01",
+      "source_hash": "9e8c5e277bb0",
+      "text": "बोली बंद होना या बोलने अथवा बात समझने में अचानक कठिनाई",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "792f321cb467": {
+      "item_id": "792f321cb467",
+      "source_hash": "f69a14b6a606",
+      "text": "धुंधला दिखना या दृष्टि का चले जाना, विशेषकर एक आंख में",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "66e5615df1e9": {
+      "item_id": "66e5615df1e9",
+      "source_hash": "07cf69bcafbd",
+      "text": "अस्पष्ट चक्कर आना, संतुलन बिगड़ना, या अचानक गिर पड़ना",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "ba504e980e0b": {
+      "item_id": "ba504e980e0b",
+      "source_hash": "2417c4e30f3f",
+      "text": "अचानक तेज सिरदर्द या बेहोशी",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "9ecbd6c246e6": {
+      "item_id": "9ecbd6c246e6",
+      "source_hash": "c5582b45aabf",
+      "text": "हाई ब्लड प्रेशर (BP) वाले व्यक्ति में इनमें से किसी भी लक्षण को आपात स्थिति माना जाना चाहिए, तुरंत नजदीकी सामुदायिक स्वास्थ्य केंद्र या अस्पताल ले जाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6926b8523b68": {
+      "item_id": "6926b8523b68",
+      "source_hash": "e846f9138a5c",
+      "text": "तंबाकू का सभी प्रकार का उपयोग बंद करें, धूम्रपान या तंबाकू चबाने से ब्लड प्रेशर (BP) और दिल के दौरे का खतरा काफी बढ़ जाता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "6ae23bcdd27e": {
+      "item_id": "6ae23bcdd27e",
+      "source_hash": "bb2f66e18d0b",
+      "text": "शराब का सेवन कम करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "58bcc72b2e7d": {
+      "item_id": "58bcc72b2e7d",
+      "source_hash": "b800ed2cece3",
+      "text": "नमक का सेवन कम करें, पूरे परिवार के लिए प्रतिदिन अधिकतम 1 छोटा चम्मच (5 ग्राम) नमक सीमित करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "23c74a2ea580": {
+      "item_id": "23c74a2ea580",
+      "source_hash": "f838b218a84d",
+      "text": "तैलीय, तले हुए और वसायुक्त खाद्य पदार्थों का सेवन कम करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "793ac1e536a0": {
+      "item_id": "793ac1e536a0",
+      "source_hash": "118a9bba4a4b",
+      "text": "मैदा, चीनी और मीठे पेय पदार्थों का सेवन कम करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "e6cd5ec51486": {
+      "item_id": "e6cd5ec51486",
+      "source_hash": "3fbf1e2fc87b",
+      "text": "अधिक ताजे फल, सब्जियां, साबुत अनाज और साबुत दालें खाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "48310da3b2b9": {
+      "item_id": "48310da3b2b9",
+      "source_hash": "e306410926a4",
+      "text": "स्वस्थ वजन बनाए रखें, अधिक वजन होने पर वजन घटाने से ब्लड प्रेशर (BP) काफी कम होता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "800f4a2d3f3d": {
+      "item_id": "800f4a2d3f3d",
+      "source_hash": "acd675f2472c",
+      "text": "शारीरिक रूप से सक्रिय रहें, प्रतिदिन कम से कम 30 मिनट तेज चलना या मध्यम गतिविधि करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "042afb6137af": {
+      "item_id": "042afb6137af",
+      "source_hash": "fe9919c726d4",
+      "text": "तनाव को प्रबंधित करें, विश्राम तकनीकों का अभ्यास करें, ब्रेक लें, सामाजिक संपर्क बनाए रखें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b9b19b5004cd": {
+      "item_id": "b9b19b5004cd",
+      "source_hash": "85d25710ebd9",
+      "text": "ब्लड प्रेशर की दवाएं डॉक्टर के निर्देशानुसार रोजाना लें, भले ही आप ठीक महसूस कर रहे हों, अपने आप दवा बंद न करें",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "21be8c9e43d4": {
+      "item_id": "21be8c9e43d4",
+      "source_hash": "ed4ccb2e0f91",
+      "text": "उपचार के दौरान महीने में कम से कम 1 बार ब्लड प्रेशर (BP) की जांच जरूर करवाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2aef0ee8f49b": {
+      "item_id": "2aef0ee8f49b",
+      "source_hash": "965e26e34845",
+      "text": "सलाह के अनुसार प्राथमिक स्वास्थ्य केंद्र या उप-केंद्र पर नियमित फॉलो-अप के लिए जाएं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "991ae8633066": {
+      "item_id": "991ae8633066",
+      "source_hash": "80ee617e5336",
+      "text": "हाइपरटेंशन को साइलेंट किलर कहा जाता है क्योंकि इसके आमतौर पर कोई लक्षण नहीं होते हैं, इसका पता लगाने का एकमात्र तरीका ब्लड प्रेशर (BP) मापना है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "1827d29670ca": {
+      "item_id": "1827d29670ca",
+      "source_hash": "cd39cec5a05f",
+      "text": "30 वर्ष और उससे अधिक आयु के सभी वयस्कों को साल में कम से कम 1 बार अपने ब्लड प्रेशर (BP) की जांच करवानी चाहिए, भले ही वे स्वस्थ महसूस करते हों",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "dbad1cd1c895": {
+      "item_id": "dbad1cd1c895",
+      "source_hash": "4cdb0d425655",
+      "text": "एकल रीडिंग में 140 mm Hg सिस्टोलिक (ऊपर का नंबर) या 90 mm Hg डायस्टोलिक (नीचे का नंबर) या उससे अधिक का ब्लड प्रेशर (BP) आने पर पुष्टि और आगे के प्रबंधन के लिए चिकित्सा अधिकारी के पास जाना चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "60dd1601422e": {
+      "item_id": "60dd1601422e",
+      "source_hash": "be3377eae3a5",
+      "text": "बार-बार सिरदर्द, विशेष रूप से सुबह के समय सिर के पिछले हिस्से में दर्द, कभी-कभी बहुत अधिक ब्लड प्रेशर (BP) का लक्षण हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "2185e8f5d68b": {
+      "item_id": "2185e8f5d68b",
+      "source_hash": "55c1102f493b",
+      "text": "हाई ब्लड प्रेशर (BP) वाले किसी भी व्यक्ति में नया लक्षण या बीमारी विकसित होना, उनमें जटिलताओं का अधिक जोखिम होता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "08239c316c9a": {
+      "item_id": "08239c316c9a",
+      "source_hash": "f2cc72824ab9",
+      "text": "दिल के दौरे या स्ट्रोक का पारिवारिक इतिहास, ऐसे मामलों में जांच और रोकथाम बहुत महत्वपूर्ण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "233f9296092f": {
+      "item_id": "233f9296092f",
+      "source_hash": "1b172da4bab9",
+      "text": "ऊपर सूचीबद्ध कोई भी दिल का दौरा या स्ट्रोक का चेतावनी संकेत, ये चिकित्सीय आपात स्थिति हैं",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "b020592599db": {
+      "item_id": "b020592599db",
+      "source_hash": "f17d99d1afd4",
+      "text": "हाई ब्लड प्रेशर (BP) के साथ बहुत तेज सिरदर्द और देखने में परेशानी या भ्रम, यह हाइपरटेंसिव आपात स्थिति का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "3aee6813651a": {
+      "item_id": "3aee6813651a",
+      "source_hash": "86ac09d4b986",
+      "text": "हाई ब्लड प्रेशर (BP) का मरीज जिसने अपनी दवाएं बंद कर दी हैं और अब अस्वस्थ महसूस कर रहा है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "be67add647a0": {
+      "item_id": "be67add647a0",
+      "source_hash": "b0eea27ce2d7",
+      "text": "सीने में दर्द, सांस फूलने, या पैरों में सूजन वाला हाई ब्लड प्रेशर (BP) का मरीज, यह हार्ट फेलियर का संकेत हो सकता है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "465669b05ef0": {
+      "item_id": "465669b05ef0",
+      "source_hash": "7b9f635a3298",
+      "text": "30 वर्ष से अधिक आयु के सभी वयस्कों की हाई ब्लड प्रेशर (BP) और डायबिटीज दोनों के लिए सालाना जांच होनी चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "d9df07a78a8d": {
+      "item_id": "d9df07a78a8d",
+      "source_hash": "c18e47776e33",
+      "text": "दिल के दौरे या स्ट्रोक के पारिवारिक इतिहास वाले उच्च जोखिम वाले व्यक्तियों में ब्लड प्रेशर (BP) और ब्लड शुगर की नियमित निगरानी होनी चाहिए",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "f0ef7db6b911": {
+      "item_id": "f0ef7db6b911",
+      "source_hash": "69187b702fc2",
+      "text": "दिल का दौरा या स्ट्रोक के चेतावनी संकेतों का अनुभव करने वाले किसी भी व्यक्ति को तुरंत चिकित्सा सहायता लेनी चाहिए, हर मिनट महत्वपूर्ण है",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    },
+    "0002a71de42b": {
+      "item_id": "0002a71de42b",
+      "source_hash": "9334cd32b373",
+      "text": "AIRA केवल हाई ब्लड प्रेशर जागरूकता, चेतावनी के संकेत, जीवनशैली के उपाय और तात्कालिक मार्गदर्शन (ट्रायज) प्रदान करता है। निदान और उपचार एक योग्य डॉक्टर या चिकित्सा अधिकारी द्वारा ही किया जाना चाहिए।",
+      "back_translation": "",
+      "status": "reviewed",
+      "reviewer": "Dr. R. Sharma (MD, General Medicine)",
+      "reviewed_on": "2026-10-23",
+      "flags": []
+    }
+  }
+}
