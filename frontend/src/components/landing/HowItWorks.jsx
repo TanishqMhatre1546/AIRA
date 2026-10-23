@@ -51,6 +51,9 @@ export function HowItWorks() {
           </li>
         ))}
       </ol>
+      <div className="landing-voice-note" data-testid="landing-voice-note">
+        {t("landing.howItWorks.voiceFeature")}
+      </div>
       <div className="landing-review-status" data-testid="landing-review-status">
         {reviewSentence}
       </div>

@@ -120,3 +120,46 @@ I have had a bad sore throat
    LLM_ENABLED=false uvicorn app.main:create_app --factory --port 8000
    ```
 2. Explain: "AIRA has a complete offline fallback mode. When internet is disconnected or Gemini is unavailable, it runs sparse BM25 retrieval and renders verbatim extractive guideline passages with 100% local determinism."
+
+---
+
+## 8. Scenario 8: Multilingual Voice Input and Read-Aloud (Web Speech API)
+
+### Voice Input Demo:
+1. Click the language toggle ("अ A") in the header and switch to **हिन्दी (Hindi)** or **मराठी (Marathi)**.
+2. Point out the rectangular **"बोलें" / "बोला" / "Speak"** button (Font Awesome microphone icon, min 44px target).
+3. Click the microphone button:
+   - The state immediately switches to **"Listening" / "सुन रहे हैं..." / "ऐकत आहे..."** with a static icon.
+   - Speak in Hindi: *"मुझे दो दिन से हल्का सिरदर्द और सर्दी है"*
+   - Interim text streams directly into the text area.
+   - When speech finishes, the state indicates: *"Check the text, then press Check guidelines"*.
+4. Highlight the safety design:
+   - Voice recognition **never automatically submits**. The user retains full control to read, edit, or clear text before submitting.
+   - Character limit (500 chars) is strictly enforced.
+   - Escape key or tapping the button stops recognition immediately.
+
+### Read-Aloud Demo:
+1. After results are displayed, point out the **"Listen" / "सुनें" / "ऐका"** button (speaker icon) in the result card action bar or banner header.
+2. Tap **"Listen"**:
+   - Synthesis speaks sentence-by-sentence in the selected language (`en-IN`, `hi-IN`, or `mr-IN`).
+   - The button switches to **"Stop"** with a stop icon.
+   - Citations like `[1]` are stripped automatically before speaking.
+   - The reader speaks the urgency level, clinical characterization, home care steps, warning signs, and concludes with the safety disclaimer: *"This is not a diagnosis. In an emergency call 112."*
+3. Tap **"Stop"** (or press Escape, or submit a new query): speech halts immediately without browser freeze.
+4. If the client device lacks a TTS voice for the active language, a graceful notice is shown: *"No voice for this language on this device."*
+
+---
+
+## 9. Manual Test Script (Cross-Platform Web Speech API)
+
+### Platform Matrix:
+
+| Platform / Browser | Feature Tested | Expected Behavior |
+| :--- | :--- | :--- |
+| **Chrome (Android)** | Voice Input (`hi-IN`, `mr-IN`, `en-IN`) | Prompts for microphone permission. Interim speech renders into textarea. Stops on silence or button tap. Shows "Check text" note. Does not auto-submit. |
+| **Chrome (Android)** | Read Aloud (TTS) | Uses Google TTS voices (`hi-IN`, `en-IN`). Sentence-by-sentence playback avoids mobile 15s cutoff. Tap Stop halts audio immediately. |
+| **Chrome (Desktop)** | Keyboard Accessibility | Focus on mic button (44px min). Space/Enter toggles listening. Escape key aborts recognition immediately. Escape key stops TTS read-aloud. |
+| **Edge (Windows/Mac)** | Neural TTS Read Aloud | Natural speech synthesis using Microsoft Natural Voices (`en-IN-NeerjaNeural`, `hi-IN-SwaraNeural`, `mr-IN-AarohiNeural`). Citation markers `[1]` stripped. |
+| **Unsupported Browser (e.g. Firefox desktop)** | Graceful Fallback | Microphone button is hidden; shows note: *"Voice input works in Chrome and Edge."* Manual typing works normally without runtime exceptions. |
+| **Permission Blocked** | Denied Mic Permission | When user denies mic access, displays static warning icon with: *"Allow the microphone in your browser settings"*. Typing remains fully functional. |
+| **No Voice on Device** | Missing Voice Pack | If system has no Marathi voice installed, hides Listen button and displays: *"No voice for this language on this device."* in Marathi. |

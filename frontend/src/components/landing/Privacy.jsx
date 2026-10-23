@@ -28,6 +28,7 @@ export function Privacy() {
       <p className="landing-text">{t("landing.privacy.statement5")}</p>
       <p className="landing-text">{t("landing.privacy.statement6")}</p>
       <p className="landing-text">{t("landing.privacy.statement7")}</p>
+      <p className="landing-text">{t("landing.privacy.statement8")}</p>
 
       <div className="landing-legal-date">{t("landing.privacy.lastUpdated")}</div>
     </section>

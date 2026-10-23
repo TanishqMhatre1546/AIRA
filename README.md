@@ -59,6 +59,7 @@ User Query ──► [ 1. Emergency Pre-Filter ] ──── (Emergency Trigger
 3. **Verified Citations Only**: All medical citations are built directly from verified guideline chunk metadata with cryptographic sha256 checksums.
 4. **Fallback Resilience**: Automatic fallback to verbatim ICMR guideline extracts if model timeouts, network failures, or ungrounded claims occur.
 5. **Zero Data Retention**: Pure stateless processing in memory; zero query logs or user identifying data written to disk.
+6. **Multilingual Voice & Read-Aloud Accessibility**: Browser-native Web Speech API allows users to speak symptoms and listen to results in English (`en-IN`), Hindi (`hi-IN`), and Marathi (`mr-IN`). Audio never touches AIRA servers, and voice transcripts never auto-submit.
 
 ---
 

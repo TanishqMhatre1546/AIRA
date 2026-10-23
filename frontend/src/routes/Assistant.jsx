@@ -27,23 +27,42 @@ export default function Assistant() {
 
   useEffect(() => {
     document.title = `${t("header.brandName")}: ${t("header.brandTagline")}`;
+    return () => {
+      if (typeof window !== "undefined" && window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
   }, [t]);
 
+  const cancelSpeech = () => {
+    if (typeof window !== "undefined" && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+  };
+
   const handleSelectPrompt = (promptText) => {
+    cancelSpeech();
     setMessage(promptText);
     submitQuery(promptText);
   };
 
   const handleReset = () => {
+    cancelSpeech();
     setMessage("");
     reset();
   };
 
   const handleRetry = () => {
+    cancelSpeech();
     const q = lastQuery || message.trim();
     if (q.length >= 2) {
       submitQuery(q);
     }
+  };
+
+  const handleSubmit = (q) => {
+    cancelSpeech();
+    submitQuery(q);
   };
 
   const isLoading = status === "loading";
@@ -77,7 +96,7 @@ export default function Assistant() {
             <SymptomForm
               message={message}
               setMessage={setMessage}
-              onSubmit={submitQuery}
+              onSubmit={handleSubmit}
               loading={isLoading}
             />
 

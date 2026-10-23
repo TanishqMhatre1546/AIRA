@@ -66,7 +66,8 @@
       "step2": "A rule table sets the urgency. The level comes from a table that cites its guideline source. The AI cannot change it.",
       "step3": "A short summary is written from guideline passages only. Every statement points to a source. If the text cannot be checked against the passages, AIRA shows the passages themselves.",
       "reviewPending": "Clinical review: pending.",
-      "reviewDonePrefix": "Clinically reviewed: yes, by "
+      "reviewDonePrefix": "Clinically reviewed: yes, by ",
+      "voiceFeature": "You can type or speak your symptoms in English, Hindi, or Marathi, and listen to results with the read-aloud button."
     },
     "limits": {
       "heading": "What AIRA does not do",
@@ -90,6 +91,7 @@
       "statement5": "The site sets no cookies and uses no analytics or advertising trackers. It stores only your chosen language in your browser and nothing else.",
       "statement6": "The hosting provider, Render, may record technical request data such as IP addresses in its own logs.",
       "statement7": "The printed summary is created in your browser and is not sent anywhere.",
+      "statement8": "If you use the microphone, your browser sends your voice to its own speech service to turn it into text. AIRA does not receive or store audio. Microphone use is completely optional.",
       "lastUpdated": "Last updated: 4 October 2026"
     },
     "terms": {
@@ -248,5 +250,20 @@
     "title": "Page not found",
     "message": "The requested page does not exist.",
     "homeLink": "Return to the home page"
+  },
+  "voiceInput": {
+    "speak": "Speak",
+    "listening": "Listening",
+    "gotIt": "Check the text, then press Check guidelines",
+    "noSpeech": "No speech heard",
+    "blocked": "Allow the microphone in your browser settings",
+    "notSupported": "Voice input works in Chrome and Edge."
+  },
+  "readAloud": {
+    "listen": "Listen",
+    "stop": "Stop",
+    "listenAria": "Listen to this result",
+    "noVoice": "No voice for this language on this device.",
+    "disclaimer": "This is not a diagnosis. In an emergency call 112."
   }
 }

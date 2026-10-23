@@ -6,6 +6,8 @@ import {
   faPhone,
   faChild,
   faPrint,
+  faVolumeHigh,
+  faStop,
 } from "@fortawesome/free-solid-svg-icons";
 
 import TriageHeader from "./TriageHeader";
@@ -15,6 +17,12 @@ import EmergencyBanner from "./EmergencyBanner";
 import CrisisBanner from "./CrisisBanner";
 import RefusalNotice from "./RefusalNotice";
 import { useT } from "../i18n/useT";
+import { useSpeechSynthesis } from "../hooks/useSpeechSynthesis";
+import {
+  buildAnswerSpeechText,
+  buildNoMatchSpeechText,
+  buildOutOfScopeSpeechText,
+} from "../utils/speechText";
 
 export default function ResultCard({
   result,
@@ -24,7 +32,9 @@ export default function ResultCard({
   onRetry,
   isStaticExample = false,
 }) {
-  const { t } = useT();
+  const { t, language } = useT();
+  const { isSupported, hasVoiceForLanguage, isSpeaking, speak, stop } =
+    useSpeechSynthesis({ language });
 
   if (error) {
     return (
@@ -62,12 +72,40 @@ export default function ResultCard({
     return null;
   }
 
-  const { response_type, triage_level, message, helplines, sections, citations, mode, disclaimer, correction } = result;
+  const {
+    response_type,
+    triage_level,
+    message,
+    helplines,
+    sections,
+    citations,
+    mode,
+    disclaimer,
+    correction,
+  } = result;
   const todayDate = new Date().toISOString().split("T")[0];
 
   const handlePrint = () => {
     if (typeof window !== "undefined" && window.print) {
       window.print();
+    }
+  };
+
+  const handleToggleSpeak = () => {
+    if (isSpeaking) {
+      stop();
+    } else {
+      let speechText = "";
+      if (response_type === "ANSWER") {
+        speechText = buildAnswerSpeechText(result, t);
+      } else if (response_type === "NO_MATCH") {
+        speechText = buildNoMatchSpeechText(t);
+      } else if (response_type === "OUT_OF_SCOPE") {
+        speechText = buildOutOfScopeSpeechText(message, t);
+      }
+      if (speechText) {
+        speak(speechText);
+      }
     }
   };
 
@@ -187,10 +225,32 @@ export default function ResultCard({
     }
   };
 
+  const showListenButton = ["ANSWER", "NO_MATCH", "OUT_OF_SCOPE"].includes(response_type);
+
   return (
     <div className="result-wrapper">
       {!isStaticExample && (
         <div className="reset-area">
+          {showListenButton && isSupported && (
+            <>
+              {hasVoiceForLanguage ? (
+                <button
+                  type="button"
+                  className="read-aloud-button"
+                  onClick={handleToggleSpeak}
+                  aria-label={isSpeaking ? t("readAloud.stop") : t("readAloud.listenAria")}
+                  data-testid="result-listen-button"
+                >
+                  <FontAwesomeIcon icon={isSpeaking ? faStop : faVolumeHigh} aria-hidden="true" />
+                  <span>{isSpeaking ? t("readAloud.stop") : t("readAloud.listen")}</span>
+                </button>
+              ) : (
+                <span className="no-voice-note" data-testid="no-voice-note">
+                  {t("readAloud.noVoice")}
+                </span>
+              )}
+            </>
+          )}
           {response_type === "ANSWER" && (
             <button
               type="button"
